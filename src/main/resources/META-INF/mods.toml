@@ -1,0 +1,68 @@
+modLoader = "javafml"
+loaderVersion = "[47,)" # Adjust this based on your Forge version requirements
+license = "MIT"
+
+[[mods]]
+modId = "dacxirons"
+version = "${mod_version}"
+displayName = "${mod_name}"
+authors = "${mod_authors}"
+displayTest = "MATCH_VERSION"
+acceptableRemoteVersions = "*"
+description = '''${mod_description}'''
+
+[[dependencies."dacxirons"]]
+modId = "forge"
+mandatory = true
+versionRange = "${forge_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."dacxirons"]]
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."dacxirons"]]
+modId = "irons_spellbooks"
+mandatory = true
+versionRange = "[${minecraft_version}-${irons_spells_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."dacxirons"]]
+modId = "dungeons_and_combat"
+mandatory = true
+versionRange = "[1.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."dacxirons"]]
+modId = "geckolib"
+mandatory = true
+versionRange = "[${minecraft_version}:${geckolib_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."dacxirons"]]
+modId = "curios"
+mandatory = true
+versionRange = "[${curios_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."dacxirons"]]
+modId = "caelus"
+mandatory = true
+versionRange = "[${caelus_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."dacxirons"]]
+modId = "playeranimator"
+mandatory = true
+versionRange = "[${player_animator_version},)"
+ordering = "NONE"
+side = "BOTH"

@@ -1,0 +1,68 @@
+modLoader = "javafml"
+loaderVersion = "[47,)" # Adjust this based on your Forge version requirements
+license = "MIT"
+
+[[mods]]
+modId = "dacxirons"
+version = "9.3.0-1.20.1"
+displayName = "dacxirons"
+authors = "Bandit-Bytes, Alshanex"
+displayTest = "MATCH_VERSION"
+acceptableRemoteVersions = "*"
+description = '''Your self has come to slay you...'''
+
+[[dependencies."dacxirons"]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."dacxirons"]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,1.21)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."dacxirons"]]
+modId = "irons_spellbooks"
+mandatory = true
+versionRange = "[1.20.1-3.4.0.9,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."dacxirons"]]
+modId = "dungeons_and_combat"
+mandatory = true
+versionRange = "[1.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."dacxirons"]]
+modId = "geckolib"
+mandatory = true
+versionRange = "[1.20.1:4.4.5,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."dacxirons"]]
+modId = "curios"
+mandatory = true
+versionRange = "[5.7.0+1.20.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."dacxirons"]]
+modId = "caelus"
+mandatory = true
+versionRange = "[3.1.0+1.20,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."dacxirons"]]
+modId = "playeranimator"
+mandatory = true
+versionRange = "[1.0.2-rc1+1.20,)"
+ordering = "NONE"
+side = "BOTH"
