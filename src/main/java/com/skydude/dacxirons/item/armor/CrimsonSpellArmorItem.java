@@ -3,62 +3,59 @@ package com.skydude.dacxirons.item.armor;
 
 //This is crimsonspellarmoritem
 
-import net.minecraft.ChatFormatting;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
-import net.minecraftforge.common.ForgeMod;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import org.jetbrains.annotations.Nullable;
-import com.skydude.dacxirons.registries.ItemRegistries;
+import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.ai.attributes.AttributeInstance;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.event.ItemAttributeModifierEvent;
 import net.minecraft.world.entity.player.Player;
+import net.minecraftforge.registries.ForgeRegistries;
+import org.jetbrains.annotations.Nullable;
 
-
-import javax.annotation.Nonnull;
-
-import java.util.List;
+import java.util.UUID;
 
 public class CrimsonSpellArmorItem extends ImbueabledacxironsArmor {
+    private static final UUID FIRE_UUID = UUID.fromString("924e4567-e89b-12d3-a456-426614174000");
+
     public CrimsonSpellArmorItem(ArmorItem.Type type, Properties properties) {
         super(dacxironsArmorMaterials.CRIMSON_SPELL_ARMOR, type, properties);
 
 
     }
-    @SubscribeEvent
-    public static void onLivingTick(TickEvent.PlayerTickEvent event) {
-        if (event.phase == TickEvent.Phase.END) {
-            Player player = event.player;
 
-            if (!player.level().isClientSide) {
-                MobEffect bleeding = BuiltInRegistries.MOB_EFFECT.get(new ResourceLocation("dungeons_and_combat", "bleeding"));
 
-                //    AttributeInstance swimSpeed = player.getAttribute(ForgeMod.SWIM_SPEED.get());
-                if (swimSpeed != null) {
-                    if (player.isInWater() && player.getItemBySlot(EquipmentSlot.FEET).getItem() == AquaItems.NEPTUNIUM_BOOTS.get()) {
-                        if (!swimSpeed.hasModifier(INCREASED_SWIM_SPEED)) {
-                            swimSpeed.addPermanentModifier(INCREASED_SWIM_SPEED);
-                        }
-                    } else {
-                        if (swimSpeed.hasModifier(INCREASED_SWIM_SPEED)) {
-                            swimSpeed.removeModifier(INCREASED_SWIM_SPEED);
-                        }
-                    }
-                }
+    @SuppressWarnings("removal")
+    @Override
+    public void onArmorTick(ItemStack stack, Level level, Player player ) {
+        // if (event.phase == TickEvent.Phase.END) {
+        //  Player player = event.player;
+
+
+        //    AttributeInstance swimSpeed = player.getAttribute(ForgeMod.SWIM_SPEED.get());
+        if (CorrectArmor.hasFullSetOn(player, dacxironsArmorMaterials.CRIMSON_SPELL_ARMOR)) {
+
+            if (player.hasEffect(DungeonsAndCombatModMobEffects.BLEEDING.get())) {
+                //player.addEffect(new MobEffectInstance(DungeonsAndCombatModMobEffects.BLEEDING.get(), 200, 0));
+                System.out.println("the thing is in the thing with the thing");
+
+//                @Nullable Attribute firePower = ForgeRegistries.ATTRIBUTES.getValue(
+//                        new ResourceLocation("irons_spellbooks:fire_spell_power")
+//                );
+//
+//
+//                if (firePower != null) {
+//                    event.addModifier(firePower, new AttributeModifier(
+//                            FIRE_UUID,
+//                            "Spell Power Bonus Fire",
+//                            3.05,
+//                            AttributeModifier.Operation.MULTIPLY_BASE
+//                    ));
+//                }
+
+
             }
         }
     }

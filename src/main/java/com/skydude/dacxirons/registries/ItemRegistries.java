@@ -40,7 +40,7 @@ public class ItemRegistries {
             DeferredRegister.create(ForgeRegistries.ITEMS, dacxirons.MOD_ID);
 
 
-
+    public static final RegistryObject<Item> DIVINEMANUSCRIPT = ITEMS.register("divine_manuscript_spell_book", DivineManuscriptSpellbook::new);
 
     public static final RegistryObject<Item> CRIMSON_WIZARD_HAT = ITEMS.register("crimson_wizard_hat",
             () -> new CrimsonSpellArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment().fireResistant()));

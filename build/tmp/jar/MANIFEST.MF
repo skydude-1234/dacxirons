@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Specification-Title: dacxirons
-Specification-Version: 1.0
-Implementation-Title: dacxirons
-Implementation-Version: 9.3.0-1.20.1
-Implementation-Vendor: your.name.here
-

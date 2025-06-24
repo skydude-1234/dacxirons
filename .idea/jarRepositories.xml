@@ -14,21 +14,6 @@
     <remote-repository>
       <option name="id" value="maven" />
       <option name="name" value="maven" />
-      <option name="url" value="https://maven.minecraftforge.net/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="maven2" />
-      <option name="name" value="maven2" />
-      <option name="url" value="https://libraries.minecraft.net/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="MavenRepo" />
-      <option name="name" value="MavenRepo" />
-      <option name="url" value="https://repo.maven.apache.org/maven2/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="maven" />
-      <option name="name" value="maven" />
       <option name="url" value="https://cursemaven.com" />
     </remote-repository>
     <remote-repository>
@@ -40,6 +25,11 @@
       <option name="id" value="Iron's Maven - Snapshots" />
       <option name="name" value="Iron's Maven - Snapshots" />
       <option name="url" value="https://code.redspace.io/snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven2" />
+      <option name="name" value="maven2" />
+      <option name="url" value="https://maven.minecraftforge.net/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="GeckoLib" />
@@ -65,6 +55,16 @@
       <option name="id" value="maven5" />
       <option name="name" value="maven5" />
       <option name="url" value="https://maven.kosmx.dev/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven7" />
+      <option name="name" value="maven7" />
+      <option name="url" value="https://libraries.minecraft.net/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="MavenRepo" />
+      <option name="name" value="MavenRepo" />
+      <option name="url" value="https://repo.maven.apache.org/maven2/" />
     </remote-repository>
   </component>
 </project>
