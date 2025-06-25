@@ -29,7 +29,7 @@ import static com.skydude.dacxirons.registries.EffectRegistry.SPELL_STRENGTH;
 import static net.minecraft.world.effect.MobEffects.*;
 
 public class CrimsonSpellArmorItem extends ImbueabledacxironsArmor {
-    private static final UUID FIRE_UUID = UUID.fromString("924e4567-e89b-12d3-a456-426614174000");
+
 
     public CrimsonSpellArmorItem(ArmorItem.Type type, Properties properties) {
         super(dacxironsArmorMaterials.CRIMSON_SPELL_ARMOR, type, properties);
