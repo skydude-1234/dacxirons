@@ -5351,3 +5351,16 @@ java.io.FileNotFoundException: minecraft:textures/models/armor/crimson_spell_arm
 [25Jun.2025 12:26:36.361] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
 [25Jun.2025 12:26:36.371] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
 [25Jun.2025 12:26:36.371] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[25Jun.2025 12:31:26.812] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[25Jun.2025 12:31:26.813] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[25Jun.2025 12:31:26.815] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[25Jun.2025 12:31:26.816] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[25Jun.2025 12:31:26.818] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[25Jun.2025 12:31:26.818] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[25Jun.2025 12:31:27.016] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[25Jun.2025 12:31:27.120] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[25Jun.2025 12:31:27.121] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[25Jun.2025 12:31:27.133] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World (4)): All chunks are saved
+[25Jun.2025 12:31:27.133] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[25Jun.2025 12:31:27.133] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[25Jun.2025 12:31:27.133] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved

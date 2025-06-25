@@ -17,12 +17,11 @@ public class CastSpeed extends MobEffect {
         super(MobEffectCategory.BENEFICIAL, 0xFF4500); // Orange-red color
 
         // Get the fire spell power attribute from Iron's Spellbooks
-        Attribute firePower = ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("irons_spellbooks", "cast_time_reduction"));
+        Attribute castPower = ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("irons_spellbooks", "cast_time_reduction"));
 
-        if (firePower != null) {
-            // Apply attribute modifier: +5 fire spell power
+        if (castPower != null) {
             this.addAttributeModifier(
-                    firePower,
+                    castPower,
                     CAST_SPEED_ID.toString(),
                     0.1,
                     AttributeModifier.Operation.MULTIPLY_TOTAL

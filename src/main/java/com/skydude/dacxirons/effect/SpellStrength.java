@@ -17,13 +17,11 @@ public class SpellStrength extends MobEffect {
     public SpellStrength() {
         super(MobEffectCategory.BENEFICIAL, 0xFF4500); // Orange-red color
 
-        // Get the fire spell power attribute from Iron's Spellbooks
-        Attribute firePower = ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("irons_spellbooks", "spell_power"));
+        Attribute spellPower = ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("irons_spellbooks", "spell_power"));
 
-        if (firePower != null) {
-            // Apply attribute modifier: +5 fire spell power
+        if (spellPower != null) {
             this.addAttributeModifier(
-                    firePower,
+                    spellPower,
                     SPELLMODIFIER_ID.toString(),
                     0.1,
                     AttributeModifier.Operation.MULTIPLY_TOTAL

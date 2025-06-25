@@ -25,6 +25,7 @@ import java.util.UUID;
 //import static com.skydude.dacxirons.registries.EffectRegistry.SPELL_STRENGTH;
 import net.minecraft.resources.ResourceLocation;
 
+import static com.skydude.dacxirons.registries.EffectRegistry.CAST_SPEED;
 import static com.skydude.dacxirons.registries.EffectRegistry.SPELL_STRENGTH;
 import static net.minecraft.world.effect.MobEffects.*;
 
@@ -86,10 +87,10 @@ public class CrimsonSpellArmorItem extends ImbueabledacxironsArmor {
                         ));
                     }
                 }
-                if (!player.hasEffect(DIG_SPEED)) {
-                    if (player.getEffect(DIG_SPEED) == null || player.getEffect(DIG_SPEED).getDuration() < 10) {
+                if (!player.hasEffect(CAST_SPEED.get())) {
+                    if (player.getEffect(CAST_SPEED.get()) == null || player.getEffect(CAST_SPEED.get()).getDuration() < 10) {
                         player.addEffect(new MobEffectInstance(
-                                DIG_SPEED,
+                                CAST_SPEED.get(),
                                 10,                  // duration in ticks (20 seconds)
                                 1,                    // amplifier (level 3 effect)
                                 true,                 // ambient — blue outline + no flashing
