@@ -4839,3 +4839,22 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_white_chestp
 [24Jun.2025 22:55:56.349] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
 [24Jun.2025 22:55:56.356] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
 [24Jun.2025 22:55:56.356] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[24Jun.2025 22:58:27.997] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 118 advancements
+[24Jun.2025 22:58:29.290] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[24Jun.2025 22:58:29.293] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[24Jun.2025 22:58:29.300] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[24Jun.2025 22:58:29.301] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[24Jun.2025 23:02:54.199] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[24Jun.2025 23:02:54.249] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[24Jun.2025 23:02:54.249] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[24Jun.2025 23:02:54.255] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[24Jun.2025 23:02:54.294] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[24Jun.2025 23:02:54.294] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[24Jun.2025 23:02:54.294] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[24Jun.2025 23:02:54.526] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[24Jun.2025 23:02:54.710] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[24Jun.2025 23:02:54.710] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[24Jun.2025 23:02:54.723] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World (4)): All chunks are saved
+[24Jun.2025 23:02:54.723] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[24Jun.2025 23:02:54.723] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[24Jun.2025 23:02:54.723] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
