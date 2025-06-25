@@ -7,7 +7,9 @@ import com.skydude.dacxirons.effect.SpellStrength;
 import com.skydude.dacxirons.registries.EffectRegistry;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.*;
@@ -20,7 +22,11 @@ import com.skydude.dacxirons.effect.SpellStrength;
 
 import java.util.UUID;
 
+//import static com.skydude.dacxirons.registries.EffectRegistry.SPELL_STRENGTH;
+import net.minecraft.resources.ResourceLocation;
+
 import static com.skydude.dacxirons.registries.EffectRegistry.SPELL_STRENGTH;
+import static net.minecraft.world.effect.MobEffects.*;
 
 public class CrimsonSpellArmorItem extends ImbueabledacxironsArmor {
     private static final UUID FIRE_UUID = UUID.fromString("924e4567-e89b-12d3-a456-426614174000");
@@ -44,18 +50,53 @@ public class CrimsonSpellArmorItem extends ImbueabledacxironsArmor {
 
             if (player.hasEffect(DungeonsAndCombatModMobEffects.BLEEDING.get())) {
                 //player.addEffect(new MobEffectInstance(DungeonsAndCombatModMobEffects.BLEEDING.get(), 200, 0));
-                if (!player.hasEffect(SPELL_STRENGTH.get()))
+                if (!player.hasEffect(SPELL_STRENGTH.get())) {
                     if (player.getEffect(SPELL_STRENGTH.get()) == null || player.getEffect(SPELL_STRENGTH.get()).getDuration() < 10) {
                         player.addEffect(new MobEffectInstance(
                                 SPELL_STRENGTH.get(),
                                 10,                  // duration in ticks (20 seconds)
-                                2,                    // amplifier (level 3 effect)
+                                2,                    // EFFECT LEVEL 0 = 1, 1 = 2, 2 = 3, etc
                                 true,                 // ambient — blue outline + no flashing
                                 false,                 // show particles
                                 true                  // show icon
                         ));
-
-
+                    }
+                }
+                if (!player.hasEffect(DAMAGE_RESISTANCE)) {
+                    if (player.getEffect(DAMAGE_RESISTANCE) == null || player.getEffect(DAMAGE_RESISTANCE).getDuration() < 10) {
+                        player.addEffect(new MobEffectInstance(
+                                DAMAGE_RESISTANCE,
+                                10,
+                                2,
+                                true,
+                                false,
+                                true
+                        ));
+                    }
+                }
+                if (!player.hasEffect(MOVEMENT_SPEED)) {
+                    if (player.getEffect(MOVEMENT_SPEED) == null || player.getEffect(MOVEMENT_SPEED).getDuration() < 10) {
+                        player.addEffect(new MobEffectInstance(
+                                MOVEMENT_SPEED,
+                                10,
+                                2,
+                                true,
+                                false,
+                                true
+                        ));
+                    }
+                }
+                if (!player.hasEffect(DIG_SPEED)) {
+                    if (player.getEffect(DIG_SPEED) == null || player.getEffect(DIG_SPEED).getDuration() < 10) {
+                        player.addEffect(new MobEffectInstance(
+                                DIG_SPEED,
+                                10,                  // duration in ticks (20 seconds)
+                                1,                    // amplifier (level 3 effect)
+                                true,                 // ambient — blue outline + no flashing
+                                false,                 // show particles
+                                true                  // show icon
+                        ));
+                    }
                 }
 
             }
