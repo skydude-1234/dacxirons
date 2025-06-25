@@ -6,6 +6,7 @@ import com.skydude.dacxirons.effect.*;
 import com.skydude.dacxirons.dacxirons;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.entity.Mob;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -29,4 +30,6 @@ public class EffectRegistry {
 
     public static final RegistryObject<MobEffect> SPELL_STRENGTH =
             MOB_EFFECTS.register("spell_strength", SpellStrength::new);
+    public static final RegistryObject<MobEffect> CAST_SPEED =
+            MOB_EFFECTS.register("cast_speed", CastSpeed:: new);
 }
