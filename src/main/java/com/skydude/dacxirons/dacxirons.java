@@ -23,6 +23,8 @@ public class dacxirons {
 
         MinecraftForge.EVENT_BUS.register(this);
         ItemRegistries.register(modEventBus);
+        EffectRegistry.MOB_EFFECTS.register(modEventBus);
+
     }
 
     private static final ResourceLocation ADVANCEMENT_ID = new ResourceLocation("dungeons_and_combat", "the_exiled");

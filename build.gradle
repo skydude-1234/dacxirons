@@ -197,9 +197,9 @@ dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     // IRONS SPELLS N SPELLBOOKS **********************************************************************************
-  //  implementation fg.deobf("io.redspace.ironsspellbooks:irons_spellbooks:${minecraft_version}-${irons_spells_version}")
+    implementation fg.deobf("io.redspace.ironsspellbooks:irons_spellbooks:${minecraft_version}-${irons_spells_version}")
     compileOnly fg.deobf("io.redspace.ironsspellbooks:irons_spellbooks:1.20.1-${irons_spells_version}")
-    compileOnly fg.deobf("io.redspace.ironsspellbooks:irons_spellbooks:1.20.1-${irons_spells_version}:api")
+  //  compileOnly fg.deobf("io.redspace.ironsspellbooks:irons_spellbooks:1.20.1-${irons_spells_version}:api")
     runtimeOnly fg.deobf("io.redspace.ironsspellbooks:irons_spellbooks:1.20.1-${irons_spells_version}")
 
     // GECKOLIB ***************************************************************************************************

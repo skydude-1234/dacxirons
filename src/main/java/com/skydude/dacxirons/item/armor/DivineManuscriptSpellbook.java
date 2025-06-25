@@ -20,6 +20,8 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import io.redspace.ironsspellbooks.item.spell_books.SimpleAttributeSpellBook;
+
 import java.util.List;
 import java.util.UUID;
 
@@ -32,7 +34,7 @@ public class DivineManuscriptSpellbook extends UniqueSpellBook {
                 new SpellDataRegistryHolder(SpellRegistry.BLAZE_STORM_SPELL, 5)
         ), 6, () -> {
             ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-            builder.put(AttributeRegistry.MAX_MANA.get(), new AttributeModifier(UUID.fromString("999ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", 200, AttributeModifier.Operation.ADDITION));
+            builder.put(AttributeRegistry.MAX_MANA.get(), new AttributeModifier(UUID.fromString("667ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", 200, AttributeModifier.Operation.ADDITION));
             return builder.build();
         });
     }

@@ -3,6 +3,8 @@ package com.skydude.dacxirons.item.armor;
 
 //This is crimsonspellarmoritem
 
+import com.skydude.dacxirons.effect.SpellStrength;
+import com.skydude.dacxirons.registries.EffectRegistry;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -14,8 +16,11 @@ import net.minecraftforge.event.ItemAttributeModifierEvent;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
+import com.skydude.dacxirons.effect.SpellStrength;
 
 import java.util.UUID;
+
+import static com.skydude.dacxirons.registries.EffectRegistry.SPELL_STRENGTH;
 
 public class CrimsonSpellArmorItem extends ImbueabledacxironsArmor {
     private static final UUID FIRE_UUID = UUID.fromString("924e4567-e89b-12d3-a456-426614174000");
@@ -39,22 +44,11 @@ public class CrimsonSpellArmorItem extends ImbueabledacxironsArmor {
 
             if (player.hasEffect(DungeonsAndCombatModMobEffects.BLEEDING.get())) {
                 //player.addEffect(new MobEffectInstance(DungeonsAndCombatModMobEffects.BLEEDING.get(), 200, 0));
-                System.out.println("the thing is in the thing with the thing");
+                if (!player.hasEffect(SPELL_STRENGTH.get())) {
+                    player.addEffect(new MobEffectInstance(SPELL_STRENGTH.get(), 400,2)); // 10 seconds
 
-//                @Nullable Attribute firePower = ForgeRegistries.ATTRIBUTES.getValue(
-//                        new ResourceLocation("irons_spellbooks:fire_spell_power")
-//                );
-//
-//
-//                if (firePower != null) {
-//                    event.addModifier(firePower, new AttributeModifier(
-//                            FIRE_UUID,
-//                            "Spell Power Bonus Fire",
-//                            3.05,
-//                            AttributeModifier.Operation.MULTIPLY_BASE
-//                    ));
-//                }
 
+                }
 
             }
         }

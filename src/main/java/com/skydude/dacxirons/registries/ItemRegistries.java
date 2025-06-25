@@ -51,6 +51,18 @@ public class ItemRegistries {
     public static final RegistryObject<Item> CRIMSON_WIZARD_BOOTS = ITEMS.register("crimson_wizard_boots",
             () -> new CrimsonSpellArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper.equipment().fireResistant()));
 
+    public static final RegistryObject<Item> GILLAGER_SPELL_BOOK = ITEMS.register("gillager_spell_book", () -> {
+        ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
+        builder.put(AttributeRegistry.HOLY_SPELL_POWER.get(), new AttributeModifier(UUID.fromString("999ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", .08, AttributeModifier.Operation.MULTIPLY_BASE));
+        builder.put(AttributeRegistry.CAST_TIME_REDUCTION.get(), new AttributeModifier(UUID.fromString("999ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", .08, AttributeModifier.Operation.MULTIPLY_BASE));
+        builder.put(AttributeRegistry.MAX_MANA.get(), new AttributeModifier(UUID.fromString("999ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", 200, AttributeModifier.Operation.ADDITION));
+        return new SimpleAttributeSpellBook(10, SpellRarity.LEGENDARY, builder.build());
+
+
+
+        });
+
+
   // something about curios or smthng idk
   //  public static Collection<RegistryObject<Item>> getdacxironsItems()
 //    {
@@ -61,5 +73,8 @@ public class ItemRegistries {
     {
         ITEMS.register(eventBus);
     }
+    public static Collection<RegistryObject<Item>> getItems() {
+        return ITEMS.getEntries();
+}
 
 }
