@@ -45,7 +45,7 @@ public class CrimsonSpellArmorItem extends ImbueabledacxironsArmor {
             if (player.hasEffect(DungeonsAndCombatModMobEffects.BLEEDING.get())) {
                 //player.addEffect(new MobEffectInstance(DungeonsAndCombatModMobEffects.BLEEDING.get(), 200, 0));
                 if (!player.hasEffect(SPELL_STRENGTH.get()))
-                    if (player.getEffect(SPELL_STRENGTH.get()).getDuration() < 10) {
+                    if (player.getEffect(SPELL_STRENGTH.get()).getDuration() < 10 || player.getEffect(SPELL_STRENGTH.get()) == null) {
                         player.addEffect(new MobEffectInstance(
                                 SPELL_STRENGTH.get(),
                                 10,                  // duration in ticks (20 seconds)
