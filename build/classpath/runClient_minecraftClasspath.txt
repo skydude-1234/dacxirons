@@ -1,4 +1,4 @@
-/home/sky/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1.jar
+/home/sky/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar
 /home/sky/.gradle/caches/forge_gradle/minecraft_repo/versions/1.20.1/client-extra.jar
 /home/sky/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlearlydisplay/1.20.1-47.3.22/c847e6564d023f01b09220f8992e042313ec8680/fmlearlydisplay-1.20.1-47.3.22.jar
 /home/sky/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.3.22/9a1d96e9108940786d846c8cc0dac07100e79f56/javafmllanguage-1.20.1-47.3.22.jar

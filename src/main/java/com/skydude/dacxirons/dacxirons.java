@@ -1,5 +1,6 @@
 package com.skydude.dacxirons;
 
+import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
@@ -11,6 +12,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
+import com.skydude.dacxirons.registries.EntityRegistry;
 
 import com.skydude.dacxirons.registries.*;
 
@@ -21,10 +23,14 @@ public class dacxirons {
     public dacxirons() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        EntityRegistry.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
+
         ItemRegistries.register(modEventBus);
         EffectRegistry.MOB_EFFECTS.register(modEventBus);
         TabRegistry.register(modEventBus); // ✅ register your creative tab
+
+        dacxironsSpellRegistry.register(modEventBus);
 
     }
 
