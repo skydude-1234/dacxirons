@@ -25,7 +25,9 @@ public abstract class ImbueabledacxironsArmor extends dacxironsArmorItem impleme
 
         if (itemStack.getItem() instanceof dacxironsArmorItem armorItem)
         {
-            if (armorItem.getEquipmentSlot() == EquipmentSlot.CHEST || armorItem.getEquipmentSlot() == EquipmentSlot.HEAD)
+            if (armorItem.getEquipmentSlot() == EquipmentSlot.CHEST
+                   // || armorItem.getEquipmentSlot() == EquipmentSlot.HEAD // Maybe I use in future????
+            )
             {
                 if (!ISpellContainer.isSpellContainer(itemStack)) {
                     var spellContainer = ISpellContainer.create(1, true, true);

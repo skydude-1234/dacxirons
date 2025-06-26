@@ -6,6 +6,8 @@ package com.skydude.dacxirons.item.armor;
 import com.skydude.dacxirons.effect.SpellStrength;
 import com.skydude.dacxirons.registries.EffectRegistry;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -17,13 +19,15 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.event.ItemAttributeModifierEvent;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.registries.ForgeRegistries;
-import org.jetbrains.annotations.Nullable;
 import com.skydude.dacxirons.effect.SpellStrength;
 
+import java.util.List;
 import java.util.UUID;
 
 //import static com.skydude.dacxirons.registries.EffectRegistry.SPELL_STRENGTH;
 import net.minecraft.resources.ResourceLocation;
+
+import javax.annotation.Nullable;
 
 import static com.skydude.dacxirons.registries.EffectRegistry.CAST_SPEED;
 import static com.skydude.dacxirons.registries.EffectRegistry.SPELL_STRENGTH;
@@ -37,7 +41,12 @@ public class CrimsonSpellArmorItem extends ImbueabledacxironsArmor {
 
 
     }
-
+    //tooltip
+    @Override
+    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
+        tooltip.add(Component.translatable("tooltip.dacxirons.crimson_wizard").withStyle(style -> style.withItalic(true)).withStyle(ChatFormatting.RED));
+        tooltip.add(Component.translatable("tooltip.dacxirons.crimson_wizard2").withStyle(style -> style.withItalic(true)).withStyle(ChatFormatting.RED));
+    }
 
     @SuppressWarnings("removal")
     @Override
@@ -103,4 +112,5 @@ public class CrimsonSpellArmorItem extends ImbueabledacxironsArmor {
             }
         }
     }
+
 }

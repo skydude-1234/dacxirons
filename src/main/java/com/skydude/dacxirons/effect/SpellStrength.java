@@ -24,7 +24,7 @@ public class SpellStrength extends MobEffect {
                     spellPower,
                     SPELLMODIFIER_ID.toString(),
                     0.1,
-                    AttributeModifier.Operation.MULTIPLY_TOTAL
+                    AttributeModifier.Operation.MULTIPLY_BASE
             );
         } else {
             System.err.println("Failed to find 'fire_spell_power' attribute for EmpowerFireEffect!");

@@ -24,6 +24,7 @@ public class dacxirons {
         MinecraftForge.EVENT_BUS.register(this);
         ItemRegistries.register(modEventBus);
         EffectRegistry.MOB_EFFECTS.register(modEventBus);
+        TabRegistry.register(modEventBus); // ✅ register your creative tab
 
     }
 

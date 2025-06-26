@@ -11,7 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.UUID;
 
 public class CastSpeed extends MobEffect {
-    private static final UUID CAST_SPEED_ID = UUID.fromString("z1b5c67e-5040-4fcb-9e9e-01e199cfb001");
+    private static final UUID CAST_SPEED_ID = UUID.fromString("c1b5c67e-5040-4fcb-9e9e-01e199cfb001");
 
     public CastSpeed() {
         super(MobEffectCategory.BENEFICIAL, 0xFF4500); // Orange-red color
@@ -24,7 +24,7 @@ public class CastSpeed extends MobEffect {
                     castPower,
                     CAST_SPEED_ID.toString(),
                     0.1,
-                    AttributeModifier.Operation.MULTIPLY_TOTAL
+                    AttributeModifier.Operation.MULTIPLY_BASE
             );
         }
 
