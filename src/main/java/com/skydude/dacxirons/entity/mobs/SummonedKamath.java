@@ -3,15 +3,20 @@ package com.skydude.dacxirons.entity.mobs;
 
 import com.skydude.dacxirons.dacxirons;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
-import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
-import io.redspace.ironsspellbooks.entity.mobs.MagicSummon;
-import io.redspace.ironsspellbooks.entity.mobs.goals.*;
-//import io.redspace.ironsspellbooks.registries.EntityRegistry;
+import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
+
+
+
 import com.skydude.dacxirons.registries.EntityRegistry;
+
+import io.redspace.ironsspellbooks.api.util.Utils;
+import io.redspace.ironsspellbooks.entity.mobs.goals.*;
 
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import io.redspace.ironsspellbooks.util.OwnerHelper;
+import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
+import io.redspace.ironsspellbooks.entity.mobs.MagicSummon;
+
 import net.mcreator.dungeonsandcombat.entity.KamathEntity;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
@@ -30,7 +35,7 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.monster.Zombie;
-import com.skydude.dacxirons.entity.mobs.SummonedKamath;
+
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -38,6 +43,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.core.animatable.GeoAnimatable;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
@@ -50,47 +56,32 @@ import javax.annotation.Nullable;
 import java.util.UUID;
 
 public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnimatable {
-    private static final EntityDataAccessor<Boolean> DATA_IS_ANIMATING_RISE = SynchedEntityData.defineId(SummonedKamath.class, EntityDataSerializers.BOOLEAN);
 
-    public SummonedKamath(EntityType<? extends KamathEntity> pEntityType, Level pLevel) {
-        super((EntityType<KamathEntity>) pEntityType, pLevel);
-        //super(pEntityType, pLevel);
-        xpReward = 0;
+    private static final EntityDataAccessor<Boolean> DATA_IS_ANIMATING_RISE =
+            SynchedEntityData.defineId(SummonedKamath.class, EntityDataSerializers.BOOLEAN);
+
+    public SummonedKamath(EntityType<? extends KamathEntity> type, Level level) {
+        super((EntityType<KamathEntity>) type, level);
     }
 
 
 
-//    public SummonedKamath(Level level, LivingEntity owner, boolean playRiseAnimation) {
-//        this(getEntityTypeSafe(), level);
-//        setSummoner(owner);
-//        if (playRiseAnimation)
-//            triggerRiseAnimation();
-//    }
 
-    // Instead of calling the constructor directly, create a static factory method:
-    public static SummonedKamath create(Level level, LivingEntity owner, boolean playRiseAnimation) {
-        if (!EntityRegistry.SUMMONED_KAMATH.isPresent()) {
-            throw new IllegalStateException("SUMMONED_KAMATH accessed before registration!");
-        }
-        SummonedKamath summoned = new SummonedKamath(EntityRegistry.SUMMONED_KAMATH.get(), level);
-        summoned.setSummoner(owner);
+
+    public SummonedKamath(Level level, LivingEntity owner, boolean playRiseAnimation) {
+        this(EntityRegistry.SUMMONED_KAMATH.get(), level);
+        setSummoner(owner);
         if (playRiseAnimation)
-            summoned.triggerRiseAnimation();
-        return summoned;
-    }
-
-
-
-    private static EntityType<? extends KamathEntity> getEntityTypeSafe() {
-        if (!EntityRegistry.SUMMONED_KAMATH.isPresent()) {
-            throw new IllegalStateException("SUMMONED_KAMATH accessed before registration!");
-        }
-        return EntityRegistry.SUMMONED_KAMATH.get();
+            triggerRiseAnimation();
     }
 
     protected LivingEntity cachedSummoner;
     protected UUID summonerUUID;
     private int riseAnimTime = 80;
+
+//    public SummonedKamath(@NotNull EntityType<SummonedKamath> summonedKamathEntityType, Level level) {
+//        super();
+//    }
 
     @Override
     public void registerGoals() {

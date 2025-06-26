@@ -1,229 +1,228 @@
-[26Jun.2025 16:13:07.356] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, /home/sky/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 47.3.22, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
-[26Jun.2025 16:13:07.358] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.15 by Arch Linux; OS Linux arch amd64 version 6.14.10-arch1-1
-[26Jun.2025 16:13:07.449] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[26Jun.2025 16:13:07.517] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[26Jun.2025 16:13:07.626] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[26Jun.2025 16:13:07.680] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/sky/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23116!/ Service=ModLauncher Env=CLIENT
-[26Jun.2025 16:13:07.715] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2 GL version 4.6.0 NVIDIA 575.57.08, NVIDIA Corporation
-[26Jun.2025 16:13:07.923] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sky/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.3.22/9a1d96e9108940786d846c8cc0dac07100e79f56/javafmllanguage-1.20.1-47.3.22.jar is missing mods.toml file
-[26Jun.2025 16:13:07.924] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sky/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.3.22/2529f2c27d8f8a63ee54efc81fdfc3cea2d43c8/lowcodelanguage-1.20.1-47.3.22.jar is missing mods.toml file
-[26Jun.2025 16:13:07.925] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sky/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.3.22/2de14adfd8715f1956007499d8d75c6a4e6fa872/mclanguage-1.20.1-47.3.22.jar is missing mods.toml file
-[26Jun.2025 16:13:07.926] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sky/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.3.22/cf26aeb747e0d323f8eed9b00ebfb783282d5837/fmlcore-1.20.1-47.3.22.jar is missing mods.toml file
-[26Jun.2025 16:13:08.077] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
-[26Jun.2025 16:13:09.367] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[26Jun.2025 16:13:09.380] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /home/sky/.gradle/caches/forge_gradle/assets, --assetIndex, 5]
-[26Jun.2025 16:13:09.608] [main/INFO] [mixin/]: Remapping refMap caelus.refmap.json using /home/sky/Videos/dacxirons/build/createSrgToMcp/output.srg
-[26Jun.2025 16:13:09.610] [main/INFO] [mixin/]: Remapping refMap curios.refmap.json using /home/sky/Videos/dacxirons/build/createSrgToMcp/output.srg
-[26Jun.2025 16:13:09.611] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using /home/sky/Videos/dacxirons/build/createSrgToMcp/output.srg
-[26Jun.2025 16:13:09.617] [main/INFO] [mixin/]: Remapping refMap player-animation-lib-minecraft_common-refmap.json using /home/sky/Videos/dacxirons/build/createSrgToMcp/output.srg
-[26Jun.2025 16:13:09.619] [main/INFO] [mixin/]: Remapping refMap irons_spellbooks.refmap.json using /home/sky/Videos/dacxirons/build/createSrgToMcp/output.srg
-[26Jun.2025 16:13:12.489] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 94 milliseconds
-[26Jun.2025 16:13:13.801] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/sky/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar%23181!/assets/.mcassetsroot' uses unexpected schema
-[26Jun.2025 16:13:13.802] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/sky/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar%23181!/data/.mcassetsroot' uses unexpected schema
-[26Jun.2025 16:13:13.811] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[26Jun.2025 16:13:13.814] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[26Jun.2025 16:13:13.869] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
-[26Jun.2025 16:13:14.036] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.22, for MC 1.20.1 with MCP 20230612.114412
-[26Jun.2025 16:13:14.037] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.22 Initialized
-[26Jun.2025 16:13:14.132] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[26Jun.2025 16:13:14.134] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 1.624 ms
-[26Jun.2025 16:13:15.476] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [dacxirons]
-[26Jun.2025 16:13:15.795] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
-[26Jun.2025 16:13:15.937] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[26Jun.2025 16:13:16.033] [Worker-Main-1/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
-[26Jun.2025 16:13:16.113] [Worker-Main-7/ERROR] [net.minecraft.Util/]: Invalid path in pack: dungeons_and_combat:models/item/stone_lance - copia.json, ignoring
-[26Jun.2025 16:13:16.135] [Worker-Main-2/WARN] [net.minecraft.client.sounds.SoundManager/]: File irons_spellbooks:sounds/dead_king/music/drums.ogg does not exist, cannot add it to event irons_spellbooks:entity.dead_king.music.drum_loop
-[26Jun.2025 16:13:16.138] [Worker-Main-2/WARN] [net.minecraft.client.sounds.SoundManager/]: File irons_spellbooks:sounds/dead_king/music/finale.ogg does not exist, cannot add it to event irons_spellbooks:entity.dead_king.music.finale
-[26Jun.2025 16:13:16.189] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.3.22 Target: 47.4.0
-[26Jun.2025 16:13:16.197] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Unused frames in sprite irons_spellbooks:item/upgrade_orb_ender: [1, 5, 6, 7]
-[26Jun.2025 16:13:16.201] [Worker-Main-6/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Unused frames in sprite irons_spellbooks:item/energized_core_energy: [11]
-[26Jun.2025 16:13:16.239] [Worker-Main-6/WARN] [net.minecraft.client.renderer.texture.SpriteLoader/]: Texture dungeons_and_combat:item/cursed_molten_blazing_greathammer with size 30x30 limits mip level from 4 to 1
-[26Jun.2025 16:13:16.239] [Worker-Main-6/WARN] [net.minecraft.client.renderer.texture.SpriteLoader/]: Texture dungeons_and_combat:item/blessed_gold_shield with size 21x21 limits mip level from 1 to 0
-[26Jun.2025 16:13:16.671] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:soul_bottle' referenced from: dungeons_and_combat:soul_bottle#facing=north: java.io.FileNotFoundException: minecraft:models/soul_bottle.json
-[26Jun.2025 16:13:16.672] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:sacrificial_table' referenced from: dungeons_and_combat:sacrificial_table#facing=north: java.io.FileNotFoundException: minecraft:models/sacrificial_table.json
-[26Jun.2025 16:13:16.672] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:chalice_blood' referenced from: dungeons_and_combat:chalice_with_blood#: java.io.FileNotFoundException: minecraft:models/chalice_blood.json
-[26Jun.2025 16:13:16.672] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:chalice_divine' referenced from: dungeons_and_combat:chalice_with_divine_blood#: java.io.FileNotFoundException: minecraft:models/chalice_divine.json
-[26Jun.2025 16:13:16.672] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:chalice_impure' referenced from: dungeons_and_combat:chalice_with_impure_blood#: java.io.FileNotFoundException: minecraft:models/chalice_impure.json
-[26Jun.2025 16:13:16.676] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:skull_chest' referenced from: dungeons_and_combat:skull_chest#facing=north: java.io.FileNotFoundException: minecraft:models/skull_chest.json
-[26Jun.2025 16:13:16.678] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:sunleia_light' referenced from: dungeons_and_combat:sunleia_light#facing=north: java.io.FileNotFoundException: minecraft:models/sunleia_light.json
-[26Jun.2025 16:13:16.678] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:sunleia_light_off' referenced from: dungeons_and_combat:sunleia_light_off#facing=north: java.io.FileNotFoundException: minecraft:models/sunleia_light_off.json
-[26Jun.2025 16:13:16.685] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:champion_brazier' referenced from: dungeons_and_combat:champion_brazier#facing=north: java.io.FileNotFoundException: minecraft:models/champion_brazier.json
-[26Jun.2025 16:13:16.685] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:champion_brazier_off' referenced from: dungeons_and_combat:champion_brazier_off#facing=north: java.io.FileNotFoundException: minecraft:models/champion_brazier_off.json
-[26Jun.2025 16:13:16.689] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'dacxirons:divine_manuscript_spell_book#inventory' referenced from: dacxirons:divine_manuscript_spell_book#inventory: java.io.FileNotFoundException: dacxirons:models/item/divine_manuscript_spell_book.json
-[26Jun.2025 16:13:16.689] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'dacxirons:gillager_spell_book#inventory' referenced from: dacxirons:gillager_spell_book#inventory: java.io.FileNotFoundException: dacxirons:models/item/gillager_spell_book.json
-[26Jun.2025 16:13:16.691] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:tomahawk' referenced from: dungeons_and_combat:steel_tomahawk_axe#inventory: java.io.FileNotFoundException: minecraft:models/tomahawk.json
-[26Jun.2025 16:13:16.691] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:cursed_molten_blazing_fist' referenced from: dungeons_and_combat:cursed_molten_blazing_fist#inventory: java.io.FileNotFoundException: minecraft:models/cursed_molten_blazing_fist.json
-[26Jun.2025 16:13:16.691] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:acid_molten_blazing_fists.bbmodel' referenced from: dungeons_and_combat:acid_molten_blazing_fists#inventory: java.io.FileNotFoundException: minecraft:models/acid_molten_blazing_fists.bbmodel.json
-[26Jun.2025 16:13:16.691] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:blessed_gold_fist' referenced from: dungeons_and_combat:sandstone_fist#inventory: java.io.FileNotFoundException: minecraft:models/blessed_gold_fist.json
-[26Jun.2025 16:13:16.692] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:blessed_gold_fist_real' referenced from: dungeons_and_combat:blessed_gold_fist#inventory: java.io.FileNotFoundException: minecraft:models/blessed_gold_fist_real.json
-[26Jun.2025 16:13:16.693] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'irons_spellbooks:item/magehunter_normal' referenced from: irons_spellbooks:item/magehunter_normal: java.io.FileNotFoundException: irons_spellbooks:models/item/magehunter_normal.json
-[26Jun.2025 16:13:16.694] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'irons_spellbooks:item/truthseeker_gui' referenced from: irons_spellbooks:item/truthseeker_gui: java.io.FileNotFoundException: irons_spellbooks:models/item/truthseeker_gui.json
-[26Jun.2025 16:13:16.694] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'irons_spellbooks:item/keeper_flamberge_normal' referenced from: irons_spellbooks:item/keeper_flamberge_normal: java.io.FileNotFoundException: irons_spellbooks:models/item/keeper_flamberge_normal.json
-[26Jun.2025 16:13:16.694] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'irons_spellbooks:item/magehunter_gui' referenced from: irons_spellbooks:item/magehunter_gui: java.io.FileNotFoundException: irons_spellbooks:models/item/magehunter_gui.json
-[26Jun.2025 16:13:16.694] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'irons_spellbooks:item/truthseeker_normal' referenced from: irons_spellbooks:item/truthseeker_normal: java.io.FileNotFoundException: irons_spellbooks:models/item/truthseeker_normal.json
-[26Jun.2025 16:13:16.694] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'irons_spellbooks:item/keeper_flamberge_gui' referenced from: irons_spellbooks:item/keeper_flamberge_gui: java.io.FileNotFoundException: irons_spellbooks:models/item/keeper_flamberge_gui.json
-[26Jun.2025 16:13:17.247] [Worker-Main-2/INFO] [io.redspace.ironsspellbooks.IronsSpellbooks/]: Got IMC []
-[26Jun.2025 16:13:17.354] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.355] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.355] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.355] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.355] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.355] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.355] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.355] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.355] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.355] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.355] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.355] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.356] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.357] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.357] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.357] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.357] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.357] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.357] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.357] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.357] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.357] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.357] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.357] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.357] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.357] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:17.357] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:18.196] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[26Jun.2025 16:13:18.196] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[26Jun.2025 16:13:18.220] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device JACK Default
-[26Jun.2025 16:13:18.221] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[26Jun.2025 16:13:18.337] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[26Jun.2025 16:13:18.352] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[26Jun.2025 16:13:18.355] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[26Jun.2025 16:13:18.356] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[26Jun.2025 16:13:18.357] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[26Jun.2025 16:13:18.361] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[26Jun.2025 16:13:18.364] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[26Jun.2025 16:13:18.364] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[26Jun.2025 16:13:18.364] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[26Jun.2025 16:13:18.525] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[26Jun.2025 16:13:18.563] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[26Jun.2025 16:13:18.565] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[26Jun.2025 16:13:18.565] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/mob_effects.png-atlas
-[26Jun.2025 16:13:18.611] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
-[26Jun.2025 16:13:18.776] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
-[26Jun.2025 16:13:22.612] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
-[26Jun.2025 16:13:22.615] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.615] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.615] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.615] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.615] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.615] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.615] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.615] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.615] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.615] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.615] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.615] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.615] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.616] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.617] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.686] [Render thread/WARN] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: dacxirons:summoned_kamath Expected: 124 Got: 248
-[26Jun.2025 16:13:22.697] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.697] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.697] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.697] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.697] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.697] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.697] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.697] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.697] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.697] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.698] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.699] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.699] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.699] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.699] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.699] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.699] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.699] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.699] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.699] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.699] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.699] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.699] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.699] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:22.699] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
-[26Jun.2025 16:13:24.444] [Render thread/WARN] [net.minecraft.world.level.storage.loot.LootDataManager/]: Found loot table element validation problem in {loot_tables:dungeons_and_combat:chests/catacumbs}.pools[19].entries[0]: Unknown loot table called dacxirons:inject/bonus_loot
-[26Jun.2025 16:13:24.452] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dark_metal_helmet
+[26Jun.2025 17:55:20.673] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, /home/sky/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 47.3.22, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
+[26Jun.2025 17:55:20.680] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.15 by Arch Linux; OS Linux arch amd64 version 6.14.10-arch1-1
+[26Jun.2025 17:55:20.895] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[26Jun.2025 17:55:21.033] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[26Jun.2025 17:55:21.175] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[26Jun.2025 17:55:21.245] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/sky/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23116!/ Service=ModLauncher Env=CLIENT
+[26Jun.2025 17:55:21.274] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2 GL version 4.6.0 NVIDIA 575.57.08, NVIDIA Corporation
+[26Jun.2025 17:55:21.696] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sky/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.3.22/9a1d96e9108940786d846c8cc0dac07100e79f56/javafmllanguage-1.20.1-47.3.22.jar is missing mods.toml file
+[26Jun.2025 17:55:21.697] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sky/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.3.22/2529f2c27d8f8a63ee54efc81fdfc3cea2d43c8/lowcodelanguage-1.20.1-47.3.22.jar is missing mods.toml file
+[26Jun.2025 17:55:21.698] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sky/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.3.22/2de14adfd8715f1956007499d8d75c6a4e6fa872/mclanguage-1.20.1-47.3.22.jar is missing mods.toml file
+[26Jun.2025 17:55:21.699] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sky/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.3.22/cf26aeb747e0d323f8eed9b00ebfb783282d5837/fmlcore-1.20.1-47.3.22.jar is missing mods.toml file
+[26Jun.2025 17:55:21.998] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[26Jun.2025 17:55:23.379] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[26Jun.2025 17:55:23.394] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /home/sky/.gradle/caches/forge_gradle/assets, --assetIndex, 5]
+[26Jun.2025 17:55:23.774] [main/INFO] [mixin/]: Remapping refMap caelus.refmap.json using /home/sky/Videos/dacxirons/build/createSrgToMcp/output.srg
+[26Jun.2025 17:55:23.776] [main/INFO] [mixin/]: Remapping refMap curios.refmap.json using /home/sky/Videos/dacxirons/build/createSrgToMcp/output.srg
+[26Jun.2025 17:55:23.777] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using /home/sky/Videos/dacxirons/build/createSrgToMcp/output.srg
+[26Jun.2025 17:55:23.786] [main/INFO] [mixin/]: Remapping refMap player-animation-lib-minecraft_common-refmap.json using /home/sky/Videos/dacxirons/build/createSrgToMcp/output.srg
+[26Jun.2025 17:55:23.788] [main/INFO] [mixin/]: Remapping refMap irons_spellbooks.refmap.json using /home/sky/Videos/dacxirons/build/createSrgToMcp/output.srg
+[26Jun.2025 17:55:28.134] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 124 milliseconds
+[26Jun.2025 17:55:29.664] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/sky/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar%23181!/assets/.mcassetsroot' uses unexpected schema
+[26Jun.2025 17:55:29.664] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/sky/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar%23181!/data/.mcassetsroot' uses unexpected schema
+[26Jun.2025 17:55:29.678] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[26Jun.2025 17:55:29.682] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[26Jun.2025 17:55:29.769] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
+[26Jun.2025 17:55:29.995] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.22, for MC 1.20.1 with MCP 20230612.114412
+[26Jun.2025 17:55:29.995] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.22 Initialized
+[26Jun.2025 17:55:30.222] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[26Jun.2025 17:55:30.233] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 9.847 ms
+[26Jun.2025 17:55:32.506] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [dacxirons]
+[26Jun.2025 17:55:32.898] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
+[26Jun.2025 17:55:33.143] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[26Jun.2025 17:55:33.297] [Worker-Main-6/WARN] [net.minecraft.client.sounds.SoundManager/]: File irons_spellbooks:sounds/dead_king/music/drums.ogg does not exist, cannot add it to event irons_spellbooks:entity.dead_king.music.drum_loop
+[26Jun.2025 17:55:33.297] [Worker-Main-6/WARN] [net.minecraft.client.sounds.SoundManager/]: File irons_spellbooks:sounds/dead_king/music/finale.ogg does not exist, cannot add it to event irons_spellbooks:entity.dead_king.music.finale
+[26Jun.2025 17:55:33.319] [Worker-Main-2/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[26Jun.2025 17:55:33.376] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.3.22 Target: 47.4.0
+[26Jun.2025 17:55:33.464] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: dungeons_and_combat:models/item/stone_lance - copia.json, ignoring
+[26Jun.2025 17:55:33.609] [Worker-Main-1/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Unused frames in sprite irons_spellbooks:item/upgrade_orb_ender: [1, 5, 6, 7]
+[26Jun.2025 17:55:33.612] [Worker-Main-1/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Unused frames in sprite irons_spellbooks:item/energized_core_energy: [11]
+[26Jun.2025 17:55:33.644] [Worker-Main-9/WARN] [net.minecraft.client.renderer.texture.SpriteLoader/]: Texture dungeons_and_combat:item/cursed_molten_blazing_greathammer with size 30x30 limits mip level from 4 to 1
+[26Jun.2025 17:55:33.644] [Worker-Main-9/WARN] [net.minecraft.client.renderer.texture.SpriteLoader/]: Texture dungeons_and_combat:item/blessed_gold_shield with size 21x21 limits mip level from 1 to 0
+[26Jun.2025 17:55:34.356] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:soul_bottle' referenced from: dungeons_and_combat:soul_bottle#facing=north: java.io.FileNotFoundException: minecraft:models/soul_bottle.json
+[26Jun.2025 17:55:34.356] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:sacrificial_table' referenced from: dungeons_and_combat:sacrificial_table#facing=north: java.io.FileNotFoundException: minecraft:models/sacrificial_table.json
+[26Jun.2025 17:55:34.356] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:chalice_blood' referenced from: dungeons_and_combat:chalice_with_blood#: java.io.FileNotFoundException: minecraft:models/chalice_blood.json
+[26Jun.2025 17:55:34.357] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:chalice_divine' referenced from: dungeons_and_combat:chalice_with_divine_blood#: java.io.FileNotFoundException: minecraft:models/chalice_divine.json
+[26Jun.2025 17:55:34.357] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:chalice_impure' referenced from: dungeons_and_combat:chalice_with_impure_blood#: java.io.FileNotFoundException: minecraft:models/chalice_impure.json
+[26Jun.2025 17:55:34.362] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:skull_chest' referenced from: dungeons_and_combat:skull_chest#facing=north: java.io.FileNotFoundException: minecraft:models/skull_chest.json
+[26Jun.2025 17:55:34.366] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:sunleia_light' referenced from: dungeons_and_combat:sunleia_light#facing=north: java.io.FileNotFoundException: minecraft:models/sunleia_light.json
+[26Jun.2025 17:55:34.366] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:sunleia_light_off' referenced from: dungeons_and_combat:sunleia_light_off#facing=north: java.io.FileNotFoundException: minecraft:models/sunleia_light_off.json
+[26Jun.2025 17:55:34.376] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:champion_brazier' referenced from: dungeons_and_combat:champion_brazier#facing=north: java.io.FileNotFoundException: minecraft:models/champion_brazier.json
+[26Jun.2025 17:55:34.376] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:champion_brazier_off' referenced from: dungeons_and_combat:champion_brazier_off#facing=north: java.io.FileNotFoundException: minecraft:models/champion_brazier_off.json
+[26Jun.2025 17:55:34.381] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'dacxirons:divine_manuscript_spell_book#inventory' referenced from: dacxirons:divine_manuscript_spell_book#inventory: java.io.FileNotFoundException: dacxirons:models/item/divine_manuscript_spell_book.json
+[26Jun.2025 17:55:34.381] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'dacxirons:gillager_spell_book#inventory' referenced from: dacxirons:gillager_spell_book#inventory: java.io.FileNotFoundException: dacxirons:models/item/gillager_spell_book.json
+[26Jun.2025 17:55:34.383] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:tomahawk' referenced from: dungeons_and_combat:steel_tomahawk_axe#inventory: java.io.FileNotFoundException: minecraft:models/tomahawk.json
+[26Jun.2025 17:55:34.383] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:cursed_molten_blazing_fist' referenced from: dungeons_and_combat:cursed_molten_blazing_fist#inventory: java.io.FileNotFoundException: minecraft:models/cursed_molten_blazing_fist.json
+[26Jun.2025 17:55:34.384] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:acid_molten_blazing_fists.bbmodel' referenced from: dungeons_and_combat:acid_molten_blazing_fists#inventory: java.io.FileNotFoundException: minecraft:models/acid_molten_blazing_fists.bbmodel.json
+[26Jun.2025 17:55:34.384] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:blessed_gold_fist' referenced from: dungeons_and_combat:sandstone_fist#inventory: java.io.FileNotFoundException: minecraft:models/blessed_gold_fist.json
+[26Jun.2025 17:55:34.384] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:blessed_gold_fist_real' referenced from: dungeons_and_combat:blessed_gold_fist#inventory: java.io.FileNotFoundException: minecraft:models/blessed_gold_fist_real.json
+[26Jun.2025 17:55:34.387] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'irons_spellbooks:item/magehunter_normal' referenced from: irons_spellbooks:item/magehunter_normal: java.io.FileNotFoundException: irons_spellbooks:models/item/magehunter_normal.json
+[26Jun.2025 17:55:34.388] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'irons_spellbooks:item/truthseeker_gui' referenced from: irons_spellbooks:item/truthseeker_gui: java.io.FileNotFoundException: irons_spellbooks:models/item/truthseeker_gui.json
+[26Jun.2025 17:55:34.388] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'irons_spellbooks:item/keeper_flamberge_normal' referenced from: irons_spellbooks:item/keeper_flamberge_normal: java.io.FileNotFoundException: irons_spellbooks:models/item/keeper_flamberge_normal.json
+[26Jun.2025 17:55:34.388] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'irons_spellbooks:item/magehunter_gui' referenced from: irons_spellbooks:item/magehunter_gui: java.io.FileNotFoundException: irons_spellbooks:models/item/magehunter_gui.json
+[26Jun.2025 17:55:34.388] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'irons_spellbooks:item/truthseeker_normal' referenced from: irons_spellbooks:item/truthseeker_normal: java.io.FileNotFoundException: irons_spellbooks:models/item/truthseeker_normal.json
+[26Jun.2025 17:55:34.388] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'irons_spellbooks:item/keeper_flamberge_gui' referenced from: irons_spellbooks:item/keeper_flamberge_gui: java.io.FileNotFoundException: irons_spellbooks:models/item/keeper_flamberge_gui.json
+[26Jun.2025 17:55:35.210] [Worker-Main-2/INFO] [io.redspace.ironsspellbooks.IronsSpellbooks/]: Got IMC []
+[26Jun.2025 17:55:35.338] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.339] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.339] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.339] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.339] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.339] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.339] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.339] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.339] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.339] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.339] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.339] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.340] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.340] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.340] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.340] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.340] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.340] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.340] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.340] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.340] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.340] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.340] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.340] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.341] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.342] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.342] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.342] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.342] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.342] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:35.342] [modloading-worker-0/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:36.558] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[26Jun.2025 17:55:36.558] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[26Jun.2025 17:55:36.577] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device JACK Default
+[26Jun.2025 17:55:36.577] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[26Jun.2025 17:55:36.711] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[26Jun.2025 17:55:36.723] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[26Jun.2025 17:55:36.725] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[26Jun.2025 17:55:36.725] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[26Jun.2025 17:55:36.726] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[26Jun.2025 17:55:36.728] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[26Jun.2025 17:55:36.729] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[26Jun.2025 17:55:36.729] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[26Jun.2025 17:55:36.730] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[26Jun.2025 17:55:36.882] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[26Jun.2025 17:55:36.925] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[26Jun.2025 17:55:36.927] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[26Jun.2025 17:55:36.927] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/mob_effects.png-atlas
+[26Jun.2025 17:55:36.980] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
+[26Jun.2025 17:55:37.111] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[26Jun.2025 17:55:41.072] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[26Jun.2025 17:55:41.075] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.075] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.075] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.075] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.076] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.076] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.076] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.076] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.076] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.076] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.076] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.076] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.076] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.076] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.076] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.076] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.076] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.077] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.078] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.078] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.078] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.078] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.078] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.078] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.078] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.078] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.078] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.078] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.078] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.078] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.078] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.183] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.183] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.184] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.184] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.184] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.184] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.184] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.184] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.184] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.184] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.184] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.184] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.185] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.185] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.185] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.185] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.185] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.185] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.185] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.185] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.185] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.185] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.185] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.185] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.186] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.186] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.186] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.186] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.186] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.186] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.186] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.186] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.186] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.186] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.187] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.187] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.187] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.187] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.187] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.187] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.187] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.187] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.187] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.187] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.188] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:41.188] [Render thread/ERROR] [net.minecraft.Util/]: Entity dacxirons:summoned_kamath has no attributes
+[26Jun.2025 17:55:43.026] [Render thread/WARN] [net.minecraft.world.level.storage.loot.LootDataManager/]: Found loot table element validation problem in {loot_tables:dungeons_and_combat:chests/catacumbs}.pools[19].entries[0]: Unknown loot table called dacxirons:inject/bonus_loot
+[26Jun.2025 17:55:43.033] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dark_metal_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'born_in_chaos_v1:dark_metal_armor_helmet'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -286,7 +285,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'born_in_chaos_v1:dark_metal_a
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.474] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_lightning_helmet
+[26Jun.2025 17:55:43.068] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_lightning_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_lightning_helmet'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -349,7 +348,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_lightn
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.476] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:electrict_boots
+[26Jun.2025 17:55:43.071] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:electrict_boots
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_electric_boots'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -412,7 +411,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_electric_boo
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.479] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:gray_helmet
+[26Jun.2025 17:55:43.074] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:gray_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_gray_helmet'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -475,7 +474,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_gray_helmet'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.480] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_lightning_recipe_long_sword
+[26Jun.2025 17:55:43.075] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_lightning_recipe_long_sword
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_lightning_ingot'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -538,7 +537,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_lightn
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.482] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:blue_helmet
+[26Jun.2025 17:55:43.076] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:blue_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_blue_helmet'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -601,7 +600,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_blue_helmet'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.483] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:silver_dragon_leggings
+[26Jun.2025 17:55:43.078] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:silver_dragon_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_silver_leggings'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -664,7 +663,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_silver_leggi
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.487] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_ice_dagger_recipe
+[26Jun.2025 17:55:43.081] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_ice_dagger_recipe
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:ice_dragon_blood'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -727,7 +726,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:ice_dragon_blood'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.489] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:white_boots
+[26Jun.2025 17:55:43.084] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:white_boots
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_white_boots'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -790,7 +789,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_white_boots'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.491] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:white_helmet
+[26Jun.2025 17:55:43.085] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:white_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_white_helmet'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -853,7 +852,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_white_helmet
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.492] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:white_leggings
+[26Jun.2025 17:55:43.088] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:white_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_white_leggings'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -916,7 +915,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_white_leggin
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.493] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_fire_recipe_katana
+[26Jun.2025 17:55:43.089] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_fire_recipe_katana
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_fire_ingot'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -979,7 +978,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_fire_i
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.495] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_lightning_greatsword_recipe
+[26Jun.2025 17:55:43.090] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_lightning_greatsword_recipe
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:lightning_dragon_blood'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1042,7 +1041,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:lightning_dragon_b
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.497] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:light_upgrade_molten_bone_greatsword
+[26Jun.2025 17:55:43.092] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:light_upgrade_molten_bone_greatsword
 com.google.gson.JsonSyntaxException: Unknown item 'dungeons_and_combat:deleted_mod_element'
 	at net.minecraftforge.common.crafting.CraftingHelper.getItem(CraftingHelper.java:160) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at net.minecraftforge.common.crafting.CraftingHelper.getItemStack(CraftingHelper.java:186) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
@@ -1100,7 +1099,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dungeons_and_combat:deleted_m
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.499] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_fire_chestplate
+[26Jun.2025 17:55:43.093] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_fire_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_fire_chestplate'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1163,7 +1162,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_fire_c
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.501] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:amethyst_helmet
+[26Jun.2025 17:55:43.094] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:amethyst_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_amythest_helmet'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1226,7 +1225,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_amythest_hel
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.504] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_ice_recipe_greatsword
+[26Jun.2025 17:55:43.095] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_ice_recipe_greatsword
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_ice_ingot'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1289,7 +1288,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_ice_in
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.509] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_bone_dagger_recipe
+[26Jun.2025 17:55:43.096] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_bone_dagger_recipe
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonbone'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1352,7 +1351,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonbone'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.513] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_fire_dagger_recipe
+[26Jun.2025 17:55:43.097] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_fire_dagger_recipe
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:fire_dragon_blood'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1415,7 +1414,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:fire_dragon_blood'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.515] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_fire_leggings
+[26Jun.2025 17:55:43.098] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_fire_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_fire_leggings'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1478,7 +1477,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_fire_l
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.518] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:red_chestplate
+[26Jun.2025 17:55:43.101] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:red_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_red_chestplate'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1541,7 +1540,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_red_chestpla
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.520] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_bone_greatsword_recipe
+[26Jun.2025 17:55:43.103] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_bone_greatsword_recipe
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonbone'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1604,7 +1603,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonbone'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.524] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:silver_dragon_chestplate
+[26Jun.2025 17:55:43.105] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:silver_dragon_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_silver_chestplate'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1667,7 +1666,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_silver_chest
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.527] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_ice_helmet
+[26Jun.2025 17:55:43.107] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_ice_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_ice_helmet'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1730,7 +1729,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_ice_he
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.529] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:electric_helmet
+[26Jun.2025 17:55:43.109] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:electric_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_electric_helmet'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1793,7 +1792,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_electric_hel
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.533] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_lightning_leggings
+[26Jun.2025 17:55:43.110] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_lightning_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_lightning_leggings'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1856,7 +1855,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_lightn
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.535] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:green_leggings
+[26Jun.2025 17:55:43.112] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:green_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_green_leggings'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1919,7 +1918,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_green_leggin
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.543] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:gray_leggings
+[26Jun.2025 17:55:43.114] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:gray_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_gray_leggings'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -1982,7 +1981,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_gray_legging
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.550] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dark_metal_leggings
+[26Jun.2025 17:55:43.118] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dark_metal_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'born_in_chaos_v1:dark_metal_armor_leggings'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2045,7 +2044,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'born_in_chaos_v1:dark_metal_a
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.556] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:red_helmet
+[26Jun.2025 17:55:43.121] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:red_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_red_helmet'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2108,7 +2107,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_red_helmet'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.559] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:blue_boots
+[26Jun.2025 17:55:43.124] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:blue_boots
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_blue_boots'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2171,7 +2170,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_blue_boots'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.562] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_ice_recipe_katana
+[26Jun.2025 17:55:43.126] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_ice_recipe_katana
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_ice_ingot'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2234,7 +2233,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_ice_in
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.564] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_lightning_lance_recipe
+[26Jun.2025 17:55:43.128] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_lightning_lance_recipe
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:lightning_dragon_blood'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2297,7 +2296,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:lightning_dragon_b
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.567] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:blue_chestplate
+[26Jun.2025 17:55:43.130] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:blue_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_blue_chestplate'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2360,7 +2359,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_blue_chestpl
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.570] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_ice_lance_recipe
+[26Jun.2025 17:55:43.133] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_ice_lance_recipe
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:ice_dragon_blood'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2423,7 +2422,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:ice_dragon_blood'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.573] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_ice_leggings
+[26Jun.2025 17:55:43.136] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_ice_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_ice_leggings'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2486,7 +2485,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_ice_le
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.575] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dark_metal_boots
+[26Jun.2025 17:55:43.138] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dark_metal_boots
 com.google.gson.JsonSyntaxException: Unknown item 'born_in_chaos_v1:dark_metal_armor_boots'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2549,7 +2548,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'born_in_chaos_v1:dark_metal_a
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.584] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:green_boots
+[26Jun.2025 17:55:43.142] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:green_boots
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_green_boots'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2612,7 +2611,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_green_boots'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.588] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:silver_dragon_boots
+[26Jun.2025 17:55:43.144] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:silver_dragon_boots
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_silver_boots'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2675,7 +2674,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_silver_boots
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.591] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:red_boots
+[26Jun.2025 17:55:43.146] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:red_boots
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_red_boots'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2738,7 +2737,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_red_boots'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.593] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_fire_greatsword_recipe
+[26Jun.2025 17:55:43.147] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_fire_greatsword_recipe
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:fire_dragon_blood'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2801,7 +2800,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:fire_dragon_blood'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.595] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:green_chestplate
+[26Jun.2025 17:55:43.150] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:green_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_green_chestplate'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2864,7 +2863,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_green_chestp
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.598] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:amethyst_leggings
+[26Jun.2025 17:55:43.152] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:amethyst_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_amythest_leggings'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2927,7 +2926,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_amythest_leg
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.600] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:copper_dragon_leggings
+[26Jun.2025 17:55:43.154] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:copper_dragon_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_copper_leggings'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -2990,7 +2989,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_copper_leggi
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.601] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_ice_greatsword_recipe
+[26Jun.2025 17:55:43.156] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_ice_greatsword_recipe
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:ice_dragon_blood'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3053,7 +3052,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:ice_dragon_blood'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.605] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_lightning_chestplate
+[26Jun.2025 17:55:43.158] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_lightning_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_lightning_chestplate'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3116,7 +3115,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_lightn
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.610] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:copper_dragon_helmet
+[26Jun.2025 17:55:43.159] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:copper_dragon_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_copper_helmet'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3179,7 +3178,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_copper_helme
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.614] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:green_helmet
+[26Jun.2025 17:55:43.161] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:green_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_green_helmet'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3242,7 +3241,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_green_helmet
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.617] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:gray_chestplate
+[26Jun.2025 17:55:43.162] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:gray_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_gray_chestplate'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3305,7 +3304,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_gray_chestpl
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.622] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:copper_dragon_chestplate
+[26Jun.2025 17:55:43.165] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:copper_dragon_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_copper_chestplate'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3368,7 +3367,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_copper_chest
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.627] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:amethyst_boots
+[26Jun.2025 17:55:43.166] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:amethyst_boots
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_amythest_boots'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3431,7 +3430,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_amythest_boo
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.633] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_fire_boots
+[26Jun.2025 17:55:43.169] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_fire_boots
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_fire_boots'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3494,7 +3493,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_fire_b
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.636] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:silver_dragon_helmet
+[26Jun.2025 17:55:43.171] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:silver_dragon_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_silver_helmet'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3557,7 +3556,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_silver_helme
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.640] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_lightning_boots
+[26Jun.2025 17:55:43.173] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_lightning_boots
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_lightning_boots'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3620,7 +3619,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_lightn
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.642] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dark_metal_chestplate
+[26Jun.2025 17:55:43.175] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dark_metal_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'born_in_chaos_v1:dark_metal_armor_chestplate'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3683,7 +3682,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'born_in_chaos_v1:dark_metal_a
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.644] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:gray_boots
+[26Jun.2025 17:55:43.176] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:gray_boots
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_gray_boots'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3746,7 +3745,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_gray_boots'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.648] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_ice_boots
+[26Jun.2025 17:55:43.179] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_ice_boots
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_ice_boots'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3809,7 +3808,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_ice_bo
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.651] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:copper_dragon_boots
+[26Jun.2025 17:55:43.181] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:copper_dragon_boots
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_copper_boots'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3872,7 +3871,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_copper_boots
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.655] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:light_upgrade_blazing_halberd
+[26Jun.2025 17:55:43.182] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:light_upgrade_blazing_halberd
 com.google.gson.JsonSyntaxException: Unknown item 'dungeons_and_combat:deleted_mod_element'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3935,7 +3934,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dungeons_and_combat:deleted_m
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.658] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_fire_recipe_greatsword
+[26Jun.2025 17:55:43.182] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_fire_recipe_greatsword
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_fire_ingot'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -3998,7 +3997,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_fire_i
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.660] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:amethyst_chestplate
+[26Jun.2025 17:55:43.183] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:amethyst_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_amythest_chestplate'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4061,7 +4060,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_amythest_che
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.661] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:electric_leggings
+[26Jun.2025 17:55:43.184] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:electric_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_electric_leggings'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4124,7 +4123,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_electric_leg
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.663] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_lightning_recipe_greatsword
+[26Jun.2025 17:55:43.185] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_lightning_recipe_greatsword
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_lightning_ingot'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4187,7 +4186,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_lightn
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.665] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_bone_lance_recipe
+[26Jun.2025 17:55:43.187] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_bone_lance_recipe
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonbone'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4250,7 +4249,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonbone'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.668] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_fire_recipe_long_sword
+[26Jun.2025 17:55:43.189] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_fire_recipe_long_sword
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_fire_ingot'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4313,7 +4312,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_fire_i
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.669] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:blue_leggings
+[26Jun.2025 17:55:43.190] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:blue_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_blue_leggings'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4376,7 +4375,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_blue_legging
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.671] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_ice_chestplate
+[26Jun.2025 17:55:43.191] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_ice_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_ice_chestplate'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4439,7 +4438,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_ice_ch
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.675] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_ice_recipe_long_sword
+[26Jun.2025 17:55:43.192] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_ice_recipe_long_sword
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_ice_ingot'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4502,7 +4501,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_ice_in
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.683] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_lightning_dagger_recipe
+[26Jun.2025 17:55:43.194] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_lightning_dagger_recipe
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:lightning_dragon_blood'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4565,7 +4564,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:lightning_dragon_b
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.685] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:red_leggings
+[26Jun.2025 17:55:43.195] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:red_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_red_leggings'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4628,7 +4627,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_red_leggings
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.687] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_lightning_recipe_katana
+[26Jun.2025 17:55:43.196] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_lightning_recipe_katana
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_lightning_ingot'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4691,7 +4690,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_lightn
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.692] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_fire_helmet
+[26Jun.2025 17:55:43.197] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragonsteel_fire_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_fire_helmet'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4754,7 +4753,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:dragonsteel_fire_h
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.698] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:electrict_chestplate
+[26Jun.2025 17:55:43.198] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:electrict_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_electric_chestplate'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4817,7 +4816,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_electric_che
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.702] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_fire_lance_recipe
+[26Jun.2025 17:55:43.199] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:dragon_fire_lance_recipe
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:fire_dragon_blood'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4880,7 +4879,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:fire_dragon_blood'
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.704] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:white_chestplate
+[26Jun.2025 17:55:43.201] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe dungeons_and_combat:white_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_white_chestplate'
 	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:292) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -4943,90 +4942,104 @@ com.google.gson.JsonSyntaxException: Unknown item 'iceandfire:armor_white_chestp
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[26Jun.2025 16:13:24.710] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
-[26Jun.2025 16:13:24.816] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1328 advancements
-[26Jun.2025 16:13:24.821] [Render thread/INFO] [top.theillusivec4.curios.Curios/]: Loaded 12 curio slots
-[26Jun.2025 16:13:24.823] [Render thread/INFO] [top.theillusivec4.curios.Curios/]: Loaded 1 curio entities
-[26Jun.2025 16:13:25.332] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
-[26Jun.2025 16:13:25.332] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[26Jun.2025 16:13:26.420] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[26Jun.2025 16:13:29.433] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[26Jun.2025 16:13:29.433] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[26Jun.2025 16:13:29.433] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[26Jun.2025 16:13:29.433] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[26Jun.2025 16:13:29.433] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[26Jun.2025 16:13:29.433] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[26Jun.2025 16:13:29.433] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[26Jun.2025 16:13:29.935] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 57%
-[26Jun.2025 16:13:30.174] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[26Jun.2025 16:13:30.175] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 3747 ms
-[26Jun.2025 16:13:30.285] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[26Jun.2025 16:13:30.288] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[26Jun.2025 16:13:30.328] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
-[26Jun.2025 16:13:30.835] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
-[26Jun.2025 16:13:30.897] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:2d13c923] logged in with entity id 114 at (310.83001913402376, 110.0, -1120.518440553153)
-[26Jun.2025 16:13:30.960] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[26Jun.2025 16:13:31.043] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingIn
-[26Jun.2025 16:13:31.044] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from DISABLED to ENABLED
-[26Jun.2025 16:13:31.625] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.RecipesUpdatedEvent
-[26Jun.2025 16:13:31.639] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.event.TagsUpdatedEvent
-[26Jun.2025 16:13:31.640] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from ENABLED to JEI_STARTED
-[26Jun.2025 16:13:31.640] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
-[26Jun.2025 16:13:31.675] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
-[26Jun.2025 16:13:31.679] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 3.593 ms
-[26Jun.2025 16:13:31.679] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
-[26Jun.2025 16:13:31.681] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 1.426 ms
-[26Jun.2025 16:13:31.684] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
-[26Jun.2025 16:13:31.732] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: Item Group has no display items and no search tab display items. Items from this group will be missing from the JEI ingredient list. Operator Utilities
-[26Jun.2025 16:13:31.796] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 111.7 milliseconds
-[26Jun.2025 16:13:31.797] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 112.5 ms
-[26Jun.2025 16:13:31.797] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients...
-[26Jun.2025 16:13:31.797] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients took 442.7 μs
-[26Jun.2025 16:13:31.798] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases...
-[26Jun.2025 16:13:31.799] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases took 1.060 ms
-[26Jun.2025 16:13:31.819] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
-[26Jun.2025 16:13:31.834] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:minecraft took 14.04 milliseconds
-[26Jun.2025 16:13:31.850] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 30.74 ms
-[26Jun.2025 16:13:31.851] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
-[26Jun.2025 16:13:31.857] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 5.271 ms
-[26Jun.2025 16:13:31.858] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
-[26Jun.2025 16:13:31.860] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 1.303 ms
-[26Jun.2025 16:13:31.860] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
-[26Jun.2025 16:13:31.873] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 12.22 ms
-[26Jun.2025 16:13:31.874] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
-[26Jun.2025 16:13:31.874] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 537.0 μs
-[26Jun.2025 16:13:31.875] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
-[26Jun.2025 16:13:32.446] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 570.2 milliseconds
-[26Jun.2025 16:13:33.957] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: irons_spellbooks:jei_plugin took 1.511 seconds
-[26Jun.2025 16:13:34.027] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:internal took 69.49 milliseconds
-[26Jun.2025 16:13:34.027] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 2.152 s
-[26Jun.2025 16:13:34.037] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
-[26Jun.2025 16:13:34.042] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 5.094 ms
-[26Jun.2025 16:13:34.048] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
-[26Jun.2025 16:13:34.051] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
-[26Jun.2025 16:13:34.066] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 14.44 ms
-[26Jun.2025 16:13:34.071] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
-[26Jun.2025 16:13:34.074] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
-[26Jun.2025 16:13:34.075] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
-[26Jun.2025 16:13:34.145] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 69.96 ms
-[26Jun.2025 16:13:34.145] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
-[26Jun.2025 16:13:34.228] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 3066 ingredients
-[26Jun.2025 16:13:35.054] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 3066 ingredients
-[26Jun.2025 16:13:35.055] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 909.6 ms
-[26Jun.2025 16:13:35.119] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:forge_gui took 1.047 seconds
-[26Jun.2025 16:13:35.119] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 1.048 s
-[26Jun.2025 16:13:35.120] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 1.072 s
-[26Jun.2025 16:13:35.121] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
-[26Jun.2025 16:13:35.121] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 705.7 μs
-[26Jun.2025 16:13:35.122] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 3.481 s
-[26Jun.2025 16:13:35.137] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 198 advancements
-[26Jun.2025 16:13:44.344] [Server thread/ERROR] [net.minecraftforge.eventbus.EventBus/EVENTBUS]: Exception caught during firing event: Cannot invoke "net.minecraft.world.entity.ai.attributes.AttributeSupplier.getValue(net.minecraft.world.entity.ai.attributes.Attribute)" because "this.supplier" is null
+[26Jun.2025 17:55:43.204] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
+[26Jun.2025 17:55:43.303] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1328 advancements
+[26Jun.2025 17:55:43.309] [Render thread/INFO] [top.theillusivec4.curios.Curios/]: Loaded 12 curio slots
+[26Jun.2025 17:55:43.313] [Render thread/INFO] [top.theillusivec4.curios.Curios/]: Loaded 1 curio entities
+[26Jun.2025 17:55:43.983] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
+[26Jun.2025 17:55:43.983] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[26Jun.2025 17:55:44.232] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file ./saves/New World (4)/serverconfig/irons_spellbooks-server.toml is not correct. Correcting
+[26Jun.2025 17:55:44.234] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spells.dacxirons:raise_dead was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26Jun.2025 17:55:44.234] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spells.dacxirons:raise_dead.Enabled was corrected from null to its default, true. 
+[26Jun.2025 17:55:44.234] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spells.dacxirons:raise_dead.School was corrected from null to its default, irons_spellbooks:blood. 
+[26Jun.2025 17:55:44.234] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spells.dacxirons:raise_dead.MaxLevel was corrected from null to its default, 6. 
+[26Jun.2025 17:55:44.234] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spells.dacxirons:raise_dead.MinRarity was corrected from null to its default, UNCOMMON. 
+[26Jun.2025 17:55:44.234] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spells.dacxirons:raise_dead.ManaCostMultiplier was corrected from null to its default, 1.0. 
+[26Jun.2025 17:55:44.234] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spells.dacxirons:raise_dead.SpellPowerMultiplier was corrected from null to its default, 1.0. 
+[26Jun.2025 17:55:44.234] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spells.dacxirons:raise_dead.CooldownInSeconds was corrected from null to its default, 150.0. 
+[26Jun.2025 17:55:44.234] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spells.dacxirons:raise_dead.AllowCrafting was corrected from null to its default, true. 
+[26Jun.2025 17:55:44.235] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spells.dacxirons:raise_kamath_dead was corrected from SimpleCommentedConfig:{Enabled=true, School=irons_spellbooks:blood, MaxLevel=6, MinRarity=UNCOMMON, ManaCostMultiplier=1.0, SpellPowerMultiplier=1.0, CooldownInSeconds=150.0, AllowCrafting=true} to its default, null. 
+[26Jun.2025 17:55:45.932] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[26Jun.2025 17:55:49.471] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[26Jun.2025 17:55:49.489] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[26Jun.2025 17:55:49.506] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[26Jun.2025 17:55:49.506] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[26Jun.2025 17:55:49.506] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[26Jun.2025 17:55:49.524] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[26Jun.2025 17:55:49.558] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[26Jun.2025 17:55:49.558] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[26Jun.2025 17:55:49.962] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[26Jun.2025 17:55:50.441] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[26Jun.2025 17:55:50.943] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 55%
+[26Jun.2025 17:55:51.149] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 5209 ms
+[26Jun.2025 17:55:51.152] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[26Jun.2025 17:55:51.272] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[26Jun.2025 17:55:51.274] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[26Jun.2025 17:55:51.396] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[26Jun.2025 17:55:51.892] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[26Jun.2025 17:55:51.942] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:5245fbf4] logged in with entity id 114 at (299.1978199528028, 112.02442408821369, -1117.3056911789404)
+[26Jun.2025 17:55:52.014] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[26Jun.2025 17:55:52.130] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingIn
+[26Jun.2025 17:55:52.130] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from DISABLED to ENABLED
+[26Jun.2025 17:55:52.748] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.RecipesUpdatedEvent
+[26Jun.2025 17:55:52.759] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.event.TagsUpdatedEvent
+[26Jun.2025 17:55:52.759] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from ENABLED to JEI_STARTED
+[26Jun.2025 17:55:52.759] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
+[26Jun.2025 17:55:52.765] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
+[26Jun.2025 17:55:52.769] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 3.502 ms
+[26Jun.2025 17:55:52.769] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
+[26Jun.2025 17:55:52.771] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 1.510 ms
+[26Jun.2025 17:55:52.772] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
+[26Jun.2025 17:55:52.828] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: Item Group has no display items and no search tab display items. Items from this group will be missing from the JEI ingredient list. Operator Utilities
+[26Jun.2025 17:55:52.880] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 106.9 milliseconds
+[26Jun.2025 17:55:52.880] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 107.5 ms
+[26Jun.2025 17:55:52.880] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients...
+[26Jun.2025 17:55:52.881] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients took 320.6 μs
+[26Jun.2025 17:55:52.881] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases...
+[26Jun.2025 17:55:52.882] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases took 797.7 μs
+[26Jun.2025 17:55:52.911] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
+[26Jun.2025 17:55:52.925] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:minecraft took 13.47 milliseconds
+[26Jun.2025 17:55:52.934] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 23.33 ms
+[26Jun.2025 17:55:52.936] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
+[26Jun.2025 17:55:52.940] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 3.913 ms
+[26Jun.2025 17:55:52.941] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
+[26Jun.2025 17:55:52.942] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 910.9 μs
+[26Jun.2025 17:55:52.942] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
+[26Jun.2025 17:55:52.951] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 8.484 ms
+[26Jun.2025 17:55:52.953] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
+[26Jun.2025 17:55:52.954] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 632.7 μs
+[26Jun.2025 17:55:52.954] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
+[26Jun.2025 17:55:53.516] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 561.7 milliseconds
+[26Jun.2025 17:55:55.711] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: irons_spellbooks:jei_plugin took 2.194 seconds
+[26Jun.2025 17:55:55.773] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:internal took 61.65 milliseconds
+[26Jun.2025 17:55:55.773] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 2.819 s
+[26Jun.2025 17:55:55.781] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
+[26Jun.2025 17:55:55.786] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 4.401 ms
+[26Jun.2025 17:55:55.793] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
+[26Jun.2025 17:55:55.796] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
+[26Jun.2025 17:55:55.806] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 10.28 ms
+[26Jun.2025 17:55:55.810] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
+[26Jun.2025 17:55:55.813] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
+[26Jun.2025 17:55:55.813] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
+[26Jun.2025 17:55:55.935] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 121.2 ms
+[26Jun.2025 17:55:55.935] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
+[26Jun.2025 17:55:55.971] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 3066 ingredients
+[26Jun.2025 17:55:56.788] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 3066 ingredients
+[26Jun.2025 17:55:56.789] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 854.1 ms
+[26Jun.2025 17:55:56.843] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:forge_gui took 1.031 seconds
+[26Jun.2025 17:55:56.843] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 1.032 s
+[26Jun.2025 17:55:56.844] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 1.051 s
+[26Jun.2025 17:55:56.844] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
+[26Jun.2025 17:55:56.845] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 423.7 μs
+[26Jun.2025 17:55:56.845] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 4.085 s
+[26Jun.2025 17:55:56.857] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 198 advancements
+[26Jun.2025 17:56:12.320] [Server thread/ERROR] [net.minecraftforge.eventbus.EventBus/EVENTBUS]: Exception caught during firing event: Cannot invoke "net.minecraft.world.entity.ai.attributes.AttributeSupplier.getValue(net.minecraft.world.entity.ai.attributes.Attribute)" because "this.supplier" is null
 	Index: 1
 	Listeners:
 		0: NORMAL
-		1: net.minecraftforge.eventbus.EventBus$$Lambda$4748/0x00007f5a00c022e8@6d0e77db
+		1: net.minecraftforge.eventbus.EventBus$$Lambda$4748/0x00007f3478bf4440@570faf06
 		2: ASM: class io.redspace.ironsspellbooks.effect.guiding_bolt.GuidingBoltManager serverTick(Lnet/minecraftforge/event/TickEvent$LevelTickEvent;)V
-		3: ASM: top.theillusivec4.curios.common.event.CuriosEventHandler@50b32a50 worldTick(Lnet/minecraftforge/event/TickEvent$LevelTickEvent;)V
+		3: ASM: top.theillusivec4.curios.common.event.CuriosEventHandler@32bd0eed worldTick(Lnet/minecraftforge/event/TickEvent$LevelTickEvent;)V
 java.lang.NullPointerException: Cannot invoke "net.minecraft.world.entity.ai.attributes.AttributeSupplier.getValue(net.minecraft.world.entity.ai.attributes.Attribute)" because "this.supplier" is null
 	at TRANSFORMER/minecraft@1.20.1/net.minecraft.world.entity.ai.attributes.AttributeMap.getValue(AttributeMap.java:79)
 	at TRANSFORMER/minecraft@1.20.1/net.minecraft.world.entity.LivingEntity.getAttributeValue(LivingEntity.java:1835)
@@ -5036,9 +5049,9 @@ java.lang.NullPointerException: Cannot invoke "net.minecraft.world.entity.ai.att
 	at TRANSFORMER/minecraft@1.20.1/net.minecraft.world.entity.PathfinderMob.<init>(PathfinderMob.java:14)
 	at TRANSFORMER/minecraft@1.20.1/net.minecraft.world.entity.monster.Monster.<init>(Monster.java:31)
 	at TRANSFORMER/dungeons_and_combat@1.1.8/net.mcreator.dungeonsandcombat.entity.KamathEntity.<init>(KamathEntity.java:73)
-	at TRANSFORMER/dacxirons@9.3.0-1.20.1/com.skydude.dacxirons.entity.mobs.SummonedKamath.<init>(SummonedKamath.java:56)
-	at TRANSFORMER/dacxirons@9.3.0-1.20.1/com.skydude.dacxirons.entity.mobs.SummonedKamath.create(SummonedKamath.java:75)
-	at TRANSFORMER/dacxirons@9.3.0-1.20.1/com.skydude.dacxirons.spells.Summon.onCast(Summon.java:98)
+	at TRANSFORMER/dacxirons@9.3.0-1.20.1/com.skydude.dacxirons.entity.mobs.SummonedKamath.<init>(SummonedKamath.java:64)
+	at TRANSFORMER/dacxirons@9.3.0-1.20.1/com.skydude.dacxirons.entity.mobs.SummonedKamath.<init>(SummonedKamath.java:72)
+	at TRANSFORMER/dacxirons@9.3.0-1.20.1/com.skydude.dacxirons.spells.Summon.onCast(Summon.java:95)
 	at TRANSFORMER/irons_spellbooks@1.20.1-3.4.0.9/io.redspace.ironsspellbooks.api.spells.AbstractSpell.castSpell(AbstractSpell.java:300)
 	at TRANSFORMER/irons_spellbooks@1.20.1-3.4.0.9/io.redspace.ironsspellbooks.capabilities.magic.MagicManager.lambda$tick$0(MagicManager.java:58)
 	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
@@ -5056,7 +5069,7 @@ java.lang.NullPointerException: Cannot invoke "net.minecraft.world.entity.ai.att
 	at TRANSFORMER/minecraft@1.20.1/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251)
 	at java.base/java.lang.Thread.run(Thread.java:840)
 
-[26Jun.2025 16:13:44.346] [Server thread/ERROR] [net.minecraft.server.MinecraftServer/]: Encountered an unexpected exception
+[26Jun.2025 17:56:12.321] [Server thread/ERROR] [net.minecraft.server.MinecraftServer/]: Encountered an unexpected exception
 java.lang.NullPointerException: Cannot invoke "net.minecraft.world.entity.ai.attributes.AttributeSupplier.getValue(net.minecraft.world.entity.ai.attributes.Attribute)" because "this.supplier" is null
 	at net.minecraft.world.entity.ai.attributes.AttributeMap.getValue(AttributeMap.java:79) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar%23181!/:?]
 	at net.minecraft.world.entity.LivingEntity.getAttributeValue(LivingEntity.java:1835) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar%23181!/:?]
@@ -5066,9 +5079,9 @@ java.lang.NullPointerException: Cannot invoke "net.minecraft.world.entity.ai.att
 	at net.minecraft.world.entity.PathfinderMob.<init>(PathfinderMob.java:14) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar%23181!/:?]
 	at net.minecraft.world.entity.monster.Monster.<init>(Monster.java:31) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar%23181!/:?]
 	at net.mcreator.dungeonsandcombat.entity.KamathEntity.<init>(KamathEntity.java:73) ~[dungeons-and-combat-1128235-6633683_mapped_official_1.20.1.jar%23191!/:?]
-	at com.skydude.dacxirons.entity.mobs.SummonedKamath.<init>(SummonedKamath.java:56) ~[%23186!/:?]
-	at com.skydude.dacxirons.entity.mobs.SummonedKamath.create(SummonedKamath.java:75) ~[%23186!/:?]
-	at com.skydude.dacxirons.spells.Summon.onCast(Summon.java:98) ~[%23186!/:?]
+	at com.skydude.dacxirons.entity.mobs.SummonedKamath.<init>(SummonedKamath.java:64) ~[%23186!/:?]
+	at com.skydude.dacxirons.entity.mobs.SummonedKamath.<init>(SummonedKamath.java:72) ~[%23186!/:?]
+	at com.skydude.dacxirons.spells.Summon.onCast(Summon.java:95) ~[%23186!/:?]
 	at io.redspace.ironsspellbooks.api.spells.AbstractSpell.castSpell(AbstractSpell.java:300) ~[irons_spellbooks-1.20.1-3.4.0.9_mapped_official_1.20.1.jar%23188!/:1.20.1-3.4.0.9]
 	at io.redspace.ironsspellbooks.capabilities.magic.MagicManager.lambda$tick$0(MagicManager.java:58) ~[irons_spellbooks-1.20.1-3.4.0.9_mapped_official_1.20.1.jar%23188!/:1.20.1-3.4.0.9]
 	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
@@ -5085,16 +5098,16 @@ java.lang.NullPointerException: Cannot invoke "net.minecraft.world.entity.ai.att
 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:661) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar%23181!/:?]
 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20.1-47.3.22_mapped_official_1.20.1-recomp.jar%23181!/:?]
 	at java.lang.Thread.run(Thread.java:840) ~[?:?]
-[26Jun.2025 16:13:44.399] [Server thread/FATAL] [net.minecraftforge.common.ForgeMod/]: Preparing crash report with UUID a1aa0084-a51f-4c0a-9ae1-741f6a6c59dc
-[26Jun.2025 16:13:44.399] [Server thread/ERROR] [net.minecraft.server.MinecraftServer/]: This crash report has been saved to: /home/sky/Videos/dacxirons/run/./crash-reports/crash-2025-06-26_16.13.44-server.txt
-[26Jun.2025 16:13:44.399] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[26Jun.2025 16:13:44.400] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[26Jun.2025 16:13:44.402] [Render thread/FATAL] [net.minecraftforge.common.ForgeMod/]: Preparing crash report with UUID 8930f6d8-aea2-40ec-b536-65d6d2504b19
-[26Jun.2025 16:13:44.407] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[26Jun.2025 16:13:44.774] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[26Jun.2025 16:13:44.909] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[26Jun.2025 16:13:44.910] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[26Jun.2025 16:13:44.934] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World (4)): All chunks are saved
-[26Jun.2025 16:13:44.934] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[26Jun.2025 16:13:44.934] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[26Jun.2025 16:13:44.934] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[26Jun.2025 17:56:12.380] [Server thread/FATAL] [net.minecraftforge.common.ForgeMod/]: Preparing crash report with UUID 158de905-6011-4f63-a445-1fe3b3704e2a
+[26Jun.2025 17:56:12.381] [Server thread/ERROR] [net.minecraft.server.MinecraftServer/]: This crash report has been saved to: /home/sky/Videos/dacxirons/run/./crash-reports/crash-2025-06-26_17.56.12-server.txt
+[26Jun.2025 17:56:12.381] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[26Jun.2025 17:56:12.382] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[26Jun.2025 17:56:12.385] [Render thread/FATAL] [net.minecraftforge.common.ForgeMod/]: Preparing crash report with UUID 416c5a30-b428-4100-af71-97f1ec820783
+[26Jun.2025 17:56:12.391] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[26Jun.2025 17:56:12.862] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[26Jun.2025 17:56:12.986] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[26Jun.2025 17:56:12.986] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[26Jun.2025 17:56:13.002] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World (4)): All chunks are saved
+[26Jun.2025 17:56:13.002] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[26Jun.2025 17:56:13.002] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[26Jun.2025 17:56:13.002] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
