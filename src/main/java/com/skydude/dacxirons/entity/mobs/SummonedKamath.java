@@ -268,6 +268,9 @@ public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnim
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
+        //inherit kamathentity anim ???
+        super.registerControllers(controllerRegistrar);
+        //rise anim
         controllerRegistrar.add(new AnimationController(this, "rise", 0, this::risePredicate));
     }
 
