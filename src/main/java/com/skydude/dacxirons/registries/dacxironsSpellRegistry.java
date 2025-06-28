@@ -1,7 +1,9 @@
 package com.skydude.dacxirons.registries;
 
 import com.skydude.dacxirons.dacxirons;
+//import com.skydude.dacxirons.spells.Summon;
 import com.skydude.dacxirons.spells.Summon;
+import com.skydude.dacxirons.spells.SummonKamath;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -19,6 +21,7 @@ public class dacxironsSpellRegistry {
         return SPELLS.register(spell.getSpellName(), () -> spell);
     }
 
-    public static final RegistryObject<AbstractSpell> SUMMONER_KAMATH = registerSpell(new Summon());
+    public static final RegistryObject<AbstractSpell> SUMMONER_WEAKNESS = registerSpell(new Summon());
+    public static final RegistryObject<AbstractSpell> SUMMONED_KAMATH = registerSpell(new SummonKamath());
 }
 

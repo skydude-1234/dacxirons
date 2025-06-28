@@ -23,7 +23,7 @@ public class dacxirons {
     public dacxirons() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        EntityRegistry.register(modEventBus);
+
         MinecraftForge.EVENT_BUS.register(this);
 
         ItemRegistries.register(modEventBus);
@@ -31,7 +31,7 @@ public class dacxirons {
         TabRegistry.register(modEventBus); // ✅ register your creative tab
 
         dacxironsSpellRegistry.register(modEventBus);
-
+        EntityRegistry.register(modEventBus);
     }
 
     private static final ResourceLocation ADVANCEMENT_ID = new ResourceLocation("dungeons_and_combat", "the_exiled");

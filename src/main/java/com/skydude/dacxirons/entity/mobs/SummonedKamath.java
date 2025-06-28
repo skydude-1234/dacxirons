@@ -2,22 +2,17 @@ package com.skydude.dacxirons.entity.mobs;
 
 
 import com.skydude.dacxirons.dacxirons;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
-import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
-
-
-
 import com.skydude.dacxirons.registries.EntityRegistry;
-
+import com.skydude.dacxirons.spells.Summon;
+import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.entity.mobs.goals.*;
-
-import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
-import io.redspace.ironsspellbooks.util.OwnerHelper;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.entity.mobs.MagicSummon;
-
+import io.redspace.ironsspellbooks.entity.mobs.goals.*;
+import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
+import io.redspace.ironsspellbooks.util.OwnerHelper;
 import net.mcreator.dungeonsandcombat.entity.KamathEntity;
+import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModAttributes;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -30,12 +25,12 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
-import net.minecraft.world.entity.monster.Zombie;
-
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -43,7 +38,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
-import org.jetbrains.annotations.NotNull;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import software.bernie.geckolib.core.animatable.GeoAnimatable;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
@@ -55,33 +52,48 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import javax.annotation.Nullable;
 import java.util.UUID;
 
+import static org.openjdk.nashorn.internal.objects.NativeWeakSet.add;
+
+@Mod.EventBusSubscriber(modid = dacxirons.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+
 public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnimatable {
+    private static final EntityDataAccessor<Boolean> DATA_IS_ANIMATING_RISE = SynchedEntityData.defineId(SummonedKamath.class, EntityDataSerializers.BOOLEAN);
 
-    private static final EntityDataAccessor<Boolean> DATA_IS_ANIMATING_RISE =
-            SynchedEntityData.defineId(SummonedKamath.class, EntityDataSerializers.BOOLEAN);
+    public SummonedKamath(EntityType<SummonedKamath> type, Level world) {
+        // Explicitly cast the EntityType to raw to bypass generics check:
+        super((EntityType) type, world);
+        xpReward = 0;
+    }
+    // Example for your WeaknessEntity:
 
-    public SummonedKamath(EntityType<? extends KamathEntity> type, Level level) {
-        super((EntityType<KamathEntity>) type, level);
+    @SubscribeEvent
+    public static void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
+        AttributeSupplier.Builder builder = Mob.createMobAttributes()
+                .add(Attributes.MOVEMENT_SPEED, 0.23)
+                .add(Attributes.MAX_HEALTH, 320.0D)
+                .add(Attributes.ARMOR, 12.0D)
+                .add(Attributes.ATTACK_DAMAGE, 16.0D)
+                .add(Attributes.FOLLOW_RANGE, 48.0D)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 0.8D)
+                .add(Attributes.ATTACK_KNOCKBACK, 0.5D)
+                .add(DungeonsAndCombatModAttributes.ACTIONSTATE.get(), 0.0D); // If needed
+
+        event.put(EntityRegistry.SUMMONED_KAMATH.get(), builder.build());
     }
 
 
-
-
-
-    public SummonedKamath(Level level, LivingEntity owner, boolean playRiseAnimation) {
-        this(EntityRegistry.SUMMONED_KAMATH.get(), level);
+    public SummonedKamath(LivingEntity owner, boolean playRiseAnimation) {
+        this(EntityRegistry.SUMMONED_KAMATH.get(), owner.level());
         setSummoner(owner);
         if (playRiseAnimation)
             triggerRiseAnimation();
     }
 
+
     protected LivingEntity cachedSummoner;
     protected UUID summonerUUID;
     private int riseAnimTime = 80;
 
-//    public SummonedKamath(@NotNull EntityType<SummonedKamath> summonedKamathEntityType, Level level) {
-//        super();
-//    }
 
     @Override
     public void registerGoals() {
@@ -104,10 +116,6 @@ public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnim
         return !this.isAlliedTo(pPlayer);
     }
 
-    //@Override
-    protected boolean isSunSensitive() {
-        return false;
-    }
 
     @Override
     protected void defineSynchedData() {
@@ -285,3 +293,11 @@ public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnim
         return PlayState.CONTINUE;
     }
 }
+//    public static AttributeSupplier.Builder createAttributes() {
+//        return Mob.createMobAttributes()
+//                // .add(Attributes.MAX_HEALTH, 40.0D)
+//                // .add(Attributes.MOVEMENT_SPEED, 0.3D)
+//                .add(DungeonsAndCombatModAttributes.ACTIONSTATE.get(), 0.0D);
+//    }
+//
+//}

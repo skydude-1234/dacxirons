@@ -54,7 +54,6 @@
 #Individual Spell Configuration
 [Spells]
 
-	#irons_spellbooks:fire
 	[Spells."irons_spellbooks:fireball"]
 		Enabled = true
 		School = "irons_spellbooks:fire"
@@ -88,6 +87,7 @@
 		CooldownInSeconds = 30.0
 		AllowCrafting = true
 
+	#irons_spellbooks:fire
 	[Spells."irons_spellbooks:fire_breath"]
 		Enabled = true
 		School = "irons_spellbooks:fire"
@@ -398,7 +398,6 @@
 		CooldownInSeconds = 1.0
 		AllowCrafting = true
 
-	#irons_spellbooks:evocation
 	[Spells."irons_spellbooks:arrow_volley"]
 		Enabled = true
 		School = "irons_spellbooks:evocation"
@@ -443,6 +442,7 @@
 		CooldownInSeconds = 15.0
 		AllowCrafting = true
 
+	#irons_spellbooks:evocation
 	[Spells."irons_spellbooks:gust"]
 		Enabled = true
 		School = "irons_spellbooks:evocation"
@@ -553,7 +553,6 @@
 		CooldownInSeconds = 1.5
 		AllowCrafting = true
 
-	#irons_spellbooks:ender
 	[Spells."irons_spellbooks:portal"]
 		Enabled = true
 		School = "irons_spellbooks:ender"
@@ -576,6 +575,7 @@
 		CooldownInSeconds = 120.0
 		AllowCrafting = true
 
+	#irons_spellbooks:ender
 	[Spells."irons_spellbooks:evasion"]
 		Enabled = true
 		School = "irons_spellbooks:ender"
@@ -686,7 +686,6 @@
 		CooldownInSeconds = 16.0
 		AllowCrafting = true
 
-	#irons_spellbooks:eldritch
 	[Spells."irons_spellbooks:sculk_tentacles"]
 		Enabled = true
 		School = "irons_spellbooks:eldritch"
@@ -698,6 +697,7 @@
 		CooldownInSeconds = 30.0
 		AllowCrafting = true
 
+	#irons_spellbooks:eldritch
 	[Spells."irons_spellbooks:telekinesis"]
 		Enabled = true
 		School = "irons_spellbooks:eldritch"
@@ -1008,7 +1008,6 @@
 		CooldownInSeconds = 1.0
 		AllowCrafting = true
 
-	#irons_spellbooks:lightning
 	[Spells."irons_spellbooks:thunder_step"]
 		Enabled = true
 		School = "irons_spellbooks:lightning"
@@ -1031,6 +1030,7 @@
 		CooldownInSeconds = 120.0
 		AllowCrafting = true
 
+	#irons_spellbooks:lightning
 	[Spells."irons_spellbooks:ascension"]
 		Enabled = true
 		School = "irons_spellbooks:lightning"
@@ -1117,5 +1117,16 @@
 		ManaCostMultiplier = 1.0
 		SpellPowerMultiplier = 1.0
 		CooldownInSeconds = 20.0
+		AllowCrafting = true
+
+	[Spells."dacxirons:raise_dead"]
+		Enabled = true
+		School = "irons_spellbooks:blood"
+		MaxLevel = 6
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 1.0
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 150.0
 		AllowCrafting = true
 

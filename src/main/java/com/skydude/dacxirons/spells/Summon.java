@@ -2,6 +2,7 @@ package com.skydude.dacxirons.spells;
 
 
 import com.skydude.dacxirons.dacxirons;
+import com.skydude.dacxirons.entity.mobs.SummonedWeakness;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
@@ -10,7 +11,7 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 
 import io.redspace.ironsspellbooks.entity.mobs.SummonedSkeleton;
 import io.redspace.ironsspellbooks.entity.mobs.SummonedZombie;
-import com.skydude.dacxirons.entity.mobs.SummonedKamath;
+//import com.skydude.dacxirons.entity.mobs.SummonedKamath;
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.minecraft.network.chat.Component;
@@ -35,9 +36,12 @@ import net.minecraft.world.phys.Vec3;
 import java.util.List;
 import java.util.Optional;
 
+
+
+
 @AutoSpellConfig
 public class Summon extends AbstractSpell {
-    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "raise_dead");
+    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "summon");
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.UNCOMMON)
             .setSchoolResource(SchoolRegistry.BLOOD_RESOURCE)
@@ -92,16 +96,17 @@ public class Summon extends AbstractSpell {
             boolean isSkeleton = Utils.random.nextDouble() < .3;
             var equipment = getEquipment(getSpellPower(spellLevel, entity), Utils.random);
 
-            Monster undead = isSkeleton ? new SummonedSkeleton(world, entity, true) : new SummonedKamath(world, entity, true);
-            undead.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(undead.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
-            undead.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, false));
-            equip(undead, equipment);
+            Monster arthropod = new SummonedWeakness(entity, true);
+
+            arthropod.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(arthropod.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
+            arthropod.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, false));
+            equip(arthropod, equipment);
             var yrot = 6.281f / spellLevel * i + entity.getYRot() * Mth.DEG_TO_RAD;
             Vec3 spawn = Utils.moveToRelativeGroundLevel(world, entity.getEyePosition().add(new Vec3(radius * Mth.cos(yrot), 0, radius * Mth.sin(yrot))), 10);
-            undead.setPos(spawn.x, spawn.y, spawn.z);
-            undead.setYRot(entity.getYRot());
-            undead.setOldPosAndRot();
-            world.addFreshEntity(undead);
+            arthropod.setPos(spawn.x, spawn.y, spawn.z);
+            arthropod.setYRot(entity.getYRot());
+            arthropod.setOldPosAndRot();
+            world.addFreshEntity(arthropod);
         }
 
         int effectAmplifier = spellLevel - 1;
