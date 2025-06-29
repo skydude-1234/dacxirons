@@ -19,9 +19,12 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerBossEvent;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.BossEvent;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
@@ -59,12 +62,20 @@ import static org.openjdk.nashorn.internal.objects.NativeWeakSet.add;
 public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnimatable {
     private static final EntityDataAccessor<Boolean> DATA_IS_ANIMATING_RISE = SynchedEntityData.defineId(SummonedKamath.class, EntityDataSerializers.BOOLEAN);
 
+
+
     public SummonedKamath(EntityType<SummonedKamath> type, Level world) {
         // Explicitly cast the EntityType to raw to bypass generics check:
         super((EntityType) type, world);
         xpReward = 0;
+
     }
-    // Example for your WeaknessEntity:
+    // override boss bar to remove it
+    @Override
+    public void startSeenByPlayer(ServerPlayer player) {
+        // No bossEvent.addPlayer(player);
+    }
+
 
     @SubscribeEvent
     public static void onEntityAttributeCreation(EntityAttributeCreationEvent event) {

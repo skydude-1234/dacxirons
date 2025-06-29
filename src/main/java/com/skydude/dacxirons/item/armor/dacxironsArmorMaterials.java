@@ -27,8 +27,7 @@ public enum dacxironsArmorMaterials implements ArmorMaterial {
     CRIMSON_SPELL_ARMOR("crimson_spell_armor", 35, new int[]{6, 8, 10, 5}, 20, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0F, 0.0F,
             () -> Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation("dungeons_and_combat", "crimson_ingot"))), Map.of(
             AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max mana", 125, AttributeModifier.Operation.ADDITION),
-            AttributeRegistry.ELDRITCH_SPELL_POWER.get(), new AttributeModifier("Eldritch Spell power", 0.15, AttributeModifier.Operation.MULTIPLY_BASE),
-            AttributeRegistry.BLOOD_SPELL_POWER.get(), new AttributeModifier("Blood Spell power", 0.10, AttributeModifier.Operation.MULTIPLY_BASE)
+            AttributeRegistry.BLOOD_SPELL_POWER.get(), new AttributeModifier("Blood Spell power", 0.15, AttributeModifier.Operation.MULTIPLY_BASE)
     ));
 
 
