@@ -20,27 +20,26 @@ import java.util.UUID;
         bus = Bus.FORGE
 )
 
-public class TombwardenHelmet {
+public class TombwardenChest {
     // UUIDs per slot and attribute ensure proper application/removal
-    private static final UUID SPELL_UUID = UUID.fromString("825e4567-e89b-12d3-a456-426614174001");
+    private static final UUID MANA_UUID = UUID.fromString("826e4567-e89b-12d3-a456-426614174000");
 
     @SubscribeEvent
     public static void onItemAttributeModifiers(ItemAttributeModifierEvent event) {
         Item item = event.getItemStack().getItem();
         ResourceLocation itemId = ForgeRegistries.ITEMS.getKey(item);
 
-        if (itemId != null && itemId.toString().equals("dungeons_and_combat:tombwarden_helmet")) {
-            if (event.getSlotType() == EquipmentSlot.HEAD) {
+        if (itemId != null && itemId.toString().equals("dungeons_and_combat:tombwarden_chestplate")) {
+            if (event.getSlotType() == EquipmentSlot.CHEST) {
                 Attribute manaPower = ForgeRegistries.ATTRIBUTES.getValue(
                         new ResourceLocation("irons_spellbooks:summon_damage")
                 );
 
 
-
                 if (manaPower != null) {
                     event.addModifier(manaPower, new AttributeModifier(
-                            SPELL_UUID,
-                            "Spell summon dmg",
+                            MANA_UUID,
+                            "Spell Power Bonus Mana",
                             0.20,
                             Operation.MULTIPLY_BASE
                     ));
