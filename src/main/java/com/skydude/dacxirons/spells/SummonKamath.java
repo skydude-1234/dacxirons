@@ -11,6 +11,7 @@ import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
+import io.redspace.ironsspellbooks.spells.eldritch.AbstractEldritchSpell;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModAttributes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -39,25 +40,25 @@ import java.util.Optional;
 
 
 @AutoSpellConfig
-public class SummonKamath extends AbstractSpell {
+public class SummonKamath extends AbstractEldritchSpell {
     private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "summonkamath");
     private final DefaultConfig defaultConfig = new DefaultConfig()
-            .setMinRarity(SpellRarity.UNCOMMON)
-            .setSchoolResource(SchoolRegistry.BLOOD_RESOURCE)
+            .setMinRarity(SpellRarity.LEGENDARY)
+            .setSchoolResource(SchoolRegistry.ELDRITCH_RESOURCE)
             .setMaxLevel(6)
-            .setCooldownSeconds(150)
+            .setCooldownSeconds(350)
             .build();
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(Component.translatable("ui.irons_spellbooks.summon_count", spellLevel));
+        return List.of(Component.translatable("ui.irons_spellbooks.summon_count", "1"));
     }
 
     public SummonKamath() {
         this.manaCostPerLevel = 10;
         this.baseSpellPower = 10;
         this.spellPowerPerLevel = 3;
-        this.castTime = 30;
+        this.castTime = 400;
         this.baseManaCost = 50;
 
     }
@@ -105,9 +106,9 @@ public class SummonKamath extends AbstractSpell {
 
 
         int effectAmplifier = spellLevel - 1;
-        if (entity.hasEffect(MobEffectRegistry.RAISE_DEAD_TIMER.get()))
-            effectAmplifier += entity.getEffect(MobEffectRegistry.RAISE_DEAD_TIMER.get()).getAmplifier() + 1;
-        entity.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, effectAmplifier, false, false, true));
+      //  if (entity.hasEffect(MobEffectRegistry.RAISE_DEAD_TIMER.get()))
+     //       effectAmplifier += entity.getEffect(MobEffectRegistry.RAISE_DEAD_TIMER.get()).getAmplifier() + 1;
+        entity.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, true));
 
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }

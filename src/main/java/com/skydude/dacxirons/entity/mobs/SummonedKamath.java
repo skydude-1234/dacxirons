@@ -2,6 +2,7 @@ package com.skydude.dacxirons.entity.mobs;
 
 
 import com.skydude.dacxirons.dacxirons;
+import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 import com.skydude.dacxirons.registries.EntityRegistry;
 import com.skydude.dacxirons.spells.Summon;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
@@ -52,6 +53,7 @@ import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+
 import javax.annotation.Nullable;
 import java.util.UUID;
 
@@ -75,13 +77,22 @@ public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnim
     public void startSeenByPlayer(ServerPlayer player) {
         // No bossEvent.addPlayer(player);
     }
+    @Override
+    protected void tickDeath() {
+        ++this.deathTime;
+        if (this.deathTime == 20) {
+            this.onRemovedHelper(this, MobEffectRegistry.RAISE_DEAD_TIMER.get());
+            this.remove(RemovalReason.KILLED);
+        }
+
+    }
 
 
     @SubscribeEvent
     public static void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
         AttributeSupplier.Builder builder = Mob.createMobAttributes()
                 .add(Attributes.MOVEMENT_SPEED, 0.23)
-                .add(Attributes.MAX_HEALTH, 320.0D)
+                .add(Attributes.MAX_HEALTH, 3.0D) //320 kamath
                 .add(Attributes.ARMOR, 12.0D)
                 .add(Attributes.ATTACK_DAMAGE, 16.0D)
                 .add(Attributes.FOLLOW_RANGE, 48.0D)
@@ -164,14 +175,15 @@ public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnim
     @Override
     public void die(DamageSource pDamageSource) {
         this.onDeathHelper();
+        //this.onRemovedHelper(this, MobEffectRegistry.RAISE_DEAD_TIMER.get());
         super.die(pDamageSource);
     }
 
     @Override
     public void onRemovedFromWorld() {
         //IronsSpellbooks.LOGGER.debug("Summoned Zombie: Removed from world, {}", this.getRemovalReason());
-        this.onRemovedHelper(this, MobEffectRegistry.RAISE_DEAD_TIMER.get());
         super.onRemovedFromWorld();
+        this.onRemovedHelper(this, MobEffectRegistry.RAISE_DEAD_TIMER.get());
     }
 
 
@@ -184,7 +196,7 @@ public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnim
 
     @Override
     public boolean doHurtTarget(Entity pEntity) {
-        return Utils.doMeleeAttack(this, pEntity, SpellRegistry.RAISE_DEAD_SPELL.get().getDamageSource(this, getSummoner()));
+        return Utils.doMeleeAttack(this, pEntity, dacxironsSpellRegistry.SUMMONED_KAMATH.get().getDamageSource(this, getSummoner()));
     }
 
     @Override

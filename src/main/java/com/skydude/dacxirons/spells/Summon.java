@@ -94,13 +94,13 @@ public class Summon extends AbstractSpell {
         float radius = 1.5f + .185f * spellLevel;
         for (int i = 0; i < spellLevel; i++) {
             boolean isSkeleton = Utils.random.nextDouble() < .3;
-            var equipment = getEquipment(getSpellPower(spellLevel, entity), Utils.random);
+
 
             Monster arthropod = new SummonedWeakness(entity, true);
 
             arthropod.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(arthropod.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
             arthropod.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, false));
-            equip(arthropod, equipment);
+
             var yrot = 6.281f / spellLevel * i + entity.getYRot() * Mth.DEG_TO_RAD;
             Vec3 spawn = Utils.moveToRelativeGroundLevel(world, entity.getEyePosition().add(new Vec3(radius * Mth.cos(yrot), 0, radius * Mth.sin(yrot))), 10);
             arthropod.setPos(spawn.x, spawn.y, spawn.z);
@@ -117,42 +117,7 @@ public class Summon extends AbstractSpell {
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
 
-    private void equip(Mob mob, ItemStack[] equipment) {
-        mob.setItemSlot(EquipmentSlot.FEET, equipment[0]);
-        mob.setItemSlot(EquipmentSlot.LEGS, equipment[1]);
-        mob.setItemSlot(EquipmentSlot.CHEST, equipment[2]);
-        mob.setItemSlot(EquipmentSlot.HEAD, equipment[3]);
-        mob.setDropChance(EquipmentSlot.FEET, 0.0F);
-        mob.setDropChance(EquipmentSlot.LEGS, 0.0F);
-        mob.setDropChance(EquipmentSlot.CHEST, 0.0F);
-        mob.setDropChance(EquipmentSlot.HEAD, 0.0F);
-    }
 
-    private ItemStack[] getEquipment(float power, RandomSource random) {
-        Item[] leather = {Items.LEATHER_BOOTS, Items.LEATHER_LEGGINGS, Items.LEATHER_CHESTPLATE, Items.LEATHER_HELMET};
-        Item[] chain = {Items.CHAINMAIL_BOOTS, Items.CHAINMAIL_LEGGINGS, Items.CHAINMAIL_CHESTPLATE, Items.CHAINMAIL_HELMET};
-        Item[] iron = {Items.IRON_BOOTS, Items.IRON_LEGGINGS, Items.IRON_CHESTPLATE, Items.IRON_HELMET};
 
-        int minQuality = 12;
-        int maxQuality = getMaxLevel() * spellPowerPerLevel + 15;
 
-        ItemStack[] result = new ItemStack[4];
-        for (int i = 0; i < 4; i++) {
-            float quality = Mth.clamp((power + (random.nextIntBetweenInclusive(-3, 8)) - minQuality) / (maxQuality - minQuality), 0, .95f);
-            if (random.nextDouble() < quality * quality) {
-                if (quality > .85) {
-                    result[i] = new ItemStack(iron[i]);
-                } else if (quality > .65) {
-                    result[i] = new ItemStack(chain[i]);
-                } else if (quality > .15) {
-                    result[i] = new ItemStack(leather[i]);
-                } else {
-                    result[i] = ItemStack.EMPTY;
-                }
-            } else {
-                result[i] = ItemStack.EMPTY;
-            }
-        }
-        return result;
-    }
 }

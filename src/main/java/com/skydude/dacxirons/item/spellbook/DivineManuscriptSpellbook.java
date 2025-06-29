@@ -1,7 +1,6 @@
-package com.skydude.dacxirons.item.armor;
+package com.skydude.dacxirons.item.spellbook;
 
 import com.google.common.collect.ImmutableMultimap;
-import com.google.common.collect.Multimap;
 import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
@@ -20,8 +19,6 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import io.redspace.ironsspellbooks.item.spell_books.SimpleAttributeSpellBook;
-
 import java.util.List;
 import java.util.UUID;
 
@@ -35,6 +32,8 @@ public class DivineManuscriptSpellbook extends UniqueSpellBook {
         ), 6, () -> {
             ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
             builder.put(AttributeRegistry.MAX_MANA.get(), new AttributeModifier(UUID.fromString("667ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", 200, AttributeModifier.Operation.ADDITION));
+            builder.put(AttributeRegistry.SUMMON_DAMAGE.get(), new AttributeModifier(UUID.fromString("767ad89f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", 0.10, AttributeModifier.Operation.MULTIPLY_BASE));
+            builder.put(AttributeRegistry.HOLY_SPELL_POWER.get(), new AttributeModifier(UUID.fromString("767ad99f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", 0.20, AttributeModifier.Operation.MULTIPLY_BASE));
             return builder.build();
         });
     }

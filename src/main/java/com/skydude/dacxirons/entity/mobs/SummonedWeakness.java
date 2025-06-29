@@ -3,6 +3,7 @@ package com.skydude.dacxirons.entity.mobs;
 
 import com.skydude.dacxirons.dacxirons;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
+import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
@@ -167,7 +168,7 @@ public class SummonedWeakness extends WeaknessEntity implements MagicSummon, Geo
 
     @Override
     public boolean doHurtTarget(Entity pEntity) {
-        return Utils.doMeleeAttack(this, pEntity, SpellRegistry.RAISE_DEAD_SPELL.get().getDamageSource(this, getSummoner()));
+        return Utils.doMeleeAttack(this, pEntity, dacxironsSpellRegistry.SUMMONER_WEAKNESS.get().getDamageSource(this, getSummoner()));
     }
 
     @Override
