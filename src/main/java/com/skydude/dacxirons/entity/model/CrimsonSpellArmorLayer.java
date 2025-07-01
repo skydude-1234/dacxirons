@@ -32,7 +32,7 @@ public class CrimsonSpellArmorLayer {
 //    }
 //
 //    public void render(PoseStack poseStack, TectonicCrestArmorItem animatable, BakedGeoModel bakedModel, RenderType renderType, MultiBufferSource bufferSource, VertexConsumer buffer, float partialTick, int packedLight, int packedOverlay) {
-//        RenderType glowRenderType = RenderType.m_110488_(LAYER);
+//        RenderType glowRenderType = RenderType.eyes(LAYER);
 //        this.getRenderer().reRender(this.getDefaultBakedModel(animatable), poseStack, bufferSource, animatable, glowRenderType, bufferSource.m_6299_(glowRenderType), partialTick, packedLight, OverlayTexture.f_118083_, 1.0F, 1.0F, 1.0F, 0.5F);
 //    }
 //}
