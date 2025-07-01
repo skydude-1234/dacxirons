@@ -4,7 +4,8 @@ package com.skydude.dacxirons.entity.mobs;
 import com.skydude.dacxirons.dacxirons;
 import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 import com.skydude.dacxirons.registries.EntityRegistry;
-import com.skydude.dacxirons.spells.Summon;
+import com.skydude.dacxirons.spells.SummonKamath;
+
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
@@ -92,7 +93,7 @@ public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnim
     public static void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
         AttributeSupplier.Builder builder = Mob.createMobAttributes()
                 .add(Attributes.MOVEMENT_SPEED, 0.23)
-                .add(Attributes.MAX_HEALTH, 3.0D) //320 kamath
+                .add(Attributes.MAX_HEALTH, 1.0D ) //320 kamath
                 .add(Attributes.ARMOR, 12.0D)
                 .add(Attributes.ATTACK_DAMAGE, 16.0D)
                 .add(Attributes.FOLLOW_RANGE, 48.0D)
@@ -149,8 +150,7 @@ public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnim
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pReason, @Nullable SpawnGroupData pSpawnData, @Nullable CompoundTag pDataTag) {
         RandomSource randomsource = Utils.random;
         this.populateDefaultEquipmentSlots(randomsource, pDifficulty);
-        if (randomsource.nextDouble() < .25)
-            this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.IRON_SWORD));
+
 
         return pSpawnData;
     }

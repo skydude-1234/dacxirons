@@ -45,21 +45,27 @@ public class SummonKamath extends AbstractEldritchSpell {
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.LEGENDARY)
             .setSchoolResource(SchoolRegistry.ELDRITCH_RESOURCE)
-            .setMaxLevel(6)
-            .setCooldownSeconds(350)
+            .setMaxLevel(8)
+            .setCooldownSeconds(600)
             .build();
+
+    public int spllLevel;
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
+        this.castTime = 520 - (spellLevel  * 40);
         return List.of(Component.translatable("ui.irons_spellbooks.summon_count", "1"));
+
+
     }
 
+
     public SummonKamath() {
-        this.manaCostPerLevel = 10;
+        this.manaCostPerLevel = 25;
         this.baseSpellPower = 10;
-        this.spellPowerPerLevel = 3;
-        this.castTime = 400;
-        this.baseManaCost = 50;
+        this.spellPowerPerLevel = 1;
+       // this.castTime = 400 - (10 * spllLevel) ;
+        this.baseManaCost = 600;
 
     }
 
@@ -91,6 +97,10 @@ public class SummonKamath extends AbstractEldritchSpell {
     @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         int summonTime = 20 * 60 * 10;
+
+
+
+
         float radius = 1.5f + .185f * spellLevel;
 
             Monster kamath = new SummonedKamath(entity, true);

@@ -25,10 +25,7 @@ import java.util.UUID;
 public class DivineManuscriptSpellbook extends UniqueSpellBook {
     public DivineManuscriptSpellbook() {
         super(SpellRarity.LEGENDARY, SpellDataRegistryHolder.of(
-                new SpellDataRegistryHolder(SpellRegistry.BLOOD_SLASH_SPELL, 5),
-                new SpellDataRegistryHolder(SpellRegistry.BLOOD_STEP_SPELL, 5),
-                new SpellDataRegistryHolder(SpellRegistry.RAY_OF_SIPHONING_SPELL, 5),
-                new SpellDataRegistryHolder(SpellRegistry.BLAZE_STORM_SPELL, 5)
+                new SpellDataRegistryHolder(SpellRegistry.BLOOD_SLASH_SPELL, 5)
         ), 6, () -> {
             ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
             builder.put(AttributeRegistry.MAX_MANA.get(), new AttributeModifier(UUID.fromString("667ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", 200, AttributeModifier.Operation.ADDITION));

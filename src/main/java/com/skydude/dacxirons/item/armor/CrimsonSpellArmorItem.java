@@ -48,6 +48,7 @@ public class CrimsonSpellArmorItem extends ImbueabledacxironsArmor {
         tooltip.add(Component.translatable("tooltip.dacxirons.crimson_wizard2").withStyle(style -> style.withItalic(true)).withStyle(ChatFormatting.RED));
     }
 
+
     @SuppressWarnings("removal")
     @Override
     public void onArmorTick(ItemStack stack, Level level, Player player ) {

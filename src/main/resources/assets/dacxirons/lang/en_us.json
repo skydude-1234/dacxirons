@@ -8,7 +8,9 @@
   "tooltip.dacxirons.crimson_wizard": "\u00a7 Full Set Bonus: Gain Spell Strength 3, Resistance 3,",
   "tooltip.dacxirons.crimson_wizard2": "\u00a7 Speed 3 and Cast Speed ",
 
-  "itemGroup.dacxirons.dacxirons_tab": "Dac x Irons items"
+  "itemGroup.dacxirons.dacxirons_tab": "Dac x Irons items",
+  "spell.dacxirons.summonkamath": "Eldritch Champion",
+  "spell.dacxirons.summonkamath.guide": "Summon the eldritch champion, Kamath himself"
 
 
 

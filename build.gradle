@@ -229,6 +229,9 @@ dependencies {
 
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"))
 
+
+
+
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
