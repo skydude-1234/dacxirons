@@ -16,7 +16,7 @@ import java.util.UUID;
 
 //@Mod.EventBusSubscriber(modid = "com.example.spellpowerboostb", bus = Mod.EventBusSubscriber.Bus.FORGE)
 @EventBusSubscriber(
-        modid = "spellpowerboost",
+        modid = "dacxirons",
         bus = Bus.FORGE
 )
 

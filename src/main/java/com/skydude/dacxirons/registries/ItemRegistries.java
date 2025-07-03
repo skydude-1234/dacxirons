@@ -32,13 +32,17 @@ public class ItemRegistries {
     public static final RegistryObject<Item> DIVINEMANUSCRIPT = ITEMS.register("divine_manuscript_spell_book", DivineManuscriptSpellbook::new);
 
     public static final RegistryObject<Item> CRIMSON_WIZARD_HAT = ITEMS.register("crimson_wizard_hat",
-            () -> new CrimsonSpellArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment().fireResistant()));
+            CrimsonSpellArmorItem.Helmet::new);
+
     public static final RegistryObject<Item> CRIMSON_WIZARD_ROBE = ITEMS.register("crimson_wizard_robe",
-            () -> new CrimsonSpellArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper.equipment().fireResistant()));
+            CrimsonSpellArmorItem.Chestplate::new);
+
     public static final RegistryObject<Item> CRIMSON_WIZARD_LEGGINGS = ITEMS.register("crimson_wizard_leggings",
-            () -> new CrimsonSpellArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper.equipment().fireResistant()));
+            CrimsonSpellArmorItem.Leggings::new);
+
     public static final RegistryObject<Item> CRIMSON_WIZARD_BOOTS = ITEMS.register("crimson_wizard_boots",
-            () -> new CrimsonSpellArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper.equipment().fireResistant()));
+            CrimsonSpellArmorItem.Boots::new);
+
 
     public static final RegistryObject<Item> GILLAGER_SPELL_BOOK = ITEMS.register("gillager_spell_book", () -> {
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();

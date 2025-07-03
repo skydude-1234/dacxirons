@@ -28,6 +28,7 @@ import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -52,19 +53,22 @@ public class SummonKamath extends AbstractEldritchSpell {
     public int spllLevel;
 
     @Override
-    public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        this.castTime = 520 - (spellLevel  * 40);
+    public List<MutableComponent> getUniqueInfo(int spellPower, LivingEntity caster) {
+
         return List.of(Component.translatable("ui.irons_spellbooks.summon_count", "1"));
 
 
     }
 
 
+    private float getKamakathDamage(int spellLevel, LivingEntity caster) {
+        return this.getSpellPower(spellLevel, caster) * 1f;
+    }
     public SummonKamath() {
         this.manaCostPerLevel = 25;
         this.baseSpellPower = 10;
         this.spellPowerPerLevel = 1;
-       // this.castTime = 400 - (10 * spllLevel) ;
+        this.castTime = 200 ;
         this.baseManaCost = 600;
 
     }
@@ -94,6 +98,8 @@ public class SummonKamath extends AbstractEldritchSpell {
         return Optional.of(SoundRegistry.RAISE_DEAD_FINISH.get());
     }
 
+
+
     @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         int summonTime = 20 * 60 * 10;
@@ -105,7 +111,13 @@ public class SummonKamath extends AbstractEldritchSpell {
 
             Monster kamath = new SummonedKamath(entity, true);
 
-            kamath.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(kamath.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
+            // set the maxhealth
+            double maxHealth = (getKamakathDamage(spellLevel, entity ));
+            kamath.getAttribute(Attributes.MAX_HEALTH).setBaseValue(maxHealth);
+            kamath.setHealth((float) maxHealth);
+            System.out.println(maxHealth);
+
+                kamath.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(kamath.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
             kamath.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, false));
             var yrot = 6.281f / spellLevel + entity.getYRot() * Mth.DEG_TO_RAD;
             Vec3 spawn = Utils.moveToRelativeGroundLevel(world, entity.getEyePosition().add(new Vec3(radius * Mth.cos(yrot), 0, radius * Mth.sin(yrot))), 10);

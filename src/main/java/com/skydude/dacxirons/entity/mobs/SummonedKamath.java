@@ -88,12 +88,16 @@ public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnim
 
     }
 
+    public static float getKamathSummonDamage(int spellPower) {
+        return (1 * spellPower);
+
+    };
 
     @SubscribeEvent
     public static void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
         AttributeSupplier.Builder builder = Mob.createMobAttributes()
                 .add(Attributes.MOVEMENT_SPEED, 0.23)
-                .add(Attributes.MAX_HEALTH, 1.0D ) //320 kamath
+                .add(Attributes.MAX_HEALTH, 1) //320 kamath
                 .add(Attributes.ARMOR, 12.0D)
                 .add(Attributes.ATTACK_DAMAGE, 16.0D)
                 .add(Attributes.FOLLOW_RANGE, 48.0D)
