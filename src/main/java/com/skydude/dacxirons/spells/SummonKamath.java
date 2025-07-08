@@ -6,6 +6,7 @@ import com.skydude.dacxirons.entity.mobs.SummonedKamath;
 import com.skydude.dacxirons.entity.mobs.SummonedWeakness;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
+import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.Utils;
@@ -13,6 +14,7 @@ import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.spells.eldritch.AbstractEldritchSpell;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModAttributes;
+import net.mcreator.dungeonsandcombat.procedures.SunleiaAirProjectileProcedure;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -25,6 +27,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
@@ -33,6 +36,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -50,19 +54,21 @@ public class SummonKamath extends AbstractEldritchSpell {
             .setCooldownSeconds(600)
             .build();
 
-    public int spllLevel;
+    //shit for rounding
+    double value = 123.4567;
+    double roundedToTwoDecimals = Math.round(value * 100.0) / 100.0; // roundedToTwoDecimals will be 123.46
 
     @Override
-    public List<MutableComponent> getUniqueInfo(int spellPower, LivingEntity caster) {
+    public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
 
-        return List.of(Component.translatable("ui.irons_spellbooks.summon_count", "1"));
+        return List.of(Component.translatable("ui.irons_spellbooks.summon_count", "1"), (Component.translatable("ui.dacxirons.kamath.summon_hp", Math.round(this.getKamathHealth(spellLevel, caster)))), (Component.translatable("ui.dacxirons.kamath.summon_duration", Math.round(this.getKamathDuration(spellLevel, caster) ))));
 
 
     }
 
 
-    private float getKamakathDamage(int spellLevel, LivingEntity caster) {
-        return this.getSpellPower(spellLevel, caster) * 1f;
+    private float getKamathHealth(int spellLevel, LivingEntity caster) {
+        return this.getSpellPower(spellLevel, caster) * 4f;
     }
     public SummonKamath() {
         this.manaCostPerLevel = 25;
@@ -98,25 +104,37 @@ public class SummonKamath extends AbstractEldritchSpell {
         return Optional.of(SoundRegistry.RAISE_DEAD_FINISH.get());
     }
 
+    private float getKamathDuration(int spellLevel, LivingEntity caster) {
+
+        return (int) ((((1.5)) * this.getSpellPower(spellLevel, caster))  );
+
+        }
 
 
+
+    private float getKamathDamage(int spellLevel, LivingEntity caster){
+
+        return 15 * (float) caster.getAttributeValue(AttributeRegistry.SUMMON_DAMAGE.get());
+    }
     @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
-        int summonTime = 20 * 60 * 10;
-
-
+        int summonTime = (int) getKamathDuration(spellLevel, entity);
 
 
         float radius = 1.5f + .185f * spellLevel;
 
-            Monster kamath = new SummonedKamath(entity, true);
+            Monster kamath = new SummonedKamath(entity, false);
 
-            // set the maxhealth
-            double maxHealth = (getKamakathDamage(spellLevel, entity ));
+      // set the maxhealth
+            double maxHealth = (getKamathHealth(spellLevel, entity ));
             kamath.getAttribute(Attributes.MAX_HEALTH).setBaseValue(maxHealth);
             kamath.setHealth((float) maxHealth);
             System.out.println(maxHealth);
 
+            double damage = (getKamathDamage(spellLevel, entity ));
+            kamath.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(damage);
+            System.out.println(damage);
+            System.out.println(getKamathDuration(spellLevel, entity));
                 kamath.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(kamath.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
             kamath.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, false));
             var yrot = 6.281f / spellLevel + entity.getYRot() * Mth.DEG_TO_RAD;

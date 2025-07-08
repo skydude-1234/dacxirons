@@ -18,6 +18,8 @@ import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModAttributes;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -56,6 +58,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 
 import javax.annotation.Nullable;
+import java.util.List;
 import java.util.UUID;
 
 import static org.openjdk.nashorn.internal.objects.NativeWeakSet.add;
@@ -88,10 +91,7 @@ public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnim
 
     }
 
-    public static float getKamathSummonDamage(int spellPower) {
-        return (1 * spellPower);
 
-    };
 
     @SubscribeEvent
     public static void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
@@ -200,7 +200,7 @@ public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnim
 
     @Override
     public boolean doHurtTarget(Entity pEntity) {
-        return Utils.doMeleeAttack(this, pEntity, dacxironsSpellRegistry.SUMMONED_KAMATH.get().getDamageSource(this, getSummoner()));
+        return Utils.doMeleeAttack(this, pEntity, dacxironsSpellRegistry.SUMMON_KAMATH.get().getDamageSource(this, getSummoner()));
     }
 
     @Override
@@ -322,6 +322,7 @@ public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnim
         }
         return PlayState.CONTINUE;
     }
+
 }
 //    public static AttributeSupplier.Builder createAttributes() {
 //        return Mob.createMobAttributes()

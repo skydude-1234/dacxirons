@@ -10,7 +10,9 @@
 
   "itemGroup.dacxirons.dacxirons_tab": "Dac x Irons items",
   "spell.dacxirons.summonkamath": "Eldritch Champion",
-  "spell.dacxirons.summonkamath.guide": "Summon the eldritch champion, Kamath himself"
+  "spell.dacxirons.summonkamath.guide": "Summon the eldritch champion, Kamath himself",
+  "ui.dacxirons.kamath.summon_hp": "%d summoned kamath hp",
+  "ui.dacxirons.kamath.summon_duration": "%ds summoned kamath duration"
 
 
 

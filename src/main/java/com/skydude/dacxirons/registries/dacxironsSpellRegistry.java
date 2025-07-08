@@ -4,6 +4,7 @@ import com.skydude.dacxirons.dacxirons;
 //import com.skydude.dacxirons.spells.Summon;
 import com.skydude.dacxirons.spells.Summon;
 import com.skydude.dacxirons.spells.SummonKamath;
+import com.skydude.dacxirons.spells.SunleiaBeam;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,6 +24,8 @@ dacxironsSpellRegistry {
     }
 
     public static final RegistryObject<AbstractSpell> SUMMONER_WEAKNESS = registerSpell(new Summon());
-    public static final RegistryObject<AbstractSpell> SUMMONED_KAMATH = registerSpell(new SummonKamath());
+    public static final RegistryObject<AbstractSpell> SUMMON_KAMATH = registerSpell(new SummonKamath());
+
+    public static final RegistryObject<AbstractSpell> SUNLEIA_BEAM = registerSpell(new SunleiaBeam());
 }
 
