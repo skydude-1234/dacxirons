@@ -1,7 +1,7 @@
-Nerfed crimson spell dmges
+Nerfed crimson  armor to only have 5% blood power
 Added crimson wizard
-Exiled now has spell dmg
-Tombwarden now has summon dmg
+Exiled now has +5% spell power and +50 max mana
+Tombwarden now has +20% summon dmg
 Divine manuscript spell book
 Kamath summon
 Weakness summon 

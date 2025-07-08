@@ -12,7 +12,11 @@
   "spell.dacxirons.summonkamath": "Eldritch Champion",
   "spell.dacxirons.summonkamath.guide": "Summon the eldritch champion, Kamath himself",
   "ui.dacxirons.kamath.summon_hp": "%d summoned kamath hp",
-  "ui.dacxirons.kamath.summon_duration": "%ds summoned kamath duration"
+  "ui.dacxirons.kamath.summon_duration": "%ds summoned kamath duration",
+  "ui.dacxirons.sunleia.beam": "%d",
+  "tooltip.dacxirons.enhance_spell_level": "\u00a7e+1 level to %s",
+  "item.dacxirons.divine_manuscript_spell_book": "Divine Manuscript"
+
 
 
 

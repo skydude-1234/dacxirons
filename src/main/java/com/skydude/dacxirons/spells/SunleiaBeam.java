@@ -1,56 +1,53 @@
 package com.skydude.dacxirons.spells;
 
 import com.skydude.dacxirons.dacxirons;
-import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
-import com.skydude.dacxirons.entity.mobs.SummonedWeakness;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
-import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
-import io.redspace.ironsspellbooks.registries.SoundRegistry;
+import net.mcreator.dungeonsandcombat.entity.LaserBeamEntity;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.util.Mth;
-import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.Vec3;
 
 import java.util.List;
 import java.util.Optional;
 
-import net.mcreator.dungeonsandcombat.procedures.SunleiaAirProjectileProcedure;
+import net.minecraftforge.registries.ForgeRegistries;
 
+import static com.ibm.icu.impl.ValidIdentifiers.Datatype.x;
 
 
 @AutoSpellConfig
 public class SunleiaBeam extends AbstractSpell {
-    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "summon");
+    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "sunleia_beam");
     private final DefaultConfig defaultConfig = new DefaultConfig()
-            .setMinRarity(SpellRarity.UNCOMMON)
-            .setSchoolResource(SchoolRegistry.BLOOD_RESOURCE)
+            .setMinRarity(SpellRarity.RARE)
+            .setSchoolResource(SchoolRegistry.HOLY_RESOURCE)
             .setMaxLevel(6)
-            .setCooldownSeconds(150)
+            .setCooldownSeconds(6)
             .build();
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(Component.translatable("ui.irons_spellbooks.summon_count", spellLevel));
+       // return List.of(Component.translatable("ui.irons_spellbooks.summon_count", spellLevel));
+        return List.of(Component.translatable("ui.dacxirons.sunleia.beam",  5 + (2 * spellLevel) * getSpellPower(spellLevel, caster)));
     }
 
     public SunleiaBeam() {
         this.manaCostPerLevel = 10;
-        this.baseSpellPower = 10;
-        this.spellPowerPerLevel = 3;
+        this.baseSpellPower = 1;
+        this.spellPowerPerLevel = 0;
         this.castTime = 30;
-        this.baseManaCost = 50;
+        this.baseManaCost = 100;
 
     }
 
@@ -72,17 +69,28 @@ public class SunleiaBeam extends AbstractSpell {
 
     @Override
     public Optional<SoundEvent> getCastStartSound() {
-        return Optional.of(SoundRegistry.RAISE_DEAD_START.get());
+        return Optional.ofNullable(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dungeons_and_combat:magic_boost")));
     }
+
 
     @Override
     public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of(SoundRegistry.RAISE_DEAD_FINISH.get());
+        return Optional.empty();
     }
+
 
     @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         int summonTime = 20 * 60 * 10;
+        LaserBeamEntity.shoot(world, entity, RandomSource.create(), 1, (2 * spellLevel) * getSpellPower(spellLevel, entity), 1);
+            SoundEvent sound = ForgeRegistries.SOUND_EVENTS.getValue(
+                    new ResourceLocation("dungeons_and_combat:magic_boost")
+            );
+            world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), sound, SoundSource.HOSTILE, 1.0F, 2.0F);
+
+
+
+            // your spell logic here
 
 
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);

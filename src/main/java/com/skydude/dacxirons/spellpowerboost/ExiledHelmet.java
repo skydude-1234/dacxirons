@@ -40,19 +40,19 @@ public class ExiledHelmet {
                 );
 
 
-                if (manaPower != null) {
-                    event.addModifier(manaPower, new AttributeModifier(
+                if (spellPower != null) {
+                    event.addModifier(spellPower, new AttributeModifier(
                             SPELL_UUID,
-                            "Spell Power Bonus Mana",
+                            "Spell Power Bonusss",
                             0.05,
                             Operation.MULTIPLY_BASE
                     ));
                 }
-                if (spellPower != null) {
+                if (manaPower != null) {
                     event.addModifier(manaPower, new AttributeModifier(
                             MANA_UUID,
                             "Spell Power Bonus Mana",
-                            0.50,
+                            50,
                             Operation.ADDITION
                     ));
                 }

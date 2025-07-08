@@ -1,10 +1,12 @@
 package com.skydude.dacxirons.item.spellbook;
 
 import com.google.common.collect.ImmutableMultimap;
+import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
+import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import io.redspace.ironsspellbooks.item.UniqueSpellBook;
 import io.redspace.ironsspellbooks.util.MinecraftInstanceHelper;
@@ -40,19 +42,18 @@ public class DivineManuscriptSpellbook extends UniqueSpellBook {
         super.appendHoverText(itemStack, level, lines, flag);
         var affinityData = AffinityData.getAffinityData(itemStack);
         var spell = affinityData.getSpell();
-        if (spell != SpellRegistry.none()) {
             int i = TooltipsUtils.indexOfComponent(lines, "tooltip.irons_spellbooks.spellbook_spell_count");
-            lines.add(i < 0 ? lines.size() : i+1, Component.translatable("tooltip.irons_spellbooks.enhance_spell_level", spell.getDisplayName(MinecraftInstanceHelper.instance.player()).withStyle(spell.getSchoolType().getDisplayName().getStyle())).withStyle(ChatFormatting.YELLOW));
-        }
+            lines.add(i < 0 ? lines.size() : i+1, Component.translatable("tooltip.irons_spellbooks.enhance_spell_level",  Component.literal("Sunleia Beam").withStyle(ChatFormatting.DARK_RED)));
+
     }
 
     @Override
     public void initializeSpellContainer(ItemStack itemStack) {
         if (itemStack == null) {
-            return;
+            super.initializeSpellContainer(itemStack);
+            AffinityData.setAffinityData(itemStack, (AbstractSpell) dacxironsSpellRegistry.SUNLEIA_BEAM.get());
         }
 
-        super.initializeSpellContainer(itemStack);
-        AffinityData.setAffinityData(itemStack, SpellRegistry.RAISE_DEAD_SPELL.get());
+
     }
 }
