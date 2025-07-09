@@ -30,9 +30,9 @@ public class DivineManuscriptSpellbook extends UniqueSpellBook {
                 new SpellDataRegistryHolder(SpellRegistry.BLOOD_SLASH_SPELL, 5)
         ), 6, () -> {
             ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-            builder.put(AttributeRegistry.MAX_MANA.get(), new AttributeModifier(UUID.fromString("667ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", 200, AttributeModifier.Operation.ADDITION));
-            builder.put(AttributeRegistry.SUMMON_DAMAGE.get(), new AttributeModifier(UUID.fromString("767ad89f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", 0.10, AttributeModifier.Operation.MULTIPLY_BASE));
-            builder.put(AttributeRegistry.HOLY_SPELL_POWER.get(), new AttributeModifier(UUID.fromString("767ad99f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", 0.20, AttributeModifier.Operation.MULTIPLY_BASE));
+            builder.put(AttributeRegistry.MAX_MANA.get(), new AttributeModifier(UUID.fromString("667ad88f-901d-4691-b2a2-3664e42026d9"), "Weapon modifier", 200, AttributeModifier.Operation.ADDITION));
+            builder.put(AttributeRegistry.SUMMON_DAMAGE.get(), new AttributeModifier(UUID.fromString("767ad89f-901d-4691-b2a2-3664e42026d9"), "Weapon modifier", 0.10, AttributeModifier.Operation.MULTIPLY_BASE));
+            builder.put(AttributeRegistry.HOLY_SPELL_POWER.get(), new AttributeModifier(UUID.fromString("767ad99f-901d-4691-b2a2-3664e42026d9"), "Weapon modifier", 0.20, AttributeModifier.Operation.MULTIPLY_BASE));
             return builder.build();
         });
     }
@@ -40,16 +40,21 @@ public class DivineManuscriptSpellbook extends UniqueSpellBook {
     @Override
     public void appendHoverText(@NotNull ItemStack itemStack, @Nullable Level level, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
         super.appendHoverText(itemStack, level, lines, flag);
-        var affinityData = AffinityData.getAffinityData(itemStack);
-        var spell = affinityData.getSpell();
+        AffinityData affinityData = AffinityData.getAffinityData(itemStack);
+        AbstractSpell spell = affinityData.getSpell();
+        if (spell != SpellRegistry.none()) {
             int i = TooltipsUtils.indexOfComponent(lines, "tooltip.irons_spellbooks.spellbook_spell_count");
-            lines.add(i < 0 ? lines.size() : i+1, Component.translatable("tooltip.irons_spellbooks.enhance_spell_level",  Component.literal("Sunleia Beam").withStyle(ChatFormatting.DARK_RED)));
+            lines.add(i < 0 ? lines.size() : i + 1, Component.translatable("tooltip.irons_spellbooks.enhance_spell_level", spell.getDisplayName(MinecraftInstanceHelper.instance.player()).withStyle(spell.getSchoolType().getDisplayName().getStyle())).withStyle(ChatFormatting.RED));
 
+        }
+        else{
+            System.out.println("is none");
+        }
     }
-
+//            lines.add(i < 0 ? lines.size() : i+1, Component.translatable("tooltip.irons_spellbooks.enhance_spell_level",  Component.literal("Sunleia Beam").withStyle(ChatFormatting.DARK_RED)));
     @Override
     public void initializeSpellContainer(ItemStack itemStack) {
-        if (itemStack == null) {
+        if (itemStack != null) {
             super.initializeSpellContainer(itemStack);
             AffinityData.setAffinityData(itemStack, (AbstractSpell) dacxironsSpellRegistry.SUNLEIA_BEAM.get());
         }

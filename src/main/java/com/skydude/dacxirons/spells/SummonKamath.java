@@ -61,15 +61,13 @@ public class SummonKamath extends AbstractEldritchSpell {
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
 
-        return List.of(Component.translatable("ui.irons_spellbooks.summon_count", "1"), (Component.translatable("ui.dacxirons.kamath.summon_hp", Math.round(this.getKamathHealth(spellLevel, caster)))), (Component.translatable("ui.dacxirons.kamath.summon_duration", Math.round(this.getKamathDuration(spellLevel, caster) ))));
+        return List.of(Component.translatable("ui.irons_spellbooks.summon_count", "1"), (Component.translatable("ui.dacxirons.kamath.summon_hp", Math.round(this.getKamathHealth(spellLevel, caster)))), (Component.translatable("ui.dacxirons.kamath.summon_duration", Math.round(this.getKamathDuration(spellLevel, caster) / 20))));
 
 
     }
 
 
-    private float getKamathHealth(int spellLevel, LivingEntity caster) {
-        return this.getSpellPower(spellLevel, caster) * 4f;
-    }
+
     public SummonKamath() {
         this.manaCostPerLevel = 25;
         this.baseSpellPower = 10;
@@ -106,7 +104,7 @@ public class SummonKamath extends AbstractEldritchSpell {
 
     private float getKamathDuration(int spellLevel, LivingEntity caster) {
 
-        return (int) ((((1.5)) * this.getSpellPower(spellLevel, caster))  );
+        return (int) (((((2)) * this.getSpellPower(spellLevel, caster)) * 20 ) );
 
         }
 
@@ -115,6 +113,9 @@ public class SummonKamath extends AbstractEldritchSpell {
     private float getKamathDamage(int spellLevel, LivingEntity caster){
 
         return 15 * (float) caster.getAttributeValue(AttributeRegistry.SUMMON_DAMAGE.get());
+    }
+    private float getKamathHealth(int spellLevel, LivingEntity caster) {
+        return this.getSpellPower(spellLevel, caster) * 4.5f;
     }
     @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {

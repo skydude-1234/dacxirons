@@ -15,7 +15,8 @@
   "ui.dacxirons.kamath.summon_duration": "%ds summoned kamath duration",
   "ui.dacxirons.sunleia.beam": "%d",
   "tooltip.dacxirons.enhance_spell_level": "\u00a7e+1 level to %s",
-  "item.dacxirons.divine_manuscript_spell_book": "Divine Manuscript"
+  "item.dacxirons.divine_manuscript_spell_book": "Divine Manuscript",
+  "spell.dacxirons.sunleia_beam" : "Sunleia Beam"
 
 
 

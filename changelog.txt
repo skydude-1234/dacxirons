@@ -1,8 +1,11 @@
 Nerfed crimson  armor to only have 5% blood power
-Added crimson wizard
+Added crimson wizard armor
 Exiled now has +5% spell power and +50 max mana
 Tombwarden now has +20% summon dmg
 Divine manuscript spell book
 Kamath summon
 Weakness summon 
 2 brandnew effects beng spell strenth and cast time used in crimson wizard armor
+New spell Sunleia beam, fires sunleia's beam
+
+Scepter of compensation can now be repaired using arcane essence

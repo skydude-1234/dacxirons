@@ -11,21 +11,21 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
-public class
-dacxironsSpellRegistry {
-    public static final DeferredRegister<AbstractSpell> SPELLS = DeferredRegister.create(SpellRegistry.SPELL_REGISTRY_KEY, dacxirons.MOD_ID);
+public class dacxironsSpellRegistry {
+  //  public static final DeferredRegister<AbstractSpell> SPELLS = DeferredRegister.create(SpellRegistry.SPELL_REGISTRY_KEY, dacxirons.MOD_ID);
+    public static final DeferredRegister<AbstractSpell> SPELLS = DeferredRegister.create(SpellRegistry.SPELL_REGISTRY_KEY, dacxirons.MOD_ID);;
+    public static final RegistryObject<AbstractSpell> SUMMONER_WEAKNESS = registerSpell(new Summon());;
+    public static final RegistryObject<AbstractSpell> SUMMON_KAMATH  = registerSpell(new SummonKamath());;
 
-    public static void register(IEventBus eventBus) {
-        SPELLS.register(eventBus);
-    }
+    public static final RegistryObject<AbstractSpell> SUNLEIA_BEAM = registerSpell(new SunleiaBeam());;
 
     public static RegistryObject<AbstractSpell> registerSpell(AbstractSpell spell) {
         return SPELLS.register(spell.getSpellName(), () -> spell);
     }
 
-    public static final RegistryObject<AbstractSpell> SUMMONER_WEAKNESS = registerSpell(new Summon());
-    public static final RegistryObject<AbstractSpell> SUMMON_KAMATH = registerSpell(new SummonKamath());
+    public static void register(IEventBus eventBus) {
+        SPELLS.register(eventBus);
+    }
 
-    public static final RegistryObject<AbstractSpell> SUNLEIA_BEAM = registerSpell(new SunleiaBeam());
 }
 
