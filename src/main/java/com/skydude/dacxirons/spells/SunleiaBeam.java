@@ -39,7 +39,7 @@ public class SunleiaBeam extends AbstractSpell {
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
        // return List.of(Component.translatable("ui.irons_spellbooks.summon_count", spellLevel));
-        return List.of(Component.translatable("ui.dacxirons.sunleia.beam",  5 + (2 * spellLevel) * getSpellPower(spellLevel, caster)));
+        return List.of(Component.translatable("ui.dacxirons.sunleia.beam",  Math.round(5 + (2 * spellLevel) * getSpellPower(spellLevel, caster))));
     }
 
     public SunleiaBeam() {
