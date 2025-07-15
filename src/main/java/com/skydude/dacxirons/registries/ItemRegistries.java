@@ -2,11 +2,17 @@ package com.skydude.dacxirons.registries;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.skydude.dacxirons.item.spellbook.DivineManuscriptSpellbook;
+import com.skydude.dacxirons.item.weapons.ScepterofOvercompensation;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
+import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
+import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import io.redspace.ironsspellbooks.item.spell_books.SimpleAttributeSpellBook;
+import io.redspace.ironsspellbooks.item.weapons.SpellbreakerItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ArmorItem;
@@ -28,6 +34,10 @@ public class ItemRegistries {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, dacxirons.MOD_ID);
 
+
+
+    public static final RegistryObject<Item> SCEPTEROVERCOMPENSATION = ITEMS.register("scepter_of_over_compensation",
+            ScepterofOvercompensation::new);
 
     public static final RegistryObject<Item> DIVINEMANUSCRIPT = ITEMS.register("divine_manuscript_spell_book", DivineManuscriptSpellbook::new);
 

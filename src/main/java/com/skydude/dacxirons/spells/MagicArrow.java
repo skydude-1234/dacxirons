@@ -1,11 +1,15 @@
 package com.skydude.dacxirons.spells;
 
+
+
 import com.skydude.dacxirons.dacxirons;
+import com.skydude.dacxirons.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import net.mcreator.dungeonsandcombat.entity.LaserBeamEntity;
+import net.mcreator.dungeonsandcombat.entity.MagicArrowEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -27,27 +31,28 @@ import static com.ibm.icu.impl.ValidIdentifiers.Datatype.x;
 
 
 @AutoSpellConfig
-public class SunleiaBeam extends AbstractSpell {
-    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "sunleia_beam");
+public class MagicArrow extends AbstractSpell {
+    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "magic_arrow");
     private final DefaultConfig defaultConfig = new DefaultConfig()
-            .setMinRarity(SpellRarity.RARE)
-            .setSchoolResource(SchoolRegistry.HOLY_RESOURCE)
-            .setMaxLevel(6)
-            .setCooldownSeconds(6)
+            .setMinRarity(SpellRarity.LEGENDARY)
+            //.setAllowCrafting(false)
+            .setSchoolResource(SchoolRegistry.EVOCATION_RESOURCE)
+            .setMaxLevel(1)
+            .setCooldownSeconds(3)
             .build();
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-       // return List.of(Component.translatable("ui.irons_spellbooks.summon_count", spellLevel));
-        return List.of(Component.translatable("ui.dacxirons.sunleia.beam",  Math.round(5 + (2 * spellLevel) * getSpellPower(spellLevel, caster))));
+        // return List.of(Component.translatable("ui.irons_spellbooks.summon_count", spellLevel));
+        return List.of(Component.translatable("ui.dacxirons.sunleia.beam", Math.round(5 * getSpellPower(spellLevel, caster))));
     }
 
-    public SunleiaBeam() {
+    public MagicArrow() {
         this.manaCostPerLevel = 10;
         this.baseSpellPower = 1;
         this.spellPowerPerLevel = 0;
         this.castTime = 30;
-        this.baseManaCost = 100;
+        this.baseManaCost = 30;
 
     }
 
@@ -69,7 +74,7 @@ public class SunleiaBeam extends AbstractSpell {
 
     @Override
     public Optional<SoundEvent> getCastStartSound() {
-        return Optional.ofNullable(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dungeons_and_combat:magic_boost")));
+        return Optional.of(SoundRegistry.MAGIC_ARROW_SOUND.get());
     }
 
 
@@ -81,23 +86,16 @@ public class SunleiaBeam extends AbstractSpell {
 
     @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
-        LaserBeamEntity.shoot(world, entity, RandomSource.create(), 1, 5 + (2 * spellLevel) * getSpellPower(spellLevel, entity), 1);
-            SoundEvent sound = ForgeRegistries.SOUND_EVENTS.getValue(
-                    new ResourceLocation("dungeons_and_combat:magic_boost")
-            );
-            world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), sound, SoundSource.HOSTILE, 1.0F, 2.0F);
+        SoundEvent sound = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("minecraft", "entity.evoker.cast_spell"));
+        if (sound != null) {
+            world.playSound(null, entity.blockPosition(), sound, SoundSource.NEUTRAL, 1.0f, 1.0f);
+            world.playSound(null, entity.blockPosition(), sound, SoundSource.NEUTRAL, 1.0f, 1.0f);
+        } else {
+            System.out.println("Failed to find sound: entity.evoker.cast_spell");
+        }
+        MagicArrowEntity.shoot(world, entity, RandomSource.create(), 1, 5 * getSpellPower(spellLevel, entity), 1);
 
 
-
-            // your spell logic here
-
-
-        super.onCast(world, spellLevel, entity, castSource, playerMagicData);
-
+            super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
-
-
-
-
-
 }

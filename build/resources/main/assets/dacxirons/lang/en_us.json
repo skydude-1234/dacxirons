@@ -13,10 +13,12 @@
   "spell.dacxirons.summonkamath.guide": "Summon the eldritch champion, Kamath himself",
   "ui.dacxirons.kamath.summon_hp": "%d summoned kamath hp",
   "ui.dacxirons.kamath.summon_duration": "%ds summoned kamath duration",
-  "ui.dacxirons.sunleia.beam": "%d",
+  "ui.dacxirons.sunleia.beam": "%d Damage",
   "tooltip.dacxirons.enhance_spell_level": "\u00a7e+1 level to %s",
   "item.dacxirons.divine_manuscript_spell_book": "Divine Manuscript",
-  "spell.dacxirons.sunleia_beam" : "Sunleia Beam"
+  "spell.dacxirons.sunleia_beam" : "Sunleia Beam",
+  "item.dacxirons.scepter_of_over_compensation": "Scepter of OverCompensation",
+  "spell.dacxirons.magic_arrow": "Magic Arrow"
 
 
 

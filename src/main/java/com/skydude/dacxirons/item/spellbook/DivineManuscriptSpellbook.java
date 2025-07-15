@@ -27,8 +27,8 @@ import java.util.UUID;
 public class DivineManuscriptSpellbook extends UniqueSpellBook {
     public DivineManuscriptSpellbook() {
         super(SpellRarity.LEGENDARY, SpellDataRegistryHolder.of(
-                new SpellDataRegistryHolder[]{new SpellDataRegistryHolder(dacxironsSpellRegistry.SUNLEIA_BEAM, 6)}
-        ), 6, () -> {
+                new SpellDataRegistryHolder(dacxironsSpellRegistry.SUNLEIA_BEAM, 6)
+        ), 11, () -> {
             ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
             builder.put(AttributeRegistry.MAX_MANA.get(), new AttributeModifier(UUID.fromString("667ad88f-901d-4691-b2a2-3664e42026d9"), "Weapon modifier", 200, AttributeModifier.Operation.ADDITION));
             builder.put(AttributeRegistry.SUMMON_DAMAGE.get(), new AttributeModifier(UUID.fromString("767ad89f-901d-4691-b2a2-3664e42026d9"), "Weapon modifier", 0.10, AttributeModifier.Operation.MULTIPLY_BASE));
@@ -56,7 +56,7 @@ public class DivineManuscriptSpellbook extends UniqueSpellBook {
     public void initializeSpellContainer(ItemStack itemStack) {
         if (itemStack != null) {
             super.initializeSpellContainer(itemStack);
-            AffinityData.setAffinityData(itemStack, (AbstractSpell) dacxironsSpellRegistry.SUNLEIA_BEAM.get());
+        //    AffinityData.setAffinityData(itemStack, dacxironsSpellRegistry.SUNLEIA_BEAM.get());
         }
 
 

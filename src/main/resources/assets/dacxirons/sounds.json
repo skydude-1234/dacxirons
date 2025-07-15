@@ -1,0 +1,12 @@
+{
+  "magic_arrow_sound": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "minecraft:entity.evoker.cast_spell",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  }
+}

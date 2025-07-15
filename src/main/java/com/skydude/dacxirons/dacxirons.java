@@ -22,7 +22,7 @@ public class dacxirons {
 
     public dacxirons() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
+        SoundRegistry.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
         dacxironsSpellRegistry.register(modEventBus);
