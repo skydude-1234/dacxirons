@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "dungeons_and_combat:blood_vial"
+    },
+    "B": {
+      "item": "irons_spellbooks:blood_rune"
+    },
+    "C": {
+      "item": "irons_spellbooks:magic_cloth"
+    },
+    "D": {
+      "item": "irons_spellbooks:arcane_ingot"
+    },
+    "E": {
+      "item": "dungeons_and_combat:divine_blood_vial"
+    }
+  },
+  "result": {
+    "item": "dacxirons:crimson_cloth",
+    "count": 1
+  },
+  "show_notification": false
+}

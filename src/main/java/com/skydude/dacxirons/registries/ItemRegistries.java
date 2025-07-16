@@ -1,6 +1,7 @@
 package com.skydude.dacxirons.registries;
 
 import com.google.common.collect.ImmutableMultimap;
+import com.skydude.dacxirons.item.CrimsonClothItem;
 import com.skydude.dacxirons.item.spellbook.DivineManuscriptSpellbook;
 import com.skydude.dacxirons.item.weapons.ScepterofOvercompensation;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
@@ -34,14 +35,14 @@ public class ItemRegistries {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, dacxirons.MOD_ID);
 
-
+    public static final RegistryObject<Item> CRIMSON_CLOTH = ITEMS.register("crimson_cloth", CrimsonClothItem::new);
 
     public static final RegistryObject<Item> SCEPTEROVERCOMPENSATION = ITEMS.register("scepter_of_over_compensation",
             ScepterofOvercompensation::new);
 
     public static final RegistryObject<Item> DIVINEMANUSCRIPT = ITEMS.register("divine_manuscript_spell_book", DivineManuscriptSpellbook::new);
 
-    public static final RegistryObject<Item> CRIMSON_WIZARD_HAT = ITEMS.register("crimson_wizard_hat",
+    public static final RegistryObject<Item> CRIMSON_WIZARD_HAT = ITEMS.register("crimson_wizard_hood",
             CrimsonSpellArmorItem.Helmet::new);
 
     public static final RegistryObject<Item> CRIMSON_WIZARD_ROBE = ITEMS.register("crimson_wizard_robe",

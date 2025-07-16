@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "dungeons_and_combat:crimson_smithing_template"
+  },
+  "base": {
+    "item": "dungeons_and_combat:ebony_leggings"
+  },
+  "addition": {
+    "item": "dacxirons:crimson_cloth"
+  },
+  "result": {
+    "item": "dacxirons:crimson_wizard_leggings"
+  }
+}
