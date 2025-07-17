@@ -1,5 +1,5 @@
-Nerfed crimson  armor to only have 5% blood power
-Added crimson wizard armor
+Nerfed crimson  armor to only have 5% blood power and removed its eldritch power
+Added crimson wizard armor - Crimson Upgrade template + Ebony armor + Crimson Cloth
 Exiled now has +5% spell power and +50 max mana
 Tombwarden now has +20% summon dmg
 Divine manuscript spell book
@@ -9,3 +9,12 @@ Weakness summon
 New spell Sunleia beam, fires sunleia's beam
 
 Scepter of compensation can now be repaired using arcane essence
+
+TODO:
+ADD SPELL STRENGTH EFFECT LOGO
+ADD CAST SPEED EFFECT LOGO
+Scepter of overcomopensaiton texture + model
+Crimson Cloth texture
+Something with crimson cloth recipe
+Crimson wizard smithing recipe
+Summon weakess thingies spell & its logo

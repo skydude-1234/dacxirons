@@ -49,6 +49,7 @@ public class CrimsonSpellArmorItem extends ImbueabledacxironsArmor {
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(Component.translatable("tooltip.dacxirons.crimson_wizard").withStyle(style -> style.withItalic(true)).withStyle(ChatFormatting.RED));
         tooltip.add(Component.translatable("tooltip.dacxirons.crimson_wizard2").withStyle(style -> style.withItalic(true)).withStyle(ChatFormatting.RED));
+
     }
 
 

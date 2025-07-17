@@ -42,7 +42,7 @@ public class ItemRegistries {
 
     public static final RegistryObject<Item> DIVINEMANUSCRIPT = ITEMS.register("divine_manuscript_spell_book", DivineManuscriptSpellbook::new);
 
-    public static final RegistryObject<Item> CRIMSON_WIZARD_HAT = ITEMS.register("crimson_wizard_hood",
+    public static final RegistryObject<Item> CRIMSON_WIZARD_HOOD = ITEMS.register("crimson_wizard_hood",
             CrimsonSpellArmorItem.Helmet::new);
 
     public static final RegistryObject<Item> CRIMSON_WIZARD_ROBE = ITEMS.register("crimson_wizard_robe",
