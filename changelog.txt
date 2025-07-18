@@ -14,7 +14,4 @@ TODO:
 ADD SPELL STRENGTH EFFECT LOGO
 ADD CAST SPEED EFFECT LOGO
 Scepter of overcomopensaiton texture + model
-Crimson Cloth texture
-Something with crimson cloth recipe
-Crimson wizard smithing recipe
 Summon weakess thingies spell & its logo
