@@ -35,7 +35,7 @@ public class MagicArrow extends AbstractSpell {
     private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "magic_arrow");
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.LEGENDARY)
-            //.setAllowCrafting(false)
+            .setAllowCrafting(false)
             .setSchoolResource(SchoolRegistry.EVOCATION_RESOURCE)
             .setMaxLevel(1)
             .setCooldownSeconds(3)

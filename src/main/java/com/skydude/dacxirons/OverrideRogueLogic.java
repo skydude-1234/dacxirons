@@ -17,10 +17,10 @@ import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
 public class OverrideRogueLogic {
-
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if (event.phase != TickEvent.Phase.END) return;
+        if (!dacxironsConfig.ENABLE_CUSTOM_ROGUE_LOGIC.get()) return;
 
         Entity entity = event.player;
 
@@ -31,19 +31,27 @@ public class OverrideRogueLogic {
 
                 // OVERRIDE or undo RogueClassEverProcedure effects
                 LivingEntity living = (LivingEntity) entity;
-                living.getAttribute(Attributes.LUCK).setBaseValue((double)1.0F);
-                living.getAttribute(Attributes.MAX_HEALTH).setBaseValue((double)16.0F);
-                living.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue((double)2.0F);
-                living.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.12);
-                living.getAttribute(Attributes.ATTACK_SPEED).setBaseValue(4.2);
+//                living.getAttribute(Attributes.LUCK).setBaseValue((double)1.0F);
+//                living.getAttribute(Attributes.MAX_HEALTH).setBaseValue((double)16.0F);
+//                living.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue((double)2.0F);
+//                living.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.12);
+//                living.getAttribute(Attributes.ATTACK_SPEED).setBaseValue(4.2);
 
-                // Remove invisishit
+                // Remove invisi shit
                 living.removeEffect(MobEffects.INVISIBILITY);
 
 
                 // custom shit
                 if (player.isShiftKeyDown() && !player.level().isClientSide()) {
-                    living.addEffect(new MobEffectInstance(MobEffectRegistry.TRUE_INVISIBILITY.get(), 20, 0, true, false));
+                    Entity lastHurt = player.getLastHurtMob();
+
+                    // If the player HASN'T recently hurt anything, allow invisibility
+                    if (lastHurt == null || player.getLastHurtMobTimestamp() + (dacxironsConfig.INVIS_REMOVAL_TIME.get() * 20) < player.tickCount) {
+                        living.addEffect(new MobEffectInstance(MobEffectRegistry.TRUE_INVISIBILITY.get(), 10, 0, true, false));
+                    } else {
+                        // remove invisibility if they just hit something
+                        living.removeEffect(MobEffectRegistry.TRUE_INVISIBILITY.get());
+                    }
                 }
             }
         }
