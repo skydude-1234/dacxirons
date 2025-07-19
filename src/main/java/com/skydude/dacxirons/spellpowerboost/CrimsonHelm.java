@@ -24,8 +24,7 @@ import java.util.UUID;
 public class CrimsonHelm {
 
     // UUIDs per slot and attribute ensure proper application/removal
-    private static final UUID ELDRITCH_UUID = UUID.fromString("123e4567-e89b-12d3-a456-426614174000");
-    private static final UUID BLOOD_UUID = UUID.fromString("123e4567-e89b-12d3-a456-426614174001");
+     private static final UUID BLOOD_UUID = UUID.fromString("123e4567-e89b-12d3-a456-426614174001");
 
     @SubscribeEvent
     public static void onItemAttributeModifiers(ItemAttributeModifierEvent event) {
@@ -34,21 +33,12 @@ public class CrimsonHelm {
 
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:crimson_helmet")) {
             if (event.getSlotType() == EquipmentSlot.HEAD) {
-                Attribute eldritchPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:eldritch_spell_power")
-                );
+
                 Attribute bloodPower = ForgeRegistries.ATTRIBUTES.getValue(
                         new ResourceLocation("irons_spellbooks:blood_spell_power")
                 );
 
-                if (eldritchPower != null) {
-                    event.addModifier(eldritchPower, new AttributeModifier(
-                            ELDRITCH_UUID,
-                            "Spell Power Bonus Eldritch",
-                            0.05,
-                            Operation.MULTIPLY_BASE
-                    ));
-                }
+
 
                 if (bloodPower != null) {
                     event.addModifier(bloodPower, new AttributeModifier(

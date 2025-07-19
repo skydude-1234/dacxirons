@@ -40,14 +40,7 @@ public class ExiledHelmet {
                 );
 
 
-                if (spellPower != null) {
-                    event.addModifier(spellPower, new AttributeModifier(
-                            SPELL_UUID,
-                            "Spell Power Bonusss",
-                            0.05,
-                            Operation.MULTIPLY_BASE
-                    ));
-                }
+
                 if (manaPower != null) {
                     event.addModifier(manaPower, new AttributeModifier(
                             MANA_UUID,
@@ -56,7 +49,14 @@ public class ExiledHelmet {
                             Operation.ADDITION
                     ));
                 }
-
+                if (spellPower != null) {
+                    event.addModifier(spellPower, new AttributeModifier(
+                            SPELL_UUID,
+                            "Spell Power Bonusss",
+                            0.05,
+                            Operation.MULTIPLY_BASE
+                    ));
+                }
 
             }
         }

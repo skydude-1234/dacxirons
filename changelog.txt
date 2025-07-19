@@ -1,14 +1,15 @@
 Nerfed crimson  armor to only have 5% blood power and removed its eldritch power
-Added crimson wizard armor - Crimson Upgrade template + Ebony armor + Crimson Cloth
+New spell armor set: crimson wizard armor - Crimson Upgrade template + Ebony armor + Crimson Cloth
+Crimson cloth is crafted using 1 Ebony Raw, 4 Arcane Cloth, 1 Divine Blood Vial & 3 Blood runes
 Exiled now has +5% spell power and +50 max mana
 Tombwarden now has +20% summon dmg
 Divine manuscript spell book
 Kamath summon
-Weakness summon 
-2 brandnew effects beng spell strenth and cast time used in crimson wizard armor
-New spell Sunleia beam, fires sunleia's beam
 
-Scepter of compensation can now be repaired using arcane essence
+2 brand new effects beng spell strenth and cast time used in crimson wizard armor
+New spell: Sunleia beam, fires sunleia's beam
+
+Scepter of compensation can now be repaired using arcane essence +100 durability per
 
 TODO:
 ADD SPELL STRENGTH EFFECT LOGO
