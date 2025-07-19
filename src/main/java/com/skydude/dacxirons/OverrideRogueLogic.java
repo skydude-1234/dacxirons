@@ -2,59 +2,61 @@ package com.skydude.dacxirons;
 
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import javax.annotation.Nullable;
+import java.util.WeakHashMap;
 
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(modid = "dacxirons")
 public class OverrideRogueLogic {
+
+    // Track last tick player hit something (melee or spell)
+    private static final WeakHashMap<ServerPlayer, Integer> lastHitTickMap = new WeakHashMap<>();
+
+    @SubscribeEvent(priority = EventPriority.HIGH)
+    public static void onLivingHurt(LivingHurtEvent event) {
+        if (!(event.getSource().getEntity() instanceof ServerPlayer player)) return;
+
+        // Always record hit timestamp regardless of damage source type
+        lastHitTickMap.put(player, player.tickCount);
+        System.out.println("[OverrideRogueLogic] Registered hit for player " + player.getName().getString() + " at tick " + player.tickCount);
+    }
+
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if (event.phase != TickEvent.Phase.END) return;
         if (!dacxironsConfig.ENABLE_CUSTOM_ROGUE_LOGIC.get()) return;
+        if (!(event.player instanceof ServerPlayer player)) return;
 
-        Entity entity = event.player;
+        if (!player.getAdvancements().getOrStartProgress(
+                        player.server.getAdvancements().getAdvancement(
+                                new ResourceLocation("dungeons_and_combat:the_rogue")))
+                .isDone()) return;
 
+        LivingEntity living = player;
 
-        if (entity instanceof ServerPlayer player) {
-            if (player.getAdvancements().getOrStartProgress(player.server.getAdvancements()
-                    .getAdvancement(new ResourceLocation("dungeons_and_combat:the_rogue"))).isDone()) {
+        // Remove vanilla invisibility to avoid conflicts
 
-                // OVERRIDE or undo RogueClassEverProcedure effects
-                LivingEntity living = (LivingEntity) entity;
-//                living.getAttribute(Attributes.LUCK).setBaseValue((double)1.0F);
-//                living.getAttribute(Attributes.MAX_HEALTH).setBaseValue((double)16.0F);
-//                living.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue((double)2.0F);
-//                living.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.12);
-//                living.getAttribute(Attributes.ATTACK_SPEED).setBaseValue(4.2);
+        living.removeEffect(MobEffects.INVISIBILITY);
 
-                // Remove invisi shit
-                living.removeEffect(MobEffects.INVISIBILITY);
+        int lastHitTick = lastHitTickMap.getOrDefault(player, -99999);
+        int cooldownTicks = (int) (dacxironsConfig.INVIS_REMOVAL_TIME.get() * 20);
 
-
-                // custom shit
-                if (player.isShiftKeyDown() && !player.level().isClientSide()) {
-                    Entity lastHurt = player.getLastHurtMob();
-
-                    // If the player HASN'T recently hurt anything, allow invisibility
-                    if (lastHurt == null || player.getLastHurtMobTimestamp() + (dacxironsConfig.INVIS_REMOVAL_TIME.get() * 20) < player.tickCount) {
-                        living.addEffect(new MobEffectInstance(MobEffectRegistry.TRUE_INVISIBILITY.get(), 10, 0, true, false));
-                    } else {
-                        // remove invisibility if they just hit something
-                        living.removeEffect(MobEffectRegistry.TRUE_INVISIBILITY.get());
-                    }
+        if (player.isShiftKeyDown() && !player.level().isClientSide()) {
+            if (lastHitTick + cooldownTicks < player.tickCount) {
+                if (!living.hasEffect(MobEffectRegistry.TRUE_INVISIBILITY.get())) {
+                    living.addEffect(new MobEffectInstance(MobEffectRegistry.TRUE_INVISIBILITY.get(), 10, 0, true, false));
+                 //   System.out.println("[OverrideRogueLogic] Added TRUE_INVISIBILITY to " + player.getName().getString());
                 }
             }
+
         }
     }
 }
-

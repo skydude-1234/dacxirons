@@ -4,12 +4,12 @@ license = "MIT"
 
 [[mods]]
 modId = "dacxirons"
-version = "1.4.0-1.20.1"
+version = "1.4-1.20.1"
 displayName = "dacxirons"
-authors = "Bandit-Bytes, Alshanex"
+authors = "skydude_"
 displayTest = "MATCH_VERSION"
 acceptableRemoteVersions = "*"
-description = '''Your self has come to slay you...'''
+description = '''dac x irons compat mod adding new items, spells, etc'''
 
 [[dependencies."dacxirons"]]
 modId = "forge"
