@@ -25,7 +25,7 @@ public class dacxironsConfig {
 
         INVIS_REMOVAL_TIME = builder
                 .comment("How long invis will be removed when player hits a mob, in seconds")
-                .defineInRange("Invis Removal Time", 0.0, 0, 100.0);
+                .defineInRange("Invis Removal Time", 3.0, 0, 100.0);
 
         builder.pop();
 
