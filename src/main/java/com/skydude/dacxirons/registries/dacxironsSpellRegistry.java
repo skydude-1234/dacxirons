@@ -3,7 +3,7 @@ package com.skydude.dacxirons.registries;
 import com.skydude.dacxirons.dacxirons;
 //import com.skydude.dacxirons.spells.Summon;
 import com.skydude.dacxirons.spells.MagicArrow;
-import com.skydude.dacxirons.spells.Summon;
+//import com.skydude.dacxirons.spells.Summon;
 import com.skydude.dacxirons.spells.SummonKamath;
 import com.skydude.dacxirons.spells.SunleiaBeam;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
@@ -15,7 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class dacxironsSpellRegistry {
   //  public static final DeferredRegister<AbstractSpell> SPELLS = DeferredRegister.create(SpellRegistry.SPELL_REGISTRY_KEY, dacxirons.MOD_ID);
     public static final DeferredRegister<AbstractSpell> SPELLS = DeferredRegister.create(SpellRegistry.SPELL_REGISTRY_KEY, dacxirons.MOD_ID);;
-    public static final RegistryObject<AbstractSpell> SUMMONER_WEAKNESS = registerSpell(new Summon());;
+  //  public static final RegistryObject<AbstractSpell> SUMMONER_WEAKNESS = registerSpell(new Summon());;
     public static final RegistryObject<AbstractSpell> SUMMON_KAMATH  = registerSpell(new SummonKamath());;
 
     public static final RegistryObject<AbstractSpell> SUNLEIA_BEAM = registerSpell(new SunleiaBeam());;

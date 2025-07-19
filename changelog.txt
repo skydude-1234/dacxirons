@@ -6,6 +6,10 @@ Tombwarden now has +20% summon dmg
 Divine manuscript spell book
 Kamath summon
 
+New Effects:
+Spell Strength gives 10% spell power/level
+Cast speed gives 10% cast speed/level
+Both are gained in the spell wizard full set bonus effect
 2 brand new effects beng spell strenth and cast time used in crimson wizard armor
 New spell: Sunleia beam, fires sunleia's beam
 
@@ -14,5 +18,4 @@ Scepter of compensation can now be repaired using arcane essence +100 durability
 TODO:
 ADD SPELL STRENGTH EFFECT LOGO
 ADD CAST SPEED EFFECT LOGO
-Scepter of overcomopensaiton texture + model
-Summon weakess thingies spell & its logo
+

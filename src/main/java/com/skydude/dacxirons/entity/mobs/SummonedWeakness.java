@@ -166,10 +166,18 @@ public class SummonedWeakness extends WeaknessEntity implements MagicSummon, Geo
         super.remove(pReason);
     }
 
-    @Override
-    public boolean doHurtTarget(Entity pEntity) {
-        return Utils.doMeleeAttack(this, pEntity, dacxironsSpellRegistry.SUMMONER_WEAKNESS.get().getDamageSource(this, getSummoner()));
-    }
+    //
+     //
+     //
+     //
+     //
+     //
+     //
+     // UNCOMMENT THE SHIT BEHIND IAIRHAITHAITHAITHAITAHI
+//    @Override
+//    public boolean doHurtTarget(Entity pEntity) {
+//        return Utils.doMeleeAttack(this, pEntity, dacxironsSpellRegistry.SUMMONER_WEAKNESS.get().getDamageSource(this, getSummoner()));
+//    }
 
     @Override
     public boolean hurt(DamageSource pSource, float pAmount) {
