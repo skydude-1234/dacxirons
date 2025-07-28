@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "CBC",
+    "BDB",
+    "CEC"
+  ],
+  "key": {
+    "B": {
+      "item": "irons_spellbooks:blood_rune"
+    },
+    "C": {
+      "item": "irons_spellbooks:magic_cloth"
+    },
+    "D": {
+      "item": "dungeons_and_combat:ebony_scrap"
+    },
+    "E": {
+      "item": "dungeons_and_combat:divine_blood_vial"
+    }
+  },
+  "result": {
+    "item": "dacxirons:crimson_cloth",
+    "count": 1
+  },
+  "show_notification": false
+}
