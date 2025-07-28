@@ -6,12 +6,15 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import org.apache.logging.log4j.core.jmx.Server;
 
+import java.util.Objects;
 import java.util.WeakHashMap;
 
 @Mod.EventBusSubscriber(modid = "dacxirons")
@@ -23,11 +26,17 @@ public class OverrideRogueLogic {
     @SubscribeEvent(priority = EventPriority.HIGH)
     public static void onLivingHurt(LivingHurtEvent event) {
         if (!(event.getSource().getEntity() instanceof ServerPlayer player)) return;
+        if(dacxironsConfig.ENABLE_CUSTOM_ROGUE_LOGIC.get() != Boolean.TRUE) return;
+        if (!player.getAdvancements().getOrStartProgress(
+                        Objects.requireNonNull(player.server.getAdvancements().getAdvancement(
+                                new ResourceLocation("dungeons_and_combat:the_rogue"))))
+                .isDone()) return;
+
+
 
         // Always record hit timestamp regardless of damage source type
         lastHitTickMap.put(player, player.tickCount);
-        System.out.println("[OverrideRogueLogic] Registered hit for player " + player.getName().getString() + " at tick " + player.tickCount);
-    }
+     }
 
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
@@ -36,8 +45,8 @@ public class OverrideRogueLogic {
         if (!(event.player instanceof ServerPlayer player)) return;
 
         if (!player.getAdvancements().getOrStartProgress(
-                        player.server.getAdvancements().getAdvancement(
-                                new ResourceLocation("dungeons_and_combat:the_rogue")))
+                        Objects.requireNonNull(player.server.getAdvancements().getAdvancement(
+                                new ResourceLocation("dungeons_and_combat:the_rogue"))))
                 .isDone()) return;
 
         LivingEntity living = player;

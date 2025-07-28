@@ -130,12 +130,12 @@ public class SummonKamath extends AbstractEldritchSpell {
             double maxHealth = (getKamathHealth(spellLevel, entity ));
             kamath.getAttribute(Attributes.MAX_HEALTH).setBaseValue(maxHealth);
             kamath.setHealth((float) maxHealth);
-            System.out.println(maxHealth);
+          //  System.out.println(maxHealth);
 
             double damage = (getKamathDamage(spellLevel, entity ));
             kamath.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(damage);
-            System.out.println(damage);
-            System.out.println(getKamathDuration(spellLevel, entity));
+          //  System.out.println(damage);
+          //  System.out.println(getKamathDuration(spellLevel, entity));
                 kamath.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(kamath.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
             kamath.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, false));
             var yrot = 6.281f / spellLevel + entity.getYRot() * Mth.DEG_TO_RAD;

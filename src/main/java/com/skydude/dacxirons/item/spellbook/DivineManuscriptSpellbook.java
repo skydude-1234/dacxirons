@@ -47,9 +47,7 @@ public class DivineManuscriptSpellbook extends UniqueSpellBook {
             lines.add(i < 0 ? lines.size() : i + 1, Component.translatable("tooltip.irons_spellbooks.enhance_spell_level", spell.getDisplayName(MinecraftInstanceHelper.instance.player()).withStyle(spell.getSchoolType().getDisplayName().getStyle())).withStyle(ChatFormatting.RED));
 
         }
-        else{
-            System.out.println("is none");
-        }
+
     }
 //            lines.add(i < 0 ? lines.size() : i+1, Component.translatable("tooltip.irons_spellbooks.enhance_spell_level",  Component.literal("Sunleia Beam").withStyle(ChatFormatting.DARK_RED)));
     @Override
