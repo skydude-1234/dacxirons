@@ -206,21 +206,27 @@
     },
     "done": true
   },
-  "irons_spellbooks:irons_spellbooks/make_scroll_forge": {
-    "criteria": {
-      "scroll_forge": "2025-07-28 13:37:35 -0400"
-    },
-    "done": true
-  },
   "dungeons_and_combat:origin": {
     "criteria": {
       "origin_0": "2025-07-28 13:36:43 -0400"
     },
     "done": true
   },
-  "irons_spellbooks:irons_spellbooks/spell_book_equip": {
+  "dungeons_and_combat:the_rogue": {
     "criteria": {
-      "requirement": "2025-07-28 13:38:58 -0400"
+      "the_rogue_0": "2025-07-28 13:36:43 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/bone_meal": {
+    "criteria": {
+      "has_bone": "2025-07-28 13:37:16 -0400"
+    },
+    "done": true
+  },
+  "irons_spellbooks:irons_spellbooks/make_scroll_forge": {
+    "criteria": {
+      "scroll_forge": "2025-07-28 13:37:35 -0400"
     },
     "done": true
   },
@@ -236,21 +242,15 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/bone_meal": {
-    "criteria": {
-      "has_bone": "2025-07-28 13:37:16 -0400"
-    },
-    "done": true
-  },
-  "dungeons_and_combat:the_rogue": {
-    "criteria": {
-      "the_rogue_0": "2025-07-28 13:36:43 -0400"
-    },
-    "done": true
-  },
   "irons_spellbooks:irons_spellbooks/make_inscription_table": {
     "criteria": {
       "inscription_table": "2025-07-28 13:37:50 -0400"
+    },
+    "done": true
+  },
+  "irons_spellbooks:irons_spellbooks/spell_book_equip": {
+    "criteria": {
+      "requirement": "2025-07-28 13:38:58 -0400"
     },
     "done": true
   },

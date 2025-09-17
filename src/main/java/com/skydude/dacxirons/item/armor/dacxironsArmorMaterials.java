@@ -28,7 +28,14 @@ public enum dacxironsArmorMaterials implements ArmorMaterial {
             () -> Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation("dungeons_and_combat", "crimson_ingot"))), Map.of(
             AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max mana", 125, AttributeModifier.Operation.ADDITION),
             AttributeRegistry.BLOOD_SPELL_POWER.get(), new AttributeModifier("Blood Spell power", 0.15, AttributeModifier.Operation.MULTIPLY_BASE)
+    )),
+    BLAZYMANCER_ARMOR("blazymancer_spell_armor", 60, new int[]{0, 0, 8, 6}, 20, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0F, 0.0F,
+            () -> Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation("dungeons_and_combat", "crimson_ingot"))), Map.of(
+            AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max mana", 125, AttributeModifier.Operation.ADDITION),
+            AttributeRegistry.BLOOD_SPELL_POWER.get(), new AttributeModifier("Blood Spell power", 0.15, AttributeModifier.Operation.MULTIPLY_BASE)
     ));
+
+
 
 
 

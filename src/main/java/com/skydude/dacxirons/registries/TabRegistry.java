@@ -26,6 +26,8 @@ public class TabRegistry {
                         output.accept(ItemRegistries.CRIMSON_WIZARD_BOOTS.get());
                         output.accept(ItemRegistries.CRIMSON_WIZARD_ROBE.get());
                         output.accept(ItemRegistries.CRIMSON_WIZARD_HOOD.get());
+                        output.accept(ItemRegistries.BLAZYMANCER_HOOD.get());
+                        output.accept(ItemRegistries.BLAZYMANCER_ROBE.get());
                         output.accept(ItemRegistries.DIVINEMANUSCRIPT.get());
                      //   output.accept(ItemRegistries.SCEPTEROVERCOMPENSATION.get());
                         output.accept(ItemRegistries.CRIMSON_CLOTH.get());

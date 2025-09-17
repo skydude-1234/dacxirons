@@ -23,6 +23,7 @@ import java.util.UUID;
 public class bloodymancerchestplate {
     // UUIDs per slot and attribute ensure proper application/removal
     private static final UUID BLOOD_UUID = UUID.fromString("663e4567-e89b-12d3-a456-426614174001");
+    private static final UUID MANA_UUID = UUID.fromString("663e4567-e89b-12d3-a456-426614174002");
 
     @SubscribeEvent
     public static void onItemAttributeModifiers(ItemAttributeModifierEvent event) {
@@ -34,6 +35,9 @@ public class bloodymancerchestplate {
                 Attribute bloodPower = ForgeRegistries.ATTRIBUTES.getValue(
                         new ResourceLocation("irons_spellbooks:blood_spell_power")
                 );
+                Attribute manaPower = ForgeRegistries.ATTRIBUTES.getValue(
+                        new ResourceLocation("irons_spellbooks:max_mana")
+                );
 
 
                 if (bloodPower != null) {
@@ -42,6 +46,14 @@ public class bloodymancerchestplate {
                             "Spell Power Bonus Blood",
                             0.10,
                             Operation.MULTIPLY_BASE
+                    ));
+                }
+                if (manaPower != null) {
+                    event.addModifier(manaPower, new AttributeModifier(
+                            MANA_UUID,
+                            "Spell Bonus Mana",
+                            75,
+                            Operation.ADDITION
                     ));
                 }
             }

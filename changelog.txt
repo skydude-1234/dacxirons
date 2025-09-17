@@ -1,27 +1,12 @@
-Nerfed crimson  armor to only have 5% blood power and removed its eldritch power
-Exiled now has +5% spell power and +50 max mana
-Tombwarden now has +20% summon dmg
-Scepter of compensation can now be repaired using arcane essence +100 durability per
-
-NEW CONFIG (:
-Option to give Rogue class's ability True Invisibility
-Option to remove true invisibility for sepcific amount of time when player attacks a mob (works with spells too (: )
-
-New Stuff:
-
-New spell armor set: crimson wizard armor - Crimson Upgrade template + Ebony armor + Crimson Cloth
-Crimson cloth is crafted using 1 Ebony Raw, 4 Arcane Cloth, 1 Divine Blood Vial & 3 Blood runes
-Divine manuscript spell book - 200mana, 15% cooldown reduction & 15% holy spell power
-Eldritch Champion Eldritch spell - Summon Kamath as yours to command, health & duration scale with spell power, damage scales with summon dmg attribute
-Sunleia Beam holy spell - fires sunleia's beam, scales with spell power
-
-New Effects:
-Spell Strength gives 10% spell power/level
-Cast speed gives 10% cast speed/level
-Both are gained in the crimson wizard full set bonus effect
+NEW SUTFF;
+New Sunleia beam Icon & Crimson cloth texture
 
 
+Reworks:
+Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood vial, 1 blood rune & 2 ebony raw
 
-
-
+Balance Changes
+BUFFS:
+Bloodymancer now has +75 max mana instead of 0
+Bloody cult now has 5% blood power and 50 max mana instead of 0
 

@@ -2,6 +2,7 @@ package com.skydude.dacxirons.registries;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.skydude.dacxirons.item.CrimsonClothItem;
+import com.skydude.dacxirons.item.armor.BlazymancerSpellArmorItem;
 import com.skydude.dacxirons.item.spellbook.DivineManuscriptSpellbook;
 import com.skydude.dacxirons.item.weapons.ScepterofOvercompensation;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
@@ -54,6 +55,10 @@ public class ItemRegistries {
     public static final RegistryObject<Item> CRIMSON_WIZARD_BOOTS = ITEMS.register("crimson_wizard_boots",
             CrimsonSpellArmorItem.Boots::new);
 
+    public static final RegistryObject<Item> BLAZYMANCER_HOOD = ITEMS.register("blazymancer_hood",
+            BlazymancerSpellArmorItem.Helmet::new);
+    public static final RegistryObject<Item> BLAZYMANCER_ROBE = ITEMS.register("blazymancer_robe",
+            BlazymancerSpellArmorItem.Chestplate::new);
 
     public static final RegistryObject<Item> GILLAGER_SPELL_BOOK = ITEMS.register("gillager_spell_book", () -> {
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();

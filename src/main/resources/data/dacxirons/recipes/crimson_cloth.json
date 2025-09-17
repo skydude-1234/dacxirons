@@ -2,11 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-    "CBC",
-    "BDB",
+    "AAA",
+    "DBD",
     "CEC"
   ],
   "key": {
+    "A": {
+      "item": "dungeons_and_combat:fleshy_cloth"
+    },
     "B": {
       "item": "irons_spellbooks:blood_rune"
     },

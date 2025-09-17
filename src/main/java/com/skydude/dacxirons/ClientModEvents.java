@@ -1,5 +1,6 @@
 package com.skydude.dacxirons;
 
+import com.skydude.dacxirons.client.model.blazymancer_model;
 import com.skydude.dacxirons.client.model.crimson_spell_model;
 import com.skydude.dacxirons.registries.EntityRegistry;
 import net.mcreator.dungeonsandcombat.client.renderer.KamathRenderer;
@@ -29,6 +30,10 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void onRegisterLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(crimson_spell_model.LAYER_LOCATION, crimson_spell_model::createBodyLayer);
+    }
+    @SubscribeEvent
+    public static void onRegisterLayerDefinitions2(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(blazymancer_model.LAYER_LOCATION, blazymancer_model::createBodyLayer);
     }
 
 }
