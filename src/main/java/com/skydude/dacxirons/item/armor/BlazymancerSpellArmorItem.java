@@ -6,11 +6,15 @@ package com.skydude.dacxirons.item.armor;
 import com.skydude.dacxirons.client.model.blazymancer_model;
 import com.skydude.dacxirons.client.model.crimson_spell_model;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
+import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModParticleTypes;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -20,9 +24,15 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import javax.annotation.Nullable;
 import java.util.Collections;
@@ -37,7 +47,7 @@ import static net.minecraft.world.effect.MobEffects.MOVEMENT_SPEED;
 
 public class BlazymancerSpellArmorItem extends ImbueabledacxironsArmor {
 
-
+    public static boolean blazymancerfull = false;
     public BlazymancerSpellArmorItem(ArmorItem.Type type, Properties properties) {
         super(dacxironsArmorMaterials.BLAZYMANCER_ARMOR, type, properties);
 
@@ -54,65 +64,55 @@ public class BlazymancerSpellArmorItem extends ImbueabledacxironsArmor {
 
     @SuppressWarnings("removal")
     @Override
-    public void onArmorTick(ItemStack stack, Level level, Player player ) {
+    public void onArmorTick(ItemStack stack, Level level, Player player) {
         // if (event.phase == TickEvent.Phase.END) {
         //  Player player = event.player;
 
+        if (CorrectArmor.hasFullSetOn(player, dacxironsArmorMaterials.CRIMSON_SPELL_ARMOR, 4)) {
+            blazymancerfull = true;
+        } else{
+            System.out.println("bomb");
+        }
 
         //    AttributeInstance swimSpeed = player.getAttribute(ForgeMod.SWIM_SPEED.get());
-        if (CorrectArmor.hasFullSetOn(player, dacxironsArmorMaterials.BLAZYMANCER_ARMOR)) {
 
-            if (player.hasEffect(DungeonsAndCombatModMobEffects.BLEEDING.get())) {
-                //player.addEffect(new MobEffectInstance(DungeonsAndCombatModMobEffects.BLEEDING.get(), 200, 0));
-                if (!player.hasEffect(SPELL_STRENGTH.get())) {
-                    if (player.getEffect(SPELL_STRENGTH.get()) == null || player.getEffect(SPELL_STRENGTH.get()).getDuration() < 10) {
-                        player.addEffect(new MobEffectInstance(
-                                SPELL_STRENGTH.get(),
-                                10,                  // duration in ticks (20 seconds)
-                                2,                    // EFFECT LEVEL 0 = 1, 1 = 2, 2 = 3, etc
-                                true,                 // ambient — blue outline + no flashing
-                                false,                 // show particles
-                                true                  // show icon
-                        ));
-                    }
-                }
-                if (!player.hasEffect(DAMAGE_RESISTANCE)) {
-                    if (player.getEffect(DAMAGE_RESISTANCE) == null || player.getEffect(DAMAGE_RESISTANCE).getDuration() < 10) {
-                        player.addEffect(new MobEffectInstance(
-                                DAMAGE_RESISTANCE,
-                                10,
-                                2,
-                                true,
-                                false,
-                                true
-                        ));
-                    }
-                }
-                if (!player.hasEffect(MOVEMENT_SPEED)) {
-                    if (player.getEffect(MOVEMENT_SPEED) == null || player.getEffect(MOVEMENT_SPEED).getDuration() < 10) {
-                        player.addEffect(new MobEffectInstance(
-                                MOVEMENT_SPEED,
-                                10,
-                                2,
-                                true,
-                                false,
-                                true
-                        ));
-                    }
-                }
-                if (!player.hasEffect(CAST_SPEED.get())) {
-                    if (player.getEffect(CAST_SPEED.get()) == null || player.getEffect(CAST_SPEED.get()).getDuration() < 10) {
-                        player.addEffect(new MobEffectInstance(
-                                CAST_SPEED.get(),
-                                10,                  // duration in ticks (20 seconds)
-                                1,                    // amplifier (level 3 effect)
-                                true,                 // ambient — blue outline + no flashing
-                                false,                 // show particles
-                                true                  // show icon
-                        ));
-                    }
-                }
 
+    }
+    @SubscribeEvent
+    public static void onEntityTick(LivingEvent.LivingTickEvent event) {
+        blazymanceraura(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
+    }
+    private static void blazymanceraura(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
+        if (blazymancerfull);
+        {
+            if (entity instanceof LivingEntity) {
+                LivingEntity _entity = (LivingEntity)entity;
+                if (!_entity.level().isClientSide()) {
+                    _entity.addEffect(new MobEffectInstance((MobEffect)DungeonsAndCombatModMobEffects.BURNING_AURA.get(), 60, 0, false, false));
+                }
+            }
+
+            entity.getPersistentData().putDouble("fuego", entity.getPersistentData().getDouble("fuego") + (double)1.0F);
+            if (entity.getPersistentData().getDouble("fuego") == (double)20.0F) {
+                world.addParticle((SimpleParticleType)DungeonsAndCombatModParticleTypes.ACID_FLAME.get(), x + 0.4, y + (double)1.0F, z + 0.4, (double)0.0F, 0.08, (double)0.0F);
+                world.addParticle((SimpleParticleType)DungeonsAndCombatModParticleTypes.ACID_FLAME.get(), x - 0.4, y + (double)1.0F, z + 0.4, (double)0.0F, 0.08, (double)0.0F);
+                world.addParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, x + (double)0.0F, y + (double)0.0F, z + (double)0.0F, (double)0.0F, 0.08, (double)0.0F);
+            }
+
+            if (entity.getPersistentData().getDouble("fuego") == (double)5.0F) {
+                world.addParticle((SimpleParticleType)DungeonsAndCombatModParticleTypes.ACID_FLAME.get(), x - 0.4, y + (double)0.5F, z + 0.4, (double)0.0F, 0.1, (double)0.0F);
+                world.addParticle((SimpleParticleType)DungeonsAndCombatModParticleTypes.ACID_FLAME.get(), x + 0.4, y + (double)0.5F, z - 0.4, (double)0.0F, 0.1, (double)0.0F);
+            }
+
+            if (entity.getPersistentData().getDouble("fuego") == (double)10.0F) {
+                world.addParticle((SimpleParticleType)DungeonsAndCombatModParticleTypes.ACID_FLAME.get(), x - 0.4, y + 1.3, z - 0.4, (double)0.0F, 0.07, (double)0.0F);
+                world.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, x + (double)0.0F, y + (double)0.0F, z + (double)0.0F, (double)0.0F, 0.08, (double)0.0F);
+            }
+
+            if (entity.getPersistentData().getDouble("fuego") == (double)25.0F) {
+                world.addParticle((SimpleParticleType)DungeonsAndCombatModParticleTypes.ACID_FLAME.get(), x + 0.4, y + 0.8, z - 0.4, (double)0.0F, 0.1, (double)0.0F);
+                world.addParticle((SimpleParticleType)DungeonsAndCombatModParticleTypes.ACID_FLAME.get(), x - 0.3, y + 0.8, z + 0.4, (double)0.0F, 0.1, (double)0.0F);
+                entity.getPersistentData().putDouble("fuego", (double)0.0F);
             }
         }
     }

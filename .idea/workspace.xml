@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="188ba439-442e-457c-947b-4f025685f2f4" name="Changes" comment="NEW SUTFF;&#10;New Sunleia beam Icon &amp; Crimson cloth texture&#10;&#10;&#10;Reworks:&#10;Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood vial, 1 blood rune &amp; 2 ebony raw&#10;&#10;Balance Changes&#10;BUFFS:&#10;Bloodymancer now has +75 max mana instead of 0&#10;Bloody cult now has 5% blood power and 50 max mana instead of 0">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/models/item/blazymancer_hood.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/models/item/blazymancer_tunic.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/item/blazymancer_hood.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/item/blazymancer_tunic.png" afterDir="false" />
+    <list default="true" id="188ba439-442e-457c-947b-4f025685f2f4" name="Changes" comment="blazymancer now has 100 max mana&#10;added blazymancer item png">
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" afterDir="false" />
@@ -19,7 +14,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/registries/TabRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/registries/TabRegistry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/item/armor/CorrectArmor.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/item/armor/CorrectArmor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
@@ -29,9 +24,10 @@
       <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/BlazymancerSpellArmorItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/BlazymancerSpellArmorItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/CorrectArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/CorrectArmor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/CrimsonSpellArmorItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/CrimsonSpellArmorItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/dacxironsArmorMaterials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/dacxironsArmorMaterials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/ItemRegistries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/ItemRegistries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/TabRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/TabRegistry.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +89,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Download Sources.executor": "Run",
     "Gradle.dacxirons [:cpw.mods.bootstraplauncher.BootstrapLauncher.main()].executor": "Run",
     "Gradle.dacxirons [:prepareRunClientCompile].executor": "Run",
     "Gradle.dacxirons [build].executor": "Run",
@@ -189,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758070090264</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="blazymancer now has 100 max mana&#10;added blazymancer item png">
+      <option name="closed" value="true" />
+      <created>1758071611587</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1758071611587</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +225,7 @@
     <MESSAGE value="fixed log spam" />
     <MESSAGE value="merged branch into masta" />
     <MESSAGE value="NEW SUTFF;&#10;New Sunleia beam Icon &amp; Crimson cloth texture&#10;&#10;&#10;Reworks:&#10;Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood vial, 1 blood rune &amp; 2 ebony raw&#10;&#10;Balance Changes&#10;BUFFS:&#10;Bloodymancer now has +75 max mana instead of 0&#10;Bloody cult now has 5% blood power and 50 max mana instead of 0" />
-    <option name="LAST_COMMIT_MESSAGE" value="NEW SUTFF;&#10;New Sunleia beam Icon &amp; Crimson cloth texture&#10;&#10;&#10;Reworks:&#10;Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood vial, 1 blood rune &amp; 2 ebony raw&#10;&#10;Balance Changes&#10;BUFFS:&#10;Bloodymancer now has +75 max mana instead of 0&#10;Bloody cult now has 5% blood power and 50 max mana instead of 0" />
+    <MESSAGE value="blazymancer now has 100 max mana&#10;added blazymancer item png" />
+    <option name="LAST_COMMIT_MESSAGE" value="blazymancer now has 100 max mana&#10;added blazymancer item png" />
   </component>
 </project>

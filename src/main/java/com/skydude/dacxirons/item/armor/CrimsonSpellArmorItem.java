@@ -61,7 +61,7 @@ public class CrimsonSpellArmorItem extends ImbueabledacxironsArmor {
 
 
         //    AttributeInstance swimSpeed = player.getAttribute(ForgeMod.SWIM_SPEED.get());
-        if (CorrectArmor.hasFullSetOn(player, dacxironsArmorMaterials.CRIMSON_SPELL_ARMOR)) {
+        if (CorrectArmor.hasFullSetOn(player, dacxironsArmorMaterials.CRIMSON_SPELL_ARMOR, 4)) {
 
             if (player.hasEffect(DungeonsAndCombatModMobEffects.BLEEDING.get())) {
                 //player.addEffect(new MobEffectInstance(DungeonsAndCombatModMobEffects.BLEEDING.get(), 200, 0));
