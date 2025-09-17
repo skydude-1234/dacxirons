@@ -6,18 +6,11 @@ import com.skydude.dacxirons.item.armor.BlazymancerSpellArmorItem;
 import com.skydude.dacxirons.item.spellbook.DivineManuscriptSpellbook;
 import com.skydude.dacxirons.item.weapons.ScepterofOvercompensation;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import io.redspace.ironsspellbooks.item.spell_books.SimpleAttributeSpellBook;
-import io.redspace.ironsspellbooks.item.weapons.SpellbreakerItem;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -57,7 +50,7 @@ public class ItemRegistries {
 
     public static final RegistryObject<Item> BLAZYMANCER_HOOD = ITEMS.register("blazymancer_hood",
             BlazymancerSpellArmorItem.Helmet::new);
-    public static final RegistryObject<Item> BLAZYMANCER_ROBE = ITEMS.register("blazymancer_robe",
+    public static final RegistryObject<Item> BLAZYMANCER_TUNIC = ITEMS.register("blazymancer_tunic",
             BlazymancerSpellArmorItem.Chestplate::new);
 
     public static final RegistryObject<Item> GILLAGER_SPELL_BOOK = ITEMS.register("gillager_spell_book", () -> {

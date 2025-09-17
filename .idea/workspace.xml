@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="188ba439-442e-457c-947b-4f025685f2f4" name="Changes" comment="merged branch into masta">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/client/model/blazymancer_model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/BlazymancerSpellArmorItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/bloodycultchestplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/bloodyculthelmet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/entities/blazymancer_armor.png" afterDir="false" />
+    <list default="true" id="188ba439-442e-457c-947b-4f025685f2f4" name="Changes" comment="NEW SUTFF;&#10;New Sunleia beam Icon &amp; Crimson cloth texture&#10;&#10;&#10;Reworks:&#10;Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood vial, 1 blood rune &amp; 2 ebony raw&#10;&#10;Balance Changes&#10;BUFFS:&#10;Bloodymancer now has +75 max mana instead of 0&#10;Bloody cult now has 5% blood power and 50 max mana instead of 0">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/models/item/blazymancer_hood.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/models/item/blazymancer_tunic.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/item/blazymancer_hood.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/item/blazymancer_tunic.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
@@ -20,19 +18,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/dacxirons.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/dacxirons.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/ClientModEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/ClientModEvents.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/registries/TabRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/registries/TabRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/downloadMCMeta/version.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/downloadMCMeta/version.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/dacxirons/textures/gui/spell_icons/sunleia_beam.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/dacxirons/textures/gui/spell_icons/sunleia_beam.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/dacxirons/textures/item/crimson_cloth.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/dacxirons/textures/item/crimson_cloth.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/dacxirons/recipes/crimson_cloth.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/dacxirons/recipes/crimson_cloth.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DivineManuscriptSpellbook.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ItemRegistries.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/changelog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2025-07-28-1.log.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
@@ -40,33 +28,10 @@
       <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/DIM-1/data/raids.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/DIM1/data/raids_end.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/advancements/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/advancements/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/data/raids.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/entities/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/entities/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/entities/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/entities/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/entities/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/entities/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/entities/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/level.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/level.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/region/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/region/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/region/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/region/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (6)/stats/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (6)/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/ClientModEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/ClientModEvents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/dacxironsArmorMaterials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/dacxironsArmorMaterials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/ItemRegistries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/ItemRegistries.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/TabRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/TabRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/bloodymancerchestplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/bloodymancerchestplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/bloodymancerhelmet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/bloodymancerhelmet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/gui/spell_icons/sunleia_beam.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/gui/spell_icons/sunleia_beam.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/item/crimson_cloth.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/item/crimson_cloth.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/crimson_cloth.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/crimson_cloth.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,19 +91,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.dacxirons [:cpw.mods.bootstraplauncher.BootstrapLauncher.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.dacxirons [:prepareRunClientCompile].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.dacxirons [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.dacxirons [createMcpToSrg].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sky/Music/dacextras&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.dacxirons [:cpw.mods.bootstraplauncher.BootstrapLauncher.main()].executor": "Run",
+    "Gradle.dacxirons [:prepareRunClientCompile].executor": "Run",
+    "Gradle.dacxirons [build].executor": "Run",
+    "Gradle.dacxirons [createMcpToSrg].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/sky/Music/dacxirons/src/main/resources/assets/dacxirons/models/item"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/dacxirons/models/item" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.skydude.dacxirons.spellpowerboost" />
       <recent name="com.skydude.dacxirons.item.armor" />
@@ -213,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753724957587</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="NEW SUTFF;&#10;New Sunleia beam Icon &amp; Crimson cloth texture&#10;&#10;&#10;Reworks:&#10;Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood vial, 1 blood rune &amp; 2 ebony raw&#10;&#10;Balance Changes&#10;BUFFS:&#10;Bloodymancer now has +75 max mana instead of 0&#10;Bloody cult now has 5% blood power and 50 max mana instead of 0">
+      <option name="closed" value="true" />
+      <created>1758070090264</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1758070090264</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,6 +219,7 @@
     <MESSAGE value="finished divine manuscript recipe" />
     <MESSAGE value="fixed log spam" />
     <MESSAGE value="merged branch into masta" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged branch into masta" />
+    <MESSAGE value="NEW SUTFF;&#10;New Sunleia beam Icon &amp; Crimson cloth texture&#10;&#10;&#10;Reworks:&#10;Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood vial, 1 blood rune &amp; 2 ebony raw&#10;&#10;Balance Changes&#10;BUFFS:&#10;Bloodymancer now has +75 max mana instead of 0&#10;Bloody cult now has 5% blood power and 50 max mana instead of 0" />
+    <option name="LAST_COMMIT_MESSAGE" value="NEW SUTFF;&#10;New Sunleia beam Icon &amp; Crimson cloth texture&#10;&#10;&#10;Reworks:&#10;Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood vial, 1 blood rune &amp; 2 ebony raw&#10;&#10;Balance Changes&#10;BUFFS:&#10;Bloodymancer now has +75 max mana instead of 0&#10;Bloody cult now has 5% blood power and 50 max mana instead of 0" />
   </component>
 </project>

@@ -7,6 +7,6 @@ Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood v
 
 Balance Changes
 BUFFS:
-Bloodymancer now has +75 max mana instead of 0
+Bloodymancer now has +100 max mana instead of 0
 Bloody cult now has 5% blood power and 50 max mana instead of 0
 

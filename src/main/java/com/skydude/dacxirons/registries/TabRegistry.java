@@ -1,7 +1,6 @@
 package com.skydude.dacxirons.registries;
 
 import com.skydude.dacxirons.dacxirons;
-import com.skydude.dacxirons.registries.ItemRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -9,8 +8,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.eventbus.api.IEventBus;
-
-import com.skydude.dacxirons.dacxirons;
 
 public class TabRegistry {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -27,7 +24,7 @@ public class TabRegistry {
                         output.accept(ItemRegistries.CRIMSON_WIZARD_ROBE.get());
                         output.accept(ItemRegistries.CRIMSON_WIZARD_HOOD.get());
                         output.accept(ItemRegistries.BLAZYMANCER_HOOD.get());
-                        output.accept(ItemRegistries.BLAZYMANCER_ROBE.get());
+                        output.accept(ItemRegistries.BLAZYMANCER_TUNIC.get());
                         output.accept(ItemRegistries.DIVINEMANUSCRIPT.get());
                      //   output.accept(ItemRegistries.SCEPTEROVERCOMPENSATION.get());
                         output.accept(ItemRegistries.CRIMSON_CLOTH.get());

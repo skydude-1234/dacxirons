@@ -52,7 +52,7 @@ public class bloodymancerchestplate {
                     event.addModifier(manaPower, new AttributeModifier(
                             MANA_UUID,
                             "Spell Bonus Mana",
-                            75,
+                            100,
                             Operation.ADDITION
                     ));
                 }
