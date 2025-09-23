@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.skydude.dacxirons.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.dacxirons.refmap.json",
+  "mixins": [
+    "OathSwordItemMixin",
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
+

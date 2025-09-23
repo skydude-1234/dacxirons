@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="188ba439-442e-457c-947b-4f025685f2f4" name="Changes" comment="blazymancer now has 100 max mana&#10;added blazymancer item png">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/Blazymancereffect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/OathSwordStaffBehavior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/WitherRuneItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/mixin/OathSwordItemMixin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/TheGravedigger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/models/item/wither_rune.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/item/wither_rune.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/blazymancer_hood.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/blazymancer_tunic.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/wither_rune.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mixins.dacxirons.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" afterDir="false" />
@@ -14,8 +27,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/item/armor/CorrectArmor.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/item/armor/CorrectArmor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/ClientModEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/ClientModEvents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/registries/TabRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/registries/TabRegistry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/downloadMCMeta/version.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/downloadMCMeta/version.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jarjar/jarJar/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/dacxirons-1.4-1.20.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/dacxirons-1.4.0-1.20.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/dacxirons-1.4fix-1.20.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/META-INF/mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/dacxirons/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/dacxirons/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/dacxirons.mixins.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/changelog.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
@@ -24,10 +48,15 @@
       <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/ClientModEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/ClientModEvents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/BlazymancerSpellArmorItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/BlazymancerSpellArmorItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/CorrectArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/CorrectArmor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/CrimsonSpellArmorItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/CrimsonSpellArmorItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/ImbueabledacxironsArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/ImbueabledacxironsArmor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/dacxironsArmorMaterials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/dacxironsArmorMaterials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/ItemRegistries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/ItemRegistries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/TabRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/TabRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dacxirons.mixins.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +88,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -87,25 +123,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.dacxirons [:cpw.mods.bootstraplauncher.BootstrapLauncher.main()].executor": "Run",
-    "Gradle.dacxirons [:prepareRunClientCompile].executor": "Run",
-    "Gradle.dacxirons [build].executor": "Run",
-    "Gradle.dacxirons [createMcpToSrg].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/sky/Music/dacxirons/src/main/resources/assets/dacxirons/models/item"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.dacxirons [:cpw.mods.bootstraplauncher.BootstrapLauncher.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.dacxirons [:prepareRunClientCompile].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.dacxirons [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.dacxirons [createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sky/Music/dacxirons/src/main/resources/data/dacxirons/recipes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes" />
       <recent name="$PROJECT_DIR$/src/main/resources/assets/dacxirons/models/item" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.skydude.dacxirons.mixin" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.skydude.dacxirons.spellpowerboost" />
+      <recent name="com.skydude.dacxirons.item" />
       <recent name="com.skydude.dacxirons.item.armor" />
     </key>
   </component>

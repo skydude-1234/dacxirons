@@ -6,8 +6,10 @@ import com.skydude.dacxirons.spells.MagicArrow;
 //import com.skydude.dacxirons.spells.Summon;
 import com.skydude.dacxirons.spells.SummonKamath;
 import com.skydude.dacxirons.spells.SunleiaBeam;
+import com.skydude.dacxirons.spells.eldritch.EldritchSlashSpell;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
+import io.redspace.ironsspellbooks.spells.fire.FlamingStrikeSpell;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -20,6 +22,8 @@ public class dacxironsSpellRegistry {
 
     public static final RegistryObject<AbstractSpell> SUNLEIA_BEAM = registerSpell(new SunleiaBeam());;
     public static final RegistryObject<AbstractSpell> MAGIC_ARROW = registerSpell(new MagicArrow());;
+
+    public static final RegistryObject<AbstractSpell> ELDRITCH_SLASH_SPELL = registerSpell(new EldritchSlashSpell());
 
     public static RegistryObject<AbstractSpell> registerSpell(AbstractSpell spell) {
         return SPELLS.register(spell.getSpellName(), () -> spell);

@@ -5,6 +5,8 @@ package com.skydude.dacxirons.item.armor;
 
 import com.skydude.dacxirons.client.model.blazymancer_model;
 import com.skydude.dacxirons.client.model.crimson_spell_model;
+import com.skydude.dacxirons.registries.ItemRegistries;
+import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModItems;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModParticleTypes;
 import net.minecraft.ChatFormatting;
@@ -33,6 +35,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
 import javax.annotation.Nullable;
 import java.util.Collections;
@@ -55,10 +58,11 @@ public class BlazymancerSpellArmorItem extends ImbueabledacxironsArmor {
     }
     //tooltip
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(Component.translatable("tooltip.dacxirons.crimson_wizard").withStyle(style -> style.withItalic(true)).withStyle(ChatFormatting.RED));
-        tooltip.add(Component.translatable("tooltip.dacxirons.crimson_wizard2").withStyle(style -> style.withItalic(true)).withStyle(ChatFormatting.RED));
-
+    public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
+        super.appendHoverText(itemstack, level, list, flag);
+        list.add(Component.literal("§7Full Set Bonus:"));
+        list.add(Component.literal(" §9Burning Aura:"));
+        list.add(Component.literal("§7Attackers will get Burning for 10 seconds"));
     }
 
 
@@ -68,54 +72,15 @@ public class BlazymancerSpellArmorItem extends ImbueabledacxironsArmor {
         // if (event.phase == TickEvent.Phase.END) {
         //  Player player = event.player;
 
-        if (CorrectArmor.hasFullSetOn(player, dacxironsArmorMaterials.CRIMSON_SPELL_ARMOR, 4)) {
-            blazymancerfull = true;
-        } else{
-            System.out.println("bomb");
-        }
+
 
         //    AttributeInstance swimSpeed = player.getAttribute(ForgeMod.SWIM_SPEED.get());
 
 
     }
-    @SubscribeEvent
-    public static void onEntityTick(LivingEvent.LivingTickEvent event) {
-        blazymanceraura(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
-    }
-    private static void blazymanceraura(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
-        if (blazymancerfull);
-        {
-            if (entity instanceof LivingEntity) {
-                LivingEntity _entity = (LivingEntity)entity;
-                if (!_entity.level().isClientSide()) {
-                    _entity.addEffect(new MobEffectInstance((MobEffect)DungeonsAndCombatModMobEffects.BURNING_AURA.get(), 60, 0, false, false));
-                }
-            }
 
-            entity.getPersistentData().putDouble("fuego", entity.getPersistentData().getDouble("fuego") + (double)1.0F);
-            if (entity.getPersistentData().getDouble("fuego") == (double)20.0F) {
-                world.addParticle((SimpleParticleType)DungeonsAndCombatModParticleTypes.ACID_FLAME.get(), x + 0.4, y + (double)1.0F, z + 0.4, (double)0.0F, 0.08, (double)0.0F);
-                world.addParticle((SimpleParticleType)DungeonsAndCombatModParticleTypes.ACID_FLAME.get(), x - 0.4, y + (double)1.0F, z + 0.4, (double)0.0F, 0.08, (double)0.0F);
-                world.addParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, x + (double)0.0F, y + (double)0.0F, z + (double)0.0F, (double)0.0F, 0.08, (double)0.0F);
-            }
 
-            if (entity.getPersistentData().getDouble("fuego") == (double)5.0F) {
-                world.addParticle((SimpleParticleType)DungeonsAndCombatModParticleTypes.ACID_FLAME.get(), x - 0.4, y + (double)0.5F, z + 0.4, (double)0.0F, 0.1, (double)0.0F);
-                world.addParticle((SimpleParticleType)DungeonsAndCombatModParticleTypes.ACID_FLAME.get(), x + 0.4, y + (double)0.5F, z - 0.4, (double)0.0F, 0.1, (double)0.0F);
-            }
 
-            if (entity.getPersistentData().getDouble("fuego") == (double)10.0F) {
-                world.addParticle((SimpleParticleType)DungeonsAndCombatModParticleTypes.ACID_FLAME.get(), x - 0.4, y + 1.3, z - 0.4, (double)0.0F, 0.07, (double)0.0F);
-                world.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, x + (double)0.0F, y + (double)0.0F, z + (double)0.0F, (double)0.0F, 0.08, (double)0.0F);
-            }
-
-            if (entity.getPersistentData().getDouble("fuego") == (double)25.0F) {
-                world.addParticle((SimpleParticleType)DungeonsAndCombatModParticleTypes.ACID_FLAME.get(), x + 0.4, y + 0.8, z - 0.4, (double)0.0F, 0.1, (double)0.0F);
-                world.addParticle((SimpleParticleType)DungeonsAndCombatModParticleTypes.ACID_FLAME.get(), x - 0.3, y + 0.8, z + 0.4, (double)0.0F, 0.1, (double)0.0F);
-                entity.getPersistentData().putDouble("fuego", (double)0.0F);
-            }
-        }
-    }
     public static class Helmet extends BlazymancerSpellArmorItem {
         public Helmet() {
             super(Type.HELMET, (new Properties()).fireResistant());

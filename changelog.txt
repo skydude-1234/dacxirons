@@ -1,5 +1,6 @@
 NEW SUTFF;
 New Sunleia beam Icon & Crimson cloth texture
+New Blazymancer 2-piece armor, 10% spell power, 100 max mana, 15% fire magic resistance, Blazing Aura full set ability
 
 
 Reworks:
@@ -9,4 +10,5 @@ Balance Changes
 BUFFS:
 Bloodymancer now has +100 max mana instead of 0
 Bloody cult now has 5% blood power and 50 max mana instead of 0
+Gravedigger weapon now has +10% summon damage and 5% cooldown reduction
 

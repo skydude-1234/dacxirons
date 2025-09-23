@@ -28,6 +28,7 @@ public class TabRegistry {
                         output.accept(ItemRegistries.DIVINEMANUSCRIPT.get());
                      //   output.accept(ItemRegistries.SCEPTEROVERCOMPENSATION.get());
                         output.accept(ItemRegistries.CRIMSON_CLOTH.get());
+                        output.accept(ItemRegistries.WITHER_RUNE.get());
                         //output.accept(ItemRegistries.SUMMONS_NECKLACE.get());
                     })
                     .build()

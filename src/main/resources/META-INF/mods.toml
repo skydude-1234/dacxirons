@@ -10,6 +10,8 @@ authors = "${mod_authors}"
 displayTest = "MATCH_VERSION"
 acceptableRemoteVersions = "*"
 description = '''${mod_description}'''
+[[mixins]]
+config="mixins.dacxirons.json"
 
 [[dependencies."dacxirons"]]
 modId = "forge"

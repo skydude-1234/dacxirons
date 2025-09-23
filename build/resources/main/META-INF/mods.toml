@@ -10,6 +10,8 @@ authors = "skydude_"
 displayTest = "MATCH_VERSION"
 acceptableRemoteVersions = "*"
 description = '''dac x irons compat mod adding new items, spells, etc'''
+[[mixins]]
+config="mixins.dacxirons.json"
 
 [[dependencies."dacxirons"]]
 modId = "forge"

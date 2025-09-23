@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "EDE",
+    "DCD",
+    "EDE"
+  ],
+  "key": {
+    "C": {
+      "item": "irons_spellbooks:blank_rune"
+    },
+    "D": {
+      "item": "dungeons_and_combat:ebony_scrap"
+    },
+    "E": {
+      "item": "minecraft:coal"
+    }
+  },
+  "result": {
+    "item": "dacxirons:wither_rune",
+    "count": 1
+  },
+  "show_notification": false
+}

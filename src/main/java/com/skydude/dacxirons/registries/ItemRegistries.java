@@ -2,6 +2,7 @@ package com.skydude.dacxirons.registries;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.skydude.dacxirons.item.CrimsonClothItem;
+import com.skydude.dacxirons.item.WitherRuneItem;
 import com.skydude.dacxirons.item.armor.BlazymancerSpellArmorItem;
 import com.skydude.dacxirons.item.spellbook.DivineManuscriptSpellbook;
 import com.skydude.dacxirons.item.weapons.ScepterofOvercompensation;
@@ -52,6 +53,9 @@ public class ItemRegistries {
             BlazymancerSpellArmorItem.Helmet::new);
     public static final RegistryObject<Item> BLAZYMANCER_TUNIC = ITEMS.register("blazymancer_tunic",
             BlazymancerSpellArmorItem.Chestplate::new);
+    public static final RegistryObject<Item> WITHER_RUNE = ITEMS.register("wither_rune",
+            WitherRuneItem::new);
+
 
     public static final RegistryObject<Item> GILLAGER_SPELL_BOOK = ITEMS.register("gillager_spell_book", () -> {
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();

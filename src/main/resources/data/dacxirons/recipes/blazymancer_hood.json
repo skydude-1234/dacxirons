@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "   ",
+    "DED",
+    "ABA"
+  ],
+  "key": {
+    "A": {
+      "item": "dungeons_and_combat:blazing_ingot"
+    },
+    "B": {
+      "item": "minecraft:leather_chestplate"
+    },
+    "D": {
+      "item": "dungeons_and_combat:molten_bone"
+    },
+    "E": {
+      "item": "irons_spellbooks:fire_rune"
+    }
+  },
+  "result": {
+    "item": "dacxirons:blazymancer_hood",
+    "count": 1
+  },
+  "show_notification": false
+}

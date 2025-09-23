@@ -2,16 +2,30 @@ package com.skydude.dacxirons;
 
 import com.skydude.dacxirons.client.model.blazymancer_model;
 import com.skydude.dacxirons.client.model.crimson_spell_model;
+import com.skydude.dacxirons.item.armor.BlazymancerSpellArmorItem;
 import com.skydude.dacxirons.registries.EntityRegistry;
+import com.skydude.dacxirons.registries.ItemRegistries;
 import net.mcreator.dungeonsandcombat.client.renderer.KamathRenderer;
 import net.mcreator.dungeonsandcombat.client.renderer.WeaknessRenderer;
 import net.mcreator.dungeonsandcombat.entity.WeaknessEntity;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModEntityRenderers;
+import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModParticleTypes;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import com.skydude.dacxirons.client.model.crimson_spell_model;
+
+import javax.annotation.Nullable;
 
 // ClientModEvents
 
@@ -35,5 +49,6 @@ public class ClientModEvents {
     public static void onRegisterLayerDefinitions2(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(blazymancer_model.LAYER_LOCATION, blazymancer_model::createBodyLayer);
     }
+
 
 }

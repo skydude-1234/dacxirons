@@ -15,6 +15,8 @@ plugins {
     id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
 }
 
+
+
 apply plugin: 'org.spongepowered.mixin'
 
 group = mod_group_id
@@ -87,6 +89,7 @@ minecraft {
             // You can set various levels here.
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             property 'forge.logging.console.level', 'debug'
+            properties 'mixin.debug': 'true'
 
             mods {
                 "${mod_id}" {
@@ -103,6 +106,7 @@ minecraft {
         server {
             property 'forge.enabledGameTestNamespaces', mod_id
             args '--nogui'
+            properties 'mixin.debug': 'true'
         }
 
         // This run config launches GameTestServer and runs all registered gametests, then exits.
@@ -296,4 +300,9 @@ jar {
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
-
+mixin {
+    // Tell Mixingradle to generate this refmap for main sources
+    add sourceSets.main, "mixins.${mod_id}.refmap.json"
+    // Register your mixin config JSON file
+    config "mixins.${mod_id}.json"
+}

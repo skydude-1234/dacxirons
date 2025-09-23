@@ -4,6 +4,8 @@
   "item.dacxirons.crimson_wizard_leggings": "\u00A7cCrimson Wizard Leggings",
   "item.dacxirons.crimson_wizard_robe": "\u00A7cCrimson Wizard Robe",
   "item.dacxirons.crimson_wizard_hood": "\u00A7cCrimson Wizard Hood",
+  "item.dacxirons.blazymancer_hood": "Blazymancer Hood",
+  "item.dacxirons.blazymancer_tunic": "Blazymancer Tunic",
   "effect.dacxirons.cast_speed": "Cast Speed",
   "tooltip.dacxirons.crimson_wizard": "Full Set Bonus: ",
   "tooltip.dacxirons.crimson_wizard2": "\u00a7 While Bleeding, Gain Spell Strength 3, Resistance 3, Speed 3 and Cast Speed 3\"",
@@ -12,6 +14,8 @@
   "itemGroup.dacxirons.dacxirons_tab": "Dac x Irons items",
   "spell.dacxirons.summonkamath": "Eldritch Champion",
   "spell.dacxirons.summonkamath.guide": "Summon the eldritch champion, Kamath himself",
+  "spell.dacxirons.eldritch_slash": "Eldritch Slash",
+  "spell.dacxirons.eldritch_slash.guide": "Unleash uninteruptable slash infused by Kamath himself",
   "ui.dacxirons.kamath.summon_hp": "%d summoned kamath hp",
   "ui.dacxirons.kamath.summon_duration": "%ds summoned kamath duration",
   "ui.dacxirons.sunleia.beam": "%d Damage",
@@ -20,7 +24,8 @@
   "spell.dacxirons.sunleia_beam" : "Sunleia Beam",
   "item.dacxirons.scepter_of_over_compensation": "Scepter of OverCompensation",
   "spell.dacxirons.magic_arrow": "Magic Arrow",
-  "item.dacxirons.crimson_cloth": "Crimson Cloth"
+  "item.dacxirons.crimson_cloth": "Crimson Cloth",
+  "tooltip.dacxirons.fullsetbonus": "Full Set Bonus:"
 
 
 

@@ -39,3 +39,21 @@ public abstract class ImbueabledacxironsArmor extends dacxironsArmorItem impleme
 
 
 }
+//{
+//        "required": true,
+//        "minVersion": "0.8",
+//        "package": "com.skydude.dacxirons",
+//        "compatibilityLevel": "JAVA_17",
+//        "refmap": "dacxirons.refmap.json",
+//        "mixins": [
+//        "mixin.OathSwordItemMixin"
+//        ],
+//        "client": [
+//        ],
+//        "injectors": {
+//        "defaultRequire": 1
+//        },
+//        "overwrites": {
+//        "requireAnnotations": true
+//        }
+//        }
