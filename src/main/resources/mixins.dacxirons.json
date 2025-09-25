@@ -5,8 +5,8 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "mixins.dacxirons.refmap.json",
   "mixins": [
-    "OathSwordItemMixin",
-
+    "BloodymancerMixin",
+    "OathSwordItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

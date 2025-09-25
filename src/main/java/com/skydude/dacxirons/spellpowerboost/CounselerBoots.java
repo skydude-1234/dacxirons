@@ -20,9 +20,9 @@ import java.util.UUID;
         bus = Bus.FORGE
 )
 
-public class KamathLegging {
+public class CounselerBoots {
     // UUIDs per slot and attribute ensure proper application/removal
-    private static final UUID ELDRITCH_UUID = UUID.fromString("537e4567-e89b-12d3-a456-426614174000");
+    private static final UUID ELDRITCH_UUID = UUID.fromString("534e567-e89b-69420-a456-426614174000");
 
 
     @SubscribeEvent
@@ -30,8 +30,8 @@ public class KamathLegging {
         Item item = event.getItemStack().getItem();
         ResourceLocation itemId = ForgeRegistries.ITEMS.getKey(item);
 
-        if (itemId != null && itemId.toString().equals("dungeons_and_combat:kamath_armor_leggings")) {
-            if (event.getSlotType() == EquipmentSlot.LEGS) {
+        if (itemId != null && itemId.toString().equals("dungeons_and_combat:kamath_armor_boots")) {
+            if (event.getSlotType() == EquipmentSlot.FEET) {
                 Attribute eldritchPower = ForgeRegistries.ATTRIBUTES.getValue(
                         new ResourceLocation("irons_spellbooks:eldritch_spell_power")
                 );
@@ -41,7 +41,7 @@ public class KamathLegging {
                     event.addModifier(eldritchPower, new AttributeModifier(
                             ELDRITCH_UUID,
                             "Spell Power Bonus Eldritch",
-                            0.5,
+                            0.05,
                             Operation.MULTIPLY_BASE
                     ));
                 }

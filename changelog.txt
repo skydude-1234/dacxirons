@@ -6,9 +6,14 @@ New Blazymancer 2-piece armor, 10% spell power, 100 max mana, 15% fire magic res
 Reworks:
 Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood vial, 1 blood rune & 2 ebony raw
 
+
 Balance Changes
 BUFFS:
-Bloodymancer now has +100 max mana instead of 0
+Bloodymancer armor now has +100 max mana instead of 0
+Bloodymancer Tunic can now be imbued with spells
 Bloody cult now has 5% blood power and 50 max mana instead of 0
 Gravedigger weapon now has +10% summon damage and 5% cooldown reduction
+
+NERFS:
+Kamath armor now has only 5% instead of 15% eldritch power
 

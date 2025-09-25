@@ -48,8 +48,7 @@ public abstract class OathSwordItemMixin implements IPresetSpellContainer {
     // Ensure the sword always has a spell container when right-clicked
     // Ensure the sword has a spell container when its tooltip is displayed
     @Inject(method = "appendHoverText", at = @At("HEAD"))
-    private void dacxirons$onHover(ItemStack stack,
-                                   Level level,
+    private void dacxirons$onHover(ItemStack stack, Level level,
                                    java.util.List<net.minecraft.network.chat.Component> tooltip,
                                    net.minecraft.world.item.TooltipFlag flag,
                                    CallbackInfo ci) {
