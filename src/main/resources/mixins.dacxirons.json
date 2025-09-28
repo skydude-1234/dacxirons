@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "mixins.dacxirons.refmap.json",
   "mixins": [
+    "BlessedAmuletMixin",
     "BloodymancerMixin",
     "OathSwordItemMixin"
   ],

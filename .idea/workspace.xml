@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="188ba439-442e-457c-947b-4f025685f2f4" name="Changes" comment="blazymancer now has 100 max mana&#10;added blazymancer item png">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/mixin/BloodymancerMixin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/CounselerBoots.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/client/model/ebony_spell_model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/effect/SpellBurnProcedure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/effect/SpellBurningAuraEffect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/EbonyMagicSpellArmorItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/set_bonuses/EbonyMagicEffect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/mixin/BlessedAmuletMixin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/CounselerLegs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/entities/ebony_wizard_armor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/mob_effect/spell_burning_aura.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/ebony_wizard_boots.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/ebony_wizard_hood.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/ebony_wizard_leggings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/ebony_wizard_robe.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" afterDir="false" />
@@ -16,9 +28,18 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/ClientModEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/ClientModEvents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/registries/EffectRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/registries/EffectRegistry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/registries/TabRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/registries/TabRegistry.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classpath/runClient_minecraftClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/classpath/runClient_minecraftClasspath.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/downloadMCMeta/version.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/downloadMCMeta/version.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/dacxirons/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/dacxirons/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/dacxirons/recipes/crimson_wizard_boots.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/dacxirons/recipes/crimson_wizard_boots.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/dacxirons/recipes/crimson_wizard_hood.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/dacxirons/recipes/crimson_wizard_hood.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/dacxirons/recipes/crimson_wizard_leggings.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/dacxirons/recipes/crimson_wizard_leggings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/dacxirons/recipes/crimson_wizard_robe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/dacxirons/recipes/crimson_wizard_robe.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/changelog.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
@@ -28,14 +49,21 @@
       <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/mixin/OathSwordItemMixin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/mixin/OathSwordItemMixin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/KamathChest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/KamathChest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/KamathHelmet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/KamathHelmet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/KamathLegging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/KamathLegging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/Kamathboots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/Kamathboots.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/gui/spell_icons/eldritch_champion.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/gui/spell_icons/summonkamath.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/Blazymancereffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/set_bonuses/Blazymancereffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/ClientModEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/ClientModEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/BlazymancerSpellArmorItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/BlazymancerSpellArmorItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/dacxironsArmorMaterials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/dacxironsArmorMaterials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/EffectRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/EffectRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/ItemRegistries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/ItemRegistries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/TabRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/TabRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/CounselerBoots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spellpowerboost/CounselerChest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/blazymancer_hood.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/blazymancer_hood.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/crimson_wizard_boots.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/crimson_wizard_boots.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/crimson_wizard_hood.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/crimson_wizard_hood.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/crimson_wizard_leggings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/crimson_wizard_leggings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/crimson_wizard_robe.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes/crimson_wizard_robe.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mixins.dacxirons.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mixins.dacxirons.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,40 +88,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="dacxirons" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="dacxirons" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="dacxirons" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="dacxirons" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="dacxirons" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="dacxirons" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="dacxirons" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
               </path>
             </expand>
             <select />
@@ -137,32 +131,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.dacxirons [:cpw.mods.bootstraplauncher.BootstrapLauncher.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.dacxirons [:prepareRunClientCompile].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.dacxirons [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.dacxirons [createMcpToSrg].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sky/Music/dacxirons/src/main/resources/data/dacxirons/recipes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.dacxirons [:cpw.mods.bootstraplauncher.BootstrapLauncher.main()].executor": "Run",
+    "Gradle.dacxirons [:prepareRunClientCompile].executor": "Run",
+    "Gradle.dacxirons [build].executor": "Run",
+    "Gradle.dacxirons [createMcpToSrg].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/sky/Music/dacxirons/src/main/resources/data/dacxirons/recipes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/data/dacxirons/recipes" />
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/mob_effect" />
       <recent name="$PROJECT_DIR$/src/main/resources/assets/dacxirons/models/item" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.skydude.dacxirons.mixin" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.skydude.dacxirons.mixin" />
+      <recent name="com.skydude.dacxirons.item.armor" />
       <recent name="com.skydude.dacxirons.spellpowerboost" />
       <recent name="com.skydude.dacxirons.item" />
-      <recent name="com.skydude.dacxirons.item.armor" />
     </key>
   </component>
   <component name="RunManager" selected="Application.runClient">

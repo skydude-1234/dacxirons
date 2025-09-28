@@ -20,9 +20,10 @@ import java.util.UUID;
         bus = Bus.FORGE
 )
 
-public class CounselerBoots {
+public class CounselerChest {
     // UUIDs per slot and attribute ensure proper application/removal
-    private static final UUID ELDRITCH_UUID = UUID.fromString("534e567-e89b-69420-a456-426614174000");
+    private static final UUID ELDRITCH_UUID = UUID.fromString("534e567-e89b-69420-456-4266141769420");
+    private static final UUID MANA_UUID = UUID.fromString("676e567-e89b-69420-456-4266141769420");
 
 
     @SubscribeEvent
@@ -30,8 +31,9 @@ public class CounselerBoots {
         Item item = event.getItemStack().getItem();
         ResourceLocation itemId = ForgeRegistries.ITEMS.getKey(item);
 
-        if (itemId != null && itemId.toString().equals("dungeons_and_combat:kamath_armor_boots")) {
-            if (event.getSlotType() == EquipmentSlot.FEET) {
+        if (itemId != null && itemId.toString().equals("dungeons_and_combat:counselor_chestplate")) {
+            if (event.getSlotType() == EquipmentSlot.CHEST) {
+
                 Attribute eldritchPower = ForgeRegistries.ATTRIBUTES.getValue(
                         new ResourceLocation("irons_spellbooks:eldritch_spell_power")
                 );
@@ -41,8 +43,22 @@ public class CounselerBoots {
                     event.addModifier(eldritchPower, new AttributeModifier(
                             ELDRITCH_UUID,
                             "Spell Power Bonus Eldritch",
-                            0.05,
+                            0.15,
                             Operation.MULTIPLY_BASE
+                    ));
+                }
+
+                Attribute manaPower = ForgeRegistries.ATTRIBUTES.getValue(
+                        new ResourceLocation("irons_spellbooks:max_mana")
+                );
+
+
+                if (manaPower != null) {
+                    event.addModifier(manaPower, new AttributeModifier(
+                            MANA_UUID,
+                            "Spell Power Bonus Eldritch",
+                            50.0,
+                            Operation.ADDITION
                     ));
                 }
 

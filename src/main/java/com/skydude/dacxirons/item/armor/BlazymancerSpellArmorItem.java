@@ -61,8 +61,8 @@ public class BlazymancerSpellArmorItem extends ImbueabledacxironsArmor {
     public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
         super.appendHoverText(itemstack, level, list, flag);
         list.add(Component.literal("§7Full Set Bonus:"));
-        list.add(Component.literal(" §9Burning Aura:"));
-        list.add(Component.literal("§7Attackers will get Burning for 10 seconds"));
+        list.add(Component.literal(" §9Burning Spell Aura:"));
+        list.add(Component.literal("§7When attacked, set your attacker ablaze and cast firebolt"));
     }
 
 

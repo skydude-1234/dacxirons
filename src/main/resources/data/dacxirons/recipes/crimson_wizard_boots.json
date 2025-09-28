@@ -4,7 +4,7 @@
     "item": "dungeons_and_combat:crimson_smithing_template"
   },
   "base": {
-    "item": "dungeons_and_combat:ebony_boots"
+    "item": "dacxirons:ebony_wizard_boots"
   },
   "addition": {
     "item": "dacxirons:crimson_cloth"

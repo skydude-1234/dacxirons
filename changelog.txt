@@ -1,10 +1,14 @@
 NEW SUTFF;
 New Sunleia beam Icon & Crimson cloth texture
-New Blazymancer 2-piece armor, 10% spell power, 100 max mana, 15% fire magic resistance, Blazing Aura full set ability
+New Blazymancer 2-piece armor, 10% spell power, 100 max mana, 15% fire magic resistance, full set ability: Blazing Aura + when attacked, cast firebolt
+New Ebony wizar armor set, replaces regular ebony armor in Crimson Wizard Recipe
+Blessed Amulet now removes Iron's harmful effects
+Counselor Tunic & Leggings now have +15% eldritch power and +50 max mana
 
 
 Reworks:
 Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood vial, 1 blood rune & 2 ebony raw
+Crimson Wizard is now crafted using ebony wizard armor instead of regular ebony
 
 
 Balance Changes
@@ -16,4 +20,6 @@ Gravedigger weapon now has +10% summon damage and 5% cooldown reduction
 
 NERFS:
 Kamath armor now has only 5% instead of 15% eldritch power
+
+
 

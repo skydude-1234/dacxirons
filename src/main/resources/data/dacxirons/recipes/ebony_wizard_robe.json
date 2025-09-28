@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "DED",
+    "DDD",
+    "DDD"
+  ],
+  "key": {
+    "D": {
+      "item": "irons_spellbooks:magic_cloth"
+    },
+    "E": {
+      "item": "dacxirons:wither_rune"
+    }
+  },
+  "result": {
+    "item": "dacxirons:ebony_wizard_robe",
+    "count": 1
+  },
+  "show_notification": false
+}

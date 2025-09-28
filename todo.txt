@@ -1,0 +1,4 @@
+
+
+
+ Make counselor skulls be able to use eldritch spells

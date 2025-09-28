@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableMultimap;
 import com.skydude.dacxirons.item.CrimsonClothItem;
 import com.skydude.dacxirons.item.WitherRuneItem;
 import com.skydude.dacxirons.item.armor.BlazymancerSpellArmorItem;
+import com.skydude.dacxirons.item.armor.EbonyMagicSpellArmorItem;
 import com.skydude.dacxirons.item.spellbook.DivineManuscriptSpellbook;
 import com.skydude.dacxirons.item.weapons.ScepterofOvercompensation;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
@@ -48,6 +49,17 @@ public class ItemRegistries {
 
     public static final RegistryObject<Item> CRIMSON_WIZARD_BOOTS = ITEMS.register("crimson_wizard_boots",
             CrimsonSpellArmorItem.Boots::new);
+    public static final RegistryObject<Item> EBONY_WIZARD_HOOD = ITEMS.register("ebony_wizard_hood",
+            EbonyMagicSpellArmorItem.Helmet::new);
+
+    public static final RegistryObject<Item> EBONY_WIZARD_ROBE = ITEMS.register("ebony_wizard_robe",
+            EbonyMagicSpellArmorItem.Chestplate::new);
+
+    public static final RegistryObject<Item> EBONY_WIZARD_LEGGINGS = ITEMS.register("ebony_wizard_leggings",
+            EbonyMagicSpellArmorItem.Leggings::new);
+
+    public static final RegistryObject<Item> EBONY_WIZARD_BOOTS = ITEMS.register("ebony_wizard_boots",
+            EbonyMagicSpellArmorItem.Boots::new);
 
     public static final RegistryObject<Item> BLAZYMANCER_HOOD = ITEMS.register("blazymancer_hood",
             BlazymancerSpellArmorItem.Helmet::new);
