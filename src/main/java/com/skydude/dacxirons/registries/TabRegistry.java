@@ -33,6 +33,7 @@ public class TabRegistry {
                         output.accept(ItemRegistries.EBONY_WIZARD_ROBE.get());
                         output.accept(ItemRegistries.EBONY_WIZARD_HOOD.get());
                         output.accept(ItemRegistries.WITHER_RUNE.get());
+                        output.accept(ItemRegistries.DIVINE_MOLD.get());
                         //output.accept(ItemRegistries.SUMMONS_NECKLACE.get());
                     })
                     .build()

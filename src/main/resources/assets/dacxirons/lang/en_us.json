@@ -25,7 +25,16 @@
   "item.dacxirons.scepter_of_over_compensation": "Scepter of OverCompensation",
   "spell.dacxirons.magic_arrow": "Magic Arrow",
   "item.dacxirons.crimson_cloth": "Crimson Cloth",
-  "tooltip.dacxirons.fullsetbonus": "Full Set Bonus:"
+  "tooltip.dacxirons.fullsetbonus": "Full Set Bonus:",
+  "fullsetbonus": "§7Full Set Bonus:",
+  "§9Burning Spell Aura:": "§9Burning Spell Aura:",
+  "§7When attacked, set your attacker ablaze and cast firebolt": "§7When attacked, set your attacker ablaze and cast firebolt",
+  "tooltip.dacxirons.ebony_wizard_set": "Your spells inflict wither upon enemies",
+  "tooltip.dacxirons.ebonyfullset": "§9Wizard of Wither:",
+  "item.dacxirons.ebony_wizard_boots": "§8Ebony Wizard Boots",
+  "item.dacxirons.ebony_wizard_leggings": "§8Ebony Wizard Leggings",
+  "item.dacxirons.ebony_wizard_robe": "§8Ebony Wizard Robe",
+  "item.dacxirons.ebony_wizard_hood": "§8Ebony Wizard Hood"
 
 
 

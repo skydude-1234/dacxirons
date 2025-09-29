@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "CEC",
+    "ABA",
+    "ADA"
+  ],
+  "key": {
+    "A": {
+      "item": "dungeons_and_combat:blessed_gold_ingot"
+    },
+    "B": {
+      "item": "irons_spellbooks:blank_rune"
+    },
+    "C": {
+      "item": "irons_spellbooks:magic_cloth"
+    },
+    "D": {
+      "item": "irons_spellbooks:divine_pearl"
+    },
+    "E": {
+      "item": "dungeons_and_combat:divine_blood_vial"
+    }
+  },
+  "result": {
+    "item": "dacxirons:divine_mold",
+    "count": 1
+  },
+  "show_notification": false
+}

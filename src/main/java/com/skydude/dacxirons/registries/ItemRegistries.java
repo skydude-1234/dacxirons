@@ -2,6 +2,7 @@ package com.skydude.dacxirons.registries;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.skydude.dacxirons.item.CrimsonClothItem;
+import com.skydude.dacxirons.item.DivineMoldTemplateItem;
 import com.skydude.dacxirons.item.WitherRuneItem;
 import com.skydude.dacxirons.item.armor.BlazymancerSpellArmorItem;
 import com.skydude.dacxirons.item.armor.EbonyMagicSpellArmorItem;
@@ -32,6 +33,7 @@ public class ItemRegistries {
             DeferredRegister.create(ForgeRegistries.ITEMS, dacxirons.MOD_ID);
 
     public static final RegistryObject<Item> CRIMSON_CLOTH = ITEMS.register("crimson_cloth", CrimsonClothItem::new);
+    public static final RegistryObject<Item> DIVINE_MOLD = ITEMS.register("divine_mold", DivineMoldTemplateItem::new);
 
     public static final RegistryObject<Item> SCEPTEROVERCOMPENSATION = ITEMS.register("scepter_of_over_compensation",
             ScepterofOvercompensation::new);

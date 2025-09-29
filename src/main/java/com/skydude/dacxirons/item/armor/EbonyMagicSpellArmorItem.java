@@ -52,8 +52,9 @@ public static boolean fullebonymagic;
     //tooltip
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(Component.translatable("tooltip.dacxirons.crimson_wizard").withStyle(style -> style.withItalic(true)).withStyle(ChatFormatting.RED));
-        tooltip.add(Component.translatable("tooltip.dacxirons.crimson_wizard2").withStyle(style -> style.withItalic(true)).withStyle(ChatFormatting.RED));
+        tooltip.add(Component.translatable("fullsetbonus"));
+        tooltip.add(Component.translatable("tooltip.dacxirons.ebonyfullset"));
+        tooltip.add(Component.translatable("tooltip.dacxirons.ebony_wizard_set").withStyle(style -> style.withItalic(true)).withStyle(ChatFormatting.DARK_GRAY));
 
     }
 
@@ -68,8 +69,6 @@ public static boolean fullebonymagic;
             //    AttributeInstance swimSpeed = player.getAttribute(ForgeMod.SWIM_SPEED.get());
             fullebonymagic = true;
 
-        } else {
-            System.out.println("not full set");
         }
     }
 
