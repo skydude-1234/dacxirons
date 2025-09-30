@@ -5,6 +5,7 @@ import com.skydude.dacxirons.item.CrimsonClothItem;
 import com.skydude.dacxirons.item.DivineMoldTemplateItem;
 import com.skydude.dacxirons.item.WitherRuneItem;
 import com.skydude.dacxirons.item.armor.BlazymancerSpellArmorItem;
+import com.skydude.dacxirons.item.armor.BlessedPriestArmorItem;
 import com.skydude.dacxirons.item.armor.EbonyMagicSpellArmorItem;
 import com.skydude.dacxirons.item.spellbook.DivineManuscriptSpellbook;
 import com.skydude.dacxirons.item.weapons.ScepterofOvercompensation;
@@ -62,6 +63,18 @@ public class ItemRegistries {
 
     public static final RegistryObject<Item> EBONY_WIZARD_BOOTS = ITEMS.register("ebony_wizard_boots",
             EbonyMagicSpellArmorItem.Boots::new);
+    public static final RegistryObject<Item> BLESSED_PRIEST_HOOD = ITEMS.register("blessed_priest_hood",
+            BlessedPriestArmorItem.Helmet::new);
+
+    public static final RegistryObject<Item> BLESSED_PRIEST_ROBE = ITEMS.register("blessed_priest_robe",
+            BlessedPriestArmorItem.Chestplate::new);
+
+    public static final RegistryObject<Item> BLESSED_PRIEST_LEGGINGS = ITEMS.register("blessed_priest_leggings",
+            BlessedPriestArmorItem.Leggings::new);
+
+    public static final RegistryObject<Item> BLESSED_PRIEST_BOOTS = ITEMS.register("blessed_priest_boots",
+            BlessedPriestArmorItem.Boots::new);
+
 
     public static final RegistryObject<Item> BLAZYMANCER_HOOD = ITEMS.register("blazymancer_hood",
             BlazymancerSpellArmorItem.Helmet::new);

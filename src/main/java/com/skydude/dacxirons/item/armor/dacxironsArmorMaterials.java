@@ -25,7 +25,7 @@ public enum dacxironsArmorMaterials implements ArmorMaterial {
 
     // Crimson WIzard Armor
     CRIMSON_SPELL_ARMOR("crimson_spell_armor", 60, new int[]{5, 8, 10, 6}, 20, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0F, 0.0F,
-            () -> Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation("dungeons_and_combat", "crimson_ingot"))), Map.of(
+            () -> Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation("dacxirons", "crimson_cloth"))), Map.of(
             AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max mana", 125, AttributeModifier.Operation.ADDITION),
             AttributeRegistry.BLOOD_SPELL_POWER.get(), new AttributeModifier("Blood Spell power", 0.15, AttributeModifier.Operation.MULTIPLY_BASE)
     )),
@@ -34,7 +34,12 @@ public enum dacxironsArmorMaterials implements ArmorMaterial {
             AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max mana", 100, AttributeModifier.Operation.ADDITION),
             AttributeRegistry.COOLDOWN_REDUCTION.get(), new AttributeModifier("coldown", 0.05, AttributeModifier.Operation.MULTIPLY_BASE)
     )),
-    BLAZYMANCER_ARMOR("blazymancer_spell_armor", 60, new int[]{0, 0, 5, 2}, 20, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0F, 0.0F,
+    BLESSED_PRIEST_ARMOR("blessed_priest_armor", 60, new int[]{3, 6, 8, 3}, 20, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0F, 0.0F,
+            () -> Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation("dungeons_and_combat", "blessed_gold_ingot"))), Map.of(
+            AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max mana", 125, AttributeModifier.Operation.ADDITION),
+            AttributeRegistry.HOLY_SPELL_POWER.get(), new AttributeModifier("holy moly", 0.20, AttributeModifier.Operation.MULTIPLY_BASE)
+    )),
+    BLAZYMANCER_ARMOR("blazymancer_spell_armor", 60, new int[]{0, 0, 5, 2}, 20, SoundEvents.ARMOR_EQUIP_LEATHER, 2.0F, 0.0F,
             () -> Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation("dungeons_and_combat", "blazing_ingot"))), Map.of(
             AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max mana", 100, AttributeModifier.Operation.ADDITION),
             AttributeRegistry.FIRE_SPELL_POWER.get(), new AttributeModifier("Fire Spell power", 0.1, AttributeModifier.Operation.MULTIPLY_BASE),

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "dacxirons:divine_mold"
+  },
+  "base": {
+    "item": "irons_spellbooks:priest_helmet"
+  },
+  "addition": {
+    "item": "dungeons_and_combat:crimson_cloth"
+  },
+  "result": {
+    "item": "dacxirons:blessed_priest_boots"
+  }
+}

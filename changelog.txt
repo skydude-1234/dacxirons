@@ -11,7 +11,8 @@ Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood v
 Crimson Wizard is now crafted using ebony wizard armor instead of regular ebony
 
 
-Balance Changes
+
+Balance Changes:
 BUFFS:
 Bloodymancer armor now has +100 max mana instead of 0
 Bloodymancer Tunic can now be imbued with spells
@@ -21,5 +22,6 @@ Gravedigger weapon now has +10% summon damage and 5% cooldown reduction
 NERFS:
 Kamath armor now has only 5% instead of 15% eldritch power
 
-
+Fixes:
+Crimson Wizard armor can now be repaired with crimson cloth instead of crimson ingot
 

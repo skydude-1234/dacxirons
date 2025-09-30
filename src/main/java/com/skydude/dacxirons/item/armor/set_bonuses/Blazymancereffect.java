@@ -24,25 +24,15 @@ public class Blazymancereffect {
 
     }
 
-    public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-        execute((Event)null, world, x, y, z, entity);
-    }
+
 
     private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
         if (entity != null) {
-
-            if (entity instanceof LivingEntity) {
-
-
-            } else {
-
-            }
 
 
                     if (entity instanceof LivingEntity) {
                           LivingEntity player = (LivingEntity)entity;
                         if (player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ItemRegistries.BLAZYMANCER_TUNIC.get() && player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ItemRegistries.BLAZYMANCER_HOOD.get()) {
-                            int yes = 1;
 
 
                             if (entity instanceof LivingEntity) {

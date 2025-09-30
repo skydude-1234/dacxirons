@@ -1,8 +1,6 @@
 package com.skydude.dacxirons;
 
-import com.skydude.dacxirons.client.model.blazymancer_model;
-import com.skydude.dacxirons.client.model.crimson_spell_model;
-import com.skydude.dacxirons.client.model.ebony_spell_model;
+import com.skydude.dacxirons.client.model.*;
 import com.skydude.dacxirons.item.armor.BlazymancerSpellArmorItem;
 import com.skydude.dacxirons.registries.EntityRegistry;
 import com.skydude.dacxirons.registries.ItemRegistries;
@@ -54,6 +52,11 @@ public class ClientModEvents {
     public static void onRegisterLayerDefinitions3(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ebony_spell_model.LAYER_LOCATION, ebony_spell_model::createBodyLayer);
     }
+    @SubscribeEvent
+    public static void onRegisterLayerDefinitions4(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(blessed_priest_model.LAYER_LOCATION, blessed_priest_model::createBodyLayer);
+    }
+
 
 
 }

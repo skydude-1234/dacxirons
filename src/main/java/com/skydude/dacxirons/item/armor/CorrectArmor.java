@@ -26,14 +26,15 @@ import java.util.Arrays;
 
 public class CorrectArmor {
 
-    public static boolean hasFullSetOn(Player player, dacxironsArmorMaterials material, int requiredPieces) {
+    public static boolean hasFullSetOn(LivingEntity living, dacxironsArmorMaterials material, int requiredPieces) {
         requiredPieces = 4;
         int equippedPieces = 0;
 
-        for (ItemStack armorStack : player.getInventory().armor) {
+        for (ItemStack armorStack : living.getArmorSlots()) {
             if (!armorStack.isEmpty() && armorStack.getItem() instanceof ArmorItem armorItem) {
                 if (armorItem.getMaterial() == material) {
                     equippedPieces++;
+
                 }
             }
         }
