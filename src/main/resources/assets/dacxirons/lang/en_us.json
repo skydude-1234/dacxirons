@@ -35,14 +35,11 @@
   "item.dacxirons.ebony_wizard_leggings": "§8Ebony Wizard Leggings",
   "item.dacxirons.ebony_wizard_robe": "§8Ebony Wizard Robe",
   "item.dacxirons.ebony_wizard_hood": "§8Ebony Wizard Hood",
-  "item.dacxirons.divine_mold": "divine_mold"
-
-
-
-
-
-
-
-
+  "item.dacxirons.divine_mold": "divine_mold",
+  "item.dacxirons.blessed_priest_boots": "Blessed Priest Boots",
+  "item.dacxirons.blessed_priest_leggings": "Blessed Priest Leggings",
+  "item.dacxirons.blessed_priest_robe": "Blessed Priest Robe",
+  "item.dacxirons.blessed_priest_hood": "Blessed Priest Hood",
+  "tooltip.dacxirons.blessedprestfullset": "§9Wizard of Wither:"
 }
 

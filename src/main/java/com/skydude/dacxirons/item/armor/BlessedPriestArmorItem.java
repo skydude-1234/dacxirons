@@ -10,11 +10,13 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
@@ -31,7 +33,7 @@ public class BlessedPriestArmorItem extends ImbueabledacxironsArmor {
 
 // public static boolean fullebonymagic;
     public BlessedPriestArmorItem(Type type, Properties properties) {
-        super(dacxironsArmorMaterials.BLESSED_PRIEST_ARMOR, type, properties);
+        super(dacxironsArmorMaterials.BLESSED_PRIEST_ARMOR, type, properties.rarity(Rarity.RARE));
 
 
     }
@@ -39,10 +41,12 @@ public class BlessedPriestArmorItem extends ImbueabledacxironsArmor {
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(Component.translatable("fullsetbonus"));
-        tooltip.add(Component.translatable("tooltip.dacxirons.ebonyfullset"));
-        tooltip.add(Component.translatable("tooltip.dacxirons.ebony_wizard_set").withStyle(style -> style.withItalic(true)).withStyle(ChatFormatting.DARK_GRAY));
+        tooltip.add(Component.translatable("tooltip.dacxirons.blessedprestfullset"));
+        tooltip.add(Component.translatable("tooltip.dacxirons.blessedfullset").withStyle(style -> style.withItalic(true)).withStyle(ChatFormatting.DARK_GRAY));
 
     }
+
+
 
 
     @SuppressWarnings("removal")
