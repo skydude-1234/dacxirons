@@ -5,15 +5,20 @@ package com.skydude.dacxirons.item.armor;
 
 import com.skydude.dacxirons.client.model.blessed_priest_model;
 import com.skydude.dacxirons.client.model.ebony_spell_model;
+import com.skydude.dacxirons.registries.EffectRegistry;
+import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
@@ -27,11 +32,18 @@ import javax.annotation.Nullable;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import java.util.function.Consumer;
 
-public class BlessedPriestArmorItem extends ImbueabledacxironsArmor {
+import static com.skydude.dacxirons.registries.EffectRegistry.CAST_SPEED;
+import static com.skydude.dacxirons.registries.EffectRegistry.SPELL_STRENGTH;
+import static net.minecraft.world.effect.MobEffects.DAMAGE_RESISTANCE;
+import static net.minecraft.world.effect.MobEffects.MOVEMENT_SPEED;
 
-// public static boolean fullebonymagic;
+public class BlessedPriestArmorItem extends ImbueabledacxironsArmor {
+    private static final UUID BLESSED_PRIEST_DAY_RESIST_UUID =
+            UUID.fromString("8b0de1f9-4df6-4f2f-8741-47a8f2d5c0ad");
+    // public static boolean fullebonymagic;
     public BlessedPriestArmorItem(Type type, Properties properties) {
         super(dacxironsArmorMaterials.BLESSED_PRIEST_ARMOR, type, properties.rarity(Rarity.RARE));
 
@@ -42,8 +54,10 @@ public class BlessedPriestArmorItem extends ImbueabledacxironsArmor {
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(Component.translatable("fullsetbonus"));
         tooltip.add(Component.translatable("tooltip.dacxirons.blessedprestfullset"));
-        tooltip.add(Component.translatable("tooltip.dacxirons.blessedfullset").withStyle(style -> style.withItalic(true)).withStyle(ChatFormatting.DARK_GRAY));
-
+        tooltip.add(Component.translatable("tooltip.dacxirons.blessedfullset").withStyle(style -> style.withItalic(true)).withStyle(ChatFormatting.YELLOW));
+        //cast speed
+        //cooldown reduction
+        //protection against blood and eldritch magic
     }
 
 
@@ -51,16 +65,76 @@ public class BlessedPriestArmorItem extends ImbueabledacxironsArmor {
 
     @SuppressWarnings("removal")
     @Override
-    public void onArmorTick(ItemStack stack, Level level, Player player ) {
-        // if (event.phase == TickEvent.Phase.END) {
-        //  Player player = event.player;
+    public void onArmorTick(ItemStack stack, Level level, Player player) {
+        if (level.isClientSide) return; // do attribute edits on server only
 
-        if (CorrectArmor.hasFullSetOn(player, dacxironsArmorMaterials.BLESSED_PRIEST_ARMOR, 4)) {
-            //    AttributeInstance swimSpeed = player.getAttribute(ForgeMod.SWIM_SPEED.get());
-          //  fullebonymagic = true;
+        boolean fullSet = CorrectArmor.hasFullSetOn(player, dacxironsArmorMaterials.BLESSED_PRIEST_ARMOR, 4);
+        boolean day = level.isDay();
 
+        // --- Cast Speed effect refresh (optional, see note below) ---
+        // If you meant *20 seconds*, use 400 ticks, not 10.
+        final int DURATION_TICKS = 400;          // 20s
+        final int REFRESH_THRESHOLD = 40;        // reapply when <2s left
+        if (fullSet && day) {
+            MobEffectInstance castspeed = player.getEffect(CAST_SPEED.get());
+            if (castspeed == null || castspeed.getDuration() <= REFRESH_THRESHOLD) {
+                player.addEffect(new MobEffectInstance(
+                        CAST_SPEED.get(),
+                        DURATION_TICKS,
+                        1,      // amplifier  0 = 1, 1 = 2
+                        true,   // ambient
+                        false,  // show particles
+                        true    // show icon
+                ));
+            }
+        } else {
+            // optional: clear effect when bonus stops
+            player.removeEffect(CAST_SPEED.get());
         }
 
+        // --- Eldritch resist attribute bonus while full set + day ---
+        var eldritch_resist_attr = player.getAttribute(AttributeRegistry.ELDRITCH_MAGIC_RESIST.get());
+        if (eldritch_resist_attr == null) return; // attribute might be absent on some entities
+
+        if (fullSet && day) {
+            // Only add if not present
+            if (eldritch_resist_attr.getModifier(BLESSED_PRIEST_DAY_RESIST_UUID) == null) {
+                AttributeModifier eldritchresist = new AttributeModifier(
+                        BLESSED_PRIEST_DAY_RESIST_UUID,
+                        "Blessed Priest day resist",
+                        1.0D,
+                        AttributeModifier.Operation.MULTIPLY_BASE
+                );
+                // If your mappings have this helper, prefer it:
+                // attr.addOrReplaceTransientModifier(mod);
+                eldritch_resist_attr.addTransientModifier(eldritchresist);
+            }
+        } else {
+            // Remove when not applicable so it doesn't stick
+            eldritch_resist_attr.removeModifier(BLESSED_PRIEST_DAY_RESIST_UUID);
+        }
+
+        // blood resist
+        var blood_resist_attr = player.getAttribute(AttributeRegistry.ELDRITCH_MAGIC_RESIST.get());
+        if (blood_resist_attr == null) return; // attribute might be absent on some entities
+
+        if (fullSet && day) {
+            // Only add if not present
+            if (blood_resist_attr.getModifier(BLESSED_PRIEST_DAY_RESIST_UUID) == null) {
+                AttributeModifier bloodresist = new AttributeModifier(
+                        BLESSED_PRIEST_DAY_RESIST_UUID,
+                        "Blessed Priest day resist",
+                        1.0D,
+                        AttributeModifier.Operation.MULTIPLY_BASE
+                );
+                // If your mappings have this helper, prefer it:
+                // attr.addOrReplaceTransientModifier(mod);
+                blood_resist_attr.addTransientModifier(bloodresist);
+            }
+        } else {
+            // Remove when not applicable so it doesn't stick
+            blood_resist_attr.removeModifier(BLESSED_PRIEST_DAY_RESIST_UUID);
+        }
     }
 
     public static class Helmet extends BlessedPriestArmorItem {

@@ -39,6 +39,8 @@
   "item.dacxirons.blessed_priest_boots": "Blessed Priest Boots",
   "item.dacxirons.blessed_priest_leggings": "Blessed Priest Leggings",
   "item.dacxirons.blessed_priest_robe": "Blessed Priest Robe",
-  "item.dacxirons.blessed_priest_hood": "Blessed Priest Hood"
+  "item.dacxirons.blessed_priest_hood": "Blessed Priest Hood",
+  "tooltip.dacxirons.blessedprestfullset": "§9Divine Blessing:",
+  "tooltip.dacxirons.blessedfullset": "The sun blesses you, granting cast speed, cooldown reduction and protection against evil magics"
 }
 

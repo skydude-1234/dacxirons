@@ -2,3 +2,5 @@
 
 
  Make counselor skulls be able to use eldritch spells
+
+ Make blood magician mobs only do blood spell damage so blessed priest can resist against them
