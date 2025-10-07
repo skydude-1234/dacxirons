@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 import java.util.List;
 
-@Mixin(value = OathSwordItem.class, remap = false)
+@Mixin(value = OathSwordItem.class, remap = true)
 public abstract class OathSwordItemMixin implements IPresetSpellContainer {
     @Unique private static final Logger LOG = LoggerFactory.getLogger("dacxirons");
 
@@ -47,7 +47,16 @@ public abstract class OathSwordItemMixin implements IPresetSpellContainer {
 
     // Ensure the sword always has a spell container when right-clicked
     // Ensure the sword has a spell container when its tooltip is displayed
-    @Inject(method = "appendHoverText", at = @At("HEAD"))
+
+    @Inject(
+            method =
+                    "appendHoverText" +
+                            "(Lnet/minecraft/world/item/ItemStack;" +
+                            "Lnet/minecraft/world/level/Level;" +
+                            "Ljava/util/List;" +
+                            "Lnet/minecraft/world/item/TooltipFlag;)V",
+            at = @At("HEAD")
+    )
     private void dacxirons$onHover(ItemStack stack, Level level,
                                    java.util.List<net.minecraft.network.chat.Component> tooltip,
                                    net.minecraft.world.item.TooltipFlag flag,

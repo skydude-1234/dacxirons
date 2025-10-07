@@ -5,6 +5,8 @@ New Ebony wizar armor set, replaces regular ebony armor in Crimson Wizard Recipe
 Blessed Amulet now removes Iron's harmful effects
 Counselor Tunic & Leggings now have +15% eldritch power and +50 max mana
 
+New configfor invis ability to set how long the invis effect lasts when given
+
 
 Reworks:
 Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood vial, 1 blood rune & 2 ebony raw

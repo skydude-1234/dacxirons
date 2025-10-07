@@ -1,6 +1,7 @@
 package com.skydude.dacxirons;
 
 import com.skydude.dacxirons.entity.spells.EldritchSlash.EldritchSlashRenderer;
+import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.entity.spells.blood_slash.BloodSlashRenderer;
 import io.redspace.ironsspellbooks.entity.spells.cone_of_cold.ConeOfColdRenderer;
@@ -24,6 +25,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import com.skydude.dacxirons.registries.EntityRegistry;
 
 import com.skydude.dacxirons.registries.*;
+import org.jetbrains.annotations.NotNull;
 
 @Mod("dacxirons")
 public class dacxirons {
@@ -75,5 +77,8 @@ public class dacxirons {
         } else if (!hasAdvancement && bonusApplied) {
             attribute.setBaseValue(baseValue / BONUS_MULTIPLY);
         }
+    }
+    public static ResourceLocation id(@NotNull String path) {
+        return new ResourceLocation(dacxirons.MOD_ID, path);
     }
 }

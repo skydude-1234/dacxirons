@@ -7,6 +7,7 @@ import com.mojang.blaze3d.vertex.PoseStack.Pose;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
+import com.skydude.dacxirons.dacxirons;
 import io.redspace.ironsspellbooks.entity.spells.flame_strike.FlameStrike;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -23,10 +24,10 @@ import java.util.Random;
 
 public class EldritchSlashRenderer extends EntityRenderer<EldritchSlash> {
     private static final ResourceLocation[] TEXTURES = {
-            IronsSpellbooks.id("textures/entity/flame_strike/flame_strike_1.png"),
-            IronsSpellbooks.id("textures/entity/flame_strike/flame_strike_2.png"),
-            IronsSpellbooks.id("textures/entity/flame_strike/flame_strike_3.png"),
-            IronsSpellbooks.id("textures/entity/flame_strike/flame_strike_4.png")
+            dacxirons.id("textures/entities/eldritch_slash/flame_strike_1.png"),
+            dacxirons.id("textures/entities/eldritch_slash/flame_strike_2.png"),
+            dacxirons.id("textures/entities/eldritch_slash/flame_strike_3.png"),
+            dacxirons.id("textures/entities/eldritch_slash/flame_strike_4.png")
     };
 
     public EldritchSlashRenderer(Context context) {

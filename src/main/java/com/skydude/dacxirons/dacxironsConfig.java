@@ -10,7 +10,9 @@ import net.minecraftforge.fml.config.ModConfig;
 public class dacxironsConfig {
     public static final ForgeConfigSpec COMMON_CONFIG;
     public static final ForgeConfigSpec.BooleanValue ENABLE_CUSTOM_ROGUE_LOGIC;
-    public static final ForgeConfigSpec.DoubleValue INVIS_REMOVAL_TIME
+    public static final ForgeConfigSpec.DoubleValue INVIS_REMOVAL_TIME;
+    public static final ForgeConfigSpec.IntValue INVIS_EFFECT_TIME
+
 
             ;
 
@@ -26,6 +28,9 @@ public class dacxironsConfig {
         INVIS_REMOVAL_TIME = builder
                 .comment("How long invis will be removed when player hits a mob, in seconds")
                 .defineInRange("Invis Removal Time", 3.0, 0, 100.0);
+        INVIS_EFFECT_TIME = builder
+                .comment("How long invis  effect lasts when given, in ticks ( 20 tick == 1 second), no decimals pls")
+                .defineInRange(" invis effect Time", 10, 0, 10);
 
         builder.pop();
 

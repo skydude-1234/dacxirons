@@ -61,8 +61,8 @@ public class OverrideRogueLogic {
         if (player.isShiftKeyDown() && !player.level().isClientSide()) {
             if (lastHitTick + cooldownTicks < player.tickCount) {
                 if (!living.hasEffect(MobEffectRegistry.TRUE_INVISIBILITY.get())) {
-                    living.addEffect(new MobEffectInstance(MobEffectRegistry.TRUE_INVISIBILITY.get(), 10, 0, true, false));
-                 //   System.out.println("[OverrideRogueLogic] Added TRUE_INVISIBILITY to " + player.getName().getString());
+                    living.addEffect(new MobEffectInstance(MobEffectRegistry.TRUE_INVISIBILITY.get(), dacxironsConfig.INVIS_EFFECT_TIME.get(), 100, true, true));
+                    //   System.out.println("[OverrideRogueLogic] Added TRUE_INVISIBILITY to " + player.getName().getString());
                 }
             }
 

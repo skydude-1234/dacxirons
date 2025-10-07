@@ -24,17 +24,6 @@ public class OathSwordStaffBehavior {
         // If you need more, add more Components here (translatables, etc.)
     }
 
-    private static void ensureSpellContainer(ItemStack stack) {
-        if (!io.redspace.ironsspellbooks.api.spells.ISpellContainer.isSpellContainer(stack)) {
-            var spells = java.util.List.of(
-                    new SpellDataRegistryHolder(
-                            com.skydude.dacxirons.registries.dacxironsSpellRegistry.MAGIC_ARROW, 1
-                    ).getSpellData()
-            );
-            var cont = io.redspace.ironsspellbooks.api.spells.ISpellContainer.create(spells.size(), true, false);
-            spells.forEach(sd -> cont.addSpell(sd.getSpell(), sd.getLevel(), true, null));
-            cont.save(stack);
-        }
-    }
+  
 
 }

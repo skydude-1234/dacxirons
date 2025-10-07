@@ -222,7 +222,8 @@ dependencies {
     runtimeOnly fg.deobf("top.theillusivec4.caelus:caelus-forge:${caelus_version}")
 
     ///DACCCC
-    implementation fg.deobf("curse.maven:dungeons-and-combat-1128235:6735006")
+    // implementation fg.deobf("curse.maven:dungeons-and-combat-1128235:6735006")
+    implementation fg.deobf("curse.maven:dungeons-and-combat-1128235:6941682")
 
     ///JEIII
     // compile against the JEI API but do not include it at runtime
@@ -281,28 +282,14 @@ jar {
     finalizedBy 'reobfJar'
 }
 
-// Example for how to get properties into the manifest for reading at runtime.
-//tasks.named('jar', Jar).configure {
- //   manifest {
-  //      attributes(["Specification-Title"     : mod_id,
-  //                  "Specification-Vendor"    : mod_authors,
-  //                  "Specification-Version"   : "1", // We are version 1 of ourselves
-  //                  "Implementation-Title"    : project.name,
-  //                  "Implementation-Version"  : project.jar.archiveVersion,
-  //                  "Implementation-Vendor"   : mod_authors,
-  //                  "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")])
- //   }
 
-    // This is the preferred method to reobfuscate your jar file
-
-//}
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
 mixin {
     // Tell Mixingradle to generate this refmap for main sources
-    add sourceSets.main, "mixins.${mod_id}.refmap.json"
+    add sourceSets.main, "mixins.dacxirons.refmap.json"
     // Register your mixin config JSON file
     config "mixins.${mod_id}.json"
 }

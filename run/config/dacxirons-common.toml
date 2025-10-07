@@ -5,4 +5,7 @@
 	#How long invis will be removed when player hits a mob, in seconds
 	#Range: 0.0 ~ 100.0
 	"Invis Removal Time" = 3.0
+	#How long invis  effect lasts when given, in ticks ( 20 tick == 1 second), no decimals pls
+	#Range: 0 ~ 10
+	" invis effect Time" = 10
 

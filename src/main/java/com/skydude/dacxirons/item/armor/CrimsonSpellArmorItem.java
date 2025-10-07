@@ -69,7 +69,7 @@ public class CrimsonSpellArmorItem extends ImbueabledacxironsArmor {
                     if (player.getEffect(SPELL_STRENGTH.get()) == null || player.getEffect(SPELL_STRENGTH.get()).getDuration() < 10) {
                         player.addEffect(new MobEffectInstance(
                                 SPELL_STRENGTH.get(),
-                                10,                  // duration in ticks (20 seconds)
+                                10,                  // duration in ticks
                                 2,                    // EFFECT LEVEL 0 = 1, 1 = 2, 2 = 3, etc
                                 true,                 // ambient — blue outline + no flashing
                                 false,                 // show particles
