@@ -17,6 +17,7 @@ import io.redspace.ironsspellbooks.api.magic.SpellSelectionManager;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.spells.eldritch.AbstractEldritchSpell;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
+import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModItems;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -24,9 +25,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
@@ -128,11 +131,11 @@ public class EldritchSlashSpell extends AbstractEldritchSpell {
 
     @Override
     public SpellDamageSource getDamageSource(Entity projectile, Entity attacker) {
-        return super.getDamageSource(projectile, attacker).setFireTime(3);
+        return super.getDamageSource(projectile, attacker);
     }
 
     private float getDamage(int spellLevel, LivingEntity entity) {
-        return getSpellPower(spellLevel, entity) + Utils.getWeaponDamage(entity, MobType.UNDEFINED) + EnchantmentHelper.getFireAspect(entity);
+        return ((getSpellPower(spellLevel, entity) + Utils.getWeaponDamage(entity, MobType.UNDEFINED)) * 1.4F) * holdingoath(entity);
     }
 
 
@@ -149,6 +152,12 @@ public class EldritchSlashSpell extends AbstractEldritchSpell {
         return "" + getSpellPower(spellLevel, entity);
     }
 
+
+    public float holdingoath(LivingEntity living){
+        if (living.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == DungeonsAndCombatModItems.OATH_SWORD.get()) {
+            return 1.3F;
+        } return 1;
+    }
     @Override
     public AnimationHolder getCastStartAnimation() {
         return SpellAnimations.ONE_HANDED_HORIZONTAL_SWING_ANIMATION;

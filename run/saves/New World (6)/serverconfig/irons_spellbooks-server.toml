@@ -1152,3 +1152,14 @@
 		CooldownInSeconds = 40.0
 		AllowCrafting = true
 
+	[Spells."dacxirons:eldritch_slash"]
+		Enabled = true
+		School = "irons_spellbooks:eldritch"
+		MaxLevel = 5
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 1.0
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 15.0
+		AllowCrafting = true
+
