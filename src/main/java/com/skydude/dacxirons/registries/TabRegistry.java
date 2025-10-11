@@ -39,6 +39,7 @@ public class TabRegistry {
                         output.accept(ItemRegistries.BLESSED_PRIEST_BOOTS.get());
                         output.accept(ItemRegistries.WITHER_RUNE.get());
                         output.accept(ItemRegistries.DIVINE_MOLD.get());
+                        output.accept(ItemRegistries.SCEPTER_COMPENSATION_STAFF.get());
                         //output.accept(ItemRegistries.SUMMONS_NECKLACE.get());
                     })
                     .build()

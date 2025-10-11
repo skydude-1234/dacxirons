@@ -12,7 +12,6 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
-import io.redspace.ironsspellbooks.entity.spells.flame_strike.FlameStrike;
 import io.redspace.ironsspellbooks.api.magic.SpellSelectionManager;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.spells.eldritch.AbstractEldritchSpell;
@@ -135,7 +134,7 @@ public class EldritchSlashSpell extends AbstractEldritchSpell {
     }
 
     private float getDamage(int spellLevel, LivingEntity entity) {
-        return ((getSpellPower(spellLevel, entity) + Utils.getWeaponDamage(entity, MobType.UNDEFINED)) * 1.4F) * holdingoath(entity);
+        return ((getSpellPower(spellLevel, entity) + Utils.getWeaponDamage(entity, MobType.UNDEFINED)) * 1.35F) * holdingoath(entity);
     }
 
 
