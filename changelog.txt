@@ -1,11 +1,14 @@
 NEW SUTFF;
+
 New Sunleia beam Icon & Crimson cloth texture
 New Blazymancer 2-piece armor, 10% spell power, 100 max mana, 15% fire magic resistance, full set ability: Blazing Aura + when attacked, cast firebolt
 New Ebony wizar armor set, replaces regular ebony armor in Crimson Wizard Recipe
 Blessed Amulet now removes Iron's harmful effects
 Counselor Tunic & Leggings now have +15% eldritch power and +50 max mana
+New Spell - Eldritch Slash, iron's flaming strike but instead of setting your opponent on fire, it does more damage & damage is boosted by the Oath weapon
+Oath
 
-New configfor invis ability to set how long the invis effect lasts when given
+New config for invis ability to set how long the invis effect lasts when given
 
 
 Reworks:
@@ -20,6 +23,7 @@ Bloodymancer armor now has +100 max mana instead of 0
 Bloodymancer Tunic can now be imbued with spells
 Bloody cult now has 5% blood power and 50 max mana instead of 0
 Gravedigger weapon now has +10% summon damage and 5% cooldown reduction
+Oath Weapon is now imbued with Eldritch Slash
 
 NERFS:
 Kamath armor now has only 5% instead of 15% eldritch power
