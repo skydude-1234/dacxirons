@@ -59,7 +59,7 @@ import software.bernie.geckolib.core.animation.AnimationController.State;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-import static com.skydude.dacxirons.item.armor.EbonyMagicSpellArmorItem.fullebonymagic;
+
 
 public class sceptercompensation extends StaffItem implements GeoItem, IPresetSpellContainer {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
@@ -178,6 +178,7 @@ public class sceptercompensation extends StaffItem implements GeoItem, IPresetSp
         if(player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.SCEPTER_COMPENSATION_STAFF.get()){
             isholding = true;
             holder = player;
+           // System.out.println(isholding);
 
 
         }

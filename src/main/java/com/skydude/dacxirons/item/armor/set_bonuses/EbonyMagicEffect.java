@@ -1,6 +1,7 @@
 package com.skydude.dacxirons.item.armor.set_bonuses;
 
 import com.skydude.dacxirons.item.armor.CorrectArmor;
+import com.skydude.dacxirons.item.armor.EbonyMagicSpellArmorItem;
 import com.skydude.dacxirons.item.armor.dacxironsArmorMaterials;
 import com.skydude.dacxirons.registries.EffectRegistry;
 import com.skydude.dacxirons.registries.ItemRegistries;
@@ -22,7 +23,7 @@ import net.minecraftforge.fml.common.Mod;
 
 import javax.annotation.Nullable;
 
-import static com.skydude.dacxirons.item.armor.EbonyMagicSpellArmorItem.fullebonymagic;
+
 
 @Mod.EventBusSubscriber // handlers must be static
 public class EbonyMagicEffect {
@@ -35,7 +36,7 @@ public class EbonyMagicEffect {
 
     @SubscribeEvent
     public static void onSpellAttack(SpellDamageEvent event) {
-        if(fullebonymagic) {
+        if(EbonyMagicSpellArmorItem.fullebonymagic) {
             LivingEntity target = event.getEntity();
 
             // run on server only

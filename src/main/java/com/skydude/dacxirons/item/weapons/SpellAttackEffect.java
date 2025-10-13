@@ -1,5 +1,6 @@
 package com.skydude.dacxirons.item.weapons;
 
+import com.skydude.dacxirons.item.armor.EbonyMagicSpellArmorItem;
 import io.redspace.ironsspellbooks.api.events.SpellDamageEvent;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.effect.MobEffect;
@@ -9,10 +10,10 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
-import static com.skydude.dacxirons.item.armor.EbonyMagicSpellArmorItem.fullebonymagic;
 import static com.skydude.dacxirons.item.weapons.sceptercompensation.isholding;
-
+@Mod.EventBusSubscriber
 public class SpellAttackEffect{
 
 
@@ -21,19 +22,19 @@ public class SpellAttackEffect{
             // run on server only
 
 
-            // test with something visible first
-            MobEffectInstance mobeffect = new MobEffectInstance(
-                    MobEffects.GLOWING, // swap to MobEffects.WITHER after confirming
-                    200,                // duration (ticks)
-                    1,                  // amplifier
-                    false,              // ambient
-                    true                // show particles
-            );
+        // test with something visible first
+        MobEffectInstance mobeffect = new MobEffectInstance(
+                MobEffects.GLOWING, // swap to MobEffects.WITHER after confirming
+                duration,                // duration (ticks)
+                amplifier,                  // amplifier
+                ambient,              // ambient
+                showParticles                // show particles
+        );
 
         target.addEffect(mobeffect);
 
 
-            // ensure main server thread
+        // ensure main server thread
 
 
     }
@@ -67,12 +68,11 @@ public class SpellAttackEffect{
     @SubscribeEvent
     public static void onSpellAttack(SpellDamageEvent event) {
 
-        System.out.println( "hellur");
-        if(isholding){
-            System.out.println("helloooow");
-            SpellAttackEffect.SpellEffectAddTarget( event.getEntity(), MobEffects.GLOWING, 300, 1, true, true);
+         if(isholding){
 
-        }
+            // add effect
+         }
+
 
     }
 }
