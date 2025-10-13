@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="188ba439-442e-457c-947b-4f025685f2f4" name="Changes" comment="added blessed priest ability">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/client/model/sceptercompensationmodel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/renderer/sceptercompensationstaffRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/weapons/sceptercompensation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/models/item/scepter_of_compensation_staff.json" afterDir="false" />
+    <list default="true" id="188ba439-442e-457c-947b-4f025685f2f4" name="Changes" comment="First draft of overrided scepter of compensation">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/weapons/SpellAttackEffect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" afterDir="false" />
@@ -20,9 +17,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/registries/TabRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/registries/TabRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/downloadMCMeta/version.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/downloadMCMeta/version.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/dacxirons/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/dacxirons/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/item/armor/CorrectArmor.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/skydude/dacxirons/item/armor/CorrectArmor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
@@ -32,10 +27,8 @@
       <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/ItemRegistries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/ItemRegistries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/TabRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/registries/TabRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spells/eldritch/EldritchSlashSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/spells/eldritch/EldritchSlashSpell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/dacxirons/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/CorrectArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/armor/CorrectArmor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/weapons/sceptercompensation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/skydude/dacxirons/item/weapons/sceptercompensation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,22 +95,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.dacxirons [:cpw.mods.bootstraplauncher.BootstrapLauncher.main()].executor": "Run",
-    "Gradle.dacxirons [:prepareRunClientCompile].executor": "Run",
-    "Gradle.dacxirons [build].executor": "Run",
-    "Gradle.dacxirons [createMcpToSrg].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/sky/Music/dacxirons/src/main/resources/assets/dacxirons/textures/item",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.dacxirons [:cpw.mods.bootstraplauncher.BootstrapLauncher.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.dacxirons [:prepareRunClientCompile].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.dacxirons [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.dacxirons [createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sky/Music/dacxirons/src/main/resources/assets/dacxirons/textures/item&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/assets/dacxirons/textures/item" />
@@ -263,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759373612601</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="First draft of overrided scepter of compensation">
+      <option name="closed" value="true" />
+      <created>1760154831708</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1760154831708</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,6 +301,7 @@
     <MESSAGE value="added blessed priest armor" />
     <MESSAGE value="SSS" />
     <MESSAGE value="added blessed priest ability" />
-    <option name="LAST_COMMIT_MESSAGE" value="added blessed priest ability" />
+    <MESSAGE value="First draft of overrided scepter of compensation" />
+    <option name="LAST_COMMIT_MESSAGE" value="First draft of overrided scepter of compensation" />
   </component>
 </project>

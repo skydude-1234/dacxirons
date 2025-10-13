@@ -15,7 +15,9 @@ import java.util.UUID;
 import java.util.function.Consumer;
 
 import com.skydude.dacxirons.item.renderer.sceptercompensationstaffRenderer;
+import com.skydude.dacxirons.registries.ItemRegistries;
 import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
+import io.redspace.ironsspellbooks.api.events.SpellDamageEvent;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.spells.IPresetSpellContainer;
@@ -27,9 +29,13 @@ import net.mcreator.dungeonsandcombat.item.renderer.ScepterOfCompensationItemRen
 import net.mcreator.dungeonsandcombat.procedures.ScepterOfCompensationRightclickedProcedure;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -42,6 +48,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
@@ -52,14 +59,19 @@ import software.bernie.geckolib.core.animation.AnimationController.State;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import static com.skydude.dacxirons.item.armor.EbonyMagicSpellArmorItem.fullebonymagic;
+
 public class sceptercompensation extends StaffItem implements GeoItem, IPresetSpellContainer {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     public String animationprocedure = "empty";
     public static ItemDisplayContext transformType;
     String prevAnim = "empty";
+    public static boolean isholding = false;
+    public static Player holder;
+
 
     public sceptercompensation() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.UNCOMMON), 7, -3,
+        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.UNCOMMON), 2, -3,
                 Map.of(
                         AttributeRegistry.CAST_TIME_REDUCTION.get(),
                         new AttributeModifier(UUID.fromString("001ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", .05, AttributeModifier.Operation.MULTIPLY_BASE),
@@ -143,32 +155,34 @@ public class sceptercompensation extends StaffItem implements GeoItem, IPresetSp
 
     public void registerControllers(AnimatableManager.ControllerRegistrar data) {
         AnimationController procedureController = new AnimationController(this, "procedureController", 0, this::procedurePredicate);
-        data.add(new AnimationController[]{procedureController});
+        data.add(procedureController);
         AnimationController idleController = new AnimationController(this, "idleController", 0, this::idlePredicate);
-        data.add(new AnimationController[]{idleController});
+        data.add(idleController);
     }
 
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
     }
 
-    public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot equipmentSlot) {
-        if (equipmentSlot == EquipmentSlot.MAINHAND) {
-            ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-            builder.putAll(super.getDefaultAttributeModifiers(equipmentSlot));
-            builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Item modifier", (double)2.0F, Operation.ADDITION));
-            builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Item modifier", -2.4, Operation.ADDITION));
-            return builder.build();
-        } else {
-            return super.getDefaultAttributeModifiers(equipmentSlot);
-        }
-    }
+
 
     public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
         super.appendHoverText(itemstack, level, list, flag);
 
         list.add(Component.literal("§7Secondary Ability:"));
         list.add(Component.literal(" §9Dash"));
+    }
+
+    @Override
+    public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex){
+        if(player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.SCEPTER_COMPENSATION_STAFF.get()){
+            isholding = true;
+            holder = player;
+
+
+        }
+
+
     }
 
 

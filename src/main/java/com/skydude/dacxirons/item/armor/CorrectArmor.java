@@ -27,7 +27,7 @@ import java.util.Arrays;
 public class CorrectArmor {
 
     public static boolean hasFullSetOn(LivingEntity living, dacxironsArmorMaterials material, int requiredPieces) {
-        requiredPieces = 4;
+
         int equippedPieces = 0;
 
         for (ItemStack armorStack : living.getArmorSlots()) {
