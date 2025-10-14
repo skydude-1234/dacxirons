@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.Mod;
 public class SpellAttackEffect{
 
 
-    public static void SpellEffectAddTarget( LivingEntity target, MobEffect effect, int duration, int amplifier, boolean ambient, boolean showParticles) {
+    public static void SpellEffectAdd( LivingEntity target, MobEffect effect, int duration, int amplifier, boolean ambient, boolean showParticles) {
 
             // run on server only
 
@@ -38,31 +38,5 @@ public class SpellAttackEffect{
 
     }
 
-
-    public static void SpellEffectAdd(SpellDamageEvent event, Player player, MobEffect effect, int duration, int amplifier, boolean ambient, boolean showParticles) {
-
-            // run on server only
-            if (player.level().isClientSide()) return;
-
-
-            // effect
-            MobEffectInstance mobeffect = new MobEffectInstance(
-                    effect, // swap to MobEffects.WITHER after confirming
-                    duration,                // duration (ticks)
-                    amplifier,                  // amplifier
-                    ambient,              // ambient
-                    showParticles                // show particles
-            );
-
-            MinecraftServer server = player.getServer();
-            if (server == null) return;
-
-            // ensure main server thread
-            server.execute(() -> {
-                player.addEffect(mobeffect);
-
-            });
-
-    }
 
 }
