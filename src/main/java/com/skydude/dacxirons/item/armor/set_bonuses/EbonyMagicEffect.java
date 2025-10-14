@@ -39,8 +39,6 @@ public class EbonyMagicEffect {
         if(EbonyMagicSpellArmorItem.fullebonymagic) {
             LivingEntity target = event.getEntity();
 
-            // run on server only
-            if (target.level().isClientSide()) return;
 
             // test with something visible first
             MobEffectInstance effect = new MobEffectInstance(
@@ -51,15 +49,13 @@ public class EbonyMagicEffect {
                     true                // show particles
             );
 
-            MinecraftServer server = target.getServer();
-            if (server == null) return;
+
 
             // ensure main server thread
-            server.execute(() -> {
+
                 target.addEffect(effect);
 
-            });
-        }
+        } else { return; }
     }
     private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
         if (entity != null) {

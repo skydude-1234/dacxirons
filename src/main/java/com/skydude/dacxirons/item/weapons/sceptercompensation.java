@@ -49,6 +49,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
@@ -61,6 +62,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 
 
+@Mod.EventBusSubscriber
 public class sceptercompensation extends StaffItem implements GeoItem, IPresetSpellContainer {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     public String animationprocedure = "empty";
@@ -185,6 +187,15 @@ public class sceptercompensation extends StaffItem implements GeoItem, IPresetSp
 
 
     }
+    @SubscribeEvent
+    public static void onSpellAttack(SpellDamageEvent event) {
 
+        if(isholding){
+            SpellAttackEffect.SpellEffectAddTarget(holder, MobEffects.GLOWING, 300,1, true, true);
+            // add effect
+        }
+
+
+    }
 
 }

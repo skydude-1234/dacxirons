@@ -12,7 +12,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import static com.skydude.dacxirons.item.weapons.sceptercompensation.isholding;
 @Mod.EventBusSubscriber
 public class SpellAttackEffect{
 
@@ -65,14 +64,5 @@ public class SpellAttackEffect{
             });
 
     }
-    @SubscribeEvent
-    public static void onSpellAttack(SpellDamageEvent event) {
 
-         if(isholding){
-
-            // add effect
-         }
-
-
-    }
 }
