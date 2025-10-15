@@ -192,6 +192,7 @@ public class sceptercompensation extends StaffItem implements GeoItem, IPresetSp
 
         if(isholding){
             SpellAttackEffect.SpellEffectAdd(holder, MobEffects.JUMP, 20,1, false, true);
+
             // add effect
         }
 

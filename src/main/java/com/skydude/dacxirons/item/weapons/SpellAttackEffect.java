@@ -23,7 +23,7 @@ public class SpellAttackEffect{
 
         // test with something visible first
         MobEffectInstance mobeffect = new MobEffectInstance(
-                MobEffects.GLOWING, // swap to MobEffects.WITHER after confirming
+                effect, // swap to MobEffects.WITHER after confirming
                 duration,                // duration (ticks)
                 amplifier,                  // amplifier
                 ambient,              // ambient

@@ -7,7 +7,9 @@ import com.skydude.dacxirons.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
+import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
+import io.redspace.ironsspellbooks.damage.DamageSources;
 import net.mcreator.dungeonsandcombat.entity.LaserBeamEntity;
 import net.mcreator.dungeonsandcombat.entity.MagicArrowEntity;
 import net.minecraft.core.BlockPos;
@@ -93,8 +95,35 @@ public class MagicArrow extends AbstractSpell {
         } else {
             System.out.println("Failed to find sound: entity.evoker.cast_spell");
         }
+       LivingEntity caster = entity;
+
+        double reach = 48.0; // how far to check
+        var start = entity.getEyePosition();
+        var end   = start.add(entity.getLookAngle().scale(reach));
+
+        var aabb = entity.getBoundingBox().expandTowards(entity.getLookAngle().scale(reach)).inflate(1.0);
+        var filter = (java.util.function.Predicate<Entity>) (e ->
+                e instanceof LivingEntity
+                        && e != entity
+                        && e.isPickable()
+                        && !e.isSpectator()
+                        && e.isAlive()
+        );
+
+        var hit = net.minecraft.world.entity.projectile.ProjectileUtil.getEntityHitResult(
+                entity, start, end, aabb, filter, reach * reach);
+
+        LivingEntity target = (hit != null && hit.getEntity() instanceof LivingEntity le) ? le : null;
+
+
+
+// actual projectile
         MagicArrowEntity.shoot(world, entity, RandomSource.create(), 1, 5 * getSpellPower(spellLevel, entity), 1);
 
+        // 0 damage, just to register as a spell for onSpellAttack event
+        if(target != null){
+            DamageSources.applyDamage(target, 0, SpellRegistry.MAGIC_ARROW_SPELL.get().getDamageSource(entity));
+        }
 
             super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
