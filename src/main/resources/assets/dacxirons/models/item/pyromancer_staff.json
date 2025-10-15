@@ -1,0 +1,7 @@
+{
+  "parent": "dungeons_and_combat:custom/pyroclastic_scepter",
+  "textures": {
+    "0": "dungeons_and_combat:block/pyroclastic_scepter",
+    "particle": "dungeons_and_combat:item/horde_torch"
+  }
+}

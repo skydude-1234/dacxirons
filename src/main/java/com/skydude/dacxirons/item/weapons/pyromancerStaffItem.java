@@ -5,15 +5,6 @@
 
 package com.skydude.dacxirons.item.weapons;
 
-import com.google.common.collect.ImmutableMultimap;
-import com.google.common.collect.Multimap;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-import java.util.function.Consumer;
-
 import com.skydude.dacxirons.item.renderer.sceptercompensationstaffRenderer;
 import com.skydude.dacxirons.registries.ItemRegistries;
 import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
@@ -25,23 +16,13 @@ import io.redspace.ironsspellbooks.api.spells.ISpellContainer;
 import io.redspace.ironsspellbooks.api.spells.SpellData;
 import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.mcreator.dungeonsandcombat.item.renderer.ScepterOfCompensationItemRenderer;
-import net.mcreator.dungeonsandcombat.procedures.ScepterOfCompensationRightclickedProcedure;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
@@ -54,34 +35,33 @@ import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimationController.State;
 import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.animation.AnimationController.State;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+import java.util.function.Consumer;
 
 
 @Mod.EventBusSubscriber
-public class sceptercompensation extends StaffItem implements GeoItem, IPresetSpellContainer {
-    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    public String animationprocedure = "empty";
-    public static ItemDisplayContext transformType;
-    String prevAnim = "empty";
+public class pyromancerStaffItem extends StaffItem implements IPresetSpellContainer {
+
     public static boolean isholding = false;
     public static Player holder;
 
 
-    public sceptercompensation() {
+    public pyromancerStaffItem() {
         super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.UNCOMMON), 2, -3,
                 Map.of(
-                        AttributeRegistry.CAST_TIME_REDUCTION.get(),
-                        new AttributeModifier(UUID.fromString("001ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", .05, AttributeModifier.Operation.MULTIPLY_BASE),
-                        AttributeRegistry.SPELL_POWER.get(),
-                        new AttributeModifier(UUID.fromString("001ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", .1, AttributeModifier.Operation.MULTIPLY_BASE),
-                        AttributeRegistry.COOLDOWN_REDUCTION.get(),
-                        new AttributeModifier(UUID.fromString("001ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", .05, AttributeModifier.Operation.MULTIPLY_BASE)
-                ));
+                        AttributeRegistry.FIRE_SPELL_POWER.get(),
+                        new AttributeModifier(UUID.fromString("001ad88d-901d-4691-b2a2-3664e42026d3"), " fire", .1, Operation.MULTIPLY_BASE)
+
+              ));
     }
     //spells container stuff
     private static final SpellDataRegistryHolder[] DEFAULT_SPELLS = new SpellDataRegistryHolder[]{
@@ -121,51 +101,8 @@ public class sceptercompensation extends StaffItem implements GeoItem, IPresetSp
 
     // end of spells container stuff
 
-    public void getTransformType(ItemDisplayContext type) {
-        transformType = type;
-    }
 
-    private PlayState idlePredicate(AnimationState event) {
-        if (transformType != null && this.animationprocedure.equals("empty")) {
-            event.getController().setAnimation(RawAnimation.begin().thenLoop("idle"));
-            return PlayState.CONTINUE;
-        } else {
-            return PlayState.STOP;
-        }
-    }
 
-    private PlayState procedurePredicate(AnimationState event) {
-        if (transformType != null) {
-            if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState() == State.STOPPED || !this.animationprocedure.equals(this.prevAnim) && !this.animationprocedure.equals("empty")) {
-                if (!this.animationprocedure.equals(this.prevAnim)) {
-                    event.getController().forceAnimationReset();
-                }
-
-                event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
-                if (event.getController().getAnimationState() == State.STOPPED) {
-                    this.animationprocedure = "empty";
-                    event.getController().forceAnimationReset();
-                }
-            } else if (this.animationprocedure.equals("empty")) {
-                this.prevAnim = "empty";
-                return PlayState.STOP;
-            }
-        }
-
-        this.prevAnim = this.animationprocedure;
-        return PlayState.CONTINUE;
-    }
-
-    public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-        AnimationController procedureController = new AnimationController(this, "procedureController", 0, this::procedurePredicate);
-        data.add(procedureController);
-        AnimationController idleController = new AnimationController(this, "idleController", 0, this::idlePredicate);
-        data.add(idleController);
-    }
-
-    public AnimatableInstanceCache getAnimatableInstanceCache() {
-        return this.cache;
-    }
 
 
 
