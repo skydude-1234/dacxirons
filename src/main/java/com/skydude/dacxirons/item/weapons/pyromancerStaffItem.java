@@ -10,16 +10,26 @@ import com.skydude.dacxirons.registries.ItemRegistries;
 import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 import io.redspace.ironsspellbooks.api.events.SpellDamageEvent;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
+import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.spells.IPresetSpellContainer;
 import io.redspace.ironsspellbooks.api.spells.ISpellContainer;
 import io.redspace.ironsspellbooks.api.spells.SpellData;
+import io.redspace.ironsspellbooks.damage.DamageSources;
+import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
 import net.minecraft.world.entity.player.Player;
@@ -47,8 +57,10 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.function.Consumer;
 
+import static com.skydude.dacxirons.dacxirons.MOD_ID;
 
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE) //
+
 public class pyromancerStaffItem extends StaffItem implements IPresetSpellContainer {
 
     public static boolean isholding = false;
@@ -109,16 +121,15 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
     public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
         super.appendHoverText(itemstack, level, list, flag);
 
-        list.add(Component.literal("§7Secondary Ability:"));
-        list.add(Component.literal(" §9Dash"));
+        list.add(Component.literal("§7Ability:"));
+        list.add(Component.literal(" §9You spells set enemies on fire"));
     }
 
     @Override
     public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex){
-        if(player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.SCEPTER_COMPENSATION_STAFF.get()){
+        if(player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.SCEPTERPYROCLASTIC.get()){
             isholding = true;
             holder = player;
-           // System.out.println(isholding);
 
 
         }
@@ -128,13 +139,51 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
     @SubscribeEvent
     public static void onSpellAttack(SpellDamageEvent event) {
 
-        if(isholding){
-            SpellAttackEffect.SpellEffectAdd(holder, MobEffects.JUMP, 20,1, false, true);
-
+        if (isholding) {
+            //    SpellAttackEffect.SpellEffectAdd(event.getEntity(), MobEffects.FL, 200,1, false, true);
+            event.getEntity().setSecondsOnFire(5);
             // add effect
+            var aaaaa = event.getSpellDamageSource();
+// to prevent client-server causing effect to stay at 00:00
+
+            // apply only on the server
+            if (event.getSpellDamageSource().spell().getSchoolType() == SchoolRegistry.EVOCATION.get()) {
+
+                MobEffectInstance mobeffect = new MobEffectInstance(
+                        DungeonsAndCombatModMobEffects.FLAME_GRANT_ME_STRENGTH.get(),
+                        60, 0, false, true
+                );
+
+                if (holder instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+                    serverPlayer.addEffect(mobeffect); // server player
+                } else if (holder != null && holder.level() instanceof net.minecraft.server.level.ServerLevel) {
+                    holder.addEffect(mobeffect); // any server-side entity
+                } else {
+                    // Client-side event path: bounce to the *integrated* server (no packets)
+                    net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(
+                            net.minecraftforge.api.distmarker.Dist.CLIENT,
+                            () -> () -> {
+                                var minecraft   = net.minecraft.client.Minecraft.getInstance();
+                                var srv  = minecraft.getSingleplayerServer();              // null on dedicated
+                                if (srv == null) return;
+                                var sLvl = srv.getLevel(holder.level().dimension()); // server copy of the same dimension
+                                if (sLvl == null) return;
+                                var real = sLvl.getEntity(holder.getUUID());         // server-side twin of holder
+                                if (real instanceof net.minecraft.world.entity.LivingEntity le) {
+                                    le.addEffect(mobeffect); // finally apply on the server
+                                }
+                            }
+                    );
+                }
+            }
+
+
+
+
+
+
+
+
         }
-
-
     }
-
 }

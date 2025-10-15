@@ -13,6 +13,7 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import io.redspace.ironsspellbooks.item.spell_books.SimpleAttributeSpellBook;
 import com.skydude.dacxirons.item.weapons.sceptercompensation;
+import com.skydude.dacxirons.item.weapons.pyromancerStaffItem;
 
 import io.redspace.ironsspellbooks.item.weapons.BloodStaffItem;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -41,7 +42,7 @@ public class ItemRegistries {
     public static final RegistryObject<Item> SCEPTEROVERCOMPENSATION = ITEMS.register("scepter_of_over_compensation",
             ScepterofOvercompensation::new);
     public static final RegistryObject<Item> SCEPTERPYROCLASTIC = ITEMS.register("pyromancer_staff",
-            ScepterofOvercompensation::new);
+           pyromancerStaffItem::new);
 
     public static final RegistryObject<Item> SCEPTER_COMPENSATION_STAFF = ITEMS.register("scepter_of_compensation_staff", sceptercompensation::new);
     public static final RegistryObject<Item> DIVINEMANUSCRIPT = ITEMS.register("divine_manuscript_spell_book", DivineManuscriptSpellbook::new);

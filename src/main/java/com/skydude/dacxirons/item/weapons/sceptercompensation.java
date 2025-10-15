@@ -172,8 +172,8 @@ public class sceptercompensation extends StaffItem implements GeoItem, IPresetSp
     public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
         super.appendHoverText(itemstack, level, list, flag);
 
-        list.add(Component.literal("§7Secondary Ability:"));
-        list.add(Component.literal(" §9Dash"));
+        list.add(Component.literal("§7Ability:"));
+        list.add(Component.literal(" §9Your spells grant you jump boost"));
     }
 
     @Override

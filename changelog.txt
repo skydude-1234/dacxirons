@@ -2,7 +2,8 @@ NEW SUTFF;
 
 New Sunleia beam Icon & Crimson cloth texture
 New Blazymancer 2-piece armor, 10% spell power, 100 max mana, 15% fire magic resistance, full set ability: Blazing Aura + when attacked, cast firebolt
-New Ebony wizar armor set, replaces regular ebony armor in Crimson Wizard Recipe
+New Ebony wizard armor set, replaces regular ebony armor in Crimson Wizard Recipe
+New Blessed Priest armor set, 20% holy spell power, 125 max mana + full set bonus: During the day,  cast speed, cooldown reduction and max blood/eldritch spell resistance
 Blessed Amulet now removes Iron's harmful effects
 Counselor Tunic & Leggings now have +15% eldritch power and +50 max mana
 New Spell - Eldritch Slash, iron's flaming strike but instead of setting your opponent on fire, it does more damage & damage is boosted by the Oath weapon
