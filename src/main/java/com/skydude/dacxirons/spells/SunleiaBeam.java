@@ -1,10 +1,13 @@
 package com.skydude.dacxirons.spells;
 
 import com.skydude.dacxirons.dacxirons;
+import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
+import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
+import io.redspace.ironsspellbooks.damage.DamageSources;
 import net.mcreator.dungeonsandcombat.entity.LaserBeamEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -81,16 +84,38 @@ public class SunleiaBeam extends AbstractSpell {
 
     @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
-        LaserBeamEntity.shoot(world, entity, RandomSource.create(), 1, 5 + (2 * spellLevel) * getSpellPower(spellLevel, entity), 1);
             SoundEvent sound = ForgeRegistries.SOUND_EVENTS.getValue(
                     new ResourceLocation("dungeons_and_combat:magic_boost")
             );
             world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), sound, SoundSource.HOSTILE, 1.0F, 2.0F);
 
+        //target entitty
 
+        double reach = 48.0; // how far to check
+        var start = entity.getEyePosition();
+        var end   = start.add(entity.getLookAngle().scale(reach));
 
-            // your spell logic here
+        var aabb = entity.getBoundingBox().expandTowards(entity.getLookAngle().scale(reach)).inflate(1.0);
+        var filter = (java.util.function.Predicate<Entity>) (e ->
+                e instanceof LivingEntity
+                        && e != entity
+                        && e.isPickable()
+                        && !e.isSpectator()
+                        && e.isAlive()
+        );
 
+        var hit = net.minecraft.world.entity.projectile.ProjectileUtil.getEntityHitResult(
+                entity, start, end, aabb, filter, reach * reach);
+
+        LivingEntity target = (hit != null && hit.getEntity() instanceof LivingEntity le) ? le : null;
+// end of target entity
+
+            // actuall projectile
+        LaserBeamEntity.shoot(world, entity, RandomSource.create(), 1, 5 + (2 * spellLevel) * getSpellPower(spellLevel, entity), 1);
+        // 0 damage, just to register as a spell for onSpellAttack event
+        if(target != null){
+            DamageSources.applyDamage(target, 0, dacxironsSpellRegistry.SUNLEIA_BEAM.get().getDamageSource(entity));
+        }
 
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
 

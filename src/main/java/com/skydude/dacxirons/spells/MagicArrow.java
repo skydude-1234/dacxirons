@@ -4,6 +4,7 @@ package com.skydude.dacxirons.spells;
 
 import com.skydude.dacxirons.dacxirons;
 import com.skydude.dacxirons.registries.SoundRegistry;
+import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
@@ -95,7 +96,7 @@ public class MagicArrow extends AbstractSpell {
         } else {
             System.out.println("Failed to find sound: entity.evoker.cast_spell");
         }
-       LivingEntity caster = entity;
+        //target entitty
 
         double reach = 48.0; // how far to check
         var start = entity.getEyePosition();
@@ -114,7 +115,7 @@ public class MagicArrow extends AbstractSpell {
                 entity, start, end, aabb, filter, reach * reach);
 
         LivingEntity target = (hit != null && hit.getEntity() instanceof LivingEntity le) ? le : null;
-
+// end of target entity
 
 
 // actual projectile
@@ -122,7 +123,7 @@ public class MagicArrow extends AbstractSpell {
 
         // 0 damage, just to register as a spell for onSpellAttack event
         if(target != null){
-            DamageSources.applyDamage(target, 0, SpellRegistry.MAGIC_ARROW_SPELL.get().getDamageSource(entity));
+            DamageSources.applyDamage(target, 0, dacxironsSpellRegistry.MAGIC_ARROW.get().getDamageSource(entity));
         }
 
             super.onCast(world, spellLevel, entity, castSource, playerMagicData);
