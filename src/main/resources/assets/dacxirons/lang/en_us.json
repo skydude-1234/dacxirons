@@ -42,6 +42,9 @@
   "item.dacxirons.blessed_priest_hood": "Blessed Priest Hood",
   "tooltip.dacxirons.blessedprestfullset": "§9Divine Blessing:",
   "tooltip.dacxirons.blessedfullset": "The sun blesses you, granting cast speed, cooldown reduction and protection against evil magics",
-  "item.dacxirons.scepter_of_compensation_staff": "Scepter Of Compensation"
+  "item.dacxirons.scepter_of_compensation_staff": "Scepter Of Compensation",
+  "ui.dacxirons.triple_fireball_ballamount": "3 Fireballs",
+  "spell.dacxirons.triple_fireball_spell": "Triple Fireball",
+  "item.dacxirons.pyromancer_staff": "§6Pyroclastic Staff"
 }
 
