@@ -1,7 +1,4 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
+
 
 package com.skydude.dacxirons.item.weapons;
 
@@ -176,12 +173,6 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
                     );
                 }
             }
-
-
-
-
-
-
 
 
         }
