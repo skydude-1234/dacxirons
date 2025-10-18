@@ -1,6 +1,7 @@
 package com.skydude.dacxirons;
 
 import com.skydude.dacxirons.client.model.*;
+import com.skydude.dacxirons.entity.spells.EldritchSlash.EldritchSlashRenderer;
 import com.skydude.dacxirons.item.armor.BlazymancerSpellArmorItem;
 import com.skydude.dacxirons.registries.EntityRegistry;
 import com.skydude.dacxirons.registries.ItemRegistries;
@@ -35,7 +36,7 @@ public class ClientModEvents {
         //Entity renderer stuffs
         event.registerEntityRenderer(EntityRegistry.SUMMONED_WEAKNESS.get(), WeaknessRenderer::new);
         event.registerEntityRenderer(EntityRegistry.SUMMONED_KAMATH.get(), KamathRenderer::new);
-
+        event.registerEntityRenderer(EntityRegistry.ELDRITCH_SLASH.get(), EldritchSlashRenderer::new);
 
 
     }

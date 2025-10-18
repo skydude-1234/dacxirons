@@ -29,7 +29,7 @@ public abstract class OathSwordItemMixin implements IPresetSpellContainer {
 
     @Unique
     private static final SpellDataRegistryHolder[] DEFAULT_SPELLS = new SpellDataRegistryHolder[]{
-            new SpellDataRegistryHolder(dacxironsSpellRegistry.MAGIC_ARROW, 1)
+            new SpellDataRegistryHolder(dacxironsSpellRegistry.ELDRITCH_SLASH_SPELL, 1)
             // add more default spells here
     };
 

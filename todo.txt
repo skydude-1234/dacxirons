@@ -1,3 +1,20 @@
+Roadmap
+
+
+Remove fire particles from Eldritch slash
+Rework pyroclastic staff
+Rework fairy wand
+Rework corroding flame sceptre
+Rework sanguine scepter {
+       Bleed when held
+       Life steal on spell attack
+}
+Swap staff with reworked version script & config
+
+New Spellbook - Abandoned Codex {
+        Loot table from Remanent Camp and Remanent watch tower
+
+Add graphical effects and particles to all armor
 
 
 

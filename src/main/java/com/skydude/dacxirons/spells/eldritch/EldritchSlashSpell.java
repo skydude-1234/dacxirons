@@ -16,12 +16,14 @@ import io.redspace.ironsspellbooks.api.magic.SpellSelectionManager;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.spells.eldritch.AbstractEldritchSpell;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
+import net.mcreator.dungeonsandcombat.DungeonsAndCombatMod;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModItems;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -69,10 +71,6 @@ public class EldritchSlashSpell extends AbstractEldritchSpell {
         return Optional.of(DungeonsAndCombatModSounds.KAMATH_STAB.get());
     }
 
-    @Override
-    public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of(DungeonsAndCombatModSounds.KAMATH_COMBO_ATTACK.get());
-    }
 
     @Override
     public CastType getCastType() {
@@ -113,7 +111,7 @@ public class EldritchSlashSpell extends AbstractEldritchSpell {
                 Vec3 offsetVector = targetEntity.getBoundingBox().getCenter().subtract(entity.getEyePosition());
                 if (offsetVector.dot(forward) >= 0) {
                     if (DamageSources.applyDamage(targetEntity, getDamage(spellLevel, entity), damageSource)) {
-                        MagicManager.spawnParticles(level, ParticleHelper.EMBERS, targetEntity.getX(), targetEntity.getY() + targetEntity.getBbHeight() * .5f, targetEntity.getZ(), 50, targetEntity.getBbWidth() * .5f, targetEntity.getBbHeight() * .5f, targetEntity.getBbWidth() * .5f, .03, false);
+                        MagicManager.spawnParticles(level, ParticleHelper.ELECTRIC_SPARKS, targetEntity.getX(), targetEntity.getY() + targetEntity.getBbHeight() * .5f, targetEntity.getZ(), 50, targetEntity.getBbWidth() * .5f, targetEntity.getBbHeight() * .5f, targetEntity.getBbWidth() * .5f, .03, false);
                         EnchantmentHelper.doPostDamageEffects(entity, targetEntity);
                     }
                 }
