@@ -74,7 +74,7 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
     }
     //spells container stuff
     private static final SpellDataRegistryHolder[] DEFAULT_SPELLS = new SpellDataRegistryHolder[]{
-            new SpellDataRegistryHolder(dacxironsSpellRegistry.MAGIC_ARROW, 1)
+            new SpellDataRegistryHolder(dacxironsSpellRegistry.TRIPLE_FIREBALL_SPELL, 1)
 
     };
 
@@ -119,7 +119,7 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
         super.appendHoverText(itemstack, level, list, flag);
 
         list.add(Component.literal("§7Ability:"));
-        list.add(Component.literal(" §9You spells set enemies on fire"));
+        list.add(Component.translatable("ui.dacxirons.pyroclasticabilityeffect"));
     }
 
     @Override

@@ -6,6 +6,7 @@ import com.skydude.dacxirons.spells.MagicArrow;
 //import com.skydude.dacxirons.spells.Summon;
 import com.skydude.dacxirons.spells.SummonKamath;
 import com.skydude.dacxirons.spells.SunleiaBeam;
+import com.skydude.dacxirons.spells.TripleFireballSpell;
 import com.skydude.dacxirons.spells.eldritch.EldritchSlashSpell;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
@@ -22,6 +23,7 @@ public class dacxironsSpellRegistry {
 
     public static final RegistryObject<AbstractSpell> SUNLEIA_BEAM = registerSpell(new SunleiaBeam());;
     public static final RegistryObject<AbstractSpell> MAGIC_ARROW = registerSpell(new MagicArrow());;
+  public static final RegistryObject<AbstractSpell> TRIPLE_FIREBALL_SPELL = registerSpell(new TripleFireballSpell());;
 
     public static final RegistryObject<AbstractSpell> ELDRITCH_SLASH_SPELL = registerSpell(new EldritchSlashSpell());
 

@@ -2,24 +2,41 @@ package com.skydude.dacxirons.spells;
 
 
 import com.skydude.dacxirons.dacxirons;
-import com.skydude.dacxirons.registries.SoundRegistry;
 import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
+import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.damage.DamageSources;
+import io.redspace.ironsspellbooks.entity.spells.fireball.MagicFireball;
+import io.redspace.ironsspellbooks.registries.SoundRegistry;
+import net.mcreator.dungeonsandcombat.DungeonsAndCombatMod;
 import net.mcreator.dungeonsandcombat.entity.MagicArrowEntity;
+import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
 import net.mcreator.dungeonsandcombat.procedures.PyromancerScepterRightclickedProcedure;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.LargeFireball;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.List;
@@ -28,28 +45,30 @@ import java.util.Optional;
 
 @AutoSpellConfig
 public class TripleFireballSpell extends AbstractSpell {
-    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "magic_arrow");
-    private final DefaultConfig defaultConfig = new DefaultConfig()
-            .setMinRarity(SpellRarity.LEGENDARY)
-            .setAllowCrafting(false)
-            .setSchoolResource(SchoolRegistry.EVOCATION_RESOURCE)
-            .setMaxLevel(1)
-            .setCooldownSeconds(3)
-            .build();
+    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "triple_fireball_spell");
+
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        // return List.of(Component.translatable("ui.irons_spellbooks.summon_count", spellLevel));
-        return List.of(Component.translatable("ui.dacxirons.sunleia.beam", Math.round(5 * getSpellPower(spellLevel, caster))));
+        return List.of(
+                Component.translatable("ui.dacxirons.triple_fireball_ballamount"),
+                Component.translatable("ui.irons_spellbooks.damage", Utils.stringTruncation(getDamage(spellLevel, caster), 2)),
+                Component.translatable("ui.irons_spellbooks.radius", getRadius(spellLevel, caster))
+        );
     }
+    private final DefaultConfig defaultConfig = new DefaultConfig()
+            .setMinRarity(SpellRarity.RARE)
+            .setSchoolResource(SchoolRegistry.FIRE_RESOURCE)
+            .setMaxLevel(5)
+            .setCooldownSeconds(50)
+            .build();
 
     public TripleFireballSpell() {
-        this.manaCostPerLevel = 10;
+        this.manaCostPerLevel = 30;
         this.baseSpellPower = 1;
-        this.spellPowerPerLevel = 0;
-        this.castTime = 30;
-        this.baseManaCost = 30;
-
+        this.spellPowerPerLevel = 1;
+        this.castTime = 40;
+        this.baseManaCost = 120;
     }
 
 
@@ -70,55 +89,54 @@ public class TripleFireballSpell extends AbstractSpell {
 
     @Override
     public Optional<SoundEvent> getCastStartSound() {
-        return Optional.of(SoundRegistry.MAGIC_ARROW_SOUND.get());
+        return Optional.of(io.redspace.ironsspellbooks.registries.SoundRegistry.FIREBALL_START.get());
     }
 
 
-    @Override
-    public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.empty();
-    }
 
 
     @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
-        SoundEvent sound = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("minecraft", "entity.evoker.cast_spell"));
-        if (sound != null) {
-            world.playSound(null, entity.blockPosition(), sound, SoundSource.NEUTRAL, 1.0f, 1.0f);
-            world.playSound(null, entity.blockPosition(), sound, SoundSource.NEUTRAL, 1.0f, 1.0f);
-        } else {
-            System.out.println("Failed to find sound: entity.evoker.cast_spell");
-        }
-        //target entitty
 
-        double reach = 48.0; // how far to check
-        var start = entity.getEyePosition();
-        var end   = start.add(entity.getLookAngle().scale(reach));
+        DungeonsAndCombatMod.queueServerWork(10, () -> {
+            spawnFireballOnce(world, entity, spellLevel);
+        });
 
-        var aabb = entity.getBoundingBox().expandTowards(entity.getLookAngle().scale(reach)).inflate(1.0);
-        var filter = (java.util.function.Predicate<Entity>) (e ->
-                e instanceof LivingEntity
-                        && e != entity
-                        && e.isPickable()
-                        && !e.isSpectator()
-                        && e.isAlive()
-        );
+        DungeonsAndCombatMod.queueServerWork(20, () -> {
+            world.playSound(null, entity.blockPosition(), SoundRegistry.FIRE_CAST.get(), SoundSource.PLAYERS);
+            spawnFireballOnce(world, entity, spellLevel);
+        });
 
-        var hit = net.minecraft.world.entity.projectile.ProjectileUtil.getEntityHitResult(
-                entity, start, end, aabb, filter, reach * reach);
+        DungeonsAndCombatMod.queueServerWork(30, () -> {
+            world.playSound(null, entity.blockPosition(), SoundRegistry.FIRE_CAST.get(), SoundSource.PLAYERS);
+            spawnFireballOnce(world, entity, spellLevel);
+        });
 
-        LivingEntity target = (hit != null && hit.getEntity() instanceof LivingEntity le) ? le : null;
-// end of target entity
-
-
-// actual projectile
-        PyromancerScepterRightclickedProcedure.execute.shoot(world, entity, RandomSource.create(), 1, 5 * getSpellPower(spellLevel, entity), 1);
-
-        // 0 damage, just to register as a spell for onSpellAttack event
-        if(target != null){
-            DamageSources.applyDamage(target, 0, dacxironsSpellRegistry.MAGIC_ARROW.get().getDamageSource(entity));
-        }
-
-            super.onCast(world, spellLevel, entity, castSource, playerMagicData);
+        super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
+    private void spawnFireballOnce(Level world, LivingEntity caster, int spellLevel) {
+        if (caster == null || !caster.isAlive()) return;
+
+        Vec3 origin = caster.getEyePosition();
+        MagicFireball fireball = new MagicFireball(world, caster);
+
+        fireball.setDamage(getDamage(spellLevel, caster));
+        fireball.setExplosionRadius(getRadius(spellLevel, caster));
+
+        fireball.setPos(origin.add(caster.getForward()).subtract(0, fireball.getBbHeight() / 2.0, 0));
+        fireball.shoot(caster.getLookAngle());
+
+        world.addFreshEntity(fireball);
+
+
+
+    }
+    public float getDamage(int spellLevel, LivingEntity caster) {
+        return 5 + 5 * getSpellPower(spellLevel, caster);
+    }
+
+    public int getRadius(int spellLevel, LivingEntity caster) {
+        return 2 + (int) getSpellPower(spellLevel, caster);
+    }
+
 }
