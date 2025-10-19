@@ -7,7 +7,10 @@ New Blessed Priest armor set, 20% holy spell power, 125 max mana + full set bonu
 Blessed Amulet now removes Iron's harmful effects
 Counselor Tunic & Leggings now have +15% eldritch power and +50 max mana
 New Spell - Eldritch Slash, iron's flaming strike but instead of setting your opponent on fire, it does more damage & damage is boosted by the Oath weapon
-Oath
+New Spell - Magic Arrow
+New Spell - Triple Fireball
+New Spell - Acid Fireball
+New Spell - Fairy's Wish, grants 2 random positive effects
 
 New config for invis ability to set how long the invis effect lasts when given
 
@@ -15,6 +18,7 @@ New config for invis ability to set how long the invis effect lasts when given
 Reworks:
 Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood vial, 1 blood rune & 2 ebony raw
 Crimson Wizard is now crafted using ebony wizard armor instead of regular ebony
+Oath is now inscribed with Eldritch Slash
 
 STAFF REWORKS:
 All scepters/staffs are now an iron's Spells StaffItem, being able to cast any spell on right click

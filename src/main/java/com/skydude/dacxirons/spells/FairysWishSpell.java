@@ -10,7 +10,9 @@ import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
+import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
+import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -91,7 +93,7 @@ public class FairysWishSpell extends AbstractSpell {
         world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(entity.getBoundingBox().getCenter(), 6, 6, 6)).forEach(livingEntity -> {
       //      IronsSpellbooks.LOGGER.debug("cleanse: {}", livingEntity);
            if(Utils.shouldHealEntity(entity, livingEntity)){
-                List<MobEffect> mobeefect = List.of(MobEffects.JUMP, EffectRegistry.CAST_SPEED.get(), EffectRegistry.SPELL_STRENGTH.get(), MobEffects.DAMAGE_BOOST);
+                List<MobEffect> mobeefect = List.of(MobEffects.JUMP, EffectRegistry.CAST_SPEED.get(), EffectRegistry.SPELL_STRENGTH.get(), MobEffects.DAMAGE_BOOST, MobEffects.MOVEMENT_SPEED, MobEffects.LUCK, MobEffects.FIRE_RESISTANCE, MobEffects.DIG_SPEED, DungeonsAndCombatModMobEffects.ACID_FIRE_EDGE.get());
                // pick random effect
                 Random random = new Random();
                 int randomIndex = random.nextInt(mobeefect.size());

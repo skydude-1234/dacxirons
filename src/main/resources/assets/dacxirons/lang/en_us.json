@@ -50,6 +50,7 @@
   "spell.dacxirons.acid_ball_spell": "Acid Fireball",
   "item.dacxirons.corroding_flame_staff": "Corroding Flame Scepter",
   "ui.dacxirons.duration": "%d Max Duration",
-  "ui.dacxirons.amplifier": "%d Max Effect Level"
+  "ui.dacxirons.amplifier": "%d Max Effect Level",
+  "spell.dacxirons.fairys_wish_spell": "Fairy's Wish"
 }
 
