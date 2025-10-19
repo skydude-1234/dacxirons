@@ -25,7 +25,7 @@ import java.util.UUID;
 
 public class ScepterCorrodingFlame {
     // UUIDs per slot and attribute ensure proper application/removal
-    private static final UUID FIRE_UUID = UUID.fromString("546e4567-e89b-13d3-a456-426614174008");
+
     private static final UUID NATURE_UUID = UUID.fromString("546e4567-e89b-12d3-a456-426614174009");
 
     @SubscribeEvent
@@ -35,26 +35,17 @@ public class ScepterCorrodingFlame {
 
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:corroding_flame")) {
             if (event.getSlotType() == EquipmentSlot.MAINHAND) {
-                Attribute firePower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:fire_spell_power")
-                );
+
                 Attribute naturePower = ForgeRegistries.ATTRIBUTES.getValue(
                         new ResourceLocation("irons_spellbooks:nature_spell_power")
                 );
 
-                if (firePower != null) {
-                    event.addModifier(firePower, new AttributeModifier(
-                            FIRE_UUID,
-                            "Cooldown Reduction",
-                            0.05,
-                            Operation.MULTIPLY_BASE
-                    ));
-                }
+
                 if (naturePower != null) {
                     event.addModifier(naturePower, new AttributeModifier(
                             NATURE_UUID,
                             "Spell Power Bonus",
-                            0.05,
+                            0.1,
                             Operation.MULTIPLY_BASE
                     ));
                 }

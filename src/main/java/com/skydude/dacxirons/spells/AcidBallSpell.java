@@ -36,30 +36,29 @@ public class AcidBallSpell extends AbstractSpell {
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         return List.of(
-                Component.translatable("ui.dacxirons.triple_fireball_ballamount"),
                 Component.translatable("ui.irons_spellbooks.damage", Utils.stringTruncation(getDamage(spellLevel, caster), 2)),
                 Component.translatable("ui.irons_spellbooks.radius", getRadius(spellLevel, caster))
         );
     }
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.RARE)
-            .setSchoolResource(SchoolRegistry.FIRE_RESOURCE)
+            .setSchoolResource(SchoolRegistry.NATURE_RESOURCE)
             .setMaxLevel(5)
-            .setCooldownSeconds(25)
+            .setCooldownSeconds(5)
             .build();
 
     public AcidBallSpell() {
-        this.manaCostPerLevel = 15;
+        this.manaCostPerLevel = 10;
         this.baseSpellPower = 1;
         this.spellPowerPerLevel = 1;
-        this.castTime = 40;
-        this.baseManaCost = 60;
+        this.castTime = 10;
+        this.baseManaCost = 40;
     }
 
 
     @Override
     public CastType getCastType() {
-        return CastType.LONG;
+        return CastType.INSTANT;
     }
 
     @Override
@@ -100,11 +99,12 @@ public class AcidBallSpell extends AbstractSpell {
     }
 
     public float getDamage(int spellLevel, LivingEntity caster) {
-        return 5 + 5 * getSpellPower(spellLevel, caster);
+        return 5 + 3 * getSpellPower(spellLevel, caster);
     }
 
     public int getRadius(int spellLevel, LivingEntity caster) {
-        return 2 + (int) getSpellPower(spellLevel, caster);
+     //   return 4 + (int) getSpellPower(spellLevel, caster);
+        return 4;
     }
 
 }

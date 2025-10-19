@@ -1,0 +1,6 @@
+{
+  "parent": "dungeons_and_combat:displaysettings/fairystaffanimated.item",
+  "textures": {
+    "layer0": "dungeons_and_combat:item/corroding_flame_scepter"
+  }
+}

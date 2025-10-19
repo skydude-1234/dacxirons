@@ -16,6 +16,11 @@ Reworks:
 Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood vial, 1 blood rune & 2 ebony raw
 Crimson Wizard is now crafted using ebony wizard armor instead of regular ebony
 
+STAFF REWORKS:
+All scepters/staffs are now an iron's Spells StaffItem, being able to cast any spell on right click
+Scepter of Compensation - Magic Arrow turned into a spell, Passive Ability: Attacking with spells gives you jump boost
+Pyroclastic Staff - Triple fireball turned into a spell, Passive Ability: Attacking with Fire spells gives you "flame grant me strength" & sets your enemies on fire
+Corroding Flame - Acid Fireball is now a spell, Passive ability: Attacking with spells gives your enemies poison effect
 
 
 Balance Changes:
@@ -25,6 +30,7 @@ Bloodymancer Tunic can now be imbued with spells
 Bloody cult now has 5% blood power and 50 max mana instead of 0
 Gravedigger weapon now has +10% summon damage and 5% cooldown reduction
 Oath Weapon is now imbued with Eldritch Slash
+Corroded flame scepter now gives +10% nature instead of 5% fire and 5% nature
 
 NERFS:
 Kamath armor now has only 5% instead of 15% eldritch power

@@ -2,7 +2,7 @@
 
 package com.skydude.dacxirons.item.weapons;
 
-import com.skydude.dacxirons.item.renderer.sceptercompensationstaffRenderer;
+import com.skydude.dacxirons.renderers.sceptercompensationstaffRenderer;
 import com.skydude.dacxirons.registries.ItemRegistries;
 import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 import io.redspace.ironsspellbooks.api.events.SpellDamageEvent;
@@ -12,25 +12,16 @@ import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.spells.IPresetSpellContainer;
 import io.redspace.ironsspellbooks.api.spells.ISpellContainer;
 import io.redspace.ironsspellbooks.api.spells.SpellData;
-import io.redspace.ironsspellbooks.damage.DamageSources;
-import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
-import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.util.RandomSource;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
@@ -38,15 +29,6 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import software.bernie.geckolib.animatable.GeoItem;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.AnimationController.State;
-import software.bernie.geckolib.core.animation.AnimationState;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.Arrays;
 import java.util.List;
@@ -65,20 +47,13 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
 
 
     public pyromancerStaffItem() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.UNCOMMON), 2, -3,
+        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.UNCOMMON), 3, -2.4,
                 Map.of(
                         AttributeRegistry.FIRE_SPELL_POWER.get(),
                         new AttributeModifier(UUID.fromString("001ad88d-901d-4691-b2a2-3664e42026d3"), " fire", .1, Operation.MULTIPLY_BASE)
 
               ));
     }
-    //spells container stuff
-    private static final SpellDataRegistryHolder[] DEFAULT_SPELLS = new SpellDataRegistryHolder[]{
-            new SpellDataRegistryHolder(dacxironsSpellRegistry.TRIPLE_FIREBALL_SPELL, 1)
-
-    };
-
-    private List<SpellData> spellData = null;
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
         super.initializeClient(consumer);
         consumer.accept(new IClientItemExtensions() {
@@ -89,6 +64,14 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
             }
         });
     }
+    //spells container stuff
+    private static final SpellDataRegistryHolder[] DEFAULT_SPELLS = new SpellDataRegistryHolder[]{
+            new SpellDataRegistryHolder(dacxironsSpellRegistry.TRIPLE_FIREBALL_SPELL, 3)
+
+    };
+
+    private List<SpellData> spellData = null;
+
 
     public List<SpellData> getSpells() {
         if (spellData == null) {
@@ -133,32 +116,29 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
             isholding = false;
         }
 
-
     }
     @SubscribeEvent
     public static void onSpellAttack(SpellDamageEvent event) {
 
         if (isholding) {
-            //    SpellAttackEffect.SpellEffectAdd(event.getEntity(), MobEffects.FL, 200,1, false, true);
+
             event.getEntity().setSecondsOnFire(5);
-            // add effect
-            var aaaaa = event.getSpellDamageSource();
-// to prevent client-server causing effect to stay at 00:00
 
-            // apply only on the server
-            if (event.getSpellDamageSource().spell().getSchoolType() == SchoolRegistry.EVOCATION.get()) {
 
-                MobEffectInstance mobeffect = new MobEffectInstance(
-                        DungeonsAndCombatModMobEffects.FLAME_GRANT_ME_STRENGTH.get(),
-                        60, 0, false, true
-                );
 
+            if (event.getSpellDamageSource().spell().getSchoolType() == SchoolRegistry.FIRE.get()) {
+
+
+                // to prevent client-server causing effect to stay at 00:00, apply only on the server
                 if (holder instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
-                    serverPlayer.addEffect(mobeffect); // server player
+                    SpellAttackEffect.SpellEffectAdd(serverPlayer, DungeonsAndCombatModMobEffects.FLAME_GRANT_ME_STRENGTH.get(), 80, 0, false, true);
+
                 } else if (holder != null && holder.level() instanceof net.minecraft.server.level.ServerLevel) {
-                    holder.addEffect(mobeffect); // any server-side entity
+                    SpellAttackEffect.SpellEffectAdd(holder, DungeonsAndCombatModMobEffects.FLAME_GRANT_ME_STRENGTH.get(), 80, 0, false, true);
+
                 } else {
-                   // Do effect server only
+
+                 // usually this is the one that runs
                     net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(
                             net.minecraftforge.api.distmarker.Dist.CLIENT,
                             () -> () -> {
@@ -169,7 +149,8 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
                                 if (sLvl == null) return;
                                 var real = sLvl.getEntity(holder.getUUID());         // server-side twin of holder
                                 if (real instanceof net.minecraft.world.entity.LivingEntity le) {
-                                    le.addEffect(mobeffect); // finally apply on the server
+                                   //apply
+                                    SpellAttackEffect.SpellEffectAdd(le, DungeonsAndCombatModMobEffects.FLAME_GRANT_ME_STRENGTH.get(), 80, 0, false, true);
                                 }
                             }
                     );
