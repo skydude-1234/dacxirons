@@ -48,6 +48,8 @@
   "item.dacxirons.pyromancer_staff": "§6Pyroclastic Staff",
   "ui.dacxirons.pyroclasticabilityeffect": "§9You spells set enemies on fire and your fire school spells grant you strength",
   "spell.dacxirons.acid_ball_spell": "Acid Fireball",
-  "item.dacxirons.corroding_flame_staff": "Corroding Flame Scepter"
+  "item.dacxirons.corroding_flame_staff": "Corroding Flame Scepter",
+  "ui.dacxirons.duration": "%d Max Duration",
+  "ui.dacxirons.amplifier": "%d Max Effect Level"
 }
 

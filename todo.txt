@@ -3,11 +3,15 @@ Roadmap
 
 
 ADD SPELL ICONS ):
+Add spell descriptions
+
+REwork fairy wand
 
 Rework sanguine scepter {
        Bleed when held
        Life steal on spell attack
 }
+
 Swap staff with reworked version script & config
 
 New Spellbook - Abandoned Codex {
