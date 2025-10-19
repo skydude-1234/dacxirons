@@ -32,6 +32,7 @@ import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -47,6 +48,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
@@ -56,7 +58,7 @@ import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.animation.AnimationController.State;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
-
+@Mod.EventBusSubscriber
 public class SanguineScepterStaffItem extends StaffItem implements GeoItem, IPresetSpellContainer {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     public String animationprocedure = "empty";
@@ -169,15 +171,12 @@ public class SanguineScepterStaffItem extends StaffItem implements GeoItem, IPre
 
     public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
         super.appendHoverText(itemstack, level, list, flag);
-        list.add(Component.literal("§7Primary Ability:"));
-        list.add(Component.literal(" §9Bloody Arrow"));
-        list.add(Component.literal("§7Secondary Ability:"));
-        list.add(Component.literal(" §9Scarlet Restoration"));
+        list.add(Component.literal("§7Ability: Your spells steal health from enemies"));
     }
 
     @Override
     public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex) {
-        if (player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.SCEPTERPYROCLASTIC.get()) {
+        if (player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.SANGUINE_SCEPTER_STAFF.get()) {
             isholding = true;
             holder = player;
 
@@ -193,15 +192,12 @@ public class SanguineScepterStaffItem extends StaffItem implements GeoItem, IPre
 
         if (isholding) {
 
-          LivingEntity enemy = event.getEntity();
-
-
                 // to prevent client-server causing effect to stay at 00:00, apply only on the server
                 if (holder instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
-                    SpellAttackEffect.SpellEffectAdd(enemy, DungeonsAndCombatModMobEffects.BLEEDING.get(), 80, 0, false, true);
+                    SpellAttackEffect.SpellEffectAdd(holder, MobEffects.HEAL, 1, 2, false, true);
 
                 } else if (holder != null && holder.level() instanceof net.minecraft.server.level.ServerLevel) {
-                    SpellAttackEffect.SpellEffectAdd(enemy, DungeonsAndCombatModMobEffects.BLEEDING.get(), 80, 0, false, true);
+                    SpellAttackEffect.SpellEffectAdd(holder, DungeonsAndCombatModMobEffects.BLEEDING.get(), 80, 0, false, true);
 
                 } else {
 
@@ -217,7 +213,7 @@ public class SanguineScepterStaffItem extends StaffItem implements GeoItem, IPre
                                 var real = sLvl.getEntity(holder.getUUID());         // server-side twin of holder
                                 if (real instanceof net.minecraft.world.entity.LivingEntity le) {
                                     //apply
-                                    SpellAttackEffect.SpellEffectAdd(enemy, DungeonsAndCombatModMobEffects.BLEEDING.get(), 80, 0, false, true);
+                                    le.heal(1);
                                 }
                             }
                     );

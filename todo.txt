@@ -5,7 +5,6 @@ Roadmap
 ADD SPELL ICONS ):
 Add spell descriptions
 
-REwork fairy wand
 
 Rework sanguine scepter {
        Bleed when held
