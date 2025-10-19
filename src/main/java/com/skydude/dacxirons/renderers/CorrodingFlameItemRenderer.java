@@ -3,15 +3,15 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.skydude.dacxirons.item.renderer;
+package com.skydude.dacxirons.renderers;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.skydude.dacxirons.client.model.sceptercompensationmodel;
-import com.skydude.dacxirons.item.weapons.sceptercompensation;
+import com.skydude.dacxirons.client.model.CorrodingFlameItemModel;
+import com.skydude.dacxirons.item.weapons.CorrodingFlameItem;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
@@ -20,21 +20,21 @@ import net.minecraft.world.item.ItemStack;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 
-public class sceptercompensationstaffRenderer extends GeoItemRenderer<sceptercompensation> {
+public class CorrodingFlameItemRenderer extends GeoItemRenderer<CorrodingFlameItem> {
     private static final float SCALE_RECIPROCAL = 0.0625F;
     protected boolean renderArms = false;
     protected MultiBufferSource currentBuffer;
     protected RenderType renderType;
     public ItemDisplayContext transformType;
-    protected sceptercompensation animatable;
+    protected CorrodingFlameItem animatable;
     private final Set<String> hiddenBones = new HashSet();
     private final Set<String> suppressedBones = new HashSet();
 
-    public sceptercompensationstaffRenderer() {
-        super(new sceptercompensationmodel());
+    public CorrodingFlameItemRenderer() {
+        super(new CorrodingFlameItemModel());
     }
 
-    public RenderType getRenderType(sceptercompensation animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
+    public RenderType getRenderType(CorrodingFlameItem animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
         return RenderType.entityTranslucent(this.getTextureLocation(animatable));
     }
 
@@ -47,7 +47,7 @@ public class sceptercompensationstaffRenderer extends GeoItemRenderer<sceptercom
         super.renderByItem(stack, transformType, matrixStack, bufferIn, combinedLightIn, p_239207_6_);
     }
 
-    public void actuallyRender(PoseStack matrixStackIn, sceptercompensation animatable, BakedGeoModel model, RenderType type, MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, boolean isRenderer, float partialTicks, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
+    public void actuallyRender(PoseStack matrixStackIn, CorrodingFlameItem animatable, BakedGeoModel model, RenderType type, MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, boolean isRenderer, float partialTicks, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
         this.currentBuffer = renderTypeBuffer;
         this.renderType = type;
         this.animatable = animatable;
@@ -58,7 +58,7 @@ public class sceptercompensationstaffRenderer extends GeoItemRenderer<sceptercom
 
     }
 
-    public ResourceLocation getTextureLocation(sceptercompensation instance) {
+    public ResourceLocation getTextureLocation(CorrodingFlameItem instance) {
         return super.getTextureLocation(instance);
     }
 }

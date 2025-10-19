@@ -5,15 +5,18 @@
 
 package com.skydude.dacxirons.item.weapons;
 
+import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.Multimap;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.function.Consumer;
 
-import com.skydude.dacxirons.renderers.sceptercompensationstaffRenderer;
 import com.skydude.dacxirons.registries.ItemRegistries;
 import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
+import com.skydude.dacxirons.renderers.CorrodingFlameItemRenderer;
 import io.redspace.ironsspellbooks.api.events.SpellDamageEvent;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
@@ -27,6 +30,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
@@ -45,33 +49,37 @@ import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.animation.AnimationController.State;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
-
-
-
 @Mod.EventBusSubscriber
-public class sceptercompensation extends StaffItem implements GeoItem, IPresetSpellContainer {
+public class CorrodingFlameItem extends StaffItem implements GeoItem, IPresetSpellContainer {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     public String animationprocedure = "empty";
     public static ItemDisplayContext transformType;
     String prevAnim = "empty";
-    public static boolean isholding = false;
+    public static boolean isholding;
     public static Player holder;
 
-
-    public sceptercompensation() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.UNCOMMON), 2, -2.4,
+    public CorrodingFlameItem() {
+        super(ItemPropertiesHelper.equipment().fireResistant().stacksTo(1).rarity(Rarity.UNCOMMON), 3, -2.4,
                 Map.of(
-                        AttributeRegistry.CAST_TIME_REDUCTION.get(),
-                        new AttributeModifier(UUID.fromString("001ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", .05, AttributeModifier.Operation.MULTIPLY_BASE),
-                        AttributeRegistry.SPELL_POWER.get(),
-                        new AttributeModifier(UUID.fromString("001ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", .1, AttributeModifier.Operation.MULTIPLY_BASE),
-                        AttributeRegistry.COOLDOWN_REDUCTION.get(),
-                        new AttributeModifier(UUID.fromString("001ad88f-901d-4691-b2a2-3664e42026d3"), "Weapon modifier", .05, AttributeModifier.Operation.MULTIPLY_BASE)
+                        AttributeRegistry.NATURE_SPELL_POWER.get(),
+                        new AttributeModifier(UUID.fromString("671ad88d-901d-4691-b2a2-6767e67026d3"), " naturee", .1, Operation.MULTIPLY_BASE)
+
                 ));
+    }
+
+    public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+        super.initializeClient(consumer);
+        consumer.accept(new IClientItemExtensions() {
+            private final BlockEntityWithoutLevelRenderer renderer = new CorrodingFlameItemRenderer();
+
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                return this.renderer;
+            }
+        });
     }
     //spells container stuff
     private static final SpellDataRegistryHolder[] DEFAULT_SPELLS = new SpellDataRegistryHolder[]{
-            new SpellDataRegistryHolder(dacxironsSpellRegistry.MAGIC_ARROW, 1)
+            new SpellDataRegistryHolder(dacxironsSpellRegistry.ACID_BALL_SPELL, 3)
 
     };
 
@@ -102,24 +110,7 @@ public class sceptercompensation extends StaffItem implements GeoItem, IPresetSp
         transformType = type;
     }
 
-    private PlayState idlePredicate(AnimationState event) {
-        if (transformType != null && this.animationprocedure.equals("empty")) {
-            event.getController().setAnimation(RawAnimation.begin().thenLoop("idle"));
-            return PlayState.CONTINUE;
-        } else {
-            return PlayState.STOP;
-        }
-    }
-    public void initializeClient(Consumer<IClientItemExtensions> consumer) {
-        super.initializeClient(consumer);
-        consumer.accept(new IClientItemExtensions() {
-            private final BlockEntityWithoutLevelRenderer renderer = new sceptercompensationstaffRenderer();
 
-            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
-                return this.renderer;
-            }
-        });
-    }
     private PlayState procedurePredicate(AnimationState event) {
         if (transformType != null) {
             if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState() == State.STOPPED || !this.animationprocedure.equals(this.prevAnim) && !this.animationprocedure.equals("empty")) {
@@ -144,9 +135,8 @@ public class sceptercompensation extends StaffItem implements GeoItem, IPresetSp
 
     public void registerControllers(AnimatableManager.ControllerRegistrar data) {
         AnimationController procedureController = new AnimationController(this, "procedureController", 0, this::procedurePredicate);
-        data.add(procedureController);
-        AnimationController idleController = new AnimationController(this, "idleController", 0, this::idlePredicate);
-        data.add(idleController);
+        data.add(new AnimationController[]{procedureController});
+
     }
 
     public AnimatableInstanceCache getAnimatableInstanceCache() {
@@ -157,33 +147,29 @@ public class sceptercompensation extends StaffItem implements GeoItem, IPresetSp
 
     public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
         super.appendHoverText(itemstack, level, list, flag);
+        list.add(Component.literal("§7 Ability:"));
+        list.add(Component.literal(" §9Your Spells poison enemies"));
 
-        list.add(Component.literal("§7Ability:"));
-        list.add(Component.literal(" §9Your spells grant you jump boost"));
     }
-
     @Override
     public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex){
-        if(player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.SCEPTER_COMPENSATION_STAFF.get()){
+        if(player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.CORRODING_FLAME_STAFF.get()){
             isholding = true;
             holder = player;
-           // System.out.println(isholding);
 
 
         } else {
             isholding = false;
         }
-
-
     }
     @SubscribeEvent
     public static void onSpellAttack(SpellDamageEvent event) {
-        int duration = 120;
+        int duration = 100;
         if(isholding){
             if (holder instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
-                SpellAttackEffect.SpellEffectAdd(serverPlayer, MobEffects.JUMP, duration,1, false, true);
+                SpellAttackEffect.SpellEffectAdd(serverPlayer, MobEffects.POISON, duration,1, false, true);
             } else if (holder != null && holder.level() instanceof net.minecraft.server.level.ServerLevel) {
-                SpellAttackEffect.SpellEffectAdd(holder, MobEffects.JUMP, duration,1, false, true);
+                SpellAttackEffect.SpellEffectAdd(holder, MobEffects.POISON, duration,1, false, true);
             } else {
                 net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(
                         net.minecraftforge.api.distmarker.Dist.CLIENT,
@@ -195,7 +181,7 @@ public class sceptercompensation extends StaffItem implements GeoItem, IPresetSp
                             if (sLvl == null) return;
                             var real = sLvl.getEntity(holder.getUUID());         // server-side twin of holder
                             if (real instanceof net.minecraft.world.entity.LivingEntity living) {
-                                SpellAttackEffect.SpellEffectAdd(living, MobEffects.JUMP, duration,1, false, true);
+                                SpellAttackEffect.SpellEffectAdd(living, MobEffects.POISON, duration,1, false, true);
                             }
                         }
                 );

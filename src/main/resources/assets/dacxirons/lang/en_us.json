@@ -46,6 +46,8 @@
   "ui.dacxirons.triple_fireball_ballamount": "3 Fireballs",
   "spell.dacxirons.triple_fireball_spell": "Triple Fireball",
   "item.dacxirons.pyromancer_staff": "§6Pyroclastic Staff",
-  "ui.dacxirons.pyroclasticabilityeffect": "§9You spells set enemies on fire and its flames grant you strength"
+  "ui.dacxirons.pyroclasticabilityeffect": "§9You spells set enemies on fire and your fire school spells grant you strength",
+  "spell.dacxirons.acid_ball_spell": "Acid Fireball",
+  "item.dacxirons.corroding_flame_staff": "Corroding Flame Scepter"
 }
 

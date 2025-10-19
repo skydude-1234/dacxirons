@@ -1,8 +1,9 @@
 Roadmap
 
 
-Rework fairy wand
-Rework corroding flame sceptre
+
+ADD SPELL ICONS ):
+
 Rework sanguine scepter {
        Bleed when held
        Life steal on spell attack

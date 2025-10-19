@@ -1,12 +1,5 @@
 package com.skydude.dacxirons;
 
-import com.skydude.dacxirons.entity.spells.EldritchSlash.EldritchSlashRenderer;
-import io.redspace.ironsspellbooks.IronsSpellbooks;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
-import io.redspace.ironsspellbooks.entity.spells.blood_slash.BloodSlashRenderer;
-import io.redspace.ironsspellbooks.entity.spells.cone_of_cold.ConeOfColdRenderer;
-import io.redspace.ironsspellbooks.entity.spells.flame_strike.FlameStrikeRenderer;
-import io.redspace.ironsspellbooks.entity.spells.magic_missile.MagicMissileRenderer;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
@@ -19,7 +12,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import com.skydude.dacxirons.registries.EntityRegistry;

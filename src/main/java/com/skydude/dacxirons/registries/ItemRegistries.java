@@ -8,6 +8,7 @@ import com.skydude.dacxirons.item.armor.BlazymancerSpellArmorItem;
 import com.skydude.dacxirons.item.armor.BlessedPriestArmorItem;
 import com.skydude.dacxirons.item.armor.EbonyMagicSpellArmorItem;
 import com.skydude.dacxirons.item.spellbook.DivineManuscriptSpellbook;
+import com.skydude.dacxirons.item.weapons.CorrodingFlameItem;
 import com.skydude.dacxirons.item.weapons.ScepterofOvercompensation;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
@@ -43,6 +44,8 @@ public class ItemRegistries {
             ScepterofOvercompensation::new);
     public static final RegistryObject<Item> SCEPTERPYROCLASTIC = ITEMS.register("pyromancer_staff",
            pyromancerStaffItem::new);
+    public static final RegistryObject<Item> CORRODING_FLAME_STAFF = ITEMS.register("corroding_flame_staff",
+            CorrodingFlameItem::new);
 
     public static final RegistryObject<Item> SCEPTER_COMPENSATION_STAFF = ITEMS.register("scepter_of_compensation_staff", sceptercompensation::new);
     public static final RegistryObject<Item> DIVINEMANUSCRIPT = ITEMS.register("divine_manuscript_spell_book", DivineManuscriptSpellbook::new);
