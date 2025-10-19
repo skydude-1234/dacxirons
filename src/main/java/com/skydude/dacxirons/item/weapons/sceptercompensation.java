@@ -184,17 +184,39 @@ public class sceptercompensation extends StaffItem implements GeoItem, IPresetSp
            // System.out.println(isholding);
 
 
+        } else {
+            isholding = false;
         }
 
 
     }
     @SubscribeEvent
     public static void onSpellAttack(SpellDamageEvent event) {
-
+        int duration = 120;
         if(isholding){
-            SpellAttackEffect.SpellEffectAdd(holder, MobEffects.JUMP, 20,1, false, true);
+            if (holder instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+                SpellAttackEffect.SpellEffectAdd(serverPlayer, MobEffects.JUMP, duration,1, false, true);
+            } else if (holder != null && holder.level() instanceof net.minecraft.server.level.ServerLevel) {
+                SpellAttackEffect.SpellEffectAdd(holder, MobEffects.JUMP, duration,1, false, true);
+            } else {
+                net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(
+                        net.minecraftforge.api.distmarker.Dist.CLIENT,
+                        () -> () -> {
+                            var minecraft   = net.minecraft.client.Minecraft.getInstance();
+                            var singleplayerServer  = minecraft.getSingleplayerServer();              // null on dedicated
+                            if (singleplayerServer == null) return;
+                            var sLvl = singleplayerServer.getLevel(holder.level().dimension()); // server copy of the same dimension
+                            if (sLvl == null) return;
+                            var real = sLvl.getEntity(holder.getUUID());         // server-side twin of holder
+                            if (real instanceof net.minecraft.world.entity.LivingEntity living) {
+                                SpellAttackEffect.SpellEffectAdd(living, MobEffects.JUMP, duration,1, false, true);
+                            }
+                        }
+                );
+            }
 
-            // add effect
+
+
         }
 
 

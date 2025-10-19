@@ -1,18 +1,22 @@
 package com.skydude.dacxirons;
 
 import com.skydude.dacxirons.client.model.*;
+import com.skydude.dacxirons.entity.spells.AcidBall.AcidFireball;
 import com.skydude.dacxirons.entity.spells.EldritchSlash.EldritchSlashRenderer;
 import com.skydude.dacxirons.item.armor.BlazymancerSpellArmorItem;
 import com.skydude.dacxirons.registries.EntityRegistry;
 import com.skydude.dacxirons.registries.ItemRegistries;
+import com.skydude.dacxirons.renderers.AcidFireBallRenderer;
 import net.mcreator.dungeonsandcombat.client.renderer.KamathRenderer;
 import net.mcreator.dungeonsandcombat.client.renderer.WeaknessRenderer;
 import net.mcreator.dungeonsandcombat.entity.WeaknessEntity;
+import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModEntities;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModEntityRenderers;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModParticleTypes;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -37,7 +41,7 @@ public class ClientModEvents {
         event.registerEntityRenderer(EntityRegistry.SUMMONED_WEAKNESS.get(), WeaknessRenderer::new);
         event.registerEntityRenderer(EntityRegistry.SUMMONED_KAMATH.get(), KamathRenderer::new);
         event.registerEntityRenderer(EntityRegistry.ELDRITCH_SLASH.get(), EldritchSlashRenderer::new);
-
+        event.registerEntityRenderer(EntityRegistry.ACID_BALL.get(),  AcidFireBallRenderer::new);
 
     }
 

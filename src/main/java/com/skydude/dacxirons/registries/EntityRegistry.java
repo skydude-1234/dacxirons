@@ -3,6 +3,7 @@ package com.skydude.dacxirons.registries;
 //import com.skydude.dacxirons.entity.mobs.SummonedKamath;
 import com.skydude.dacxirons.dacxirons;
 import com.skydude.dacxirons.entity.mobs.SummonedWeakness;
+import com.skydude.dacxirons.entity.spells.AcidBall.AcidFireball;
 import com.skydude.dacxirons.entity.spells.EldritchSlash.EldritchSlash;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.entity.spells.flame_strike.FlameStrike;
@@ -51,6 +52,11 @@ public class EntityRegistry {
                     .sized(5f, 1f)
                     .clientTrackingRange(64)
                     .build(new ResourceLocation(IronsSpellbooks.MODID, "eldritch_slash").toString()));
+    public static final RegistryObject<EntityType<AcidFireball>> ACID_BALL =
+            ENTITIES.register("acid_ball", () -> EntityType.Builder.<AcidFireball>of(AcidFireball::new, MobCategory.MISC)
+                    .sized(5f, 1f)
+                    .clientTrackingRange(64)
+                    .build(new ResourceLocation(IronsSpellbooks.MODID, "acid_ball").toString()));
 
 
 

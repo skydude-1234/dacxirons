@@ -2,6 +2,7 @@ package com.skydude.dacxirons.spells;
 
 
 import com.skydude.dacxirons.dacxirons;
+import com.skydude.dacxirons.entity.spells.AcidBall.AcidFireball;
 import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
@@ -121,6 +122,7 @@ public class TripleFireballSpell extends AbstractSpell {
         MagicFireball fireball = new MagicFireball(world, caster);
 
         fireball.setDamage(getDamage(spellLevel, caster));
+        System.out.println(fireball.damageSources());
         fireball.setExplosionRadius(getRadius(spellLevel, caster));
 
         fireball.setPos(origin.add(caster.getForward()).subtract(0, fireball.getBbHeight() / 2.0, 0));

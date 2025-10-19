@@ -129,6 +129,8 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
             holder = player;
 
 
+        } else {
+            isholding = false;
         }
 
 
@@ -156,7 +158,7 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
                 } else if (holder != null && holder.level() instanceof net.minecraft.server.level.ServerLevel) {
                     holder.addEffect(mobeffect); // any server-side entity
                 } else {
-                    // Client-side event path: bounce to the *integrated* server (no packets)
+                   // Do effect server only
                     net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(
                             net.minecraftforge.api.distmarker.Dist.CLIENT,
                             () -> () -> {
@@ -172,9 +174,10 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
                             }
                     );
                 }
-            }
+
 
 
         }
     }
+}
 }

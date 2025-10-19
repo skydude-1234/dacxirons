@@ -1,8 +1,6 @@
 Roadmap
 
 
-Remove fire particles from Eldritch slash
-Rework pyroclastic staff
 Rework fairy wand
 Rework corroding flame sceptre
 Rework sanguine scepter {
