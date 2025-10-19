@@ -11,6 +11,7 @@ New Spell - Magic Arrow
 New Spell - Triple Fireball
 New Spell - Acid Fireball
 New Spell - Fairy's Wish, grants 2 random positive effects
+New Spell - Crimson Oath: Lose 80-30% of health and  bleed, but gain 20-60% blood spell power
 
 New config for invis ability to set how long the invis effect lasts when given
 
@@ -26,7 +27,7 @@ Scepter of Compensation - Magic Arrow turned into a spell, Passive Ability: Atta
 Pyroclastic Staff - Triple fireball turned into a spell, Passive Ability: Attacking with Fire spells gives you "flame grant me strength" & sets your enemies on fire
 Corroding Flame - Acid Fireball is now a spell, Passive ability: Attacking with spells gives your enemies poison effect
 Fairy Wand - Removed fairy missile, too generic/close to Magic Arrow. Secondary ability replaced with Fairy's Wish imbued spell, Passive Ability: your spells levitate enemies
-
+Sanguine Scepter - Bloody arrow is now a spell, Passive Ability: Your spells steal life from your enemies
 
 Balance Changes:
 BUFFS:

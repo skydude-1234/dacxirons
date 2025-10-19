@@ -4,10 +4,11 @@ import com.skydude.dacxirons.dacxirons;
 //import com.skydude.dacxirons.spells.Summon;
 import com.skydude.dacxirons.spells.*;
 //import com.skydude.dacxirons.spells.Summon;
+import com.skydude.dacxirons.spells.Blood.BloodyArrow;
+import com.skydude.dacxirons.spells.Blood.CrimsonOath;
 import com.skydude.dacxirons.spells.eldritch.EldritchSlashSpell;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
-import io.redspace.ironsspellbooks.spells.fire.FlamingStrikeSpell;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -24,6 +25,7 @@ public class dacxironsSpellRegistry {
   public static final RegistryObject<AbstractSpell> TRIPLE_FIREBALL_SPELL = registerSpell(new TripleFireballSpell());
   public static final RegistryObject<AbstractSpell> ACID_BALL_SPELL = registerSpell(new AcidBallSpell());;
   public static final RegistryObject<AbstractSpell> FAIRYS_WISH_SPELL = registerSpell(new FairysWishSpell());;
+  public static final RegistryObject<AbstractSpell> CRIMSON_OATH = registerSpell(new CrimsonOath());;
 
     public static final RegistryObject<AbstractSpell> ELDRITCH_SLASH_SPELL = registerSpell(new EldritchSlashSpell());
 
