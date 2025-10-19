@@ -45,6 +45,8 @@ public class ItemRegistries {
             CorrodingFlameItem::new);
     public static final RegistryObject<Item> FAIRY_WAND_STAFF = ITEMS.register("fairy_wand_staff",
             FairyWandStaff::new);
+    public static final RegistryObject<Item> SANGUINE_SCEPTER_STAFF = ITEMS.register("sanguine_scepter_staff",
+            SanguineScepterStaffItem::new);
     public static final RegistryObject<Item> SCEPTER_COMPENSATION_STAFF = ITEMS.register("scepter_of_compensation_staff", sceptercompensation::new);
     public static final RegistryObject<Item> DIVINEMANUSCRIPT = ITEMS.register("divine_manuscript_spell_book", DivineManuscriptSpellbook::new);
 

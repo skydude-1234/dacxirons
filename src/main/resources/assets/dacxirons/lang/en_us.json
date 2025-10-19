@@ -51,6 +51,8 @@
   "item.dacxirons.corroding_flame_staff": "Corroding Flame Scepter",
   "ui.dacxirons.duration": "%d Max Duration",
   "ui.dacxirons.amplifier": "%d Max Effect Level",
-  "spell.dacxirons.fairys_wish_spell": "Fairy's Wish"
+  "spell.dacxirons.fairys_wish_spell": "Fairy's Wish",
+  "item.dacxirons.sanguine_scepter_staff": "Sanguine Scepter",
+  "spell.dacxirons.bloody_arrow": "Bloody Arrow"
 }
 

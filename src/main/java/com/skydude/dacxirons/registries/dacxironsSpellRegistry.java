@@ -19,7 +19,8 @@ public class dacxironsSpellRegistry {
     public static final RegistryObject<AbstractSpell> SUMMON_KAMATH  = registerSpell(new SummonKamath());;
 
     public static final RegistryObject<AbstractSpell> SUNLEIA_BEAM = registerSpell(new SunleiaBeam());;
-    public static final RegistryObject<AbstractSpell> MAGIC_ARROW = registerSpell(new MagicArrow());;
+    public static final RegistryObject<AbstractSpell> MAGIC_ARROW = registerSpell(new MagicArrow());
+  public static final RegistryObject<AbstractSpell> BLOODY_ARROW = registerSpell(new BloodyArrow());
   public static final RegistryObject<AbstractSpell> TRIPLE_FIREBALL_SPELL = registerSpell(new TripleFireballSpell());
   public static final RegistryObject<AbstractSpell> ACID_BALL_SPELL = registerSpell(new AcidBallSpell());;
   public static final RegistryObject<AbstractSpell> FAIRYS_WISH_SPELL = registerSpell(new FairysWishSpell());;

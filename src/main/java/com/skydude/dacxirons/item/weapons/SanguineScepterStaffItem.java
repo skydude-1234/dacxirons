@@ -1,47 +1,12 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
 
 package com.skydude.dacxirons.item.weapons;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import com.skydude.dacxirons.registries.ItemRegistries;
-import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
-import com.skydude.dacxirons.renderers.FairyScepterItemRenderer;
-import com.skydude.dacxirons.renderers.sceptercompensationstaffRenderer;
-import io.redspace.ironsspellbooks.api.events.SpellDamageEvent;
-import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
-import io.redspace.ironsspellbooks.api.spells.IPresetSpellContainer;
-import io.redspace.ironsspellbooks.api.spells.ISpellContainer;
-import io.redspace.ironsspellbooks.api.spells.SpellData;
-import io.redspace.ironsspellbooks.item.weapons.StaffItem;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemDisplayContext;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
-import net.minecraftforge.client.extensions.common.IClientItemExtensions;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import software.bernie.geckolib.animatable.GeoItem;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.AnimationController.State;
-import software.bernie.geckolib.core.animation.AnimationState;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.Arrays;
 import java.util.List;
@@ -49,9 +14,50 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.function.Consumer;
 
+import com.skydude.dacxirons.registries.ItemRegistries;
+import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
+import com.skydude.dacxirons.renderers.SanguineScepterItemRenderer;
+import io.redspace.ironsspellbooks.api.events.SpellDamageEvent;
+import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
+import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
+import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
+import io.redspace.ironsspellbooks.api.spells.IPresetSpellContainer;
+import io.redspace.ironsspellbooks.api.spells.ISpellContainer;
+import io.redspace.ironsspellbooks.api.spells.SpellData;
+import io.redspace.ironsspellbooks.item.weapons.StaffItem;
+import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
+import net.mcreator.dungeonsandcombat.procedures.SanguineScepterRightclickedProcedure;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import software.bernie.geckolib.animatable.GeoItem;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.RawAnimation;
+import software.bernie.geckolib.core.animation.AnimationController.State;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.util.GeckoLibUtil;
 
-@Mod.EventBusSubscriber
-public class FairyWandStaff extends StaffItem implements GeoItem, IPresetSpellContainer {
+public class SanguineScepterStaffItem extends StaffItem implements GeoItem, IPresetSpellContainer {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     public String animationprocedure = "empty";
     public static ItemDisplayContext transformType;
@@ -60,18 +66,18 @@ public class FairyWandStaff extends StaffItem implements GeoItem, IPresetSpellCo
     public static Player holder;
 
 
-    public FairyWandStaff() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.UNCOMMON), 2, -2.4,
+    public SanguineScepterStaffItem() {
+        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.UNCOMMON), 3, -2.4,
                 Map.of(
-                        AttributeRegistry.MANA_REGEN.get(),
-                        new AttributeModifier(UUID.fromString("001ad88f-901d-4691-b2a2-3664e42026d6"), "manannaa modifier", .05, AttributeModifier.Operation.MULTIPLY_BASE),
-                        AttributeRegistry.NATURE_SPELL_POWER.get(),
-                        new AttributeModifier(UUID.fromString("001ad88f-901d-4691-b2a2-3664e42026d9"), "natureee modisssfier", .1, AttributeModifier.Operation.MULTIPLY_BASE)
+                        AttributeRegistry.FIRE_SPELL_POWER.get(),
+                        new AttributeModifier(UUID.fromString("001ad88d-901d-4691-b2a2-3664e42026d3"), " fire", .1, Operation.MULTIPLY_BASE)
+
                 ));
     }
+
     //spells container stuff
     private static final SpellDataRegistryHolder[] DEFAULT_SPELLS = new SpellDataRegistryHolder[]{
-            new SpellDataRegistryHolder(dacxironsSpellRegistry.FAIRYS_WISH_SPELL, 3)
+            new SpellDataRegistryHolder(dacxironsSpellRegistry.BLOODY_ARROW, 3)
 
     };
 
@@ -84,6 +90,7 @@ public class FairyWandStaff extends StaffItem implements GeoItem, IPresetSpellCo
         }
         return spellData;
     }
+
     @Override
     public void initializeSpellContainer(ItemStack itemStack) {
         if (itemStack == null) return;
@@ -97,10 +104,11 @@ public class FairyWandStaff extends StaffItem implements GeoItem, IPresetSpellCo
     }
 
     // end of spells container stuff
+
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
         super.initializeClient(consumer);
         consumer.accept(new IClientItemExtensions() {
-            private final BlockEntityWithoutLevelRenderer renderer = new FairyScepterItemRenderer();
+            private final BlockEntityWithoutLevelRenderer renderer = new SanguineScepterItemRenderer();
 
             public BlockEntityWithoutLevelRenderer getCustomRenderer() {
                 return this.renderer;
@@ -154,54 +162,66 @@ public class FairyWandStaff extends StaffItem implements GeoItem, IPresetSpellCo
         return this.cache;
     }
 
+    public int getEnchantmentValue() {
+        return 12;
+    }
 
 
     public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
         super.appendHoverText(itemstack, level, list, flag);
-        list.add(Component.literal("§7Ability:"));
-        list.add(Component.literal(" §9Your spells levitate enemies"));
+        list.add(Component.literal("§7Primary Ability:"));
+        list.add(Component.literal(" §9Bloody Arrow"));
+        list.add(Component.literal("§7Secondary Ability:"));
+        list.add(Component.literal(" §9Scarlet Restoration"));
     }
 
     @Override
-    public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex){
-        if(player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.FAIRY_WAND_STAFF.get()){
+    public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex) {
+        if (player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.SCEPTERPYROCLASTIC.get()) {
             isholding = true;
             holder = player;
-           // System.out.println(isholding);
 
 
         } else {
             isholding = false;
         }
 
-
     }
+
     @SubscribeEvent
     public static void onSpellAttack(SpellDamageEvent event) {
-        int duration = 100;
-        LivingEntity enemy = event.getEntity();
-        if(isholding){
-            if (holder instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
-                SpellAttackEffect.SpellEffectAdd(serverPlayer, MobEffects.POISON, duration,1, false, true);
-            } else if (holder != null && holder.level() instanceof net.minecraft.server.level.ServerLevel) {
-                SpellAttackEffect.SpellEffectAdd(holder, MobEffects.POISON, duration,1, false, true);
-            } else {
-                net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(
-                        net.minecraftforge.api.distmarker.Dist.CLIENT,
-                        () -> () -> {
-                            var minecraft   = net.minecraft.client.Minecraft.getInstance();
-                            var singleplayerServer  = minecraft.getSingleplayerServer();              // null on dedicated
-                            if (singleplayerServer == null) return;
-                            var sLvl = singleplayerServer.getLevel(holder.level().dimension()); // server copy of the same dimension
-                            if (sLvl == null) return;
-                            var real = sLvl.getEntity(holder.getUUID());         // server-side twin of holder
-                            if (real instanceof net.minecraft.world.entity.LivingEntity living) {
-                                SpellAttackEffect.SpellEffectAdd(enemy, MobEffects.LEVITATION, duration,1, false, true);
+
+        if (isholding) {
+
+          LivingEntity enemy = event.getEntity();
+
+
+                // to prevent client-server causing effect to stay at 00:00, apply only on the server
+                if (holder instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+                    SpellAttackEffect.SpellEffectAdd(enemy, DungeonsAndCombatModMobEffects.BLEEDING.get(), 80, 0, false, true);
+
+                } else if (holder != null && holder.level() instanceof net.minecraft.server.level.ServerLevel) {
+                    SpellAttackEffect.SpellEffectAdd(enemy, DungeonsAndCombatModMobEffects.BLEEDING.get(), 80, 0, false, true);
+
+                } else {
+
+                    // usually this is the one that runs
+                    net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(
+                            net.minecraftforge.api.distmarker.Dist.CLIENT,
+                            () -> () -> {
+                                var minecraft = net.minecraft.client.Minecraft.getInstance();
+                                var srv = minecraft.getSingleplayerServer();              // null on dedicated
+                                if (srv == null) return;
+                                var sLvl = srv.getLevel(holder.level().dimension()); // server copy of the same dimension
+                                if (sLvl == null) return;
+                                var real = sLvl.getEntity(holder.getUUID());         // server-side twin of holder
+                                if (real instanceof net.minecraft.world.entity.LivingEntity le) {
+                                    //apply
+                                    SpellAttackEffect.SpellEffectAdd(enemy, DungeonsAndCombatModMobEffects.BLEEDING.get(), 80, 0, false, true);
+                                }
                             }
-                        }
-                );
-            }
+                    );
+                }
         }
     }
-
 }

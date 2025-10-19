@@ -1,0 +1,6 @@
+{
+  "parent": "dungeons_and_combat:displaysettings/scepterofcompensation.item",
+  "textures": {
+    "layer0": "dungeons_and_combat:item/sanguinescepter"
+  }
+}
