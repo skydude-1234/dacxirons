@@ -42,6 +42,7 @@ public class TabRegistry {
                         output.accept(ItemRegistries.SCEPTER_COMPENSATION_STAFF.get());
                         output.accept(ItemRegistries.SCEPTERPYROCLASTIC.get());
                         output.accept(ItemRegistries.CORRODING_FLAME_STAFF.get());
+                        output.accept(ItemRegistries.FAIRY_WAND_STAFF.get());
                         //output.accept(ItemRegistries.SUMMONS_NECKLACE.get());
                     })
                     .build()

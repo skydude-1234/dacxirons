@@ -26,6 +26,7 @@ import java.util.UUID;
 public class ScepterFairy {
     // UUIDs per slot and attribute ensure proper application/removal
     private static final UUID NATURE_UUID = UUID.fromString("546e4567-e89b-12d3-a456-426614174005");
+    private static final UUID MANA_UUID = UUID.fromString("546e4567-e67b-12d3-a456-426614174005");
 
     @SubscribeEvent
     public static void onItemAttributeModifiers(ItemAttributeModifierEvent event) {
@@ -46,7 +47,17 @@ public class ScepterFairy {
                             Operation.MULTIPLY_BASE
                     ));
                 }
-
+                Attribute regenPower = ForgeRegistries.ATTRIBUTES.getValue(
+                        new ResourceLocation("irons_spellbooks:mana_regen")
+                );
+                if (regenPower != null) {
+                    event.addModifier(firePower, new AttributeModifier(
+                            NATURE_UUID,
+                            "sss Spell POwer",
+                            0.05,
+                            Operation.MULTIPLY_BASE
+                    ));
+                }
             }
         }
     }

@@ -45,7 +45,7 @@ public class ScepterCorrodingFlame {
                     event.addModifier(naturePower, new AttributeModifier(
                             NATURE_UUID,
                             "Spell Power Bonus",
-                            0.1,
+                            0.15,
                             Operation.MULTIPLY_BASE
                     ));
                 }

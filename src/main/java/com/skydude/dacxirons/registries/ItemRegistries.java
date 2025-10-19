@@ -8,13 +8,10 @@ import com.skydude.dacxirons.item.armor.BlazymancerSpellArmorItem;
 import com.skydude.dacxirons.item.armor.BlessedPriestArmorItem;
 import com.skydude.dacxirons.item.armor.EbonyMagicSpellArmorItem;
 import com.skydude.dacxirons.item.spellbook.DivineManuscriptSpellbook;
-import com.skydude.dacxirons.item.weapons.CorrodingFlameItem;
-import com.skydude.dacxirons.item.weapons.ScepterofOvercompensation;
+import com.skydude.dacxirons.item.weapons.*;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import io.redspace.ironsspellbooks.item.spell_books.SimpleAttributeSpellBook;
-import com.skydude.dacxirons.item.weapons.sceptercompensation;
-import com.skydude.dacxirons.item.weapons.pyromancerStaffItem;
 
 import io.redspace.ironsspellbooks.item.weapons.BloodStaffItem;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -46,7 +43,8 @@ public class ItemRegistries {
            pyromancerStaffItem::new);
     public static final RegistryObject<Item> CORRODING_FLAME_STAFF = ITEMS.register("corroding_flame_staff",
             CorrodingFlameItem::new);
-
+    public static final RegistryObject<Item> FAIRY_WAND_STAFF = ITEMS.register("fairy_wand_staff",
+            FairyWandStaff::new);
     public static final RegistryObject<Item> SCEPTER_COMPENSATION_STAFF = ITEMS.register("scepter_of_compensation_staff", sceptercompensation::new);
     public static final RegistryObject<Item> DIVINEMANUSCRIPT = ITEMS.register("divine_manuscript_spell_book", DivineManuscriptSpellbook::new);
 
