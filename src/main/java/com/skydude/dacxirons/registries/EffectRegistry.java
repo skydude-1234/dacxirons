@@ -18,4 +18,6 @@ public class EffectRegistry {
             MOB_EFFECTS.register("cast_speed", CastSpeed:: new);
     public static final RegistryObject<MobEffect> SPELL_BURNING_AURA =
             MOB_EFFECTS.register("spell_burn", SpellBurningAuraEffect:: new);
+    public static final RegistryObject<MobEffect> BLOOD_SPELL_STRENGTH =
+            MOB_EFFECTS.register("blood_spell_strength", BloodSpellStrength:: new);
 }
