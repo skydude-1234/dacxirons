@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " ab",
+    " ca",
+    "c  "
+  ],
+  "key": {
+    "a": {
+      "item": "dungeons_and_combat:igneous"
+    },
+    "b": {
+      "item": "minecraft:fire_charge"
+    },
+    "c": {
+      "item": "dungeons_and_combat:molten_bone"
+    }
+  },
+  "result": {
+    "item": "dungeons_and_combat:pyromancer_scepter",
+    "count": 1
+  }
+}

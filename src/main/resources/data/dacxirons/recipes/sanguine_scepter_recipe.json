@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " ab",
+    " ca",
+    "c  "
+  ],
+  "key": {
+    "a": {
+      "item": "dungeons_and_combat:ebony_scrap"
+    },
+    "b": {
+      "item": "dungeons_and_combat:blood_orb"
+    },
+    "c": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "dungeons_and_combat:sanguine_scepter",
+    "count": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " ab",
+    " ca",
+    "d  "
+  ],
+  "key": {
+    "a": {
+      "item": "dungeons_and_combat:fairy_wing"
+    },
+    "b": {
+      "item": "dungeons_and_combat:fairy_dust"
+    },
+    "c": {
+      "item": "minecraft:moss_block"
+    },
+    "d": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "dungeons_and_combat:fairy_scepter",
+    "count": 1
+  }
+}
