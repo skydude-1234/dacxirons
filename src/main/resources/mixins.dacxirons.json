@@ -7,7 +7,8 @@
   "mixins": [
     "BlessedAmuletMixin",
     "BloodymancerMixin",
-    "OathSwordItemMixin"
+    "OathSwordItemMixin",
+    "OverridedExiled"
   ],
   "injectors": {
     "defaultRequire": 1
