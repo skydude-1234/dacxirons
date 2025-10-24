@@ -18,7 +18,9 @@ import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
 import net.minecraft.world.entity.player.Player;
@@ -42,8 +44,7 @@ import static com.skydude.dacxirons.dacxirons.MOD_ID;
 
 public class pyromancerStaffItem extends StaffItem implements IPresetSpellContainer {
 
-    public static boolean isholding = false;
-    public static Player holder;
+
 
 
     public pyromancerStaffItem() {
@@ -105,60 +106,21 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
         list.add(Component.translatable("ui.dacxirons.pyroclasticabilityeffect"));
     }
 
-    @Override
-    public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex){
-        if(player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.SCEPTERPYROCLASTIC.get()){
-            isholding = true;
-            holder = player;
-
-
-        } else {
-            isholding = false;
-        }
-
-    }
     @SubscribeEvent
     public static void onSpellAttack(SpellDamageEvent event) {
+        LivingEntity target = event.getEntity();
 
-        if (isholding) {
+        // Get the player/caster
+        LivingEntity attacker = (LivingEntity) event.getSpellDamageSource().getEntity();
 
-            event.getEntity().setSecondsOnFire(5);
+        if (attacker != null) {
 
-
-
-            if (event.getSpellDamageSource().spell().getSchoolType() == SchoolRegistry.FIRE.get()) {
-
-
-                // to prevent client-server causing effect to stay at 00:00, apply only on the server
-                if (holder instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
-                    SpellAttackEffect.SpellEffectAdd(serverPlayer, DungeonsAndCombatModMobEffects.FLAME_GRANT_ME_STRENGTH.get(), 80, 0, false, true);
-
-                } else if (holder != null && holder.level() instanceof net.minecraft.server.level.ServerLevel) {
-                    SpellAttackEffect.SpellEffectAdd(holder, DungeonsAndCombatModMobEffects.FLAME_GRANT_ME_STRENGTH.get(), 80, 0, false, true);
-
-                } else {
-
-                 // usually this is the one that runs
-                    net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(
-                            net.minecraftforge.api.distmarker.Dist.CLIENT,
-                            () -> () -> {
-                                var minecraft   = net.minecraft.client.Minecraft.getInstance();
-                                var srv  = minecraft.getSingleplayerServer();              // null on dedicated
-                                if (srv == null) return;
-                                var sLvl = srv.getLevel(holder.level().dimension()); // server copy of the same dimension
-                                if (sLvl == null) return;
-                                var real = sLvl.getEntity(holder.getUUID());         // server-side twin of holder
-                                if (real instanceof net.minecraft.world.entity.LivingEntity le) {
-                                   //apply
-                                    SpellAttackEffect.SpellEffectAdd(le, DungeonsAndCombatModMobEffects.FLAME_GRANT_ME_STRENGTH.get(), 80, 0, false, true);
-                                }
-                            }
-                    );
+            if (attacker.getMainHandItem().is(ItemRegistries.FAIRY_WAND_STAFF.get())) {
+                // only server side
+                if (!attacker.level().isClientSide) {
+                    SpellAttackEffect.SpellEffectAdd(attacker, DungeonsAndCombatModMobEffects.FLAME_GRANT_ME_STRENGTH.get(), 80, 1, false, true);
                 }
-
-
-
+            }
         }
     }
-}
 }

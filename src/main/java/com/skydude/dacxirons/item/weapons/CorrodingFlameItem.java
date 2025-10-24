@@ -54,8 +54,7 @@ public class CorrodingFlameItem extends StaffItem implements GeoItem, IPresetSpe
     public String animationprocedure = "empty";
     public static ItemDisplayContext transformType;
     String prevAnim = "empty";
-    public static boolean isholding;
-    public static Player holder;
+
 
     public CorrodingFlameItem() {
         super(ItemPropertiesHelper.equipment().fireResistant().stacksTo(1).rarity(Rarity.UNCOMMON), 3, -2.4,
@@ -163,8 +162,7 @@ public class CorrodingFlameItem extends StaffItem implements GeoItem, IPresetSpe
             if (attacker.getMainHandItem().is(ItemRegistries.CORRODING_FLAME_STAFF.get())) {
                 // only server side
                 if (!attacker.level().isClientSide) {
-                    int duration = 100;
-                    SpellAttackEffect.SpellEffectAdd(target, MobEffects.POISON, duration, 1, false, true);
+                    SpellAttackEffect.SpellEffectAdd(target, MobEffects.POISON, 100, 1, false, true);
                 }
             }
         }

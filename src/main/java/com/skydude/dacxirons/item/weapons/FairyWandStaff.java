@@ -56,8 +56,7 @@ public class FairyWandStaff extends StaffItem implements GeoItem, IPresetSpellCo
     public String animationprocedure = "empty";
     public static ItemDisplayContext transformType;
     String prevAnim = "empty";
-    public static boolean isholding = false;
-    public static Player holder;
+
 
 
     public FairyWandStaff() {
@@ -162,44 +161,21 @@ public class FairyWandStaff extends StaffItem implements GeoItem, IPresetSpellCo
         list.add(Component.literal(" §9Your spells levitate enemies"));
     }
 
-    @Override
-    public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex){
-        if(player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.FAIRY_WAND_STAFF.get()){
-            isholding = true;
-            holder = player;
-           // System.out.println(isholding);
 
-
-        } else {
-            isholding = false;
-        }
-
-
-    }
     @SubscribeEvent
     public static void onSpellAttack(SpellDamageEvent event) {
-        int duration = 100;
-        LivingEntity enemy = event.getEntity();
-        if(isholding){
-            if (holder instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
-                SpellAttackEffect.SpellEffectAdd(serverPlayer, MobEffects.POISON, duration,1, false, true);
-            } else if (holder != null && holder.level() instanceof net.minecraft.server.level.ServerLevel) {
-                SpellAttackEffect.SpellEffectAdd(holder, MobEffects.POISON, duration,1, false, true);
-            } else {
-                net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(
-                        net.minecraftforge.api.distmarker.Dist.CLIENT,
-                        () -> () -> {
-                            var minecraft   = net.minecraft.client.Minecraft.getInstance();
-                            var singleplayerServer  = minecraft.getSingleplayerServer();              // null on dedicated
-                            if (singleplayerServer == null) return;
-                            var sLvl = singleplayerServer.getLevel(holder.level().dimension()); // server copy of the same dimension
-                            if (sLvl == null) return;
-                            var real = sLvl.getEntity(holder.getUUID());         // server-side twin of holder
-                            if (real instanceof net.minecraft.world.entity.LivingEntity living) {
-                                SpellAttackEffect.SpellEffectAdd(enemy, MobEffects.LEVITATION, duration,1, false, true);
-                            }
-                        }
-                );
+        LivingEntity target = event.getEntity();
+
+        // Get the player/caster
+        LivingEntity attacker = (LivingEntity) event.getSpellDamageSource().getEntity();
+
+        if (attacker != null) {
+
+            if (attacker.getMainHandItem().is(ItemRegistries.FAIRY_WAND_STAFF.get())) {
+                // only server side
+                if (!attacker.level().isClientSide) {
+                    SpellAttackEffect.SpellEffectAdd(target, MobEffects.LEVITATION, 100, 1, false, true);
+                }
             }
         }
     }

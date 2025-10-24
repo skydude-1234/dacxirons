@@ -26,6 +26,7 @@ import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemDisplayContext;
@@ -162,45 +163,23 @@ public class sceptercompensation extends StaffItem implements GeoItem, IPresetSp
         list.add(Component.literal(" §9Your spells grant you jump boost"));
     }
 
-    @Override
-    public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex){
-        if(player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.SCEPTER_COMPENSATION_STAFF.get()){
-            isholding = true;
-            holder = player;
-           // System.out.println(isholding);
 
-
-        } else {
-            isholding = false;
-        }
-
-
-    }
     @SubscribeEvent
     public static void onSpellAttack(SpellDamageEvent event) {
-        int duration = 120;
-        if(isholding){
-            if (holder instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
-                SpellAttackEffect.SpellEffectAdd(serverPlayer, MobEffects.JUMP, duration,1, false, true);
-            } else if (holder != null && holder.level() instanceof net.minecraft.server.level.ServerLevel) {
-                SpellAttackEffect.SpellEffectAdd(holder, MobEffects.JUMP, duration,1, false, true);
-            } else {
-                net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(
-                        net.minecraftforge.api.distmarker.Dist.CLIENT,
-                        () -> () -> {
-                            var minecraft   = net.minecraft.client.Minecraft.getInstance();
-                            var singleplayerServer  = minecraft.getSingleplayerServer();              // null on dedicated
-                            if (singleplayerServer == null) return;
-                            var sLvl = singleplayerServer.getLevel(holder.level().dimension()); // server copy of the same dimension
-                            if (sLvl == null) return;
-                            var real = sLvl.getEntity(holder.getUUID());         // server-side twin of holder
-                            if (real instanceof net.minecraft.world.entity.LivingEntity living) {
-                                SpellAttackEffect.SpellEffectAdd(living, MobEffects.JUMP, duration,1, false, true);
-                            }
-                        }
-                );
+        LivingEntity target = event.getEntity();
+
+        // Get the player/caster
+        LivingEntity attacker = (LivingEntity) event.getSpellDamageSource().getEntity();
+
+        if (attacker != null) {
+
+            if (attacker.getMainHandItem().is(ItemRegistries.FAIRY_WAND_STAFF.get())) {
+                // only server side
+                if (!attacker.level().isClientSide) {
+                    SpellAttackEffect.SpellEffectAdd(attacker, MobEffects.JUMP, 120,1, false, true); }
             }
         }
     }
+
 
 }

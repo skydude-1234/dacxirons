@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.function.Consumer;
 
+import com.skydude.dacxirons.dacxirons;
 import com.skydude.dacxirons.registries.ItemRegistries;
 import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 import com.skydude.dacxirons.renderers.SanguineScepterItemRenderer;
@@ -30,8 +31,10 @@ import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
 import net.mcreator.dungeonsandcombat.procedures.SanguineScepterRightclickedProcedure;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -47,6 +50,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -58,14 +62,13 @@ import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.animation.AnimationController.State;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(modid = dacxirons.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class SanguineScepterStaffItem extends StaffItem implements GeoItem, IPresetSpellContainer {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     public String animationprocedure = "empty";
     public static ItemDisplayContext transformType;
     String prevAnim = "empty";
-    public static boolean isholding = false;
-    public static Player holder;
+
 
 
     public SanguineScepterStaffItem() {
@@ -174,50 +177,29 @@ public class SanguineScepterStaffItem extends StaffItem implements GeoItem, IPre
         list.add(Component.literal("§7Ability: Your spells steal health from enemies"));
     }
 
-    @Override
-    public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex) {
-        if (player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.SANGUINE_SCEPTER_STAFF.get()) {
-            isholding = true;
-            holder = player;
+    @SubscribeEvent
+    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+        if (event.player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.SANGUINE_SCEPTER_STAFF.get()) {
+            event.player.addEffect(new MobEffectInstance(DungeonsAndCombatModMobEffects.BLEEDING.get(), 20, 0, false, true));
 
-
-        } else {
-            isholding = false;
         }
 
     }
-
     @SubscribeEvent
     public static void onSpellAttack(SpellDamageEvent event) {
+        LivingEntity target = event.getEntity();
 
-        if (isholding) {
+        // Get the player/caster
+        LivingEntity attacker = (LivingEntity) event.getSpellDamageSource().getEntity();
 
-                // to prevent client-server causing effect to stay at 00:00, apply only on the server
-                if (holder instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
-                    SpellAttackEffect.SpellEffectAdd(holder, MobEffects.HEAL, 1, 2, false, true);
+        if (attacker != null) {
 
-                } else if (holder != null && holder.level() instanceof net.minecraft.server.level.ServerLevel) {
-                    SpellAttackEffect.SpellEffectAdd(holder, DungeonsAndCombatModMobEffects.BLEEDING.get(), 80, 0, false, true);
-
-                } else {
-
-                    // usually this is the one that runs
-                    net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(
-                            net.minecraftforge.api.distmarker.Dist.CLIENT,
-                            () -> () -> {
-                                var minecraft = net.minecraft.client.Minecraft.getInstance();
-                                var srv = minecraft.getSingleplayerServer();              // null on dedicated
-                                if (srv == null) return;
-                                var sLvl = srv.getLevel(holder.level().dimension()); // server copy of the same dimension
-                                if (sLvl == null) return;
-                                var real = sLvl.getEntity(holder.getUUID());         // server-side twin of holder
-                                if (real instanceof net.minecraft.world.entity.LivingEntity le) {
-                                    //apply
-                                    le.heal(1);
-                                }
-                            }
-                    );
-                }
+            if (attacker.getMainHandItem().is(ItemRegistries.FAIRY_WAND_STAFF.get())) {
+                // only server side
+                if (!attacker.level().isClientSide) {
+                    SpellAttackEffect.SpellEffectAdd(attacker, MobEffects.HEAL, 1, 2, false, true); }
+            }
         }
     }
+
 }
