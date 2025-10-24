@@ -1,3 +1,5 @@
+NOTES: If your world's dacxirons datapack isnt above dungeons and combat data, disable and re enable dacxirons datapack. check using /datapack list
+
 NEW SUTFF;
 
 New Sunleia beam Icon & Crimson cloth texture
@@ -19,7 +21,6 @@ New config for invis ability to set how long the invis effect lasts when given
 Reworks:
 Changed Crimson Cloth recipe to 3x fleshy cloth, 2 magic cloth, 1 divine blood vial, 1 blood rune & 2 ebony raw
 Crimson Wizard is now crafted using ebony wizard armor instead of regular ebony
-Oath is now inscribed with Eldritch Slash
 
 STAFF REWORKS:
 All scepters/staffs are now an iron's Spells StaffItem, being able to cast any spell on right click
@@ -31,11 +32,11 @@ Sanguine Scepter - Bloody arrow is now a spell, Passive Ability: Your spells ste
 
 Balance Changes:
 BUFFS:
+Oath Weapon is now imbued with Eldritch Slash, +10% eldritch power and +5% spell resistance
 Bloodymancer armor now has +100 max mana instead of 0
 Bloodymancer Tunic can now be imbued with spells
 Bloody cult now has 5% blood power and 50 max mana instead of 0
 Gravedigger weapon now has +10% summon damage and 5% cooldown reduction
-Oath Weapon is now imbued with Eldritch Slash
 Corroded flame scepter now gives +15% nature instead of 5% fire and 5% nature
 Fairy Wand now has +5% mana regen
 

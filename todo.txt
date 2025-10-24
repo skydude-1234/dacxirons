@@ -6,13 +6,6 @@ ADD SPELL ICONS ):
 Add spell descriptions
 
 
-Rework sanguine scepter {
-       Bleed when held
-       Life steal on spell attack
-}
-
-Swap staff with reworked version script & config
-
 New Spellbook - Abandoned Codex {
         Loot table from Remanent Camp and Remanent watch tower
     }
@@ -22,7 +15,8 @@ New Spellbook - High priest's handbook {
     summons high priests summons as an imbued spell
 }
 
-
+Wither Rune crafted into useful tings????
+More accessories
 Add graphical effects and particles to all armor
 
 

@@ -35,7 +35,7 @@
   "item.dacxirons.ebony_wizard_leggings": "§8Ebony Wizard Leggings",
   "item.dacxirons.ebony_wizard_robe": "§8Ebony Wizard Robe",
   "item.dacxirons.ebony_wizard_hood": "§8Ebony Wizard Hood",
-  "item.dacxirons.divine_mold": "divine_mold",
+  "item.dacxirons.divine_mold": "Divine Mold",
   "item.dacxirons.blessed_priest_boots": "Blessed Priest Boots",
   "item.dacxirons.blessed_priest_leggings": "Blessed Priest Leggings",
   "item.dacxirons.blessed_priest_robe": "Blessed Priest Robe",
@@ -59,6 +59,7 @@
   "spell.dacxirons.crimson_oath" : "Crimson Oath",
   "spell.dacxirons.bloody_arrow.guide": "Projectile full of dread and gore, inflicts bleeding",
   "spell.dacxirons.crimson_oath.guide": "Reduce your health critically and begin to bleed, but your power grows exponentially",
-  "ui.dacxirons.bloodpower": "%d Percent Blood Power"
+  "ui.dacxirons.bloodpower": "%d Percent Blood Power",
+  "item.dacxirons.wither_rune": "Wither Rune"
 }
 

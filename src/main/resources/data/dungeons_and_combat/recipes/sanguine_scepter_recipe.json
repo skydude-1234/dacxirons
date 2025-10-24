@@ -2,19 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-    " ab",
-    " ca",
-    "c  "
+    "aaa",
+    "aaa",
+    "aaa"
   ],
   "key": {
     "a": {
-      "item": "dungeons_and_combat:ebony_scrap"
-    },
-    "b": {
-      "item": "dungeons_and_combat:blood_orb"
-    },
-    "c": {
-      "item": "minecraft:stick"
+      "item": "minecraft:barrier"
     }
   },
   "result": {

@@ -2,19 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-    " ab",
-    " ca",
-    "c  "
+    "aaa",
+    "aaa",
+    "aaa"
   ],
   "key": {
     "a": {
-      "item": "dungeons_and_combat:igneous"
-    },
-    "b": {
-      "item": "minecraft:fire_charge"
-    },
-    "c": {
-      "item": "dungeons_and_combat:molten_bone"
+      "item": "minecraft:barrier"
     }
   },
   "result": {

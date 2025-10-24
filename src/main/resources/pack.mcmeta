@@ -2,5 +2,10 @@
   "pack": {
     "description": "dacxirons resources",
     "pack_format": 15
+  },
+  "filter": {
+    "block": [{ "namespace": "dungeons_and_combat", "path": "recipes/fairy_wings_recipe.json" }]
   }
+
+
 }
