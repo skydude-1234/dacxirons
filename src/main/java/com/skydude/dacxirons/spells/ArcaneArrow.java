@@ -8,14 +8,9 @@ import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.damage.DamageSources;
-import net.mcreator.dungeonsandcombat.entity.BloodyArrowEntity;
-import net.mcreator.dungeonsandcombat.entity.LaserBeamEntity;
 import net.mcreator.dungeonsandcombat.entity.MagicArrowEntity;
-import net.mcreator.dungeonsandcombat.procedures.SanguineScepterRightclickedProcedure;
-import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -24,7 +19,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
@@ -32,17 +26,14 @@ import java.util.Optional;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
-import static com.ibm.icu.impl.ValidIdentifiers.Datatype.x;
-
 
 @AutoSpellConfig
-public class MagicArrow extends AbstractSpell {
-    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "magic_arrow");
+public class ArcaneArrow extends AbstractSpell {
+    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "arcane_arrow");
     private final DefaultConfig defaultConfig = new DefaultConfig()
-            .setMinRarity(SpellRarity.LEGENDARY)
-            .setAllowCrafting(false)
+            .setMinRarity(SpellRarity.UNCOMMON)
             .setSchoolResource(SchoolRegistry.EVOCATION_RESOURCE)
-            .setMaxLevel(1)
+            .setMaxLevel(5)
             .setCooldownSeconds(3)
             .build();
 
@@ -52,7 +43,7 @@ public class MagicArrow extends AbstractSpell {
         return List.of(Component.translatable("ui.dacxirons.sunleia.beam", Math.round(5 * getSpellPower(spellLevel, caster))));
     }
 
-    public MagicArrow() {
+    public ArcaneArrow() {
         this.manaCostPerLevel = 10;
         this.baseSpellPower = 1;
         this.spellPowerPerLevel = 0;
@@ -121,13 +112,16 @@ public class MagicArrow extends AbstractSpell {
 
 
 // actual projectile
-        MagicArrowEntity.shoot(world, entity, RandomSource.create(), 1, 5 * getSpellPower(spellLevel, entity), 1);
+        MagicArrowEntity.shoot(world, entity, RandomSource.create(), 1, getDamage(spellLevel, entity), 1);
 
         // 0 damage, just to register as a spell for onSpellAttack event
         if(target != null){
-            DamageSources.applyDamage(target, 0, dacxironsSpellRegistry.MAGIC_ARROW.get().getDamageSource(entity));
+            DamageSources.applyDamage(target, 0, dacxironsSpellRegistry.ARCANE_ARROW.get().getDamageSource(entity));
         }
 
             super.onCast(world, spellLevel, entity, castSource, playerMagicData);
+    }
+    public float getDamage( int spellLevel , LivingEntity caster){
+        return (5 * getSpellPower(spellLevel, caster));
     }
 }

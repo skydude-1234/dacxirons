@@ -3,11 +3,9 @@ package com.skydude.dacxirons.item.weapons;
 import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.IPresetSpellContainer;
 import io.redspace.ironsspellbooks.api.spells.ISpellContainer;
 import io.redspace.ironsspellbooks.api.spells.SpellData;
-import io.redspace.ironsspellbooks.command.CreateImbuedSwordCommand;
 import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -23,7 +21,7 @@ import java.util.Map;
 import java.util.UUID;
 public class ScepterofOvercompensation extends StaffItem implements IPresetSpellContainer {
     private static final SpellDataRegistryHolder[] DEFAULT_SPELLS = new SpellDataRegistryHolder[]{
-            new SpellDataRegistryHolder(dacxironsSpellRegistry.MAGIC_ARROW, 1)
+            new SpellDataRegistryHolder(dacxironsSpellRegistry.ARCANE_ARROW, 1)
 
     };
 

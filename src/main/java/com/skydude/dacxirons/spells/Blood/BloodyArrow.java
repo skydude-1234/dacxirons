@@ -117,6 +117,7 @@ public class BloodyArrow extends AbstractSpell {
 
             super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
+
     public float getDamage( int spellLevel , LivingEntity caster){
         return (5 * getSpellPower(spellLevel, caster));
     }
