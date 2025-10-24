@@ -115,10 +115,10 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
 
         if (attacker != null) {
 
-            if (attacker.getMainHandItem().is(ItemRegistries.FAIRY_WAND_STAFF.get())) {
+            if (attacker.getMainHandItem().is(ItemRegistries.SCEPTERPYROCLASTIC.get())) {
                 // only server side
                 if (!attacker.level().isClientSide) {
-                    SpellAttackEffect.SpellEffectAdd(attacker, DungeonsAndCombatModMobEffects.FLAME_GRANT_ME_STRENGTH.get(), 80, 1, false, true);
+                    SpellAttackEffect.SpellEffectAdd(attacker, DungeonsAndCombatModMobEffects.FLAME_GRANT_ME_STRENGTH.get(), 100, 1, false, true);
                 }
             }
         }

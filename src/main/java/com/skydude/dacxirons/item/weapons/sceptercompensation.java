@@ -173,7 +173,7 @@ public class sceptercompensation extends StaffItem implements GeoItem, IPresetSp
 
         if (attacker != null) {
 
-            if (attacker.getMainHandItem().is(ItemRegistries.FAIRY_WAND_STAFF.get())) {
+            if (attacker.getMainHandItem().is(ItemRegistries.SCEPTER_COMPENSATION_STAFF.get())) {
                 // only server side
                 if (!attacker.level().isClientSide) {
                     SpellAttackEffect.SpellEffectAdd(attacker, MobEffects.JUMP, 120,1, false, true); }

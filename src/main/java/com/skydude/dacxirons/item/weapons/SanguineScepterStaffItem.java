@@ -194,10 +194,11 @@ public class SanguineScepterStaffItem extends StaffItem implements GeoItem, IPre
 
         if (attacker != null) {
 
-            if (attacker.getMainHandItem().is(ItemRegistries.FAIRY_WAND_STAFF.get())) {
+            if (attacker.getMainHandItem().is(ItemRegistries.SANGUINE_SCEPTER_STAFF.get())) {
                 // only server side
                 if (!attacker.level().isClientSide) {
-                    SpellAttackEffect.SpellEffectAdd(attacker, MobEffects.HEAL, 1, 2, false, true); }
+                   attacker.heal(3F);
+                }
             }
         }
     }
