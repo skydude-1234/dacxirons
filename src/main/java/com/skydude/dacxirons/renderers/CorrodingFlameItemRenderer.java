@@ -21,14 +21,11 @@ import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 
 public class CorrodingFlameItemRenderer extends GeoItemRenderer<CorrodingFlameItem> {
-    private static final float SCALE_RECIPROCAL = 0.0625F;
     protected boolean renderArms = false;
     protected MultiBufferSource currentBuffer;
     protected RenderType renderType;
     public ItemDisplayContext transformType;
     protected CorrodingFlameItem animatable;
-    private final Set<String> hiddenBones = new HashSet();
-    private final Set<String> suppressedBones = new HashSet();
 
     public CorrodingFlameItemRenderer() {
         super(new CorrodingFlameItemModel());

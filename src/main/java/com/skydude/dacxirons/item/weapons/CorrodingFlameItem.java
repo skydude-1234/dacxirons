@@ -19,11 +19,13 @@ import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.spells.IPresetSpellContainer;
 import io.redspace.ironsspellbooks.api.spells.ISpellContainer;
 import io.redspace.ironsspellbooks.api.spells.SpellData;
+import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -108,36 +110,36 @@ public class CorrodingFlameItem extends StaffItem implements GeoItem, IPresetSpe
     }
 
 
-    private PlayState procedurePredicate(AnimationState event) {
-        if (transformType != null) {
-            if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState() == State.STOPPED || !this.animationprocedure.equals(this.prevAnim) && !this.animationprocedure.equals("empty")) {
-                if (!this.animationprocedure.equals(this.prevAnim)) {
-                    event.getController().forceAnimationReset();
-                }
-
-                event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
-                if (event.getController().getAnimationState() == State.STOPPED) {
-                    this.animationprocedure = "empty";
-                    event.getController().forceAnimationReset();
-                }
-            } else if (this.animationprocedure.equals("empty")) {
-                this.prevAnim = "empty";
-                return PlayState.STOP;
-            }
-        }
-
-        this.prevAnim = this.animationprocedure;
-        return PlayState.CONTINUE;
-    }
+//    private PlayState procedurePredicate(AnimationState event) {
+//        if (transformType != null) {
+//            if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState() == State.STOPPED || !this.animationprocedure.equals(this.prevAnim) && !this.animationprocedure.equals("empty")) {
+//                if (!this.animationprocedure.equals(this.prevAnim)) {
+//                    event.getController().forceAnimationReset();
+//                }
+//
+//                event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
+//                if (event.getController().getAnimationState() == State.STOPPED) {
+//                    this.animationprocedure = "empty";
+//                    event.getController().forceAnimationReset();
+//                }
+//            } else if (this.animationprocedure.equals("empty")) {
+//                this.prevAnim = "empty";
+//                return PlayState.STOP;
+//            }
+//        }
+//
+//        this.prevAnim = this.animationprocedure;
+//        return PlayState.CONTINUE;
+//    }
 
     public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-        AnimationController procedureController = new AnimationController(this, "procedureController", 0, this::procedurePredicate);
-        data.add(new AnimationController[]{procedureController});
-
+//        AnimationController procedureController = new AnimationController(this, "procedureController", 0, this::procedurePredicate);
+//        data.add(new AnimationController[]{procedureController});
     }
 
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
+
     }
 
 
@@ -148,43 +150,25 @@ public class CorrodingFlameItem extends StaffItem implements GeoItem, IPresetSpe
         list.add(Component.literal(" §9Your Spells poison enemies"));
 
     }
-    @Override
-    public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex){
-        if(player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.CORRODING_FLAME_STAFF.get()){
-            isholding = true;
-            holder = player;
 
-
-        } else {
-            isholding = false;
-        }
-    }
     @SubscribeEvent
     public static void onSpellAttack(SpellDamageEvent event) {
-        int duration = 100;
-        LivingEntity enemy = event.getEntity();
-        if(isholding){
-            if (holder instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
-                SpellAttackEffect.SpellEffectAdd(serverPlayer, MobEffects.POISON, duration,1, false, true);
-            } else if (holder != null && holder.level() instanceof net.minecraft.server.level.ServerLevel) {
-                SpellAttackEffect.SpellEffectAdd(holder, MobEffects.POISON, duration,1, false, true);
-            } else {
-                net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(
-                        net.minecraftforge.api.distmarker.Dist.CLIENT,
-                        () -> () -> {
-                            var minecraft   = net.minecraft.client.Minecraft.getInstance();
-                            var singleplayerServer  = minecraft.getSingleplayerServer();              // null on dedicated
-                            if (singleplayerServer == null) return;
-                            var sLvl = singleplayerServer.getLevel(holder.level().dimension()); // server copy of the same dimension
-                            if (sLvl == null) return;
-                            var real = sLvl.getEntity(holder.getUUID());         // server-side twin of holder
-                            if (real instanceof net.minecraft.world.entity.LivingEntity living) {
-                                SpellAttackEffect.SpellEffectAdd(enemy, MobEffects.POISON, duration,1, false, true);
-                            }
-                        }
-                );
+        LivingEntity target = event.getEntity();
+
+        // Get the player/caster
+        LivingEntity attacker = (LivingEntity) event.getSpellDamageSource().getEntity();
+
+        if (attacker != null) {
+
+            if (attacker.getMainHandItem().is(ItemRegistries.CORRODING_FLAME_STAFF.get())) {
+                // only server side
+                if (!attacker.level().isClientSide) {
+                    int duration = 100;
+                    SpellAttackEffect.SpellEffectAdd(target, MobEffects.POISON, duration, 1, false, true);
+                }
             }
         }
     }
+
 
 }

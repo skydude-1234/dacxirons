@@ -1,5 +1,6 @@
 package com.skydude.dacxirons;
 
+import com.skydude.dacxirons.item.loot.LootModifiers;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
@@ -34,9 +35,9 @@ public class dacxirons {
         ItemRegistries.register(modEventBus);
         EffectRegistry.MOB_EFFECTS.register(modEventBus);
         TabRegistry.register(modEventBus); //  register your creative tab
-
-
+        LootModifiers.register(modEventBus);
         EntityRegistry.register(modEventBus);
+        MinecraftForge.EVENT_BUS.register(this);
     }
     EntityRenderersEvent.RegisterRenderers event;
 
