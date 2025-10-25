@@ -1,12 +1,14 @@
 package com.skydude.dacxirons.entity.spells.SunsWrath;
 
+import com.skydude.dacxirons.registries.EntityRegistry;
+import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 import io.redspace.ironsspellbooks.api.events.SpellHealEvent;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.SchoolType;
+import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.mobs.AntiMagicSusceptible;
 import io.redspace.ironsspellbooks.entity.spells.AoeEntity;
-import io.redspace.ironsspellbooks.registries.EntityRegistry;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import net.mcreator.dungeonsandcombat.client.particle.BlessedSparkleParticle;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
@@ -15,7 +17,9 @@ import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModParticles;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.Mth;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -39,16 +43,17 @@ public class SunsWrathAOE extends AoeEntity implements AntiMagicSusceptible {
     }
 
     public SunsWrathAOE(Level level) {
-        this(EntityRegistry.HEALING_AOE.get(), level);
+        this(EntityRegistry.SUNS_WRATH_AOE.get(), level);
     }
 
 
 
     @Override
     public void applyEffect(LivingEntity target) {
+        //var owner = getOwner();
+        //IronsSpellbooks.LOGGER.debug("HealingAoe apply effect: target: {} owner: {} should heal: {}",target.getName().getString(),owner==null?null:owner.getName().getString(),owner==null?false: Utils.shouldHealEntity((LivingEntity) owner,target));
         if (getOwner() instanceof LivingEntity owner && !Utils.shouldHealEntity(owner, target)) {
-         //   float healAmount = getDamage();
-
+            DamageSources.applyDamage(target, getDamage(), dacxironsSpellRegistry.SUNS_WRATH.get().getDamageSource(this, getOwner()));
             target.addEffect(new MobEffectInstance(DungeonsAndCombatModMobEffects.CURSE_OF_THE_SUN.get(), 100, 2, true, false));
         }
     }
@@ -60,7 +65,7 @@ public class SunsWrathAOE extends AoeEntity implements AntiMagicSusceptible {
 
     @Override
     public float getParticleCount() {
-        return .15f;
+        return 1.15f;
     }
 
     @Override
@@ -70,11 +75,11 @@ public class SunsWrathAOE extends AoeEntity implements AntiMagicSusceptible {
             return;
         }
 
-        int color = PotionUtils.getColor(Potion.byName("healing"));
-
-        double d0 = (double) (color >> 16 & 255) / 255.0D;
-        double d1 = (double) (color >> 8 & 255) / 255.0D;
-        double d2 = (double) (color >> 0 & 255) / 255.0D;
+//        int color = 0xFFFF00;
+//
+        double vx = (random.nextDouble() - 0.5) * 0.02;
+        double vy = (random.nextDouble()) * 0.02;
+        double vz = (random.nextDouble() - 0.5) * 0.02;
         float f = getParticleCount();
         f = Mth.clamp(f * getRadius(), f / 4, f * 10);
         for (int i = 0; i < f; i++) {
@@ -92,8 +97,10 @@ public class SunsWrathAOE extends AoeEntity implements AntiMagicSusceptible {
                         Utils.getRandomScaled(r * .85f)
                 );
             }
-            level.addParticle(DungeonsAndCombatModParticleTypes.BLESSED_SPARKLE.get(), getX() + pos.x, getY() + pos.y + particleYOffset(), getZ() + pos.z, d0, d1, d2);
+            level.addParticle(DungeonsAndCombatModParticleTypes.BLESSED_SPARKLE.get(), getX() + pos.x, getY() + pos.y + particleYOffset(), getZ() + pos.z, vx, vy, vz);
         }
+     //   level.addParticle(DungeonsAndCombatModParticleTypes.BLESSED_SPARKLE.get(), getX(), getY(), getZ(), vx, vy, vz);
+
     }
 
     @Override
@@ -103,7 +110,7 @@ public class SunsWrathAOE extends AoeEntity implements AntiMagicSusceptible {
 
     @Override
     public Optional<ParticleOptions> getParticle() {
-        return Optional.empty();
+        return Optional.of(DungeonsAndCombatModParticleTypes.BLESSED_SPARKLE.get());
     }
 
     @Override

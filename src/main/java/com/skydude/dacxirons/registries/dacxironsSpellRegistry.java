@@ -26,7 +26,7 @@ public class dacxironsSpellRegistry {
   public static final RegistryObject<AbstractSpell> ACID_BALL_SPELL = registerSpell(new AcidBallSpell());;
   public static final RegistryObject<AbstractSpell> FAIRYS_WISH_SPELL = registerSpell(new FairysWishSpell());;
   public static final RegistryObject<AbstractSpell> CRIMSON_OATH = registerSpell(new CrimsonOath());;
-
+  public static final RegistryObject<AbstractSpell> SUNS_WRATH = registerSpell(new SunsWrath());
     public static final RegistryObject<AbstractSpell> ELDRITCH_SLASH_SPELL = registerSpell(new EldritchSlashSpell());
 
     public static RegistryObject<AbstractSpell> registerSpell(AbstractSpell spell) {

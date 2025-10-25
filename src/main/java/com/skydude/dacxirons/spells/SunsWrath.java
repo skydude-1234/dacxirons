@@ -1,5 +1,7 @@
 package com.skydude.dacxirons.spells;
 
+import com.skydude.dacxirons.dacxirons;
+import com.skydude.dacxirons.entity.spells.SunsWrath.SunsWrathAOE;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
@@ -8,7 +10,6 @@ import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.TargetEntityCastData;
-import io.redspace.ironsspellbooks.entity.spells.HealingAoe;
 import io.redspace.ironsspellbooks.entity.spells.target_area.TargetedAreaEntity;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.minecraft.network.chat.Component;
@@ -26,12 +27,12 @@ import java.util.Optional;
 
 @AutoSpellConfig
 public class SunsWrath extends AbstractSpell {
-    private final ResourceLocation spellId = new ResourceLocation(IronsSpellbooks.MODID, "healing_circle");
+    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "suns_wrath");
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         return List.of(
-                Component.translatable("ui.irons_spellbooks.aoe_healing", Utils.stringTruncation(getHealing(spellLevel, caster), 2)),
+                Component.translatable("ui.irons_spellbooks.aoe_damage", Utils.stringTruncation(getHealing(spellLevel, caster), 2)),
                 Component.translatable("ui.irons_spellbooks.radius", Utils.stringTruncation(getRadius(spellLevel, caster), 1)),
                 Component.translatable("ui.irons_spellbooks.duration", Utils.timeFromTicks(getDuration(spellLevel, caster), 1))
         );
@@ -95,25 +96,26 @@ public class SunsWrath extends AbstractSpell {
         float radius = getRadius(spellLevel, entity);
 
 
-        HealingAoe aoeEntity = new HealingAoe(world);
+        SunsWrathAOE aoeEntity = new SunsWrathAOE(world);
         aoeEntity.setOwner(entity);
         aoeEntity.setCircular();
         aoeEntity.setRadius(radius);
         aoeEntity.setDuration(duration);
         aoeEntity.setDamage(getHealing(spellLevel, entity));
         aoeEntity.setPos(spawn);
-        world.addFreshEntity(aoeEntity);
+        aoeEntity.getParticle();
 
-        TargetedAreaEntity visualEntity = TargetedAreaEntity.createTargetAreaEntity(world, spawn, radius, 0xc80000);
+        TargetedAreaEntity visualEntity = TargetedAreaEntity.createTargetAreaEntity(world, spawn, radius, 0xFFFF00);
         visualEntity.setDuration(duration);
         visualEntity.setOwner(aoeEntity);
         visualEntity.setShouldFade(true);
+        world.addFreshEntity(aoeEntity);
 
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
 
     private float getHealing(int spellLevel, LivingEntity caster) {
-        return getSpellPower(spellLevel, caster) * .25f;
+        return getSpellPower(spellLevel, caster) * .2f;
     }
 
     private float getRadius(int spellLevel, LivingEntity caster) {
@@ -121,7 +123,7 @@ public class SunsWrath extends AbstractSpell {
     }
 
     private int getDuration(int spellLevel, LivingEntity caster) {
-        return 200;
+        return (int) (200 + ( 10 * getSpellPower(spellLevel, caster)));
     }
 
     @Override
@@ -131,6 +133,6 @@ public class SunsWrath extends AbstractSpell {
 
     @Override
     public Vector3f getTargetingColor() {
-        return new Vector3f(.85f, 0, 0);
+        return new Vector3f(1.0f, 1.0f, 0.0f); // bright yellow (#FFFF00)
     }
 }

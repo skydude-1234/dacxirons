@@ -61,6 +61,9 @@
   "spell.dacxirons.crimson_oath.guide": "Reduce your health critically and begin to bleed, but your power grows exponentially",
   "ui.dacxirons.bloodpower": "%d Percent Blood Power",
   "item.dacxirons.wither_rune": "Wither Rune",
-  "item.dacxirons.fairy_wand_staff": "Fairy Wand"
+  "item.dacxirons.fairy_wand_staff": "Fairy Wand",
+  "spell.dacxirons.suns_wrath": "Sun's Wrath",
+  "spell.dacxirons.suns_wrath.guide": "Summon an AOE embodiment of Sunleia's wrath, cursing those who enter",
+  "spell.dacxirons.sunleia_beam.guide": "A beam straight from the depths of the burning sun"
 }
 
