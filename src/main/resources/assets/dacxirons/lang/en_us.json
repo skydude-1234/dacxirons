@@ -15,7 +15,7 @@
   "spell.dacxirons.summonkamath": "Eldritch Champion",
   "spell.dacxirons.summonkamath.guide": "Summon the eldritch champion, Kamath himself",
   "spell.dacxirons.eldritch_slash": "Eldritch Slash",
-  "spell.dacxirons.eldritch_slash.guide": "Unleash uninteruptable slash infused by Kamath himself",
+  "spell.dacxirons.eldritch_slash.guide": "Unleash an uninterruptible slash infused by Kamath himself",
   "ui.dacxirons.kamath.summon_hp": "%d summoned kamath hp",
   "ui.dacxirons.kamath.summon_duration": "%ds summoned kamath duration",
   "ui.dacxirons.sunleia.beam": "%d Damage",
@@ -24,6 +24,7 @@
   "spell.dacxirons.sunleia_beam" : "Sunleia Beam",
   "item.dacxirons.scepter_of_over_compensation": "Scepter of OverCompensation",
   "spell.dacxirons.arcane_arrow": "Arcane Arrow",
+  "spell.dacxirons.arcane_arrow.guide": "The classic magical arrow",
   "item.dacxirons.crimson_cloth": "Crimson Cloth",
   "tooltip.dacxirons.fullsetbonus": "Full Set Bonus:",
   "fullsetbonus": "§7Full Set Bonus:",
@@ -41,7 +42,7 @@
   "item.dacxirons.blessed_priest_robe": "Blessed Priest Robe",
   "item.dacxirons.blessed_priest_hood": "Blessed Priest Hood",
   "tooltip.dacxirons.blessedprestfullset": "§9Divine Blessing:",
-  "tooltip.dacxirons.blessedfullset": "The sun blesses you, granting cast speed, cooldown reduction and protection against evil magics",
+  "tooltip.dacxirons.blessedfullset": "The sun blesses you, granting cast speed and protection against evil magics",
   "item.dacxirons.scepter_of_compensation_staff": "Scepter Of Compensation",
   "ui.dacxirons.triple_fireball_ballamount": "3 Fireballs",
   "spell.dacxirons.triple_fireball_spell": "Triple Fireball",
@@ -58,12 +59,15 @@
   "ui.dacxirons.healthreduction": "%d Percent Health Reduction",
   "spell.dacxirons.crimson_oath" : "Crimson Oath",
   "spell.dacxirons.bloody_arrow.guide": "Projectile full of dread and gore, inflicts bleeding",
-  "spell.dacxirons.crimson_oath.guide": "Reduce your health critically and begin to bleed, but your power grows exponentially",
+  "spell.dacxirons.crimson_oath.guide": "Reduce your health critically and begin to bleed, but your blood empowers your spells",
   "ui.dacxirons.bloodpower": "%d Percent Blood Power",
   "item.dacxirons.wither_rune": "Wither Rune",
   "item.dacxirons.fairy_wand_staff": "Fairy Wand",
   "spell.dacxirons.suns_wrath": "Sun's Wrath",
   "spell.dacxirons.suns_wrath.guide": "Summon an AOE embodiment of Sunleia's wrath, cursing those who enter",
-  "spell.dacxirons.sunleia_beam.guide": "A beam straight from the depths of the burning sun"
+  "spell.dacxirons.sunleia_beam.guide": "A beam straight from the depths of the burning sun",
+  "spell.dacxirons.acid_ball_spell.guide": "Unleash a poisonous flaming ball upon your enemies",
+  "spell.dacxirons.fairys_wish_spell.guide": "Your wish has been granted, receive 2 randomly chosen positive effects",
+  "spell.dacxirons.triple_fireball_spell.guide": "Unleash three consecutive balls of fire"
 }
 

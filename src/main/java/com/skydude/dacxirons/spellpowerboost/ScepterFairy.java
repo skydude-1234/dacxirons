@@ -54,7 +54,7 @@ public class ScepterFairy {
                     event.addModifier(firePower, new AttributeModifier(
                             NATURE_UUID,
                             "sss Spell POwer",
-                            0.05,
+                            0.15,
                             Operation.MULTIPLY_BASE
                     ));
                 }

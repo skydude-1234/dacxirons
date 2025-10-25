@@ -39,7 +39,7 @@ Bloodymancer Tunic can now be imbued with spells
 Bloody cult now has 5% blood power and 50 max mana instead of 0
 Gravedigger weapon now has +10% summon damage and 5% cooldown reduction
 Corroded flame scepter now gives +15% nature instead of 5% fire and 5% nature
-Fairy Wand now has +5% mana regen
+Fairy Wand now has +15% mana regen
 
 NERFS:
 Kamath armor now has only 5% instead of 15% eldritch power

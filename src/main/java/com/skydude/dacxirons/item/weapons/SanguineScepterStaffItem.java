@@ -74,8 +74,8 @@ public class SanguineScepterStaffItem extends StaffItem implements GeoItem, IPre
     public SanguineScepterStaffItem() {
         super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.UNCOMMON), 3, -2.4,
                 Map.of(
-                        AttributeRegistry.FIRE_SPELL_POWER.get(),
-                        new AttributeModifier(UUID.fromString("001ad88d-901d-4691-b2a2-3664e42026d3"), " fire", .1, Operation.MULTIPLY_BASE)
+                        AttributeRegistry.BLOOD_SPELL_POWER.get(),
+                        new AttributeModifier(UUID.fromString("001ad88d-901d-4691-b2a2-3664e42026d3"), " blood", .15, Operation.MULTIPLY_BASE)
 
                 ));
     }

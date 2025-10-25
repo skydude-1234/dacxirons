@@ -63,7 +63,7 @@ public class FairyWandStaff extends StaffItem implements GeoItem, IPresetSpellCo
         super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.UNCOMMON), 2, -2.4,
                 Map.of(
                         AttributeRegistry.MANA_REGEN.get(),
-                        new AttributeModifier(UUID.fromString("001ad88f-901d-4691-b2a2-3664e42026d6"), "manannaa modifier", .05, AttributeModifier.Operation.MULTIPLY_BASE),
+                        new AttributeModifier(UUID.fromString("001ad88f-901d-4691-b2a2-3664e42026d6"), "manannaa modifier", .15, AttributeModifier.Operation.MULTIPLY_BASE),
                         AttributeRegistry.NATURE_SPELL_POWER.get(),
                         new AttributeModifier(UUID.fromString("001ad88f-901d-4691-b2a2-3664e42026d9"), "natureee modisssfier", .1, AttributeModifier.Operation.MULTIPLY_BASE)
                 ));
