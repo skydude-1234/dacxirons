@@ -14,7 +14,8 @@ New Spell - Triple Fireball
 New Spell - Acid Fireball
 New Spell - Fairy's Wish, grants 2 random positive effects
 New Spell - Crimson Oath: Lose 80-30% of health and  bleed, but gain 20-60% blood spell power
-
+New Spell - Sun's Wrath: AOE pool, damages enemies and gives them Curse of the Sun
+New Spell - Bloody arrow
 New config for invis ability to set how long the invis effect lasts when given
 
 
@@ -45,4 +46,25 @@ Kamath armor now has only 5% instead of 15% eldritch power
 
 Fixes:
 Crimson Wizard armor can now be repaired with crimson cloth instead of crimson ingot
+
+Reworked ALL 5 Dungeons and Combat scepters, making them proper staffItems, with a BRAND new spell for each of them based off of the original ability as well as a passive ability for each reworked staff. Drop tables and crafting recipes all changed to the new reworked items
+
+All new spells added:
+ Eldritch Slash  - iron's flaming strike but eldritch,  does more damage & damage is boosted by the Oath Sword
+Magic Arrow - Reworked projectile to work with Iron's Spell damage (staff rework)
+Triple Fireball - Fire 3 fireballs in quick succession (staff rework)
+ Acid Fireball - Acidic version of fireball, inflicts poison (staff rework)
+Fairy's Wish, grants 2 random positive effects (staff rework)
+Bloody Arrow - Bloodt arrow projectile reworked to work with Iron's spells (staff rework)
+Crimson Oath: Lose 80-30% of health and  bleed, but gain 20-60% blood spell power
+Sun's Wrath: AOE pool, damages enemies and inflicts them with Curse of the Sun
+
+Several Dungeons And Combat items were also made imbuable with spells and given spell power, such as Oath Sword & Bloodymancer Tunic
+
+
+
+
+
+
+
 

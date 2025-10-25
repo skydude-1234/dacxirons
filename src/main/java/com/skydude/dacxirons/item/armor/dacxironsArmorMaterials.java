@@ -32,7 +32,9 @@ public enum dacxironsArmorMaterials implements ArmorMaterial {
     EBONY_SPELL_ARMOR("ebony_spell_armor", 60, new int[]{3, 6, 8, 3}, 20, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0F, 0.0F,
             () -> Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation("dungeons_and_combat", "ebony_ingot"))), Map.of(
             AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max mana", 100, AttributeModifier.Operation.ADDITION),
-            AttributeRegistry.COOLDOWN_REDUCTION.get(), new AttributeModifier("coldown", 0.05, AttributeModifier.Operation.MULTIPLY_BASE)
+            AttributeRegistry.COOLDOWN_REDUCTION.get(), new AttributeModifier("coldown", 0.05, AttributeModifier.Operation.MULTIPLY_BASE),
+            AttributeRegistry.SPELL_POWER.get(), new AttributeModifier("cossldown", 0.1, AttributeModifier.Operation.MULTIPLY_BASE)
+
     )),
     BLESSED_PRIEST_ARMOR("blessed_priest_armor", 60, new int[]{3, 6, 8, 3}, 20, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0F, 0.0F,
             () -> Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation("dungeons_and_combat", "blessed_gold_ingot"))), Map.of(
