@@ -1,0 +1,14 @@
+{
+  "type": "dacxirons:add_item",
+  "conditions": [
+    {
+      "chance": 1.0,
+      "condition": "minecraft:random_chance"
+    },
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "dungeons_and_combat:entities/hermit_witch"
+    }
+  ],
+  "item": "dacxirons:corroding_flame_staff"
+}

@@ -5,7 +5,9 @@ import com.skydude.dacxirons.dacxirons;
 import com.skydude.dacxirons.entity.mobs.SummonedWeakness;
 import com.skydude.dacxirons.entity.spells.AcidBall.AcidFireball;
 import com.skydude.dacxirons.entity.spells.EldritchSlash.EldritchSlash;
+import com.skydude.dacxirons.entity.spells.SunsWrath.SunsWrathAOE;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
+import io.redspace.ironsspellbooks.entity.spells.HealingAoe;
 import io.redspace.ironsspellbooks.entity.spells.flame_strike.FlameStrike;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -58,6 +60,11 @@ public class EntityRegistry {
                     .clientTrackingRange(64)
                     .build(new ResourceLocation(IronsSpellbooks.MODID, "acid_ball").toString()));
 
+    public static final RegistryObject<EntityType<SunsWrathAOE>> SUNS_WRATH_AOE =
+            ENTITIES.register("suns_wrath_aoe", () -> EntityType.Builder.<SunsWrathAOE>of(SunsWrathAOE::new, MobCategory.MISC)
+                    .sized(4f, .8f)
+                    .clientTrackingRange(64)
+                    .build(new ResourceLocation(IronsSpellbooks.MODID, "suns_wrath_aoe").toString()));
 
 
 }

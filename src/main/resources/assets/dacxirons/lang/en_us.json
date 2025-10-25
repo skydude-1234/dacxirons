@@ -60,6 +60,7 @@
   "spell.dacxirons.bloody_arrow.guide": "Projectile full of dread and gore, inflicts bleeding",
   "spell.dacxirons.crimson_oath.guide": "Reduce your health critically and begin to bleed, but your power grows exponentially",
   "ui.dacxirons.bloodpower": "%d Percent Blood Power",
-  "item.dacxirons.wither_rune": "Wither Rune"
+  "item.dacxirons.wither_rune": "Wither Rune",
+  "item.dacxirons.fairy_wand_staff": "Fairy Wand"
 }
 

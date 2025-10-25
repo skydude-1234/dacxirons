@@ -223,7 +223,8 @@ dependencies {
 
     ///DACCCC
     // implementation fg.deobf("curse.maven:dungeons-and-combat-1128235:6735006")
-    implementation fg.deobf("curse.maven:dungeons-and-combat-1128235:6941682")
+    //implementation fg.deobf("curse.maven:dungeons-and-combat-1128235:6941682")
+    implementation fg.deobf("curse.maven:dungeons-and-combat-1128235:7088475")
 
     ///JEIII
     // compile against the JEI API but do not include it at runtime
