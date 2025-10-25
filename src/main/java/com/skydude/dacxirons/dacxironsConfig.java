@@ -20,7 +20,6 @@ public class dacxironsConfig {
         ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
         builder.push("Config (:");
 
-
         ENABLE_CUSTOM_ROGUE_LOGIC = builder
                 .comment("True Invisibility for Rogue")
                 .define("enableTrueInvis", true);
