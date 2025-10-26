@@ -54,12 +54,13 @@ public class EbonyMagicEffect {
     public static void onLivingDamage(LivingDamageEvent event) {
 
         LivingEntity survivor = event.getEntity();
-        if (EbonyMagicSpellArmorItem.fullebonymagic) {
+        if (CorrectArmor.hasFullSetOn(event.getEntity(), dacxironsArmorMaterials.EBONY_SPELL_ARMOR, 4)) {
             if (canUseAbility(survivor)) {
                 // Now you can use it inside this lambda without passing it in as a parameter
                 if (survivor.level().isClientSide) return;
                 if (survivor.getHealth() - event.getAmount() <= 0.0f) {
                     event.setCanceled(true);
+
                     System.out.println("triggered but ur dead");
 
                     MagicData.getPlayerMagicData(survivor).setMana(0);
