@@ -4,12 +4,12 @@
     "item": "dacxirons:divine_mold"
   },
   "base": {
-    "item": "irons_spellbooks:priest_boots"
+    "item": "irons_spellbooks:priest_helmet"
   },
   "addition": {
     "item": "irons_spellbooks:holy_rune"
   },
   "result": {
-    "item": "dacxirons:blessed_priest_boots"
+    "item": "dacxirons:blessed_priest_helmet"
   }
 }

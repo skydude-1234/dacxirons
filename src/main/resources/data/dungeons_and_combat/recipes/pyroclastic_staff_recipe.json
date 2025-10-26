@@ -2,17 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-    "aaa",
-    "aaa",
-    "aaa"
+    " ab",
+    " ca",
+    "c  "
   ],
   "key": {
     "a": {
-      "item": "minecraft:barrier"
+      "item": "dungeons_and_combat:igneous"
+    },
+    "b": {
+      "item": "minecraft:fire_charge"
+    },
+    "c": {
+      "item": "dungeons_and_combat:molten_bone"
     }
   },
   "result": {
-    "item": "dungeons_and_combat:pyromancer_scepter",
+    "item": "dacxirons:pyromancer_staff",
     "count": 1
   }
 }
