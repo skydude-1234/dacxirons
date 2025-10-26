@@ -68,6 +68,8 @@
   "spell.dacxirons.sunleia_beam.guide": "A beam straight from the depths of the burning sun",
   "spell.dacxirons.acid_ball_spell.guide": "Unleash a poisonous flaming ball upon your enemies",
   "spell.dacxirons.fairys_wish_spell.guide": "Your wish has been granted, receive 2 randomly chosen positive effects",
-  "spell.dacxirons.triple_fireball_spell.guide": "Unleash three consecutive balls of fire"
+  "spell.dacxirons.triple_fireball_spell.guide": "Unleash three consecutive balls of fire",
+  "item.dacxirons.wither_ring.desc": "Your spells wither enemies",
+  "item.dacxirons.wither_ring": "Wither Ring"
 }
 

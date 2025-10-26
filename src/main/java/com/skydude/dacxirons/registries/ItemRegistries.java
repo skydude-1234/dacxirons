@@ -7,10 +7,13 @@ import com.skydude.dacxirons.item.WitherRuneItem;
 import com.skydude.dacxirons.item.armor.BlazymancerSpellArmorItem;
 import com.skydude.dacxirons.item.armor.BlessedPriestArmorItem;
 import com.skydude.dacxirons.item.armor.EbonyMagicSpellArmorItem;
+import com.skydude.dacxirons.item.curios.WitherRing;
 import com.skydude.dacxirons.item.spellbook.DivineManuscriptSpellbook;
 import com.skydude.dacxirons.item.weapons.*;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
+import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
+import io.redspace.ironsspellbooks.item.curios.PoisonwardRing;
 import io.redspace.ironsspellbooks.item.spell_books.SimpleAttributeSpellBook;
 
 import io.redspace.ironsspellbooks.item.weapons.BloodStaffItem;
@@ -92,6 +95,7 @@ public class ItemRegistries {
     public static final RegistryObject<Item> WITHER_RUNE = ITEMS.register("wither_rune",
             WitherRuneItem::new);
 
+    public static final RegistryObject<CurioBaseItem> WITHER_RING = ITEMS.register("wither_ring", WitherRing::new);
 
     public static final RegistryObject<Item> GILLAGER_SPELL_BOOK = ITEMS.register("gillager_spell_book", () -> {
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
