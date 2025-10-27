@@ -24,7 +24,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class BlessedAmuletMixin implements IPresetSpellContainer {
     @Unique private static final Logger LOG = LoggerFactory.getLogger("dacxirons");
     @Inject(method = "execute", at = @At("HEAD"), cancellable = true)
-    public static void execute(Entity entity, CallbackInfo ci) {
+    private static void execute(Entity entity, CallbackInfo ci) {
 
         if (entity instanceof LivingEntity) {
             LivingEntity _entity = (LivingEntity)entity;

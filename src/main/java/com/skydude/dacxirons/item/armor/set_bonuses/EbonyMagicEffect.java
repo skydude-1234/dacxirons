@@ -47,7 +47,7 @@ public class EbonyMagicEffect {
         return entity.level().getGameTime() >= next;
     }
     private static void startCooldown(LivingEntity entity) {
-        entity.getPersistentData().putLong("ebony_next_use", entity.level().getGameTime() + 20 * 60);
+        entity.getPersistentData().putLong("ebony_next_use", entity.level().getGameTime() + 20 * 60 * 5);
     }
 
     @SubscribeEvent
@@ -60,8 +60,6 @@ public class EbonyMagicEffect {
                 if (survivor.level().isClientSide) return;
                 if (survivor.getHealth() - event.getAmount() <= 0.0f) {
                     event.setCanceled(true);
-
-                    System.out.println("triggered but ur dead");
 
                     MagicData.getPlayerMagicData(survivor).setMana(0);
 

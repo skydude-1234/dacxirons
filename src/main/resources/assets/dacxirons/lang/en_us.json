@@ -30,7 +30,7 @@
   "fullsetbonus": "§7Full Set Bonus:",
   "§9Burning Spell Aura:": "§9Burning Spell Aura:",
   "§7When attacked, set your attacker ablaze and cast firebolt": "§7When attacked, set your attacker ablaze and cast firebolt",
-  "tooltip.dacxirons.ebony_wizard_set": "Your spells inflict wither upon enemies",
+  "tooltip.dacxirons.ebony_wizard_set": "WHen taking fatal damage, consume all mana and heal to half health. Cooldown of 5 minutes",
   "tooltip.dacxirons.ebonyfullset": "§9Wizard of Wither:",
   "item.dacxirons.ebony_wizard_boots": "§8Ebony Wizard Boots",
   "item.dacxirons.ebony_wizard_leggings": "§8Ebony Wizard Leggings",
