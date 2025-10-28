@@ -1,5 +1,6 @@
 Roadmap
 
+ - Better combat compat
 
 
 Add spell descriptions

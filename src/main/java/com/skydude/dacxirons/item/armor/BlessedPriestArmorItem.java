@@ -7,11 +7,18 @@ import com.skydude.dacxirons.client.model.blessed_priest_model;
 import com.skydude.dacxirons.client.model.ebony_spell_model;
 import com.skydude.dacxirons.registries.EffectRegistry;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
+import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModItems;
+import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModParticleTypes;
 import net.minecraft.ChatFormatting;
+import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -24,9 +31,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
 import javax.annotation.Nullable;
 import java.util.Collections;
@@ -39,7 +51,7 @@ import static com.skydude.dacxirons.registries.EffectRegistry.CAST_SPEED;
 import static com.skydude.dacxirons.registries.EffectRegistry.SPELL_STRENGTH;
 import static net.minecraft.world.effect.MobEffects.DAMAGE_RESISTANCE;
 import static net.minecraft.world.effect.MobEffects.MOVEMENT_SPEED;
-
+@Mod.EventBusSubscriber
 public class BlessedPriestArmorItem extends ImbueabledacxironsArmor {
     private static final UUID BLESSED_PRIEST_DAY_RESIST_UUID =
             UUID.fromString("8b0de1f9-4df6-4f2f-8741-47a8f2d5c0ad");
@@ -59,8 +71,6 @@ public class BlessedPriestArmorItem extends ImbueabledacxironsArmor {
         //cooldown reduction
         //protection against blood and eldritch magic
     }
-
-
 
 
     @SuppressWarnings("removal")
@@ -137,6 +147,34 @@ public class BlessedPriestArmorItem extends ImbueabledacxironsArmor {
         }
     }
 
+    @SubscribeEvent
+    public static void onEntityTick(LivingEvent.LivingTickEvent event) {
+        execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
+    }
+
+    private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
+        if (entity != null) {
+            if (CorrectArmor.hasFullSetOn((LivingEntity) entity, dacxironsArmorMaterials.BLESSED_PRIEST_ARMOR, 4)) {
+                entity.getPersistentData().putDouble("fuego", entity.getPersistentData().getDouble("fuego") + (double) 1.0F);
+                if (entity.getPersistentData().getDouble("fuego") == (double) 20.0F) {
+                    world.addParticle((SimpleParticleType) DungeonsAndCombatModParticleTypes.BLESSED_SPARKLE.get(), x + 0.4, y + (double) 1.0F, z + 0.4, (double) 0.0F, 0.08, (double) 0.0F);
+                }
+
+                if (entity.getPersistentData().getDouble("fuego") == (double) 5.0F) {
+                    world.addParticle((SimpleParticleType) DungeonsAndCombatModParticleTypes.BLESSED_SPARKLE.get(), x - 0.4, y + (double) 0.5F, z + 0.4, (double) 0.0F, 0.1, (double) 0.0F);
+                }
+
+                if (entity.getPersistentData().getDouble("fuego") == (double) 10.0F) {
+                    world.addParticle((SimpleParticleType) DungeonsAndCombatModParticleTypes.BLESSED_SPARKLE.get(), x - 0.4, y + 1.3, z - 0.4, (double) 0.0F, 0.07, (double) 0.0F);
+                }
+
+                if (entity.getPersistentData().getDouble("fuego") == (double) 25.0F) {
+                    world.addParticle((SimpleParticleType) DungeonsAndCombatModParticleTypes.BLESSED_SPARKLE.get(), x + 0.4, y + 0.8, z - 0.4, (double) 0.0F, 0.1, (double) 0.0F);
+                    entity.getPersistentData().putDouble("fuego", (double) 0.0F);
+                }
+            }
+        }
+    }
     public static class Helmet extends BlessedPriestArmorItem {
         public Helmet() {
             super(Type.HELMET, (new Properties()).fireResistant());
