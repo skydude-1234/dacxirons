@@ -8,6 +8,7 @@ package com.skydude.dacxirons.effect;
 import javax.annotation.Nullable;
 
 import com.skydude.dacxirons.registries.EffectRegistry;
+import io.redspace.ironsspellbooks.spells.fire.FireballSpell;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.server.MinecraftServer;
@@ -23,10 +24,13 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 @EventBusSubscriber
 public class SpellBurnProcedure {
 
+    public static LivingEntity lastattacker;
     @SubscribeEvent
-    public static void onEntityAttacked(LivingAttackEvent event) {
+    public static void onLivingAttacked(LivingAttackEvent event) {
         if (event != null && event.getEntity() != null) {
+            lastattacker = (LivingEntity) event.getSource().getEntity();
             execute(event, event.getEntity(), event.getSource().getEntity());
+
         }
 
     }
@@ -48,19 +52,16 @@ public class SpellBurnProcedure {
     }
 
 
-    public static void execute(Entity entity, Entity sourceentity) {
-        execute((Event)null, entity, sourceentity);
-    }
 
-    private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
+    private static void execute(@Nullable Event event, Entity entity, Entity sourceentity ) {
         if (entity instanceof ServerPlayer && sourceentity != null) {
             if (sourceentity instanceof LivingEntity) {
-                LivingEntity _livEnt1 = (LivingEntity)entity;
-                if (_livEnt1.hasEffect((MobEffect) EffectRegistry.SPELL_BURNING_AURA.get())) {
+                LivingEntity living = (LivingEntity)entity;
+                if (living.hasEffect( EffectRegistry.SPELL_BURNING_AURA.get())) {
                     sourceentity.setSecondsOnFire(10);
 // lol we can make the entity attack
                   //  CommandUtils.runCommandAtPlayer((ServerPlayer) entity, "cast " + sourceentity.getStringUUID() + " fireball 1");
-                    CommandUtils.runCommandAtPlayer((ServerPlayer) entity, "cast @s firebolt 5");
+                    CommandUtils.runCommandAtPlayer((ServerPlayer) entity, "cast @s dacxirons:firebolt_copy 5");
                 }
             }
 

@@ -1,3 +1,5 @@
 Dacxirons 1.5.2
 
 Added blessed gold armor full set visual effect to dacxirons blessed priest
+Added Better Combat weapon_attributes data folder for staffs
+Re-worked Blazymancer ability to automatically aim the firebolt at the attacker instead of being casted wherever the player is looking

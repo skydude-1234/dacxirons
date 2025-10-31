@@ -3,6 +3,13 @@ Roadmap
  - Better combat compat
 
 
+Blazymancer
+Bloodymancer tombwarden
+
+make fairys blessing canhealentity aoe
+
+fairy boots & rework fairy wings
+
 Add spell descriptions
 
 
