@@ -3,20 +3,19 @@ Roadmap
  - Better combat compat
 
 
-Blazymancer
-Bloodymancer tombwarden
+ tombwarden
 
 make fairys blessing canhealentity aoe
 
 fairy boots & rework fairy wings
 
 Add spell descriptions
-
+Finish summon weakness summon spell - icon can js be spawn egg
 
 New Spellbook - Abandoned Codex {
         Loot table from Remanent Camp and Remanent watch tower
     }
-  Finish summon weakness summon spell
+
 New Spellbook - High priest's handbook {
     drop from high priest obviously
     summons high priests summons as an imbued spell

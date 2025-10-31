@@ -16,7 +16,7 @@
   "spell.dacxirons.summonkamath.guide": "Summon the eldritch champion, Kamath himself",
   "spell.dacxirons.eldritch_slash": "Eldritch Slash",
   "spell.dacxirons.eldritch_slash.guide": "Unleash an uninterruptible slash infused by Kamath himself",
-  "ui.dacxirons.kamath.summon_hp": "%d summoned kamath hp",
+  "ui.dacxirons.summon_hp": "%d summoned kamath hp",
   "ui.dacxirons.kamath.summon_duration": "%ds summoned kamath duration",
   "ui.dacxirons.sunleia.beam": "%d Damage",
   "tooltip.dacxirons.enhance_spell_level": "\u00a7e+1 level to %s",
@@ -73,7 +73,7 @@
   "item.dacxirons.wither_ring": "Wither Ring",
   "effect.dacxirons.blood_spell_strength": "Blood Spell Strength",
   "Blood Bending": "§9Blood Bending",
-  "tooltip.dacxirons.blood_bending_dec": "\u00A7cWhile Bleeding, +20% blood spell power per level of Bleeding"
-
+  "tooltip.dacxirons.blood_bending_dec": "\u00A7cWhile Bleeding, +20% blood spell power per level of Bleeding",
+  "spell.dacxirons.summon_weakness": "Summon Weakness"
 }
 

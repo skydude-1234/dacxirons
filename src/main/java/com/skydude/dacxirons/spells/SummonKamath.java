@@ -61,7 +61,7 @@ public class SummonKamath extends AbstractEldritchSpell {
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
 
-        return List.of(Component.translatable("ui.irons_spellbooks.summon_count", "1"), (Component.translatable("ui.dacxirons.kamath.summon_hp", Math.round(this.getKamathHealth(spellLevel, caster)))), (Component.translatable("ui.dacxirons.kamath.summon_duration", Math.round(this.getKamathDuration(spellLevel, caster) / 20))));
+        return List.of(Component.translatable("ui.irons_spellbooks.summon_count", "1"), (Component.translatable("ui.dacxirons.summon_hp", Math.round(this.getKamathHealth(spellLevel, caster)))), (Component.translatable("ui.dacxirons.kamath.summon_duration", Math.round(this.getKamathDuration(spellLevel, caster) / 20))));
 
 
     }

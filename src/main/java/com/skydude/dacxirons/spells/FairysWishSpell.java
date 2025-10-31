@@ -93,7 +93,7 @@ public class FairysWishSpell extends AbstractSpell {
         world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(entity.getBoundingBox().getCenter(), 6, 6, 6)).forEach(livingEntity -> {
       //      IronsSpellbooks.LOGGER.debug("cleanse: {}", livingEntity);
            if(Utils.shouldHealEntity(entity, livingEntity)){
-                List<MobEffect> mobeefect = List.of(MobEffects.JUMP, EffectRegistry.CAST_SPEED.get(), EffectRegistry.SPELL_STRENGTH.get(), MobEffects.DAMAGE_BOOST, MobEffects.MOVEMENT_SPEED, MobEffects.LUCK, MobEffects.FIRE_RESISTANCE, MobEffects.DIG_SPEED, DungeonsAndCombatModMobEffects.ACID_FIRE_EDGE.get());
+                List<MobEffect> mobeefect = List.of(MobEffects.JUMP, EffectRegistry.CAST_SPEED.get(), EffectRegistry.SPELL_STRENGTH.get(), MobEffects.DAMAGE_BOOST, MobEffects.MOVEMENT_SPEED, MobEffects.LUCK, MobEffects.FIRE_RESISTANCE, MobEffects.DIG_SPEED, DungeonsAndCombatModMobEffects.ACID_FIRE_EDGE.get(), MobEffects.ABSORPTION);
                // pick random effect
                 Random random = new Random();
                 int randomIndex = random.nextInt(mobeefect.size());
@@ -105,6 +105,7 @@ public class FairysWishSpell extends AbstractSpell {
 
                MobEffectInstance s2 =  (new MobEffectInstance(mobeefect.get(randomIndex), (int) (Math.random() * (getMaxDuration(spellLevel, entity))), (int) (Math.random() * getMaxEffectAmplifier(spellLevel, entity)), true, true));
                livingEntity.addEffect(s2);
+
                System.out.println("s" + s);
                System.out.println("s2" + s2);
                MagicManager.spawnParticles(world, ParticleHelper.SIPHON, livingEntity.getX(), livingEntity.getY() + .25, livingEntity.getZ(), 15, livingEntity.getBbWidth() * 0.5, livingEntity.getBbWidth() * 0.5, livingEntity.getBbWidth() * 0.5, 0, false);

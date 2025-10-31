@@ -6,4 +6,5 @@ Re-worked Blazymancer ability to automatically aim the firebolt at the attacker 
 Added 20% summon dmg to bloodywarden set, as its just a reskin of tombwarden set
 Fixed Blessed Priest Hood & Robe not being craftable
 BloodyMancer rework:
-Added an ability of while bleeding, +20% blood spell power per bleeding level
+Blood Bending Full se ability:  while bleeding, +20% blood spell power per bleeding level
+Gave bloodymancer +15% blood magic resistance/piece to match blazymancer

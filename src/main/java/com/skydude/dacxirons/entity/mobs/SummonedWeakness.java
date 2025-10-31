@@ -122,9 +122,9 @@ public class SummonedWeakness extends WeaknessEntity implements MagicSummon, Geo
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pReason, @Nullable SpawnGroupData pSpawnData, @Nullable CompoundTag pDataTag) {
         RandomSource randomsource = Utils.random;
         this.populateDefaultEquipmentSlots(randomsource, pDifficulty);
-        if (randomsource.nextDouble() < .25)
+        if (randomsource.nextDouble() < .25) {
             this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.IRON_SWORD));
-
+        }
         return pSpawnData;
     }
 
@@ -271,7 +271,8 @@ public class SummonedWeakness extends WeaknessEntity implements MagicSummon, Geo
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
-        controllerRegistrar.add(new AnimationController(this, "rise", 0, this::risePredicate));
+        super.registerControllers(controllerRegistrar);
+     //   controllerRegistrar.add(new AnimationController(this, "rise", 0, this::risePredicate));
     }
 
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
@@ -286,13 +287,13 @@ public class SummonedWeakness extends WeaknessEntity implements MagicSummon, Geo
         return this.tickCount;
     }
 
-    private PlayState risePredicate(software.bernie.geckolib.core.animation.AnimationState event) {
-        if (!isAnimatingRise())
-            return PlayState.STOP;
-        if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-            String animation = new String[]{"rise_from_ground_01", "rise_from_ground_02", "rise_from_ground_03", "rise_from_ground_04"}[random.nextIntBetweenInclusive(0, 3)];
-            event.getController().setAnimation(RawAnimation.begin().thenPlay(animation));
-        }
-        return PlayState.CONTINUE;
-    }
+//    private PlayState risePredicate(software.bernie.geckolib.core.animation.AnimationState event) {
+//        if (!isAnimatingRise())
+//            return PlayState.STOP;
+//        if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
+//            String animation = new String[]{"rise_from_ground_01", "rise_from_ground_02", "rise_from_ground_03", "rise_from_ground_04"}[random.nextIntBetweenInclusive(0, 3)];
+//            event.getController().setAnimation(RawAnimation.begin().thenPlay(animation));
+//        }
+//        return PlayState.CONTINUE;
+//    }
 }
