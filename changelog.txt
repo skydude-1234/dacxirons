@@ -3,3 +3,7 @@ Dacxirons 1.5.2
 Added blessed gold armor full set visual effect to dacxirons blessed priest
 Added Better Combat weapon_attributes data folder for staffs
 Re-worked Blazymancer ability to automatically aim the firebolt at the attacker instead of being casted wherever the player is looking
+Added 20% summon dmg to bloodywarden set, as its just a reskin of tombwarden set
+Fixed Blessed Priest Hood & Robe not being craftable
+BloodyMancer rework:
+Added an ability of while bleeding, +20% blood spell power per bleeding level

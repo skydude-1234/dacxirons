@@ -70,6 +70,10 @@
   "spell.dacxirons.fairys_wish_spell.guide": "Your wish has been granted, receive 2 randomly chosen positive effects",
   "spell.dacxirons.triple_fireball_spell.guide": "Unleash three consecutive balls of fire",
   "item.dacxirons.wither_ring.desc": "Your spells wither enemies",
-  "item.dacxirons.wither_ring": "Wither Ring"
+  "item.dacxirons.wither_ring": "Wither Ring",
+  "effect.dacxirons.blood_spell_strength": "Blood Spell Strength",
+  "Blood Bending": "§9Blood Bending",
+  "tooltip.dacxirons.blood_bending_dec": "\u00A7cWhile Bleeding, +20% blood spell power per level of Bleeding"
+
 }
 

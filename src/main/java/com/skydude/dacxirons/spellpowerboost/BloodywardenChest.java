@@ -20,56 +20,34 @@ import java.util.UUID;
         bus = Bus.FORGE
 )
 
-public class bloodymancerchestplate {
+public class BloodywardenChest {
     // UUIDs per slot and attribute ensure proper application/removal
-    private static final UUID BLOOD_UUID = UUID.fromString("663e4567-e89b-12d3-a456-426614174001");
-    private static final UUID MANA_UUID = UUID.fromString("663e4567-e89b-12d3-a456-426614174002");
-    private static final UUID RESIST_UUID = UUID.fromString("663e4567-e89b-12d3-a456-426614174003");
+    private static final UUID MANA_UUID = UUID.fromString("826e4567-e89b-12d3-a456-426614174060");
 
     @SubscribeEvent
     public static void onItemAttributeModifiers(ItemAttributeModifierEvent event) {
         Item item = event.getItemStack().getItem();
         ResourceLocation itemId = ForgeRegistries.ITEMS.getKey(item);
 
-        if (itemId != null && itemId.toString().equals("dungeons_and_combat:bloodymancer_chestplate")) {
+        if (itemId != null && itemId.toString().equals("dungeons_and_combat:bloodywarden_chestplate")) {
             if (event.getSlotType() == EquipmentSlot.CHEST) {
-
-                Attribute bloodPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:blood_spell_power")
-                );
                 Attribute manaPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:max_mana")
-                );
-                Attribute resistPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:blood_magic_resist")
+                        new ResourceLocation("irons_spellbooks:summon_damage")
                 );
 
 
-                if (bloodPower != null) {
-                    event.addModifier(bloodPower, new AttributeModifier(
-                            BLOOD_UUID,
-                            "Spell Power Bonus Blood",
-                            0.10,
-                            Operation.MULTIPLY_BASE
-                    ));
-                }
                 if (manaPower != null) {
                     event.addModifier(manaPower, new AttributeModifier(
                             MANA_UUID,
-                            "Spell Bonus Mana",
-                            100,
-                            Operation.ADDITION
-                    ));
-                }
-                if (resistPower != null) {
-                    event.addModifier(resistPower, new AttributeModifier(
-                            RESIST_UUID,
-                            "Spell resist",
-                            0.15,
+                            "Spell Power Bonus Mana",
+                            0.20,
                             Operation.MULTIPLY_BASE
                     ));
                 }
+
+
             }
         }
     }
 }
+

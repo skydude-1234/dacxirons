@@ -24,6 +24,7 @@ public class bloodymancerhelmet {
     // UUIDs per slot and attribute ensure proper application/removal
     private static final UUID BLOOD_UUID = UUID.fromString("623e4567-e89b-12d3-a456-426614174001");
     private static final UUID MANA_UUID = UUID.fromString("623e4567-e89b-12d3-a456-426614174002");
+    private static final UUID RESIST_UUID = UUID.fromString("623e4567-e89b-12d3-a456-426614174003");
 
     @SubscribeEvent
     public static void onItemAttributeModifiers(ItemAttributeModifierEvent event) {
@@ -37,6 +38,9 @@ public class bloodymancerhelmet {
                 );
                 Attribute manaPower = ForgeRegistries.ATTRIBUTES.getValue(
                         new ResourceLocation("irons_spellbooks:max_mana")
+                );
+                Attribute resistPower = ForgeRegistries.ATTRIBUTES.getValue(
+                        new ResourceLocation("irons_spellbooks:blood_magic_resist")
                 );
 
 
@@ -54,6 +58,14 @@ public class bloodymancerhelmet {
                             "Spell  Bonus Mana",
                             100,
                             Operation.ADDITION
+                    ));
+                }
+                if (resistPower != null) {
+                    event.addModifier(resistPower, new AttributeModifier(
+                            RESIST_UUID,
+                            "Spell Power resist Blood",
+                            0.15,
+                            Operation.MULTIPLY_BASE
                     ));
                 }
             }

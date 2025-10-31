@@ -4,20 +4,10 @@ package com.skydude.dacxirons.item.armor;
 
 
 import com.skydude.dacxirons.client.model.blazymancer_model;
-import com.skydude.dacxirons.client.model.crimson_spell_model;
-import com.skydude.dacxirons.registries.ItemRegistries;
-import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModItems;
-import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
-import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModParticleTypes;
-import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -26,27 +16,15 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-
-import javax.annotation.Nullable;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
-import static com.skydude.dacxirons.registries.EffectRegistry.CAST_SPEED;
-import static com.skydude.dacxirons.registries.EffectRegistry.SPELL_STRENGTH;
-import static net.minecraft.world.effect.MobEffects.DAMAGE_RESISTANCE;
-import static net.minecraft.world.effect.MobEffects.MOVEMENT_SPEED;
+
 
 public class BlazymancerSpellArmorItem extends ImbueabledacxironsArmor {
 
@@ -63,20 +41,6 @@ public class BlazymancerSpellArmorItem extends ImbueabledacxironsArmor {
         list.add(Component.translatable("fullsetbonus"));
         list.add(Component.translatable("§9Burning Spell Aura:"));
         list.add(Component.translatable("§7When attacked, set your attacker ablaze and cast firebolt"));
-    }
-
-
-    @SuppressWarnings("removal")
-    @Override
-    public void onArmorTick(ItemStack stack, Level level, Player player) {
-        // if (event.phase == TickEvent.Phase.END) {
-        //  Player player = event.player;
-
-
-
-        //    AttributeInstance swimSpeed = player.getAttribute(ForgeMod.SWIM_SPEED.get());
-
-
     }
 
 
