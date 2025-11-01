@@ -21,6 +21,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
@@ -35,7 +36,7 @@ import java.util.Optional;
 public class SummonWeakness extends AbstractSpell {
     private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "summon_weakness");
     private final DefaultConfig defaultConfig = new DefaultConfig()
-            .setAllowCrafting(false)
+            .setAllowCrafting(true)
             .setMinRarity(SpellRarity.UNCOMMON)
             .setSchoolResource(SchoolRegistry.BLOOD_RESOURCE)
             .setMaxLevel(6)
@@ -45,7 +46,9 @@ public class SummonWeakness extends AbstractSpell {
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         return List.of(Component.translatable("ui.irons_spellbooks.summon_count", spellLevel),
-                      (Component.translatable("ui.dacxirons.summon_hp", Math.round(getHealth(new SummonedWeakness(caster, true), caster, spellLevel)))));
+                      (Component.translatable("ui.dacxirons.summon_hp", Math.round(getHealth(new SummonedWeakness(caster, true), caster, spellLevel)))),
+                     (Component.translatable("ui.dacxirons.summon_dmg", Math.round(getDamage(new SummonedWeakness(caster, true), caster, spellLevel)))));
+
     }
 
     public SummonWeakness() {
@@ -101,6 +104,7 @@ public class SummonWeakness extends AbstractSpell {
             arthropod.setHealth(getHealth(arthropod, entity, spellLevel));
             arthropod.setPos(spawn.x, spawn.y, spawn.z);
 
+
             arthropod.setYRot(entity.getYRot());
             arthropod.setOldPosAndRot();
             world.addFreshEntity(arthropod);
@@ -119,6 +123,9 @@ public class SummonWeakness extends AbstractSpell {
 
     public float getHealth(LivingEntity monster, LivingEntity entity, int spellLevel){
         return (float) (monster.getMaxHealth() * 0.05 * getSpellPower(spellLevel, entity));
+    }
+    public float getDamage(LivingEntity monster, LivingEntity entity, int spellLevel){
+        return (float) (monster.getAttributeValue(Attributes.ATTACK_DAMAGE) * 0.1 * getSpellPower(spellLevel, entity));
     }
 
 }
