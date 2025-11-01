@@ -35,7 +35,7 @@ public class SummonPyroKnight extends AbstractSpell {
     private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "summon_pyro_knight");
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setAllowCrafting(true)
-            .setMinRarity(SpellRarity.UNCOMMON)
+            .setMinRarity(SpellRarity.EPIC)
             .setSchoolResource(SchoolRegistry.BLOOD_RESOURCE)
             .setMaxLevel(6)
             .setCooldownSeconds(150)

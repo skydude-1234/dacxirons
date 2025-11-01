@@ -76,6 +76,9 @@
   "Blood Bending": "§9Blood Bending",
   "tooltip.dacxirons.blood_bending_dec": "\u00A7cWhile Bleeding, +20% blood spell power per level of Bleeding",
   "spell.dacxirons.summon_weakness": "Summon Weakness",
-  "spell.dacxirons.summon_pyro_knight": "Summon Pyro Knight"
+  "spell.dacxirons.summon_pyro_knight": "Summon Pyro Knight",
+  "entity.dacxirons.summoned_weakness": "Summoned Weakness",
+  "entity.dacxirons.summoned_pyro_knight": "Summoned Pyro Knight",
+  "entity.dacxirons.summoned_kamath": "Summoned Kamath"
 }
 
