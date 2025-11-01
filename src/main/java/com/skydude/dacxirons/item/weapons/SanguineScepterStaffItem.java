@@ -179,7 +179,7 @@ public class SanguineScepterStaffItem extends StaffItem implements GeoItem, IPre
 
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        if (event.player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.SANGUINE_SCEPTER_STAFF.get()) {
+        if (event.player.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == ItemRegistries.SANGUINE_SCEPTER_STAFF.get() || event.player.getItemBySlot(EquipmentSlot.OFFHAND).getItem() == ItemRegistries.SANGUINE_SCEPTER_STAFF.get())  {
             event.player.addEffect(new MobEffectInstance(DungeonsAndCombatModMobEffects.BLEEDING.get(), 20, 0, false, true));
 
         }

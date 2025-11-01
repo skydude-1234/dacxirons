@@ -28,9 +28,11 @@ public class SpellBurnProcedure {
     @SubscribeEvent
     public static void onLivingAttacked(LivingAttackEvent event) {
         if (event != null && event.getEntity() != null) {
-            lastattacker = (LivingEntity) event.getSource().getEntity();
-            execute(event, event.getEntity(), event.getSource().getEntity());
+            if(event.getEntity().hasEffect(EffectRegistry.SPELL_BURNING_AURA.get())) {
 
+                lastattacker = (LivingEntity) event.getSource().getEntity();
+                execute(event, event.getEntity(), event.getSource().getEntity());
+            }
         }
 
     }

@@ -8,3 +8,4 @@ Fixed Blessed Priest Hood & Robe not being craftable
 BloodyMancer rework:
 Blood Bending Full se ability:  while bleeding, +20% blood spell power per bleeding level
 Gave bloodymancer +15% blood magic resistance/piece to match blazymancer
+Sanguine Scepter also inflicts bleeding when held in offhand
