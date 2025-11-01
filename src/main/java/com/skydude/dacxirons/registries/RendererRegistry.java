@@ -8,6 +8,7 @@ import com.skydude.dacxirons.dacxirons;
 import com.skydude.dacxirons.renderers.EldritchSlashRenderer;
 import com.skydude.dacxirons.renderers.AcidFireBallRenderer;
 import net.mcreator.dungeonsandcombat.client.renderer.KamathRenderer;
+import net.mcreator.dungeonsandcombat.client.renderer.PyroKnightRenderer;
 import net.mcreator.dungeonsandcombat.client.renderer.WeaknessRenderer;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraftforge.api.distmarker.Dist;
@@ -22,6 +23,7 @@ public class RendererRegistry {
         //Entity renderer stuffs
         event.registerEntityRenderer(EntityRegistry.SUMMONED_WEAKNESS.get(), WeaknessRenderer::new);
         event.registerEntityRenderer(EntityRegistry.SUMMONED_KAMATH.get(), KamathRenderer::new);
+        event.registerEntityRenderer(EntityRegistry.SUMMONED_PYRO.get(), PyroKnightRenderer::new);
         event.registerEntityRenderer(EntityRegistry.ELDRITCH_SLASH.get(), EldritchSlashRenderer::new);
         event.registerEntityRenderer(EntityRegistry.ACID_BALL.get(),  AcidFireBallRenderer::new);
         event.registerEntityRenderer(EntityRegistry.SUNS_WRATH_AOE.get(), NoopRenderer::new);

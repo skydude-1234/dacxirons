@@ -2,14 +2,13 @@ package com.skydude.dacxirons.spells;
 
 
 import com.skydude.dacxirons.dacxirons;
+import com.skydude.dacxirons.entity.mobs.SummonedPyro;
 import com.skydude.dacxirons.entity.mobs.SummonedWeakness;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.Utils;
-
-//import com.skydude.dacxirons.entity.mobs.SummonedKamath;
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.minecraft.network.chat.Component;
@@ -31,11 +30,9 @@ import java.util.Objects;
 import java.util.Optional;
 
 
-
-
 @AutoSpellConfig
-public class SummonWeakness extends AbstractSpell {
-    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "summon_weakness");
+public class SummonPyroKnight extends AbstractSpell {
+    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "summon_pyro_knight");
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setAllowCrafting(true)
             .setMinRarity(SpellRarity.UNCOMMON)
@@ -46,18 +43,18 @@ public class SummonWeakness extends AbstractSpell {
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(Component.translatable("ui.irons_spellbooks.summon_count", spellLevel),
-                      (Component.translatable("ui.dacxirons.summon_hp", Math.round(getHealth(new SummonedWeakness(caster, true), caster, spellLevel)))),
-                     (Component.translatable("ui.dacxirons.summon_dmg", Math.round(getDamage(new SummonedWeakness(caster, true), caster, spellLevel)))));
+        return List.of(Component.translatable("ui.irons_spellbooks.summon_count", 1),
+                      (Component.translatable("ui.dacxirons.summon_hp", Math.round(getHealth(new SummonedPyro(caster, true), caster, spellLevel)))),
+                     (Component.translatable("ui.dacxirons.kamath.summon_duration", Math.round((float) getDuration(new SummonedPyro(caster, true), caster, spellLevel) / 20))));
 
     }
 
-    public SummonWeakness() {
-        this.manaCostPerLevel = 10;
+    public SummonPyroKnight() {
+        this.manaCostPerLevel = 20;
         this.baseSpellPower = 10;
         this.spellPowerPerLevel = 3;
         this.castTime = 30;
-        this.baseManaCost = 50;
+        this.baseManaCost = 100;
 
     }
 
@@ -89,28 +86,28 @@ public class SummonWeakness extends AbstractSpell {
 
     @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
-        int summonTime = 20 * 60 * 10;
+
         float radius = 1.5f + .185f * spellLevel;
-        for (int i = 0; i < spellLevel; i++) {
 
 
-            Monster arthropod = new SummonedWeakness(entity, true);
 
-            arthropod.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(arthropod.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
-            arthropod.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, false));
+        Monster pyro = new SummonedPyro(entity, true);
+        int summonTime = getDuration(pyro, entity, spellLevel);
 
-            var yrot = 6.281f / spellLevel * i + entity.getYRot() * Mth.DEG_TO_RAD;
+        pyro.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(pyro.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
+        pyro.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, false));
+
+            var yrot = 6.281f + entity.getYRot() * Mth.DEG_TO_RAD;
             Vec3 spawn = Utils.moveToRelativeGroundLevel(world, entity.getEyePosition().add(new Vec3(radius * Mth.cos(yrot), 0, radius * Mth.sin(yrot))), 10);
            //get health
-            arthropod.setHealth(getHealth(arthropod, entity, spellLevel));
-            arthropod.setPos(spawn.x, spawn.y, spawn.z);
-            //dmg
-            Objects.requireNonNull(arthropod.getAttribute(Attributes.ATTACK_DAMAGE)).setBaseValue(getDamage(arthropod, entity, spellLevel));
+        pyro.setHealth(getHealth(pyro, entity, spellLevel));
+        pyro.setPos(spawn.x, spawn.y, spawn.z);
 
-            arthropod.setYRot(entity.getYRot());
-            arthropod.setOldPosAndRot();
-            world.addFreshEntity(arthropod);
-        }
+
+        pyro.setYRot(entity.getYRot());
+        pyro.setOldPosAndRot();
+            world.addFreshEntity(pyro);
+
 
         int effectAmplifier = spellLevel - 1;
 
@@ -124,10 +121,10 @@ public class SummonWeakness extends AbstractSpell {
     }
 
     public float getHealth(LivingEntity monster, LivingEntity entity, int spellLevel){
-        return (float) (monster.getMaxHealth() * 0.05 * getSpellPower(spellLevel, entity));
+        return (float) (monster.getMaxHealth() * 0.005  * getSpellPower(spellLevel, entity));
     }
-    public float getDamage(LivingEntity monster, LivingEntity entity, int spellLevel){
-        return (float) (monster.getAttributeValue(Attributes.ATTACK_DAMAGE) * 0.1 * getSpellPower(spellLevel, entity));
+    public int getDuration(LivingEntity monster, LivingEntity entity, int spellLevel){
+        return (int) (5 * 15 * getSpellPower(spellLevel, entity));
     }
 
 }

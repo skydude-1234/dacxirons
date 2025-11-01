@@ -2,6 +2,7 @@ package com.skydude.dacxirons.registries;
 
 //import com.skydude.dacxirons.entity.mobs.SummonedKamath;
 import com.skydude.dacxirons.dacxirons;
+import com.skydude.dacxirons.entity.mobs.SummonedPyro;
 import com.skydude.dacxirons.entity.mobs.SummonedWeakness;
 import com.skydude.dacxirons.entity.spells.AcidBall.AcidFireball;
 import com.skydude.dacxirons.entity.spells.EldritchSlash.EldritchSlash;
@@ -48,6 +49,11 @@ public class EntityRegistry {
                     .sized(.6f, 1.8f)
                     .clientTrackingRange(64)
                     .build(new ResourceLocation(MOD_ID, "summoned_kamath").toString()));
+    public static final RegistryObject<EntityType<SummonedPyro>> SUMMONED_PYRO =
+            ENTITIES.register("summoned_pyro_knight", () -> EntityType.Builder.<SummonedPyro>of(SummonedPyro::new, MobCategory.MONSTER)
+                    .sized(.6f, 1.8f)
+                    .clientTrackingRange(64)
+                    .build(new ResourceLocation(MOD_ID, "summoned_pyro_knight").toString()));
 
     public static final RegistryObject<EntityType<EldritchSlash>> ELDRITCH_SLASH =
             ENTITIES.register("eldritch_slash", () -> EntityType.Builder.<EldritchSlash>of(EldritchSlash::new, MobCategory.MISC)
