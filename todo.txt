@@ -10,7 +10,7 @@ make fairys blessing canhealentity aoe
 fairy boots & rework fairy wings
 
 Add spell descriptions
-Finish summon weakness summon spell - icon can js be spawn egg
+
 
 New Spellbook - Abandoned Codex {
         Loot table from Remanent Camp and Remanent watch tower

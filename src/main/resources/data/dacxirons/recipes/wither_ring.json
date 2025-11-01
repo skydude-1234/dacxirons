@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " A ",
+    "ABA",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "dungeons_and_combat:fractured_soul"
+    },
+    "B": {
+      "item": "dacxirons:wither_rune"
+    }
+  },
+  "result": {
+    "item": "dacxirons:wither_ring",
+    "count": 1
+  },
+  "show_notification": false
+}

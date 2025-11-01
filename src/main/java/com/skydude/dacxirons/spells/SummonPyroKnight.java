@@ -36,7 +36,7 @@ public class SummonPyroKnight extends AbstractSpell {
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setAllowCrafting(true)
             .setMinRarity(SpellRarity.EPIC)
-            .setSchoolResource(SchoolRegistry.BLOOD_RESOURCE)
+            .setSchoolResource(SchoolRegistry.FIRE_RESOURCE)
             .setMaxLevel(6)
             .setCooldownSeconds(150)
             .build();

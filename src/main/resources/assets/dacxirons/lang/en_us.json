@@ -79,6 +79,8 @@
   "spell.dacxirons.summon_pyro_knight": "Summon Pyro Knight",
   "entity.dacxirons.summoned_weakness": "Summoned Weakness",
   "entity.dacxirons.summoned_pyro_knight": "Summoned Pyro Knight",
-  "entity.dacxirons.summoned_kamath": "Summoned Kamath"
+  "entity.dacxirons.summoned_kamath": "Summoned Kamath",
+  "spell.dacxirons.summon_weakness.guide" : "These spider-like critters come to your bloody aid",
+  "spell.dacxirons.summon_pyro_knight.guide": "A blazing guard comes to your defense"
 }
 
