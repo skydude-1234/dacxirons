@@ -5,7 +5,6 @@ Roadmap
 
  tombwarden
 
-make fairys blessing canhealentity aoe
 
 fairy boots & rework fairy wings
 

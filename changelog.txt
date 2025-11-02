@@ -12,3 +12,4 @@ Sanguine Scepter also inflicts bleeding when held in offhand
 Summon Weakness spel is now obtainable
 Summoned Weakness Health & damage now scales with spell power
 New spell - Summon Pyro Knight. Hp & duration scales with spell power
+Wither Ring is now craftable
