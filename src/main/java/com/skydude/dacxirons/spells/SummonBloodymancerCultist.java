@@ -45,8 +45,8 @@ public class SummonBloodymancerCultist extends AbstractSpell {
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         return List.of(Component.translatable("ui.irons_spellbooks.summon_count", Math.min(3, (spellLevel + 1) / 2)),
-                      (Component.translatable("ui.dacxirons.summon_hp", Math.round(getHealth(new SummonedPyro(caster, true), caster, spellLevel)))),
-                     (Component.translatable("ui.dacxirons.kamath.summon_duration", Math.round((float) getDuration(new SummonedPyro(caster, true), caster, spellLevel) / 20))));
+                      (Component.translatable("ui.dacxirons.summon_hp", Math.round(getHealth( caster, spellLevel)))),
+                     (Component.translatable("ui.dacxirons.kamath.summon_duration", Math.round((float) getDuration(caster, spellLevel) / 20))));
 
     }
 
@@ -94,14 +94,14 @@ public class SummonBloodymancerCultist extends AbstractSpell {
 
 
             Monster summon = new SummonedBloodymancerCultist(entity, true);
-            summonTime = getDuration(summon, entity, spellLevel);
+            summonTime = getDuration( entity, spellLevel);
             summon.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(summon.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
             summon.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, false));
 
             var yrot = 6.281f / spellLevel * i + entity.getYRot() * Mth.DEG_TO_RAD;
             Vec3 spawn = Utils.moveToRelativeGroundLevel(world, entity.getEyePosition().add(new Vec3(radius * Mth.cos(yrot), 0, radius * Mth.sin(yrot))), 10);
             //get health
-            summon.setHealth(getHealth(summon, entity, spellLevel));
+            summon.setHealth(getHealth( entity, spellLevel));
             summon.setPos(spawn.x, spawn.y, spawn.z);
 
 
@@ -120,10 +120,10 @@ public class SummonBloodymancerCultist extends AbstractSpell {
 
     }
 
-    public float getHealth(LivingEntity monster, LivingEntity entity, int spellLevel){
-        return (float) (monster.getMaxHealth() * 0.005  * getSpellPower(spellLevel, entity));
+    public float getHealth( LivingEntity entity, int spellLevel){
+        return (float) (SummonedBloodymancerCultist.createAttributes().build().getValue(Attributes.MAX_HEALTH)* 0.005  * getSpellPower(spellLevel, entity));
     }
-    public int getDuration(LivingEntity monster, LivingEntity entity, int spellLevel){
+    public int getDuration( LivingEntity entity, int spellLevel){
         return (int) (6 * 15 * getSpellPower(spellLevel, entity));
     }
 

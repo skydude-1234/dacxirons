@@ -3,10 +3,6 @@ Roadmap
 
 
 
- tombwarden
-
-
-fairy boots & rework fairy wings
 
 Add spell descriptions
 
@@ -20,13 +16,5 @@ New Spellbook - High priest's handbook {
     summons high priests summons as an imbued spell
 }
 
-More accessories
-Wither Rune crafted into useful tings????
+
 More effects to fairys wish
-Add graphical effects and particles to all armor
-
-
-
- Make counselor skulls be able to use eldritch spells
-
- Make blood magician mobs only do blood spell damage so blessed priest can resist against them

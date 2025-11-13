@@ -44,8 +44,8 @@ public class SummonPyroKnight extends AbstractSpell {
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         return List.of(Component.translatable("ui.irons_spellbooks.summon_count", 1),
-                      (Component.translatable("ui.dacxirons.summon_hp", Math.round(getHealth(new SummonedPyro(caster, true), caster, spellLevel)))),
-                     (Component.translatable("ui.dacxirons.kamath.summon_duration", Math.round((float) getDuration(new SummonedPyro(caster, true), caster, spellLevel) / 20))));
+                      (Component.translatable("ui.dacxirons.summon_hp", Math.round(getHealth(caster, spellLevel)))),
+                     (Component.translatable("ui.dacxirons.kamath.summon_duration", Math.round((float) getDuration(caster, spellLevel) / 20))));
 
     }
 
@@ -92,7 +92,7 @@ public class SummonPyroKnight extends AbstractSpell {
 
 
         Monster pyro = new SummonedPyro(entity, true);
-        int summonTime = getDuration(pyro, entity, spellLevel);
+        int summonTime = getDuration(entity, spellLevel);
 
         pyro.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(pyro.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
         pyro.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, false));
@@ -100,7 +100,7 @@ public class SummonPyroKnight extends AbstractSpell {
             var yrot = 6.281f + entity.getYRot() * Mth.DEG_TO_RAD;
             Vec3 spawn = Utils.moveToRelativeGroundLevel(world, entity.getEyePosition().add(new Vec3(radius * Mth.cos(yrot), 0, radius * Mth.sin(yrot))), 10);
            //get health
-        pyro.setHealth(getHealth(pyro, entity, spellLevel));
+        pyro.setHealth(getHealth(entity, spellLevel));
         pyro.setPos(spawn.x, spawn.y, spawn.z);
 
 
@@ -120,10 +120,10 @@ public class SummonPyroKnight extends AbstractSpell {
 
     }
 
-    public float getHealth(LivingEntity monster, LivingEntity entity, int spellLevel){
-        return (float) (monster.getMaxHealth() * 0.005  * getSpellPower(spellLevel, entity));
+    public float getHealth( LivingEntity entity, int spellLevel){
+        return (float) (SummonedPyro.createAttributes().build().getValue(Attributes.MAX_HEALTH) * 0.005  * getSpellPower(spellLevel, entity));
     }
-    public int getDuration(LivingEntity monster, LivingEntity entity, int spellLevel){
+    public int getDuration( LivingEntity entity, int spellLevel){
         return (int) (5 * 15 * getSpellPower(spellLevel, entity));
     }
 
