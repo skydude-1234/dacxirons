@@ -62,7 +62,6 @@ public class SpellBurnProcedure {
                 LivingEntity living = (LivingEntity)entity;
                 if (living.hasEffect( EffectRegistry.SPELL_BURNING_AURA.get())) {
                     sourceentity.setSecondsOnFire(10);
-// lol we can make the entity attack
                   //  CommandUtils.runCommandAtPlayer((ServerPlayer) entity, "cast " + sourceentity.getStringUUID() + " fireball 1");
                     CommandUtils.runCommandAtPlayer((ServerPlayer) entity, "cast @s dacxirons:firebolt_copy 5");
                 }
