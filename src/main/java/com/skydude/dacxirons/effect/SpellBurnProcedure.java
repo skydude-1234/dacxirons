@@ -24,14 +24,16 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 @EventBusSubscriber
 public class SpellBurnProcedure {
 
-    public static LivingEntity lastattacker;
+    public static Entity lastattacker;
     @SubscribeEvent
     public static void onLivingAttacked(LivingAttackEvent event) {
         if (event != null && event.getEntity() != null) {
             if(event.getEntity().hasEffect(EffectRegistry.SPELL_BURNING_AURA.get())) {
 
-                lastattacker = (LivingEntity) event.getSource().getEntity();
-                execute(event, event.getEntity(), event.getSource().getEntity());
+                assert event.getSource().getEntity() != null;
+                assert event.getSource().getDirectEntity() != null;
+                lastattacker = event.getSource().getEntity();
+                execute(event, event.getEntity(), lastattacker);
             }
         }
 
@@ -57,7 +59,6 @@ public class SpellBurnProcedure {
 
     private static void execute(@Nullable Event event, Entity entity, Entity sourceentity ) {
         if (entity instanceof ServerPlayer && sourceentity != null) {
-            if (sourceentity instanceof LivingEntity) {
                 LivingEntity living = (LivingEntity)entity;
                 if (living.hasEffect( EffectRegistry.SPELL_BURNING_AURA.get())) {
                     sourceentity.setSecondsOnFire(10);
@@ -65,7 +66,7 @@ public class SpellBurnProcedure {
                   //  CommandUtils.runCommandAtPlayer((ServerPlayer) entity, "cast " + sourceentity.getStringUUID() + " fireball 1");
                     CommandUtils.runCommandAtPlayer((ServerPlayer) entity, "cast @s dacxirons:firebolt_copy 5");
                 }
-            }
+
 
         }
     }
