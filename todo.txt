@@ -1,8 +1,14 @@
 Roadmap
 
 
+FIX LASTATTACKER. Use last player.getlastdamagesource instead
+Make it do sepll = new heatsurge
+spell.castspell
+RAHHHHHH
 
+also fix that one wand not being craftable wtf man
 
+fff
 
 Add spell descriptions
 
