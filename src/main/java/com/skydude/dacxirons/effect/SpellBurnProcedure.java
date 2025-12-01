@@ -24,7 +24,6 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 @EventBusSubscriber
 public class SpellBurnProcedure {
 
-    public static Entity lastattacker;
     @SubscribeEvent
     public static void onLivingAttacked(LivingAttackEvent event) {
         if (event != null && event.getEntity() != null) {
@@ -32,8 +31,8 @@ public class SpellBurnProcedure {
 
                 assert event.getSource().getEntity() != null;
                 assert event.getSource().getDirectEntity() != null;
-                lastattacker = event.getSource().getEntity();
-                execute(event, event.getEntity(), lastattacker);
+
+                execute(event, event.getEntity(), event.getEntity().getLastAttacker());
             }
         }
 

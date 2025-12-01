@@ -21,8 +21,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-import static com.skydude.dacxirons.effect.SpellBurnProcedure.lastattacker;
-
 @AutoSpellConfig
 public class FireboltCopySpell extends AbstractSpell {
     private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "firebolt_copy");
@@ -68,7 +66,7 @@ public class FireboltCopySpell extends AbstractSpell {
         FireboltProjectile firebolt = new FireboltProjectile(world, entity);
         firebolt.setPos(entity.position().add(0, entity.getEyeHeight() - firebolt.getBoundingBox().getYsize() * .5f, 0));
         //null checks, dont wanna be beating a dead horse
-        if(lastattacker == null) return;
+        LivingEntity lastattacker = entity.getLastAttacker();
         if(!lastattacker.isAlive()) return;
 
         Vec3 from = entity.getEyePosition();
