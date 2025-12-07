@@ -41,7 +41,7 @@ public class KamathLegging {
                     event.addModifier(eldritchPower, new AttributeModifier(
                             ELDRITCH_UUID,
                             "Spell Power Bonus Eldritch",
-                            0.5,
+                            0.05,
                             Operation.MULTIPLY_BASE
                     ));
                 }

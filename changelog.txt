@@ -1,2 +1,6 @@
-Dacxirons 1.5.2fix
-fixed ebony spell armor recipe
+Dacxirons 1.5.3
+Fixed kamath leggings having 10x more spell power than normal
+Changed blazymancer spell burn effect to cast heat_surge instead of firebolt
+Removed duplicate firebolt spell
+Fixed custom sanguine scepter being uncraftable
+

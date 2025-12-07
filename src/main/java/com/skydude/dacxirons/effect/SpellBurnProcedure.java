@@ -8,7 +8,10 @@ package com.skydude.dacxirons.effect;
 import javax.annotation.Nullable;
 
 import com.skydude.dacxirons.registries.EffectRegistry;
+import io.redspace.ironsspellbooks.api.magic.MagicData;
+import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.spells.fire.FireballSpell;
+import io.redspace.ironsspellbooks.spells.fire.HeatSurgeSpell;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.server.MinecraftServer;
@@ -32,7 +35,7 @@ public class SpellBurnProcedure {
                 assert event.getSource().getEntity() != null;
                 assert event.getSource().getDirectEntity() != null;
 
-                execute(event, event.getEntity(), event.getEntity().getLastAttacker());
+                execute(event.getEntity(), event.getEntity().getLastAttacker());
             }
         }
 
@@ -56,13 +59,14 @@ public class SpellBurnProcedure {
 
 
 
-    private static void execute(@Nullable Event event, Entity entity, Entity sourceentity ) {
-        if (entity instanceof ServerPlayer && sourceentity != null) {
-                LivingEntity living = (LivingEntity)entity;
-                if (living.hasEffect( EffectRegistry.SPELL_BURNING_AURA.get())) {
+    private static void execute(Entity entity, Entity sourceentity ) {
+        if (entity instanceof ServerPlayer living && sourceentity != null) {
+            if (living.hasEffect( EffectRegistry.SPELL_BURNING_AURA.get())) {
                     sourceentity.setSecondsOnFire(10);
                   //  CommandUtils.runCommandAtPlayer((ServerPlayer) entity, "cast " + sourceentity.getStringUUID() + " fireball 1");
-                    CommandUtils.runCommandAtPlayer((ServerPlayer) entity, "cast @s dacxirons:firebolt_copy 5");
+                   // CommandUtils.runCommandAtPlayer((ServerPlayer) entity, "cast @s dacxirons:heat_surge 3");
+                    AbstractSpell spell = new HeatSurgeSpell();
+                    spell.castSpell(living.level(), 4, living, MagicData.getPlayerMagicData(living).getCastSource(), false);
                 }
 
 

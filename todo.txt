@@ -1,8 +1,8 @@
 Roadmap
 
 
-change spell burn to vast heatsurge instead of firebolt copy
-fix kamath leggings to only give 5% instead of 50
+
+
 also fix that one wand not being craftable wtf man
 
 lowk just review entire code base and fix everything

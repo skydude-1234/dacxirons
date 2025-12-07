@@ -2,17 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-    "aaa",
-    "aaa",
-    "aaa"
+    " ab",
+    " ca",
+    "c  "
   ],
   "key": {
     "a": {
-      "item": "minecraft:barrier"
+      "item": "dungeons_and_combat:ebony_scrap"
+    },
+    "b": {
+      "item": "dungeons_and_combat:blood_orb"
+    },
+    "c": {
+      "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "dungeons_and_combat:sanguine_scepter",
+    "item": "dacxirons:sanguine_scepter_staff",
     "count": 1
   }
 }

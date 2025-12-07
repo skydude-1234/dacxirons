@@ -136,7 +136,7 @@ public class SummonKamath extends AbstractEldritchSpell {
             kamath.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(damage);
           //  System.out.println(damage);
           //  System.out.println(getKamathDuration(spellLevel, entity));
-                kamath.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(kamath.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
+            kamath.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(kamath.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
             kamath.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, false));
             var yrot = 6.281f / spellLevel + entity.getYRot() * Mth.DEG_TO_RAD;
             Vec3 spawn = Utils.moveToRelativeGroundLevel(world, entity.getEyePosition().add(new Vec3(radius * Mth.cos(yrot), 0, radius * Mth.sin(yrot))), 10);

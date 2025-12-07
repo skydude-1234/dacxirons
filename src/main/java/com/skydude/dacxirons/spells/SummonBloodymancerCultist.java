@@ -95,7 +95,7 @@ public class SummonBloodymancerCultist extends AbstractSpell {
 
             Monster summon = new SummonedBloodymancerCultist(entity, true);
             summonTime = getDuration( entity, spellLevel);
-            summon.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(summon.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
+         //   summon.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(summon.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
             summon.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, false));
 
             var yrot = 6.281f / spellLevel * i + entity.getYRot() * Mth.DEG_TO_RAD;
