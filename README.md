@@ -91,10 +91,11 @@ Big thanks to Tohirogosu for SO MANY models, textures, icons
 
 Thanks to Rikka for Logo & Ideas
 
-<div align="center">
-  <a href="https://moonshot.hackclub.com" target="_blank">
-    <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/35ad2be8c916670f3e1ac63c1df04d76a4b337d1_moonshot.png" 
-         alt="This project is part of Moonshot, a 4-day hackathon in Florida visiting Kennedy Space Center and Universal Studios!" 
-         style="width: 100%;">
-  </a>
-</div>
+## Licensing
+
+- The **code** of this project is licensed under **GPL-3.0**.
+- The **assets** (textures, models, icons, etc.) are **NOT open source**.
+
+The assets were created by **Tohirogosu** (CurseForge) and are used with 
+explicit permission. They remain **All Rights Reserved** and may not be reused 
+or redistributed by others.
