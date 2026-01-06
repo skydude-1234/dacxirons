@@ -172,7 +172,7 @@ public class SummonedBloodymancerCultist extends BloodymancerCultistEntity imple
     public void onRemovedFromWorld() {
         //IronsSpellbooks.LOGGER.debug("Summoned Zombie: Removed from world, {}", this.getRemovalReason());
         super.onRemovedFromWorld();
-        this.onRemovedHelper(this, MobEffectRegistry.RAISE_DEAD_TIMER.get());
+//        this.onRemovedHelper(this, MobEffectRegistry.RAISE_DEAD_TIMER.get());
     }
     @Override
     public void die(DamageSource pDamageSource) {

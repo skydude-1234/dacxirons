@@ -16,7 +16,6 @@ import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
 import io.redspace.ironsspellbooks.item.curios.PoisonwardRing;
 import io.redspace.ironsspellbooks.item.spell_books.SimpleAttributeSpellBook;
 
-import io.redspace.ironsspellbooks.item.weapons.BloodStaffItem;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.Item;

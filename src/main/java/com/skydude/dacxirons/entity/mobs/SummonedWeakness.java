@@ -7,6 +7,7 @@ import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
+import io.redspace.ironsspellbooks.entity.mobs.IMagicSummon;
 import io.redspace.ironsspellbooks.entity.mobs.MagicSummon;
 import io.redspace.ironsspellbooks.entity.mobs.goals.*;
 
@@ -34,6 +35,7 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -57,12 +59,12 @@ import javax.annotation.Nullable;
 import java.util.UUID;
 @Mod.EventBusSubscriber(modid = dacxirons.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 
-public class SummonedWeakness extends WeaknessEntity implements MagicSummon, GeoAnimatable {
+public class SummonedWeakness extends WeaknessEntity implements IMagicSummon, GeoAnimatable {
     private static final EntityDataAccessor<Boolean> DATA_IS_ANIMATING_RISE = SynchedEntityData.defineId(SummonedWeakness.class, EntityDataSerializers.BOOLEAN);
 
-    public SummonedWeakness(EntityType<SummonedWeakness> type, Level world) {
+    public SummonedWeakness(EntityType<? extends WeaknessEntity> type, Level world) {
         // Explicitly cast the EntityType to raw to bypass generics check:
-        super((EntityType) type, world);
+        super((EntityType<WeaknessEntity>) type, world);
         xpReward = 0;
     }
     // Example for your WeaknessEntity:
@@ -77,7 +79,6 @@ public class SummonedWeakness extends WeaknessEntity implements MagicSummon, Geo
 
     public SummonedWeakness(LivingEntity owner, boolean playRiseAnimation) {
         this(EntityRegistry.SUMMONED_WEAKNESS.get(), owner.level());
-        setSummoner(owner);
         if (playRiseAnimation)
             triggerRiseAnimation();
     }
@@ -115,11 +116,11 @@ public class SummonedWeakness extends WeaknessEntity implements MagicSummon, Geo
     @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
-        entityData.define(DATA_IS_ANIMATING_RISE, false);
+        this.entityData.define(DATA_IS_ANIMATING_RISE, false);
     }
 
     @Override
-    public SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pReason, @Nullable SpawnGroupData pSpawnData, @Nullable CompoundTag pDataTag) {
+    public @org.jetbrains.annotations.Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pReason, @org.jetbrains.annotations.Nullable SpawnGroupData pSpawnData, @org.jetbrains.annotations.Nullable CompoundTag pDataTag) {
         RandomSource randomsource = Utils.random;
         this.populateDefaultEquipmentSlots(randomsource, pDifficulty);
         if (randomsource.nextDouble() < .25) {
@@ -128,22 +129,12 @@ public class SummonedWeakness extends WeaknessEntity implements MagicSummon, Geo
         return pSpawnData;
     }
 
+
     @Override
     public boolean isAlliedTo(Entity pEntity) {
         return super.isAlliedTo(pEntity) || this.isAlliedHelper(pEntity);
     }
 
-    @Override
-    public LivingEntity getSummoner() {
-        return OwnerHelper.getAndCacheOwner(level(), cachedSummoner, summonerUUID);
-    }
-
-    public void setSummoner(@Nullable LivingEntity owner) {
-        if (owner != null) {
-            this.summonerUUID = owner.getUUID();
-            this.cachedSummoner = owner;
-        }
-    }
 
     @Override
     public void die(DamageSource pDamageSource) {
@@ -153,31 +144,9 @@ public class SummonedWeakness extends WeaknessEntity implements MagicSummon, Geo
 
     @Override
     public void onRemovedFromWorld() {
-        //IronsSpellbooks.LOGGER.debug("Summoned Zombie: Removed from world, {}", this.getRemovalReason());
-        this.onRemovedHelper(this, MobEffectRegistry.RAISE_DEAD_TIMER.get());
+        this.onRemovedHelper(this);
         super.onRemovedFromWorld();
     }
-
-
-    @Override
-    public void remove(RemovalReason pReason) {
-        // IronsSpellbooks.LOGGER.debug("Summoned Zombie: Attempt remove for: {}",pReason.toString());
-
-        super.remove(pReason);
-    }
-
-    //
-     //
-     //
-     //
-     //
-     //
-     //
-     // UNCOMMENT THE SHIT BEHIND IAIRHAITHAITHAITHAITAHI
-//    @Override
-//    public boolean doHurtTarget(Entity pEntity) {
-//        return Utils.doMeleeAttack(this, pEntity, dacxironsSpellRegistry.SUMMONER_WEAKNESS.get().getDamageSource(this, getSummoner()));
-//    }
 
     @Override
     public boolean hurt(DamageSource pSource, float pAmount) {
@@ -212,21 +181,22 @@ public class SummonedWeakness extends WeaknessEntity implements MagicSummon, Geo
     public void onUnSummon() {
         if (!level().isClientSide) {
             MagicManager.spawnParticles(level(), ParticleTypes.POOF, getX(), getY(), getZ(), 25, .4, .8, .4, .03, false);
-            discard();
+            setRemoved(RemovalReason.DISCARDED);
         }
     }
 
-    @Override
-    public void readAdditionalSaveData(CompoundTag compoundTag) {
-        super.readAdditionalSaveData(compoundTag);
-        this.summonerUUID = OwnerHelper.deserializeOwner(compoundTag);
-    }
-
-    @Override
-    public void addAdditionalSaveData(CompoundTag compoundTag) {
-        super.addAdditionalSaveData(compoundTag);
-        OwnerHelper.serializeOwner(compoundTag, summonerUUID);
-    }
+    // dont think we need this anymore
+//    @Override
+//    public void readAdditionalSaveData(CompoundTag compoundTag) {
+//        super.readAdditionalSaveData(compoundTag);
+//        this.summonerUUID = OwnerHelper.deserializeOwner(compoundTag);
+//    }
+//
+//    @Override
+//    public void addAdditionalSaveData(CompoundTag compoundTag) {
+//        super.addAdditionalSaveData(compoundTag);
+//        OwnerHelper.serializeOwner(compoundTag, summonerUUID);
+//    }
 
     //
     //  Rise Animation Stuff

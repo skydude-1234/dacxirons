@@ -95,7 +95,7 @@ public class SummonPyroKnight extends AbstractSpell {
         int summonTime = getDuration(entity, spellLevel);
 
         pyro.finalizeSpawn((ServerLevel) world, world.getCurrentDifficultyAt(pyro.getOnPos()), MobSpawnType.MOB_SUMMONED, null, null);
-        pyro.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, false));
+   //     pyro.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, 0, false, false, false));
 
             var yrot = 6.281f + entity.getYRot() * Mth.DEG_TO_RAD;
             Vec3 spawn = Utils.moveToRelativeGroundLevel(world, entity.getEyePosition().add(new Vec3(radius * Mth.cos(yrot), 0, radius * Mth.sin(yrot))), 10);
@@ -109,14 +109,14 @@ public class SummonPyroKnight extends AbstractSpell {
             world.addFreshEntity(pyro);
 
 
-        int effectAmplifier = spellLevel - 1;
-
-        if (entity.hasEffect(MobEffectRegistry.RAISE_DEAD_TIMER.get())) {
-            effectAmplifier += entity.getEffect(MobEffectRegistry.RAISE_DEAD_TIMER.get()).getAmplifier() + 1;
-        }
-        entity.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, effectAmplifier, false, false, true));
-
-        super.onCast(world, spellLevel, entity, castSource, playerMagicData);
+//        int effectAmplifier = spellLevel - 1;
+//
+//        if (entity.hasEffect(MobEffectRegistry.RAISE_DEAD_TIMER.get())) {
+//            effectAmplifier += entity.getEffect(MobEffectRegistry.RAISE_DEAD_TIMER.get()).getAmplifier() + 1;
+//        }
+//        entity.addEffect(new MobEffectInstance(MobEffectRegistry.RAISE_DEAD_TIMER.get(), summonTime, effectAmplifier, false, false, true));
+//
+//        super.onCast(world, spellLevel, entity, castSource, playerMagicData);
 
     }
 

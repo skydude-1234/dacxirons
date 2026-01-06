@@ -85,7 +85,7 @@ public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnim
     protected void tickDeath() {
         ++this.deathTime;
         if (this.deathTime == 20) {
-            this.onRemovedHelper(this, MobEffectRegistry.RAISE_DEAD_TIMER.get());
+        //    this.onRemovedHelper(this, MobEffectRegistry.RAISE_DEAD_TIMER.get());
             this.remove(RemovalReason.KILLED);
         }
 
@@ -187,7 +187,7 @@ public class SummonedKamath extends KamathEntity implements MagicSummon, GeoAnim
     public void onRemovedFromWorld() {
         //IronsSpellbooks.LOGGER.debug("Summoned Zombie: Removed from world, {}", this.getRemovalReason());
         super.onRemovedFromWorld();
-        this.onRemovedHelper(this, MobEffectRegistry.RAISE_DEAD_TIMER.get());
+  //      this.onRemovedHelper(this, MobEffectRegistry.RAISE_DEAD_TIMER.get());
     }
 
 
