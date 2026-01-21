@@ -42,8 +42,8 @@ public class dacxirons {
     EntityRenderersEvent.RegisterRenderers event;
 
 
-    private static final ResourceLocation ADVANCEMENT_ID = new ResourceLocation("dungeons_and_combat", "the_exiled");
-    private static final ResourceLocation ATTRIBUTE_ID = new ResourceLocation("irons_spellbooks", "spell_power");
+    private static final ResourceLocation ADVANCEMENT_ID = ResourceLocation.fromNamespaceAndPath("dungeons_and_combat", "the_exiled");
+    private static final ResourceLocation ATTRIBUTE_ID = ResourceLocation.fromNamespaceAndPath("irons_spellbooks", "spell_power");
 
     private static final double BONUS_PERCENT = 10.0;
     private static final double BONUS_MULTIPLY = 1 + (BONUS_PERCENT / 100.0);
@@ -72,6 +72,6 @@ public class dacxirons {
         }
     }
     public static ResourceLocation id(@NotNull String path) {
-        return new ResourceLocation(dacxirons.MOD_ID, path);
+        return ResourceLocation.fromNamespaceAndPath(dacxirons.MOD_ID, path);
     }
 }
