@@ -31,40 +31,40 @@ public class EntityRegistry {
             ENTITIES.register("summoned_weakness", () -> EntityType.Builder.<SummonedWeakness>of(SummonedWeakness::new, MobCategory.MONSTER)
                     .sized(.6f, 1.8f)
                     .clientTrackingRange(64)
-                    .build(new ResourceLocation(MOD_ID, "summoned_weakness").toString()));
+                    .build(ResourceLocation.fromNamespaceAndPath(MOD_ID, "summoned_weakness").toString()));
 
     public static final RegistryObject<EntityType<SummonedKamath>> SUMMONED_KAMATH =
             ENTITIES.register("summoned_kamath", () -> EntityType.Builder.<SummonedKamath>of(SummonedKamath::new, MobCategory.MONSTER)
                     .sized(.6f, 1.8f)
                     .clientTrackingRange(64)
-                    .build(new ResourceLocation(MOD_ID, "summoned_kamath").toString()));
+                    .build(ResourceLocation.fromNamespaceAndPath(MOD_ID, "summoned_kamath").toString()));
     public static final RegistryObject<EntityType<SummonedPyro>> SUMMONED_PYRO =
             ENTITIES.register("summoned_pyro_knight", () -> EntityType.Builder.<SummonedPyro>of(SummonedPyro::new, MobCategory.MONSTER)
                     .sized(.6f, 1.8f)
                     .clientTrackingRange(64)
-                    .build(new ResourceLocation(MOD_ID, "summoned_pyro_knight").toString()));
+                    .build(ResourceLocation.fromNamespaceAndPath(MOD_ID, "summoned_pyro_knight").toString()));
     public static final RegistryObject<EntityType<SummonedBloodymancerCultist>> SUMMONED_BLOODYMANCER_CULTIST =
             ENTITIES.register("summoned_bloodymancer_cultist", () -> EntityType.Builder.<SummonedBloodymancerCultist>of(SummonedBloodymancerCultist::new, MobCategory.MONSTER)
                     .sized(.6f, 1.8f)
                     .clientTrackingRange(64)
-                    .build(new ResourceLocation(MOD_ID, "summoned_bloodymancer_cultist").toString()));
+                    .build(ResourceLocation.fromNamespaceAndPath(MOD_ID, "summoned_bloodymancer_cultist").toString()));
 
     public static final RegistryObject<EntityType<EldritchSlash>> ELDRITCH_SLASH =
             ENTITIES.register("eldritch_slash", () -> EntityType.Builder.<EldritchSlash>of(EldritchSlash::new, MobCategory.MISC)
                     .sized(5f, 1f)
                     .clientTrackingRange(64)
-                    .build(new ResourceLocation(IronsSpellbooks.MODID, "eldritch_slash").toString()));
+                    .build(ResourceLocation.fromNamespaceAndPath(IronsSpellbooks.MODID, "eldritch_slash").toString()));
     public static final RegistryObject<EntityType<AcidFireball>> ACID_BALL =
             ENTITIES.register("acid_ball", () -> EntityType.Builder.<AcidFireball>of(AcidFireball::new, MobCategory.MISC)
                     .sized(5f, 1f)
                     .clientTrackingRange(64)
-                    .build(new ResourceLocation(IronsSpellbooks.MODID, "acid_ball").toString()));
+                    .build(ResourceLocation.fromNamespaceAndPath(IronsSpellbooks.MODID, "acid_ball").toString()));
 
     public static final RegistryObject<EntityType<SunsWrathAOE>> SUNS_WRATH_AOE =
             ENTITIES.register("suns_wrath_aoe", () -> EntityType.Builder.<SunsWrathAOE>of(SunsWrathAOE::new, MobCategory.MISC)
                     .sized(4f, .8f)
                     .clientTrackingRange(64)
-                    .build(new ResourceLocation(IronsSpellbooks.MODID, "suns_wrath_aoe").toString()));
+                    .build(ResourceLocation.fromNamespaceAndPath(IronsSpellbooks.MODID, "suns_wrath_aoe").toString()));
 
 
 }

@@ -33,10 +33,10 @@ public class bloodycultchestplate {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:bloody_cult_chestplate")) {
             if (event.getSlotType() == EquipmentSlot.CHEST) {
                 Attribute bloodPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:blood_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:blood_spell_power")
                 );
                 Attribute manaPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:max_mana")
+                        ResourceLocation.parse("irons_spellbooks:max_mana")
                 );
 
 

@@ -36,10 +36,10 @@ public class TheGravedigger {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:the_gravedigger_greataxe")) {
             if (event.getSlotType() == EquipmentSlot.MAINHAND) {
                 Attribute summonPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:summon_damage")
+                        ResourceLocation.parse("irons_spellbooks:summon_damage")
                 );
                 Attribute cooldownPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:cooldown_reduction")
+                        ResourceLocation.parse("irons_spellbooks:cooldown_reduction")
                 );
 
                 if (summonPower != null) {

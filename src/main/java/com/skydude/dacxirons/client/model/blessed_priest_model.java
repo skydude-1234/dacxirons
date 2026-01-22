@@ -15,7 +15,7 @@ import net.minecraft.world.entity.Entity;
 
 public class blessed_priest_model<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("dacxirons", "blessed_priest_model"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("dacxirons", "blessed_priest_model"), "main");
 	public final ModelPart head;
 	public final ModelPart body;
 	public final ModelPart left_arm;

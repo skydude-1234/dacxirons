@@ -33,7 +33,7 @@ public class AcidMoltenBlazingHelm {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:acid_molten_blazing_helmet")) {
             if (event.getSlotType() == EquipmentSlot.HEAD) {
                 Attribute firePower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:fire_spell_power")
+                         ResourceLocation.parse("irons_spellbooks:fire_spell_power")
                 );
 
 

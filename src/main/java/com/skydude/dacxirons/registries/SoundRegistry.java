@@ -16,7 +16,7 @@ public class SoundRegistry {
 
     public static final RegistryObject<SoundEvent> MAGIC_ARROW_SOUND =
             SOUNDS.register("magic_arrow_sound",
-                    () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(dacxirons.MOD_ID, "magic_arrow_sound")));
+                    () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(dacxirons.MOD_ID, "magic_arrow_sound")));
 
     public static void register(IEventBus eventBus) {
         SOUNDS.register(eventBus);

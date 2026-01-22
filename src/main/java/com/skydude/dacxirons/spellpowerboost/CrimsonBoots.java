@@ -33,7 +33,7 @@ public class CrimsonBoots {
             if (event.getSlotType() == EquipmentSlot.FEET) {
 
                 Attribute bloodPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:blood_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:blood_spell_power")
                 );
 
 

@@ -30,7 +30,7 @@ import java.util.Optional;
 
 @AutoSpellConfig
 public class AcidBallSpell extends AbstractSpell {
-    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "acid_ball_spell");
+    private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(dacxirons.MOD_ID, "acid_ball_spell");
 
 
     @Override

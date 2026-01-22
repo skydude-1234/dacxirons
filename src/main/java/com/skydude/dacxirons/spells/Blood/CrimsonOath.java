@@ -36,7 +36,7 @@ import java.util.UUID;
 
 @AutoSpellConfig
 public class CrimsonOath extends AbstractSpell {
-    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "crimson_oath");
+    private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(dacxirons.MOD_ID, "crimson_oath");
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.EPIC)
             .setSchoolResource(SchoolRegistry.BLOOD_RESOURCE)

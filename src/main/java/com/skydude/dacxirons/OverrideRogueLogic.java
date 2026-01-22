@@ -29,7 +29,7 @@ public class OverrideRogueLogic {
         if(dacxironsConfig.ENABLE_CUSTOM_ROGUE_LOGIC.get() != Boolean.TRUE) return;
         if (!player.getAdvancements().getOrStartProgress(
                         Objects.requireNonNull(player.server.getAdvancements().getAdvancement(
-                                new ResourceLocation("dungeons_and_combat:the_rogue"))))
+                                ResourceLocation.parse("dungeons_and_combat:the_rogue"))))
                 .isDone()) return;
 
 
@@ -46,7 +46,7 @@ public class OverrideRogueLogic {
 
         if (!player.getAdvancements().getOrStartProgress(
                         Objects.requireNonNull(player.server.getAdvancements().getAdvancement(
-                                new ResourceLocation("dungeons_and_combat:the_rogue"))))
+                                ResourceLocation.parse("dungeons_and_combat:the_rogue"))))
                 .isDone()) return;
 
         LivingEntity living = player;

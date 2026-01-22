@@ -33,7 +33,7 @@ public class SunleiaHelmet {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:sunleia_armor_helmet")) {
             if (event.getSlotType() == EquipmentSlot.HEAD) {
                 Attribute holyPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:holy_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:holy_spell_power")
                 );
 
 

@@ -32,7 +32,7 @@ public class TombwardenHelmet {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:tombwarden_helmet")) {
             if (event.getSlotType() == EquipmentSlot.HEAD) {
                 Attribute manaPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:summon_damage")
+                        ResourceLocation.parse("irons_spellbooks:summon_damage")
                 );
 
 

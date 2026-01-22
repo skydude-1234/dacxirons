@@ -44,7 +44,7 @@ import static com.skydude.dacxirons.dacxirons.MOD_ID;
 
 @AutoSpellConfig
 public class EldritchSlashSpell extends AbstractEldritchSpell {
-    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "eldritch_slash");
+    private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(dacxirons.MOD_ID, "eldritch_slash");
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {

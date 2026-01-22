@@ -14,7 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 public class JEIdacxironsPlugin implements IModPlugin {
     @Override
     public ResourceLocation getPluginUid() {
-        return new ResourceLocation(dacxirons.MOD_ID, "jei_plugin");
+        return ResourceLocation.fromNamespaceAndPath(dacxirons.MOD_ID, "jei_plugin");
     }
 
     @Override

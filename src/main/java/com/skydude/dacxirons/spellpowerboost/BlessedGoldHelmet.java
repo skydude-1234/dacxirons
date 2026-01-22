@@ -33,7 +33,7 @@ public class BlessedGoldHelmet {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:blessed_gold_helmet")) {
             if (event.getSlotType() == EquipmentSlot.HEAD) {
                 Attribute holyPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:holy_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:holy_spell_power")
                 );
 
 

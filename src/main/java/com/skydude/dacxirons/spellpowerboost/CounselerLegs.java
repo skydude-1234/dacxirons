@@ -33,7 +33,7 @@ public class CounselerLegs {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:counselor_leggings")) {
             if (event.getSlotType() == EquipmentSlot.LEGS) {
                 Attribute eldritchPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:eldritch_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:eldritch_spell_power")
                 );
 
 
@@ -47,7 +47,7 @@ public class CounselerLegs {
                 }
 
                 Attribute manaPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:max_mana")
+                        ResourceLocation.parse("irons_spellbooks:max_mana")
                 );
 
 

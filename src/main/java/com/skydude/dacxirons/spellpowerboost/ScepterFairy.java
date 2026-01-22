@@ -36,7 +36,7 @@ public class ScepterFairy {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:fairy_scepter")) {
             if (event.getSlotType() == EquipmentSlot.MAINHAND) {
                 Attribute firePower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:nature_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:nature_spell_power")
                 );
 
                 if (firePower != null) {
@@ -48,7 +48,7 @@ public class ScepterFairy {
                     ));
                 }
                 Attribute regenPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:mana_regen")
+                        ResourceLocation.parse("irons_spellbooks:mana_regen")
                 );
                 if (regenPower != null) {
                     event.addModifier(firePower, new AttributeModifier(

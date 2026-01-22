@@ -35,7 +35,7 @@ public class ScepterSanguine {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:sanguine_scepter")) {
             if (event.getSlotType() == EquipmentSlot.MAINHAND) {
                 Attribute bloodPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:blood_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:blood_spell_power")
                 );
 
                 if (bloodPower != null) {

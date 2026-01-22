@@ -33,7 +33,7 @@ public class SandstoneLeggings {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:sandstone_leggings")) {
             if (event.getSlotType() == EquipmentSlot.LEGS) {
                 Attribute naturePower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:nature_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:nature_spell_power")
                 );
 
 

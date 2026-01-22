@@ -33,7 +33,7 @@ public class Silverleggings {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:silver_leggings")) {
             if (event.getSlotType() == EquipmentSlot.LEGS) {
                 Attribute holyPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:holy_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:holy_spell_power")
                 );
 
 

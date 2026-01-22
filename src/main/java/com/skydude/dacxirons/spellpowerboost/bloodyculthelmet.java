@@ -33,10 +33,10 @@ public class bloodyculthelmet {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:bloody_cult_helmet")) {
             if (event.getSlotType() == EquipmentSlot.HEAD) {
                 Attribute bloodPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:blood_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:blood_spell_power")
                 );
                 Attribute manaPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:max_mana")
+                        ResourceLocation.parse("irons_spellbooks:max_mana")
                 );
 
 

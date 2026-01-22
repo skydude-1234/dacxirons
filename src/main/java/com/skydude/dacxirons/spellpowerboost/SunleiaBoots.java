@@ -33,7 +33,7 @@ public class SunleiaBoots {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:sunleia_armor_boots")) {
             if (event.getSlotType() == EquipmentSlot.FEET) {
                 Attribute holyPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:holy_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:holy_spell_power")
                 );
 
 

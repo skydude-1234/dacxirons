@@ -37,13 +37,13 @@ public class ScepterExiled {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:scepter_of_compensation")) {
             if (event.getSlotType() == EquipmentSlot.MAINHAND) {
                 Attribute cooldownPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:cooldown_reduction")
+                        ResourceLocation.parse("irons_spellbooks:cooldown_reduction")
                 );
                 Attribute castPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:cast_time_reduction")
+                        ResourceLocation.parse("irons_spellbooks:cast_time_reduction")
                 );
                 Attribute spellPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:spell_power")
+                        ResourceLocation.parse("irons_spellbooks:spell_power")
                 );
 
                 if (cooldownPower != null) {

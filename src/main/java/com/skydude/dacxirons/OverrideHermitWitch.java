@@ -10,9 +10,9 @@ import static com.skydude.dacxirons.dacxirons.MOD_ID;
 @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public final class OverrideHermitWitch {
     private static final ResourceLocation WITCH_ID =
-            new ResourceLocation("dungeons_and_combat", "hermit_witch");
+            ResourceLocation.fromNamespaceAndPath("dungeons_and_combat", "hermit_witch");
     private static final ResourceLocation SCEPTER_ID =
-            new ResourceLocation("dungeons_and_combat", "corroding_flame"); // item id
+            ResourceLocation.fromNamespaceAndPath("dungeons_and_combat", "corroding_flame"); // item id
 
     @SubscribeEvent
     public static void onDrops(LivingDropsEvent e) {

@@ -36,10 +36,10 @@ public class Oathh {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:oath_sword")) {
             if (event.getSlotType() == EquipmentSlot.MAINHAND) {
                 Attribute eldritchPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:eldritch_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:eldritch_spell_power")
                 );
                 Attribute resistPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:spell_resist")
+                        ResourceLocation.parse("irons_spellbooks:spell_resist")
                 );
 
                 if (eldritchPower != null) {

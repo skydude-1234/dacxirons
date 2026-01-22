@@ -12,8 +12,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class AnvilEvents {
 
     // Replace these with the real item IDs
-    private static final ResourceLocation TARGET_ITEM_ID = new ResourceLocation("dungeons_and_combat", "scepter_of_compensation");
-    private static final ResourceLocation REPAIR_MATERIAL_ID = new ResourceLocation("irons_spellbooks", "arcane_essence");
+    private static final ResourceLocation TARGET_ITEM_ID = ResourceLocation.fromNamespaceAndPath("dungeons_and_combat", "scepter_of_compensation");
+    private static final ResourceLocation REPAIR_MATERIAL_ID = ResourceLocation.fromNamespaceAndPath("irons_spellbooks", "arcane_essence");
 
     @SubscribeEvent
     public static void onAnvilUpdate(AnvilUpdateEvent event) {

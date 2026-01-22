@@ -17,7 +17,7 @@ public class BloodSpellStrength extends MobEffect {
     public BloodSpellStrength() {
         super(MobEffectCategory.BENEFICIAL, 0xFF4500); // Orange-red color
 
-        Attribute spellPower = ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("irons_spellbooks", "blood_spell_power"));
+        Attribute spellPower = ForgeRegistries.ATTRIBUTES.getValue(ResourceLocation.fromNamespaceAndPath("irons_spellbooks", "blood_spell_power"));
 
         if (spellPower != null) {
             this.addAttributeModifier(

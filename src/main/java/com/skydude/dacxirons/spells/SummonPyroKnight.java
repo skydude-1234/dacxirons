@@ -32,7 +32,7 @@ import java.util.Optional;
 
 @AutoSpellConfig
 public class SummonPyroKnight extends AbstractSpell {
-    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "summon_pyro_knight");
+    private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(dacxirons.MOD_ID, "summon_pyro_knight");
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setAllowCrafting(true)
             .setMinRarity(SpellRarity.EPIC)

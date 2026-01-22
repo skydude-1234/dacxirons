@@ -34,7 +34,7 @@ import static io.redspace.ironsspellbooks.api.util.Utils.random;
 
 @AutoSpellConfig
 public class FairysWishSpell extends AbstractSpell {
-    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "fairys_wish_spell");
+    private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(dacxirons.MOD_ID, "fairys_wish_spell");
 
 
     @Override

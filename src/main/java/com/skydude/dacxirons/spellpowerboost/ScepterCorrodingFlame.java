@@ -37,7 +37,7 @@ public class ScepterCorrodingFlame {
             if (event.getSlotType() == EquipmentSlot.MAINHAND) {
 
                 Attribute naturePower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:nature_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:nature_spell_power")
                 );
 
 

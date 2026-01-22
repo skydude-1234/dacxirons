@@ -33,7 +33,7 @@ public class KamathHelmet {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:kamath_armor_helmet")) {
             if (event.getSlotType() == EquipmentSlot.HEAD) {
                 Attribute eldritchPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:eldritch_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:eldritch_spell_power")
                 );
 
 

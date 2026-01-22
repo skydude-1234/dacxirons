@@ -8,14 +8,14 @@ import software.bernie.geckolib.model.GeoModel;
 
 public class SanguineScepterItemModel extends GeoModel<SanguineScepterStaffItem> {
     public ResourceLocation getAnimationResource(SanguineScepterStaffItem animatable) {
-        return new ResourceLocation("dungeons_and_combat", "animations/sanguinescepter.animation.json");
+        return ResourceLocation.fromNamespaceAndPath("dungeons_and_combat", "animations/sanguinescepter.animation.json");
     }
 
     public ResourceLocation getModelResource(SanguineScepterStaffItem animatable) {
-        return new ResourceLocation("dungeons_and_combat", "geo/sanguinescepter.geo.json");
+        return ResourceLocation.fromNamespaceAndPath("dungeons_and_combat", "geo/sanguinescepter.geo.json");
     }
 
     public ResourceLocation getTextureResource(SanguineScepterStaffItem animatable) {
-        return new ResourceLocation("dungeons_and_combat", "textures/item/sanguinescepter.png");
+        return ResourceLocation.fromNamespaceAndPath("dungeons_and_combat", "textures/item/sanguinescepter.png");
     }
 }

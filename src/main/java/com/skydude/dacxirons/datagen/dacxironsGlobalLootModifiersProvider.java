@@ -23,7 +23,7 @@ public class dacxironsGlobalLootModifiersProvider extends GlobalLootModifierProv
     protected void start() {
         add("corroding_flame_staff_hermit_witch", new AddItemModifier(new LootItemCondition[]{
                 LootItemRandomChanceCondition.randomChance(5F).build(),
-                new LootTableIdCondition.Builder(new ResourceLocation("dungeons_and_combat", "entities/hermit_witch")).build()
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("dungeons_and_combat", "entities/hermit_witch")).build()
         }, ItemRegistries.CORRODING_FLAME_STAFF.get()));
     }
 }

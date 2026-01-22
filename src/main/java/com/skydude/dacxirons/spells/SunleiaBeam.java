@@ -31,7 +31,7 @@ import static com.ibm.icu.impl.ValidIdentifiers.Datatype.x;
 
 @AutoSpellConfig
 public class SunleiaBeam extends AbstractSpell {
-    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "sunleia_beam");
+    private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(dacxirons.MOD_ID, "sunleia_beam");
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.RARE)
             .setSchoolResource(SchoolRegistry.HOLY_RESOURCE)
@@ -72,7 +72,7 @@ public class SunleiaBeam extends AbstractSpell {
 
     @Override
     public Optional<SoundEvent> getCastStartSound() {
-        return Optional.ofNullable(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dungeons_and_combat:magic_boost")));
+        return Optional.ofNullable(ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("dungeons_and_combat:magic_boost")));
     }
 
 
@@ -85,7 +85,7 @@ public class SunleiaBeam extends AbstractSpell {
     @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
             SoundEvent sound = ForgeRegistries.SOUND_EVENTS.getValue(
-                    new ResourceLocation("dungeons_and_combat:magic_boost")
+                    ResourceLocation.parse("dungeons_and_combat:magic_boost")
             );
             world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), sound, SoundSource.HOSTILE, 1.0F, 2.0F);
 

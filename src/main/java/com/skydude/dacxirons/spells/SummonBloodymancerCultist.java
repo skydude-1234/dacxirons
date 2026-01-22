@@ -33,7 +33,7 @@ import java.util.Optional;
 
 @AutoSpellConfig
 public class SummonBloodymancerCultist extends AbstractSpell {
-    private final ResourceLocation spellId = new ResourceLocation(dacxirons.MOD_ID, "summon_bloodymancer_cultist");
+    private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(dacxirons.MOD_ID, "summon_bloodymancer_cultist");
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setAllowCrafting(true)
             .setMinRarity(SpellRarity.EPIC)

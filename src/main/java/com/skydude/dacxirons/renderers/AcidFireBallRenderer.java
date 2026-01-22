@@ -19,7 +19,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 
 public class AcidFireBallRenderer extends EntityRenderer<AcidFireball> {
-    private static final ResourceLocation texture = new ResourceLocation("dungeons_and_combat:textures/entities/acid_fire_ball.png");
+    private static final ResourceLocation texture =  ResourceLocation.parse("dungeons_and_combat:textures/entities/acid_fire_ball.png");
     private final Modelacid_fire_ball model;
 
     public AcidFireBallRenderer(EntityRendererProvider.Context context) {

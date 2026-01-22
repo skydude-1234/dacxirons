@@ -33,7 +33,7 @@ public class AcidMoltenBlazingChest {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:acid_molten_blazing_chestplate")) {
             if (event.getSlotType() == EquipmentSlot.CHEST) {
                 Attribute firePower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:fire_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:fire_spell_power")
                 );
 
 

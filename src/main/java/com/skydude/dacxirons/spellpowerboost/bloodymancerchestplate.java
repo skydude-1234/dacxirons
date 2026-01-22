@@ -35,13 +35,13 @@ public class bloodymancerchestplate {
             if (event.getSlotType() == EquipmentSlot.CHEST) {
 
                 Attribute bloodPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:blood_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:blood_spell_power")
                 );
                 Attribute manaPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:max_mana")
+                        ResourceLocation.parse("irons_spellbooks:max_mana")
                 );
                 Attribute resistPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:blood_magic_resist")
+                        ResourceLocation.parse("irons_spellbooks:blood_magic_resist")
                 );
 
 

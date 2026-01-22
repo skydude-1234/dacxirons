@@ -33,7 +33,7 @@ public class CursedMoltenBlazingLeggings {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:cursed_molten_blazing_leggings")) {
             if (event.getSlotType() == EquipmentSlot.LEGS) {
                 Attribute firePower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:fire_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:fire_spell_power")
                 );
 
 

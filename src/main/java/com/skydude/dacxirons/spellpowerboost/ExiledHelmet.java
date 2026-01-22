@@ -33,10 +33,10 @@ public class ExiledHelmet {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:exiled_helmet")) {
             if (event.getSlotType() == EquipmentSlot.HEAD) {
                 Attribute manaPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:max_mana")
+                        ResourceLocation.parse("irons_spellbooks:max_mana")
                 );
                 Attribute spellPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:spell_power")
+                        ResourceLocation.parse("irons_spellbooks:spell_power")
                 );
 
 

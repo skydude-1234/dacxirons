@@ -32,7 +32,7 @@ public class TombwardenChest {
         if (itemId != null && itemId.toString().equals("dungeons_and_combat:tombwarden_chestplate")) {
             if (event.getSlotType() == EquipmentSlot.CHEST) {
                 Attribute manaPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:summon_damage")
+                        ResourceLocation.parse("irons_spellbooks:summon_damage")
                 );
 
 

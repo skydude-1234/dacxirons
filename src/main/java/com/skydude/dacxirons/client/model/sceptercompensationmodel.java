@@ -12,14 +12,14 @@ import software.bernie.geckolib.model.GeoModel;
 
 public class sceptercompensationmodel extends GeoModel<sceptercompensation> {
     public ResourceLocation getAnimationResource(sceptercompensation animatable) {
-        return new ResourceLocation("dungeons_and_combat", "animations/scepterofcompensation.animation.json");
+        return ResourceLocation.fromNamespaceAndPath("dungeons_and_combat", "animations/scepterofcompensation.animation.json");
     }
 
     public ResourceLocation getModelResource(sceptercompensation animatable) {
-        return new ResourceLocation("dungeons_and_combat", "geo/scepterofcompensation.geo.json");
+        return ResourceLocation.fromNamespaceAndPath("dungeons_and_combat", "geo/scepterofcompensation.geo.json");
     }
 
     public ResourceLocation getTextureResource(sceptercompensation animatable) {
-        return new ResourceLocation("dungeons_and_combat", "textures/item/scepter_of_compensation.png");
+        return ResourceLocation.fromNamespaceAndPath("dungeons_and_combat", "textures/item/scepter_of_compensation.png");
     }
 }

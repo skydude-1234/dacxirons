@@ -33,7 +33,7 @@ public class CrimsonChestA {
             if (event.getSlotType() == EquipmentSlot.CHEST) {
 
                 Attribute bloodPower = ForgeRegistries.ATTRIBUTES.getValue(
-                        new ResourceLocation("irons_spellbooks:blood_spell_power")
+                        ResourceLocation.parse("irons_spellbooks:blood_spell_power")
                 );
 
 
