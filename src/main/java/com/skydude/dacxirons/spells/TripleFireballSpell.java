@@ -44,7 +44,6 @@ import java.util.List;
 import java.util.Optional;
 
 
-@AutoSpellConfig
 public class TripleFireballSpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(dacxirons.MOD_ID, "triple_fireball_spell");
 

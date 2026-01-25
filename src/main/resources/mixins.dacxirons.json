@@ -8,6 +8,7 @@
     "BlessedAmuletMixin",
     "BloodymancerMixin",
     "OathSwordItemMixin",
+    "OathSwordTierMixin",
     "OverridedExiled"
   ],
   "injectors": {

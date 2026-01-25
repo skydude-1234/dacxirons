@@ -7,25 +7,21 @@ import com.skydude.dacxirons.registries.ItemRegistries;
 import com.skydude.dacxirons.registries.dacxironsSpellRegistry;
 import io.redspace.ironsspellbooks.api.events.SpellDamageEvent;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
+import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.IPresetSpellContainer;
 import io.redspace.ironsspellbooks.api.spells.ISpellContainer;
 import io.redspace.ironsspellbooks.api.spells.SpellData;
+import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.item.weapons.StaffItem;
+import io.redspace.ironsspellbooks.item.weapons.StaffTier;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.mcreator.dungeonsandcombat.init.DungeonsAndCombatModMobEffects;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
@@ -34,8 +30,6 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import java.util.UUID;
 import java.util.function.Consumer;
 
 import static com.skydude.dacxirons.dacxirons.MOD_ID;
@@ -45,15 +39,12 @@ import static com.skydude.dacxirons.dacxirons.MOD_ID;
 public class pyromancerStaffItem extends StaffItem implements IPresetSpellContainer {
 
 
+    public static StaffTier PYROCLASTIC = new StaffTier(3, -2.4f,
+            new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, .25, AttributeModifier.Operation.MULTIPLY_BASE)
+    );
 
-
-    public pyromancerStaffItem() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.UNCOMMON), 3, -2.4,
-                Map.of(
-                        AttributeRegistry.FIRE_SPELL_POWER.get(),
-                        new AttributeModifier(UUID.fromString("001ad88d-901d-4691-b2a2-3664e42026d3"), " fire", .1, Operation.MULTIPLY_BASE)
-
-              ));
+    public pyromancerStaffItem( ) {
+        super(ItemPropertiesHelper.equipment(1), PYROCLASTIC);
     }
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
         super.initializeClient(consumer);
@@ -65,33 +56,31 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
             }
         });
     }
-    //spells container stuff
-    private static final SpellDataRegistryHolder[] DEFAULT_SPELLS = new SpellDataRegistryHolder[]{
-            new SpellDataRegistryHolder(dacxironsSpellRegistry.TRIPLE_FIREBALL_SPELL, 3)
-
-    };
+//    //spells container stuff
+//    private static final SpellDataRegistryHolder[] DEFAULT_SPELLS = new SpellDataRegistryHolder[]{
+//            new SpellDataRegistryHolder(dacxironsSpellRegistry.TRIPLE_FIREBALL_SPELL, 3)
+//
+//    };
 
     private List<SpellData> spellData = null;
 
 
-    public List<SpellData> getSpells() {
-        if (spellData == null) {
-            spellData = Arrays.stream(DEFAULT_SPELLS).map(SpellDataRegistryHolder::getSpellData).toList();
-        }
-        return spellData;
-    }
+//    public List<SpellData> getSpells() {
+//        if (spellData == null) {
+//            spellData = Arrays.stream(DEFAULT_SPELLS).map(SpellDataRegistryHolder::getSpellData).toList();
+//        }
+//        return spellData;
+//    }
     @Override
     public void initializeSpellContainer(ItemStack itemStack) {
         if (itemStack == null) return;
 
         if (!ISpellContainer.isSpellContainer(itemStack)) {
-            var spells = getSpells();
-            var spellContainer = ISpellContainer.create(spells.size(), true, false);
-            spells.forEach(spellData -> spellContainer.addSpell(spellData.getSpell(), spellData.getLevel(), true, null));
-            spellContainer.save(itemStack);
+            var spellContainer = ISpellContainer.create(1, true, false).mutableCopy();
+            spellContainer.addSpell(dacxironsSpellRegistry.TRIPLE_FIREBALL_SPELL.get(), 1, true);
+            ISpellContainer.set(itemStack, spellContainer.toImmutable());
         }
     }
-
     // end of spells container stuff
 
 

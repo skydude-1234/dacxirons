@@ -10,6 +10,8 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -44,7 +46,9 @@ public abstract class OathSwordItemMixin implements IPresetSpellContainer {
         }
         return dacxirons$spellData;
     }
-
+    private int changeUses(Tier tier) {
+        return 1200; // your new durability
+    }
     // Ensure the sword always has a spell container when right-clicked
     // Ensure the sword has a spell container when its tooltip is displayed
 
