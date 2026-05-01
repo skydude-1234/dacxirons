@@ -167,10 +167,7 @@ public class FairyWandStaff extends StaffItem implements GeoItem, IPresetSpellCo
         LivingEntity target = event.getEntity();
 
         // Get the player/caster
-        LivingEntity attacker = (LivingEntity) event.getSpellDamageSource().getEntity();
-
-        if (attacker != null) {
-
+        if (event.getSpellDamageSource().getEntity() instanceof LivingEntity attacker) {
             if (attacker.getMainHandItem().is(ItemRegistries.FAIRY_WAND_STAFF.get())) {
                 // only server side
                 if (!attacker.level().isClientSide) {
@@ -179,5 +176,4 @@ public class FairyWandStaff extends StaffItem implements GeoItem, IPresetSpellCo
             }
         }
     }
-
 }

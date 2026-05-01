@@ -188,19 +188,15 @@ public class SanguineScepterStaffItem extends StaffItem implements GeoItem, IPre
     @SubscribeEvent
     public static void onSpellAttack(SpellDamageEvent event) {
         LivingEntity target = event.getEntity();
-
-        // Get the player/caster
-        LivingEntity attacker = (LivingEntity) event.getSpellDamageSource().getEntity();
-
-        if (attacker != null) {
+        if (event.getSpellDamageSource().getEntity() instanceof LivingEntity attacker) {
+            // Get the player/caster
 
             if (attacker.getMainHandItem().is(ItemRegistries.SANGUINE_SCEPTER_STAFF.get())) {
                 // only server side
                 if (!attacker.level().isClientSide) {
-                   attacker.heal(3F);
+                    attacker.heal(3F);
                 }
             }
         }
     }
-
 }

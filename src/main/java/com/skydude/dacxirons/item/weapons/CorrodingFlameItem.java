@@ -155,10 +155,7 @@ public class CorrodingFlameItem extends StaffItem implements GeoItem, IPresetSpe
         LivingEntity target = event.getEntity();
 
         // Get the player/caster
-        LivingEntity attacker = (LivingEntity) event.getSpellDamageSource().getEntity();
-
-        if (attacker != null) {
-
+        if (event.getSpellDamageSource().getEntity() instanceof LivingEntity attacker) {
             if (attacker.getMainHandItem().is(ItemRegistries.CORRODING_FLAME_STAFF.get())) {
                 // only server side
                 if (!attacker.level().isClientSide) {
@@ -167,6 +164,5 @@ public class CorrodingFlameItem extends StaffItem implements GeoItem, IPresetSpe
             }
         }
     }
-
 
 }

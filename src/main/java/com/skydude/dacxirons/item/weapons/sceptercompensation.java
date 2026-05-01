@@ -168,14 +168,14 @@ public class sceptercompensation extends StaffItem implements GeoItem, IPresetSp
         LivingEntity target = event.getEntity();
 
         // Get the player/caster
-        LivingEntity attacker = (LivingEntity) event.getSpellDamageSource().getEntity();
+        if(event.getSpellDamageSource().getEntity() instanceof LivingEntity attacker ) {
 
-        if (attacker != null) {
 
             if (attacker.getMainHandItem().is(ItemRegistries.SCEPTER_COMPENSATION_STAFF.get())) {
                 // only server side
                 if (!attacker.level().isClientSide) {
-                    SpellAttackEffect.SpellEffectAdd(attacker, MobEffects.JUMP, 120,1, false, true); }
+                    SpellAttackEffect.SpellEffectAdd(attacker, MobEffects.JUMP, 120, 1, false, true);
+                }
             }
         }
     }

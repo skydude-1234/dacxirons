@@ -100,10 +100,7 @@ public class pyromancerStaffItem extends StaffItem implements IPresetSpellContai
         LivingEntity target = event.getEntity();
 
         // Get the player/caster
-        LivingEntity attacker = (LivingEntity) event.getSpellDamageSource().getEntity();
-
-        if (attacker != null) {
-
+        if (event.getSpellDamageSource().getEntity() instanceof LivingEntity attacker) {
             if (attacker.getMainHandItem().is(ItemRegistries.SCEPTERPYROCLASTIC.get())) {
                 // only server side
                 if (!attacker.level().isClientSide) {
