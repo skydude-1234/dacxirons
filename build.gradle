@@ -203,10 +203,9 @@ dependencies {
     // IRONS SPELLS N SPELLBOOKS **********************************************************************************
     implementation fg.deobf("io.redspace:irons_spellbooks:1.20.1-${irons_spells_version}")
     compileOnly fg.deobf("io.redspace:irons_spellbooks:1.20.1-${irons_spells_version}")
-  //  compileOnly fg.deobf("io.redspace.ironsspellbooks:irons_spellbooks:1.20.1-${irons_spells_version}:api")
-    runtimeOnly fg.deobf("io.redspace:irons_spellbooks:1.20.1-${irons_spells_version}")
+   runtimeOnly fg.deobf("io.redspace:irons_spellbooks:1.20.1-${irons_spells_version}")
 // iron lib / iron telemetry
-    implementation fg.deobf("curse.maven:irons-lib-1492763:7907335")
+    implementation fg.deobf("curse.maven:irons-lib-1492763:8364892")
     // GECKOLIB ***************************************************************************************************
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${minecraft_version}:${geckolib_version}")
     implementation("com.eliotlash.mclib:mclib:20")
@@ -279,7 +278,8 @@ jar {
                 "Specification-Version": "1.0",
                 "Implementation-Title": project.name,
                 "Implementation-Version": project.version,
-                "Implementation-Vendor": "your.name.here"
+                "Implementation-Vendor": "your.name.here",
+                "MixinConfigs": "mixins.dacxirons.json"
         ])
     }
     finalizedBy 'reobfJar'
@@ -293,4 +293,5 @@ tasks.withType(JavaCompile).configureEach {
 mixin {
     // Tell Mixingradle to generate this refmap for main sources
     add sourceSets.main, "mixins.dacxirons.refmap.json"
+    config "mixins.dacxirons.json"
 }

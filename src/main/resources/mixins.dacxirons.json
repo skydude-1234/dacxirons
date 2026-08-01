@@ -9,7 +9,9 @@
     "BloodymancerMixin",
     "LasarBeamFix",
     "OathSwordItemMixin",
-    "OverridedExiled"
+    "OverridedExiled",
+    "omsunleia.OminousMixin",
+    "omsunleia.SunleiaMixin"
   ],
   "injectors": {
     "defaultRequire": 1
