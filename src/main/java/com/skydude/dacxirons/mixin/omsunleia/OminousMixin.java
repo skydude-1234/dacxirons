@@ -1,33 +1,37 @@
 package com.skydude.dacxirons.mixin.omsunleia;
 
 import com.skydude.dacxirons.compat.omsunleia.SunleiaEvents;
+import io.redspace.ironsspellbooks.api.entity.IOminousEntity;
 import io.redspace.ironsspellbooks.player.ServerPlayerEvents;
 import net.mcreator.dungeonsandcombat.entity.SunleiaEntity;
-import net.minecraft.world.effect.MobEffect;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
+
+import java.util.List;
 
 @Mixin(value = ServerPlayerEvents.class, remap = false)
 public abstract class OminousMixin {
 
-    @Redirect(
+    @Inject(
             method = "handleOminousEntities",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/world/entity/player/Player;hasEffect(Lnet/minecraft/world/effect/MobEffect;)Z",
-                    remap = true
+                    target = "Ljava/util/List;isEmpty()Z"
             ),
-            require = 2,
+            locals = LocalCapture.CAPTURE_FAILHARD,
             remap = false
     )
-    private static boolean dacxirons$requireOldFriendsForSunleia(Player player, MobEffect effect, EntityJoinLevelEvent event) {
-        if (!player.hasEffect(effect)) {
-            return false;
+    private static void dacxirons$requireOldFriendsForSunleia(EntityJoinLevelEvent event, CallbackInfo ci, ServerLevel serverLevel, Entity entity, IOminousEntity ominousSettings, float rangeSqr, Vec3 center, List<Player> ominousPlayers) {
+        if (entity instanceof SunleiaEntity) {
+            ominousPlayers.removeIf(player -> !SunleiaEvents.hasOldFriendsAdvancement(player));
         }
-
-        return !(event.getEntity() instanceof SunleiaEntity) || SunleiaEvents.hasOldFriendsAdvancement(player);
     }
 }
